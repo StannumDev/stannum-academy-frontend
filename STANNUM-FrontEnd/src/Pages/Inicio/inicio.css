@@ -1,0 +1,11 @@
+.botonTest{
+    border: 1px solid #4C5464;
+    background-color: #4C5464;
+    color: white;
+}
+
+.botonTest:hover{
+    border: 1px solid #74BCAC;
+    background-color: #74BCAC;
+    color: white;
+}

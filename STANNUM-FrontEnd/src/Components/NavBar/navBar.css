@@ -1,0 +1,37 @@
+.logoNavbar{
+    width: 200px;
+}
+  
+.logoNavbar:hover {
+filter: invert(44%) sepia(94%) saturate(406%) hue-rotate(485deg) brightness(92%) contrast(88%);
+}
+
+.linkNavbar{
+    font-weight: 500;
+    color: #FFFFFF;
+    font-size: 1.2rem;
+}
+
+.navbar{
+    background-color: #4C5464;
+    border-bottom: 6px solid #74BCAC;
+    box-shadow: 1px -13px 51px 0px rgba(0,0,0,0.75);
+}
+
+.nav-item {
+    margin-right: 10px;
+    padding-right: 10px;
+    border-right: 1px solid #6d798f;
+  }
+  
+  .nav-item:last-child {
+    border-right: none;
+  }
+
+.linkNavbar:hover{
+    color: #74BCAC;
+}
+
+.animate__animated.animate__fadeInDown {
+    --animate-duration: 0.5s;
+}
