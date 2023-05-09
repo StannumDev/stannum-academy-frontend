@@ -1,6 +1,6 @@
 import React from 'react'
 import './navBar.css'
-import logo from '../../Images/LogoBlanco.png';
+import logo from '../../assets/LogoBlanco.png';
 import 'animate.css';
 
 function NavBar() {

@@ -1,0 +1,51 @@
+.imagenLogin{
+    max-height: 100vh;   
+}
+
+.stannumAcademyTituloLogin{
+    color: #67CCB9;
+}
+
+.ingreseALogin{
+    color: #505050;
+}
+
+.completaTuInformacion{
+    color: #838282;
+}
+
+.botonSolicitarAcceso{
+    width: 127px;
+    height: 36px;
+    background: #3A3A3A;
+    border-radius: 4px;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 18px;
+    color: #FFFFFF;
+}
+
+.textoNoTienesUnaCuenta{
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 21px;
+    color: #838282;
+}
+
+.divSolicitarAcceso{
+    position: absolute;
+    top: 30px;
+    right: 30px;
+}
+
+.logoStannumLogin{
+    position: absolute;
+    z-index: 100;
+    top: 10px;
+    left: 10px;
+    width: 300px;
+}
+
+.formularioLoginDiv{
+    padding-left: 7rem;
+}

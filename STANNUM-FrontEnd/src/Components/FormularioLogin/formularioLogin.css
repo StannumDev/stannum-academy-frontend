@@ -1,0 +1,33 @@
+.labelFormLogin{
+    font-size: 1rem;
+    font-weight: 500;
+    color: #505050;
+}
+
+.inputLogin{
+    background-color: #FFFFFF;
+    border: 1px solid #C6C6C6;
+    border-radius: 4px;
+    height: 40px;
+}
+
+.keyIconLogin{
+    width: 15px;
+    position: relative;
+    bottom: 2px;
+}
+
+.botonSubmitLogin{
+    width: 160px;
+    background: #67CCB9;
+    border: 1px solid #67CCB9;
+    border-radius: 4px;
+    color: white;
+    padding-inline: 0.2rem;
+    padding-block: 0.5rem;
+    font-size: 12px;
+    line-height: 18px;
+    font-weight: 600;
+    font-style: normal;
+    height: 44px;
+}

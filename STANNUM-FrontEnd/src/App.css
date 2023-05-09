@@ -1,3 +1,25 @@
 *{
-    font-family: 'Quicksand', sans-serif;
+    font-family: 'Poppins', sans-serif; 
+}
+
+/* font-family: 'Anton', sans-serif;
+font-family: 'Poppins', sans-serif; */
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    transition: background-color 5000s ease-in-out 0s;
+    -webkit-text-fill-color: black !important;
+}
+
+.form-control:focus {
+    box-shadow: none;
+    border-color: none;
+    border: 1px solid #67CCB9;
+}
+
+.form-control.is-invalid:focus {
+    box-shadow: none;
+    border-color: none;
 }
