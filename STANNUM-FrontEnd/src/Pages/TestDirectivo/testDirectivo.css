@@ -1,0 +1,44 @@
+.tituloDominio1Test{
+    font-family: 'Anton', sans-serif;
+    font-weight: 400;
+    font-size: 5rem;
+    line-height: 5rem;
+    text-align: center;
+    color: #3A3A3A;
+}
+
+.tituloDominio1TestRojo{
+    font-family: 'Anton', sans-serif;
+    font-weight: 400;
+    font-size: 5rem;
+    line-height: 5rem;
+    text-align: center;
+    color: #D3214D;
+}
+
+.parrafoBienvenidaCentro{
+    margin-top: 2rem;
+    width: 40%;
+    font-weight: 400;
+    font-size: 1.2rem;
+    line-height: 1.8rem;
+    text-align: center;
+    color: #505050;
+}
+
+.importanteDominio1TestRojo{
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 45px;
+    color: #D3214D;
+}
+
+.parrafoImportanteDominio1Test{
+    margin-top: 0rem;
+    width: 30%;
+    font-weight: 400;
+    font-size: 1.2rem;
+    line-height: 1.8rem;
+    text-align: center;
+    color: #505050;
+}

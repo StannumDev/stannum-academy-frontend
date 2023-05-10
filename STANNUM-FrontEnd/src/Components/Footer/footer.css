@@ -1,0 +1,12 @@
+.footer{
+    background-color: #3A3A3A;
+    background-image: url("../../assets/ConcreteIntenso.png");
+    background-size: cover;
+    background-blend-mode: multiply;
+    padding: 2rem;
+    text-align: center;
+}
+
+.footerImagen{
+    width: 200px;
+}

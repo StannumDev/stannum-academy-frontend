@@ -32,3 +32,139 @@
     line-height: 45px;
     color: #67CCB9;
 }
+
+.parrafoPrimerosPasos{
+    margin-top: 0rem;
+    width: 40%;
+    font-weight: 400;
+    font-size: 1.2rem;
+    line-height: 1.8rem;
+    text-align: center;
+    color: #505050;
+}
+
+.contenedorCardsTest{
+    margin-top: 3rem;
+    width: 100%;
+    padding-top: 3rem;
+    background-color: #67cfbc;
+    background-image: url("../../assets/Concrete.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-blend-mode: multiply;
+    padding-bottom: 4rem;
+}
+
+.seleccioneTestTitulo{
+    margin: auto;
+    font-weight: 600;
+    font-size: 2.6rem;
+    line-height: 2.6rem;
+    color: #FFFFFF;
+}
+
+.cajaCardsTest{
+    width: 100%;
+}
+
+.cardTest {
+    padding: 2rem;
+    width: 20%;
+    background-color: white;
+    box-shadow: 0px 5.39818px 10.7964px -1.34954px rgba(0, 0, 0, 0.25);
+    border-radius: 10.7964px;
+}
+
+.tituloDominio{
+    text-align: center;
+    font-weight: 900;
+    font-size: 1.9rem;
+}
+
+.subtituloDominio{
+    text-align: center;
+    font-weight: 900;
+    font-size: 1.6rem;
+    margin-top: -1rem;
+}
+
+.tituloDominio1{
+    color: #CD0133;
+}
+
+.tituloDominio2{
+    color: #35B4B6;
+}
+
+.tituloDominio3{
+    color: #FFCA1A;
+}
+
+.tituloDominio4{
+    color: #4EA86A;
+}
+
+.tituloDominio5{
+    color: #FE832F;
+}
+
+.tituloDominio6{
+    color: #6A279B;
+}
+
+
+.hrDominio{
+    width: 90%;
+    background-color: #4F4F4F;
+    margin: auto;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.botonDominio{
+    width: 100%;
+    border-radius: 5.39818px;
+    padding-block: 1rem;
+    font-size: 1.3rem;
+}
+
+.botonDominio1{
+    background: #CD0133;
+    border: 1.34954px solid #CD0133;
+    color: white;
+}
+
+.botonDominio2{
+    background: #FFFFFF;
+    color: #4EBDBF;
+    border: 2.69909px dashed #4EBDBF;
+}
+
+.botonDominio3{
+    background: #FFFFFF;
+    color: #FFCA1A;
+    border: 2.69909px dashed #FFCA1A;
+}
+
+.botonDominio4{
+    background: #FFFFFF;
+    color: #4EA86A;
+    border: 2.69909px dashed #4EA86A;
+}
+
+.botonDominio5{
+    background: #FFFFFF;
+    color: #FE832F;
+    border: 2.69909px dashed #FE832F;
+}
+
+.botonDominio6{
+    background: #FFFFFF;
+    color: #6A279B;
+    border: 2.69909px dashed #6A279B;
+}
+
+.flexCardsTests{
+    width: 70%;
+    margin-top: 3rem;
+}

@@ -1,6 +1,6 @@
 import React from 'react'
 import './login.css'
-import imagenLogin from '../../assets/Concrete.png'
+import imagenLogin from '../../assets/Login.png'
 import iconoStannum from '../../assets/LogoColor.png'
 import FormularioLogin from '../../Components/FormularioLogin/FormularioLogin'
 
@@ -8,9 +8,8 @@ function Login() {
   return (
     <>
         <div className='row w-100 align-items-stretch vh-100'>
-            <div className='col-6'>
+            <div className='col-6 p-0'>
                 <img src={imagenLogin} alt="Iniciar Sesion" className='w-100 imagenLogin'/>
-                <img src={iconoStannum} alt="Logo STANNUM" className='logoStannumLogin'/>
             </div>
             <div className='col-6 bg-white d-flex align-items-center formularioLoginDiv'>
                 <div>

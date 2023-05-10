@@ -1,5 +1,8 @@
 .imagenLogin{
+    min-height: 100vh;   
     max-height: 100vh;   
+    object-fit: cover;
+
 }
 
 .stannumAcademyTituloLogin{

@@ -1,9 +1,23 @@
 *{
     font-family: 'Poppins', sans-serif; 
 }
+/* 
+body:not(.bg-white):not(.crear-usuario):not(.crear-edificio) {
+    background: url("../src/assets/fondo.jpg") no-repeat center center fixed;
+    background-size: cover;
+  } */
+
+/* document.body.classList.add('crear-usuario'); */
 
 /* font-family: 'Anton', sans-serif;
 font-family: 'Poppins', sans-serif; */
+
+body{
+    background-color: #FFFFFF;
+    background-image: url("../src/assets/Concrete.png");
+    background-size: cover;
+    background-blend-mode: multiply;
+} 
 
 input:-webkit-autofill,
 input:-webkit-autofill:hover,
