@@ -28,13 +28,13 @@ function Inicio() {
               <div className='tituloDominio tituloDominio2 text-center'>DOMINIO 2</div>
               <div className='subtituloDominio tituloDominio2 text-center'>TIEMPO</div>
               <hr className='hrDominio'/>
-              <button className='botonDominio botonDominio2' disabled="true">Próximamente</button>
+              <button className='botonDominio botonDominio2' disabled={true}>Próximamente</button>
             </div>
             <div className='cardTest'>
               <div className='tituloDominio tituloDominio3 text-center'>DOMINIO 3</div>
               <div className='subtituloDominio tituloDominio3 text-center'>COMUNICACION</div>
               <hr className='hrDominio'/>
-              <button className='botonDominio botonDominio3' disabled="true">Próximamente</button>
+              <button className='botonDominio botonDominio3' disabled={true}>Próximamente</button>
             </div>
           </div>
           <div className='d-flex justify-content-evenly flexCardsTests'>
@@ -42,19 +42,19 @@ function Inicio() {
               <div className='tituloDominio tituloDominio4 text-center'>DOMINIO 4</div>
               <div className='subtituloDominio tituloDominio4 text-center'>DELEGACION</div>
               <hr className='hrDominio'/>
-              <button className='botonDominio botonDominio4' disabled="true">Próximamente</button>
+              <button className='botonDominio botonDominio4' disabled={true}>Próximamente</button>
             </div>
             <div className='cardTest'>
               <div className='tituloDominio tituloDominio5 text-center'>DOMINIO 5</div>
               <div className='subtituloDominio tituloDominio5 text-center'>ORGANIZACION</div>
               <hr className='hrDominio'/>
-              <button className='botonDominio botonDominio5' disabled="true">Próximamente</button>
+              <button className='botonDominio botonDominio5' disabled={true}>Próximamente</button>
             </div>
             <div className='cardTest'>
               <div className='tituloDominio tituloDominio6 text-center'>DOMINIO 6</div>
               <div className='subtituloDominio tituloDominio6 text-center'>PLANIFICACION</div>
               <hr className='hrDominio'/>
-              <button className='botonDominio botonDominio6' disabled="true">Próximamente</button>
+              <button className='botonDominio botonDominio6' disabled={true}>Próximamente</button>
             </div>
           </div>
         </div>

@@ -1,0 +1,236 @@
+.tituloRanking{
+    margin-top: 3rem;
+    text-align: center;
+}
+
+.tituloRankingH1{
+    font-family: 'Anton', sans-serif;
+    font-weight: 400;
+    font-size: 6rem;
+    color: #323337;
+}
+
+.parrafoRanking{
+    text-align: center;
+    margin:auto;
+    width: 50%;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.5rem;
+    line-height: 2.34rem;
+    text-align: center;
+    color: #505050;
+}
+
+.divRankingYMedallero{
+    width: 70%;
+    margin: auto;
+    margin-top: 4rem;
+    gap: 5%;
+}
+
+.divBotonRankingDominio{
+    width: 47.5%;
+}
+
+.botonRankingDominio{
+    width: 100%;
+    font-family: 'Anton';
+    font-weight: 400;
+    font-size: 4rem;
+    line-height: 4.4rem;
+    text-align: center;
+    color: #FFFFFF;
+    background: #63C4B2;
+    border-radius: 16px;
+    padding-inline: 4rem;
+    padding-block: 4rem;
+    border: none;
+    
+}
+
+.botonRankingDominio{
+    width: 100%;
+    font-family: 'Anton';
+    font-weight: 400;
+    font-size: 4rem;
+    line-height: 4.4rem;
+    text-align: center;
+    color: #FFFFFF;
+    border-radius: 16px;
+    padding-inline: 4rem;
+    padding-block: 4rem;
+    border: none;
+}
+
+.botonRankingDominioSuelto{
+    background: rgb(99,196,178,0.6);
+    background-image: url("../../../assets/Concrete.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-blend-mode: multiply;
+    transition: background 0.5s;
+
+}
+
+.botonRankingDominioApretado{
+    background: rgb(99,196,178,1);
+    transition: background 0.5s;
+    background-image: url("../../../assets/Concrete.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-blend-mode: multiply;
+    
+}
+
+.botonRankingDominio:hover{
+    background: rgb(99,196,178,1);
+    background-image: url("../../../assets/Concrete.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-blend-mode: multiply;
+    transition: background 0.5s;
+}
+
+.botonRankingDominio span{
+    font-family: 'Anton';
+    font-weight: 400;
+    font-size: 4rem;
+    line-height: 4.4rem;
+    text-align: center;
+    color: #FFFFFF;
+    display: block;
+}
+
+.divBotonMedalleroMetal{
+    width: 47.5%;
+}
+
+.botonMedalleroMetal{
+    width: 100%;
+    text-align: center;
+    color: #A7A7A9;
+    font-family: 'Anton';
+    font-weight: 400;
+    font-size: 4rem;
+    line-height: 4.4rem;
+    background: rgba(217, 217, 217, 0.5);
+    background-image: url("../../../assets/Concrete.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-blend-mode: multiply;
+    border: 2px dashed #A2A2A2;
+    border-radius: 16px;
+    padding-inline: 4rem;
+    padding-block: 4rem;
+}
+
+.botonMedalleroMetal span{
+    font-family: 'Anton';
+    font-weight: 400;
+    font-size: 4rem;
+    line-height: 4.4rem;
+    text-align: center;
+    color: #A7A7A9;
+    display: block;
+}
+
+.divBotonesRankingDominios{
+    width: 70%;
+    margin: auto;
+    margin-top: 2rem;
+    margin-bottom: 10rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.botonRankingDominio1{
+    background: #C8204A;
+    border-radius: 10px;
+    font-weight: 600;
+    font-size: 25px;
+    line-height: 38px;
+    color: #FFFFFF;
+    border: none;
+    padding-inline: 1rem;
+    padding-block: 0.3rem;
+}
+
+.botonRankingDominio2{
+    background: rgba(229, 229, 229, 0.5);
+    border: 1px dashed #A1A1A1;
+    border-radius: 10px;
+    font-weight: 600;
+    font-size: 25px;
+    line-height: 38px;
+    color: #A7A7A9;
+    padding-inline: 1rem;
+    padding-block: 0.3rem;
+}
+
+.botonRankingDominio3{
+    background: rgba(229, 229, 229, 0.5);
+    border: 1px dashed #A1A1A1;
+    border-radius: 10px;
+    font-weight: 600;
+    font-size: 25px;
+    line-height: 38px;
+    color: #A7A7A9;
+    padding-inline: 1rem;
+    padding-block: 0.3rem;
+}
+
+.botonRankingDominio4{
+    background: rgba(229, 229, 229, 0.5);
+    border: 1px dashed #A1A1A1;
+    border-radius: 10px;
+    font-weight: 600;
+    font-size: 25px;
+    line-height: 38px;
+    color: #A7A7A9;
+    padding-inline: 1rem;
+    padding-block: 0.3rem;
+}
+
+.botonRankingDominio5{
+    background: rgba(229, 229, 229, 0.5);
+    border: 1px dashed #A1A1A1;
+    border-radius: 10px;
+    font-weight: 600;
+    font-size: 25px;
+    line-height: 38px;
+    color: #A7A7A9;
+    padding-inline: 1rem;
+    padding-block: 0.3rem;
+}
+
+.botonRankingDominio6{
+    background: rgba(229, 229, 229, 0.5);
+    border: 1px dashed #A1A1A1;
+    border-radius: 10px;
+    font-weight: 600;
+    font-size: 25px;
+    line-height: 38px;
+    color: #A7A7A9;
+    padding-inline: 1rem;
+    padding-block: 0.3rem;
+}
+
+.divBotonesRankingDominiosEsconder {
+    opacity: 0;
+    transition: opacity 0.5s;
+  }
+
+.divBotonesRankingDominiosMostrar {
+    opacity: 1;
+    transition: opacity 0.5s;
+}
+
+.divBotonesRankingDominiosMostrar.animate__animated.animate__fadeInLeftBig{
+    --animate-duration: 0.8s;
+}
+
+.divBotonesRankingDominiosEsconder.animate__animated.animate__fadeOutLeftBig{
+    --animate-duration: 0.8s;
+}

@@ -8,6 +8,7 @@ function InicioTestDirectivo() {
 
   const onSubmit = (data) => {
     console.log(data);
+    window.location.replace('/Test/Dominio/Directivo/Seccion-1')
   };
 
   return (
@@ -25,34 +26,33 @@ function InicioTestDirectivo() {
           <div className='text-center'><h2 className='subtituloInicioTestDominio'>Sección 1 : <b>Conciencia del emprendedor estratégico</b></h2></div>
           <div className='text-center'><h2 className='textoInicioTestDominio'>Un Emprendedor PROFESIONAL mantiene un equilibrio de actividades en donde el 80% son estratégicas y menos del 20% son operativas, por por lo tanto, vamos a repetir la pregunta 1 cada cierto tiempo hasta llegar a 80% ESTRATÉGICO.</h2></div>
         </div>
-        <div className="contenedorPreguntaTestDominio">
-          <div className="tituloPreguntaDominio">Pregunta 01</div>
-          <div className="preguntaDominio">¿Qué tan sumergido en la operación estás?</div>
-          <div className='d-flex mt-5'>
-            <div className='textoPregunta1-10'>Muy sumergido<b>en la operación</b></div>
-            <div>
-
-            <form onSubmit={handleSubmit(onSubmit)} id='prueba'>
-            <div className="contenedorInputsPregunta1-10 d-flex gap-4">
-              {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((value) => (
-                <div key={value} className="d-flex flex-column align-items-center">
-                  <label key={value} className="radioInputContainer">
-                    <input type="radio" {...register("rating", { required: true })} value={value} />
-                    <span className="checkmark"></span>
-                  </label>
-                  <span className="labelInput1-10">{value}</span>
+        <form onSubmit={handleSubmit(onSubmit)} id='prueba'>
+          <div className="contenedorPreguntaTestDominio">
+            <div className="tituloPreguntaDominio">Pregunta 01</div>
+            <div className="preguntaDominio">¿Qué tan sumergido en la operación estás?</div>
+            <div className='d-flex mt-5'>
+              <div className='textoPregunta1-10'>Muy sumergido<b>en la operación</b></div>
+              <div>
+                <div className="contenedorInputsPregunta1-10 d-flex gap-4">
+                  {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((value) => (
+                    <div key={value} className="d-flex flex-column align-items-center">
+                      <label key={value} className="radioInputContainer">
+                        <input type="radio" {...register("rating", { required: true })} value={value} />
+                        <span className="checkmark"></span>
+                      </label>
+                      <span className="labelInput1-10">{value}</span>
+                    </div>
+                  ))}
                 </div>
-              ))}
+                {errors.rating && <div className="error1-10">Seleccione una respuesta.</div>}
+              </div>
+              <div className='textoPregunta1-10'>Totalmente<b>estratégico</b></div>
             </div>
-            </form>
-              {errors.rating && <div className="error">Seleccione una respuesta.</div>}
-            </div>
-            <div className='textoPregunta1-10'>Totalmente<b>estratégico</b></div>
           </div>
-        </div>
-        <div className='cajaBotonEnviarRespuestasDominio'>
-          <button type="submit" form='prueba'>Continuar (1/6)</button>
-        </div>
+          <div className='cajaBotonEnviarRespuestasDominio'>
+            <button type="submit">Continuar (1/6)</button>
+          </div>
+        </form>
     </>
   )
 }
