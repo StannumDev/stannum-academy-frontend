@@ -1,0 +1,41 @@
+.contenedorInicioTestDominioSeccion1{
+    width: 100%;
+    padding-top: 3rem;
+    background-color: #D3214D;
+    background-image: url("../../../assets/Concrete.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-blend-mode: multiply;
+    padding-bottom: 4rem;
+    padding-inline: 9rem;
+}
+
+.tituloInicioTestDominioSeccion1{
+    font-family: 'Anton';
+    font-weight: 400;
+    font-size: 5rem;
+}
+
+.titulo2InicioTestDominioSeccion1{
+    font-family: 'Anton';
+    font-weight: 400;
+    font-size: 5rem;
+    margin-top: -1rem;
+}
+
+.subtituloInicioTestDominioSeccion1{
+    margin-top: 1rem;
+    font-weight: 300;
+}
+
+.subtituloInicioTestDominioSeccion1 b{
+    font-weight: 600;
+}
+
+.contenedorInputsPregunta1-3{
+    margin-left: 4rem;
+}
+
+.labelInput1-3{
+    margin-left: 1rem;
+}

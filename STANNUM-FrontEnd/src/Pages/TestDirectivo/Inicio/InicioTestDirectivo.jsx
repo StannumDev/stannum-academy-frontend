@@ -1,8 +1,8 @@
 import React from 'react'
-import './testDirectivo.css'
+import './inicioTestDirectivo.css'
 import { useForm } from "react-hook-form";
 
-function TestDirectivo() {
+function InicioTestDirectivo() {
   
   const { register, handleSubmit, formState: { errors } } = useForm();
 
@@ -45,7 +45,7 @@ function TestDirectivo() {
               ))}
             </div>
             </form>
-              {errors.rating && <div className="error">Campo requerido</div>}
+              {errors.rating && <div className="error">Seleccione una respuesta.</div>}
             </div>
             <div className='textoPregunta1-10'>Totalmente<b>estratégico</b></div>
           </div>
@@ -57,4 +57,4 @@ function TestDirectivo() {
   )
 }
 
-export default TestDirectivo
+export default InicioTestDirectivo
