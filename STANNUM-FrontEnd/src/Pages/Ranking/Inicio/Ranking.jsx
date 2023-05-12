@@ -25,7 +25,7 @@ function Ranking() {
                 <div className='divBotonMedalleroMetal'><button className='botonMedalleroMetal' disabled={true}>MEDALLERO<span>DE METAL</span></button></div>
             </div>
             <div className={`divBotonesRankingDominios ${mostrarDominios === 'inicio' ? 'divBotonesRankingDominiosEsconder' : mostrarDominios === 'mostrar' ? 'divBotonesRankingDominiosMostrar animate__animated animate__fadeInLeftBig' : 'divBotonesRankingDominiosEsconder animate__animated animate__fadeOutLeftBig'}`}>
-                <div className='divBotonRankingDominioChico'><button className='botonRankingDominio1'>Dominio 1</button></div>
+                <div className='divBotonRankingDominioChico'><a href="/Ranking/Directivo"><button className='botonRankingDominio1'>Dominio 1</button></a></div>
                 <div className='divBotonRankingDominioChico'><button className='botonRankingDominio2' disabled={true}>Dominio 2</button></div>
                 <div className='divBotonRankingDominioChico'><button className='botonRankingDominio3' disabled={true}>Dominio 3</button></div>
                 <div className='divBotonRankingDominioChico'><button className='botonRankingDominio4' disabled={true}>Dominio 4</button></div>

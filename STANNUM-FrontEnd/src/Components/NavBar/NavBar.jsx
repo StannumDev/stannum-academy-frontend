@@ -11,9 +11,17 @@ function NavBar() {
     const [activeIndex, setActiveIndex] = useState(0);
   
     useEffect(() => {
-      const paths = ['/', '/Ranking/Inicio', '/Perfil'];
-      const index = paths.indexOf(location.pathname);
-      setActiveIndex(index);
+        
+      if (location.pathname === '/') {
+        setActiveIndex(0);
+      }
+      if (location.pathname.includes('/Ranking')) {
+        setActiveIndex(1);
+      }
+      if (location.pathname === '/Perfil') {
+        setActiveIndex(2);
+      }
+
     }, [location.pathname]);
 
     return (

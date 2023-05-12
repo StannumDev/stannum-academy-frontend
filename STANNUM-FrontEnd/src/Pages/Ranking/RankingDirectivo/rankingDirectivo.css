@@ -1,0 +1,157 @@
+.tituloRankingDirectivo{
+    margin-top: 3rem;
+    text-align: center;
+}
+
+.tituloRankingH1Directivo{
+    font-family: 'Anton', sans-serif;
+    font-weight: 400;
+    font-size: 6rem;
+    color: #323337;
+}
+
+.subtituloRankingDirectivo{
+    margin-top: -1rem;
+    text-align: center;
+}
+
+.subtituloRankingH2Directivo{
+    font-family: 'Anton', sans-serif;
+    font-weight: 400;
+    font-size: 3rem;
+    color: #D3214D;
+}
+
+.divGrandeRankingDirectivo{
+    width: 30%;
+    margin: auto;
+    margin-top: 3rem;
+    filter: drop-shadow(5px 5px 10px #000);
+    margin-bottom: 7rem;
+}
+
+.parteSuperiorRankingDirectivo{
+    background-color: #FFFFFF;
+    padding-inline: 2rem;
+    padding-block: 0.5rem;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.titulosRankingTablaDirectivo span{
+    font-family: 'Anton', sans-serif;
+    font-weight: 400;
+    font-size: 1.6rem;
+    color: #020203;
+}
+
+.tituloCategoriaRankingDirectivo {
+    padding-block: 1rem;
+    background-color: #A11733;
+    text-align: center;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+}
+
+.tituloCategoriaRankingDirectivo h3{
+    font-family: 'Anton', sans-serif;
+    font-weight: 400;
+    font-size: 3.135rem;
+    color: #FFFFFF;
+    margin: 0;
+}
+
+.jugadorARankingDirectivo{
+    padding-block: 0rem;
+    background-color: #CE1236;
+    padding-inline: 1.7rem;
+    border-bottom: 0.5px solid #333438;
+}
+
+.puestoARankingTablaDirectivo span{
+    font-family: 'Anton', sans-serif;
+    font-weight: 400;
+    font-size: 4.52rem;
+    color: #FFFFFF;
+}
+
+.nombreARankingTablaDirectivo{
+    text-align: start;
+}
+
+.nombreARankingTablaDirectivo span{
+    font-weight: 600;
+    font-size: 2.1rem;
+    color: #FFFFFF;
+}
+
+.puntosARankingTablaDirectivo span{
+    font-family: 'Anton', sans-serif;
+    font-weight: 400;
+    font-size: 3.1rem;
+    color: #FFFFFF;
+}
+
+.jugadorB1RankingDirectivo{
+    padding-block: 0rem;
+    background-color: #FFFFFF;
+    padding-inline: 1.7rem;
+    border-bottom: 0.5px solid #333438;
+}
+
+.jugadorB2RankingDirectivo{
+    padding-block: 0rem;
+    background-color: #FFFFFF;
+    padding-inline: 1.7rem;
+    border-bottom: 0.5px solid #333438;
+}
+
+.jugadorCRankingDirectivo{
+    padding-block: 0rem;
+    background-color: #FFFFFF;
+    padding-inline: 1.7rem;
+    border-bottom: 0.5px solid #333438;
+}
+
+.puestoBRankingTablaDirectivo span{
+    font-family: 'Anton', sans-serif;
+    font-weight: 400;
+    font-size: 4.52rem;
+    color: #333438;
+}
+
+.nombreBRankingTablaDirectivo{
+    text-align: start;
+}
+
+.nombreBRankingTablaDirectivo span{
+    font-weight: 600;
+    font-size: 2.1rem;
+    color: #333438;
+}
+
+.puntosBRankingTablaDirectivo span{
+    font-family: 'Anton', sans-serif;
+    font-weight: 400;
+    font-size: 3.1rem;
+    color: #333438;
+}
+
+.numeroJugadorRankingDirectivo{
+    width: 36px;
+}
+
+.parteInferiorRankingDirectivo{
+    background-color: #CE1236;
+    padding-block: 1rem;
+    padding-inline: 2rem;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    text-align: center;
+}
+
+.parteInferiorRankingDirectivo span{
+    font-family: 'Anton', sans-serif;
+    font-weight: 400;
+    font-size: 1.62rem;
+    color: #FFFFFF;
+}
