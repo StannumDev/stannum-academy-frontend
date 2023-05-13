@@ -22,6 +22,19 @@
     color: #D3214D;
 }
 
+.divBotonesRankingDominiosDirectivo{
+    width: 70%;
+    margin: auto;
+    margin-top: 2rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.divBotonesRankingDominiosDirectivoMostrar {
+    opacity: 1;
+    transition: opacity 0.5s;
+}
+
 .divGrandeRankingDirectivo{
     width: 30%;
     margin: auto;

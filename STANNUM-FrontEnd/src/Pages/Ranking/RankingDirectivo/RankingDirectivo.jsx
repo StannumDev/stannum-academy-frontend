@@ -7,6 +7,14 @@ function RankingDirectivo() {
         <>
             <div className='tituloRankingDirectivo'><h1 className='tituloRankingH1Directivo'>RANKING DE DOMINIOS</h1></div>
             <div className='subtituloRankingDirectivo'><h2 className='subtituloRankingH2Directivo'>DOMINIO 1 - DIRECTIVO</h2></div>
+            <div className="divBotonesRankingDominiosDirectivo divBotonesRankingDominiosDirectivoMostrar">
+                <div className='divBotonRankingDominioChico'><a href="/Ranking/Directivo"><button className='botonRankingDominio1' disabled={true}>Dominio 1</button></a></div>
+                <div className='divBotonRankingDominioChico'><button className='botonRankingDominio2' disabled={true}>Dominio 2</button></div>
+                <div className='divBotonRankingDominioChico'><button className='botonRankingDominio3' disabled={true}>Dominio 3</button></div>
+                <div className='divBotonRankingDominioChico'><button className='botonRankingDominio4' disabled={true}>Dominio 4</button></div>
+                <div className='divBotonRankingDominioChico'><button className='botonRankingDominio5' disabled={true}>Dominio 5</button></div>
+                <div className='divBotonRankingDominioChico'><button className='botonRankingDominio6' disabled={true}>Dominio 6</button></div>
+            </div>
             <div className='divGrandeRankingDirectivo'>
                 <div className='d-flex parteSuperiorRankingDirectivo'>
                     <div className='titulosRankingTablaDirectivo'><span>N°</span></div>

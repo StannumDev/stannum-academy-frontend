@@ -12,11 +12,16 @@ body:not(.bg-white):not(.crear-usuario):not(.crear-edificio) {
 /* font-family: 'Anton', sans-serif;
 font-family: 'Poppins', sans-serif; */
 
-body{
+body:not(.recuperar-contraseña-body){
     background-color: #FFFFFF;
     background-image: url("../src/assets/Concrete.png");
     background-size: cover;
     background-blend-mode: multiply;
+} 
+
+body.recuperar-contraseña-body{
+    background: url("../src/assets/RecuperarContraseña.png") no-repeat center center fixed;
+    background-size: cover;
 } 
 
 input:-webkit-autofill,

@@ -1,0 +1,86 @@
+.recuperar-contraseña-body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.cajaRecuperarContraseña{
+    background: #FFFFFF;
+    box-shadow: 0px 8px 16px -2px rgba(0, 0, 0, 0.25);
+    border-radius: 32px;
+    width: 30%;
+    margin: auto;
+    padding-block: 2rem;
+    padding-inline: 3rem;
+}
+
+.imagenRecuperarContraseña{
+    width: 60%;
+    margin: auto;
+}
+
+.imagenRecuperarContraseña img{
+    filter: invert(70%);
+    width: 100%;
+}
+
+.tituloOlvidasteTuContraseña{
+    width: 100%;
+    text-align: center;
+    margin-top: 1.5rem;
+}
+
+.tituloOlvidasteTuContraseña h1{
+    font-family: 'Anton';
+    font-size: 2.5rem;
+    color: #505050; 
+}
+
+.tituloOlvidasteTuContraseña h1 span{
+    font-family: 'Anton';
+    font-size: 2.5rem;
+    color: #67CCB9; 
+}
+
+.explicacionOlvidasteTuContraseña{
+    font-weight: 500;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    color: #838282;
+    text-align: start;
+    margin-top: 1.5rem;
+}
+
+.botonVolverRecuperarContraseña{
+    background: #67CCB9;
+    border: 1px solid #67CCB9;
+    border-radius: 4px;
+    color: white;
+    padding-inline: 2.2rem;
+    padding-block: 1.3rem;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    font-weight: 700;
+    font-style: normal;
+    text-align: center;
+}
+
+.textoNoTienesUnaCuentaRecuperarContraseña{
+    font-weight: 700;
+    font-size: 1rem;
+    color: #FFFFFF;
+    text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.50);
+}
+
+.botonSolicitarAccesoRecuperarContraseña{
+    background: #3A3A3A;
+    border-radius: 4px;
+    font-weight: 400;
+    font-size: 1rem;
+    text-align: center;
+    color: #FFFFFF;
+    padding-inline: 1rem;
+    padding-block: 0.5rem;
+    border: none;
+}
