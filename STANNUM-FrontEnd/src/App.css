@@ -22,6 +22,8 @@ body:not(.recuperar-contraseña-body){
 body.recuperar-contraseña-body{
     background: url("../src/assets/RecuperarContraseña.png") no-repeat center center fixed;
     background-size: cover;
+    backdrop-filter: blur(5px);
+    background-blend-mode: multiply;
 } 
 
 input:-webkit-autofill,
@@ -41,4 +43,8 @@ input:-webkit-autofill:active {
 .form-control.is-invalid:focus {
     box-shadow: none;
     border-color: none;
+}
+
+button {
+    border: none;
 }

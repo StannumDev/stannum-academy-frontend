@@ -1,7 +1,6 @@
 import React from 'react'
 import './login.css'
 import imagenLogin from '../../assets/Login.png'
-import iconoStannum from '../../assets/LogoColor.png'
 import FormularioLogin from '../../Components/FormularioLogin/FormularioLogin'
 
 function Login() {
@@ -14,7 +13,7 @@ function Login() {
             <div className='col-6 bg-white d-flex align-items-center formularioLoginDiv'>
                 <div>
                     <h1 className='fs-3'><span className='ingreseALogin'>Ingresa a</span> <span className='stannumAcademyTituloLogin'>Stannum Academy!</span></h1>
-                    <h3 className='fs-6 completaTuInformacion mt-3'>Completa tu información para ingresar</h3>
+                    <h3 className='fs-6 completaTuInformacion mt-3'>Completa tu información para ingresar.</h3>
                     <FormularioLogin/>
                 </div>
                 <div className='d-flex justify-content-end gap-3 align-items-center divSolicitarAcceso'>

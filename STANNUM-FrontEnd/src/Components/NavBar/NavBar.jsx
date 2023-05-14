@@ -21,6 +21,9 @@ function NavBar() {
       if (location.pathname === '/Perfil') {
         setActiveIndex(2);
       }
+      if (location.pathname === '/Iniciar-sesion') {
+        setActiveIndex(3);
+      }
     }, [location.pathname]);
 
     if (location.pathname !== '/Iniciar-sesion' && !location.pathname.includes('/Recuperar-contrase%C3%B1a')) {
@@ -45,7 +48,7 @@ function NavBar() {
                                 <li className={`nav-item ${activeIndex === 2 ? 'active' : 'nonActive'}`}>
                                     <a className="nav-link linkNavbar" aria-current="page" href="/Perfil">Mi Perfil</a>
                                 </li>
-                                <li className="nav-item nonActive">
+                                <li className={`nav-item ${activeIndex === 3 ? 'active' : 'nonActive'}`}>
                                     <a className="nav-link linkNavbar" aria-current="page" href="/Iniciar-sesion">Iniciar Sesión</a>
                                 </li>
                             </ul>
