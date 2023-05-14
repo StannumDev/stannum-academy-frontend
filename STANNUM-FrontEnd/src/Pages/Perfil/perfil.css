@@ -1,0 +1,234 @@
+.tituloPerfil{
+    margin-top: 3rem;
+    text-align: center;
+}
+
+.tituloPerfil h1{
+    font-family: 'Anton', sans-serif;
+    font-weight: 400;
+    font-size: 6rem;
+    color: #323337;
+}
+
+.parrafoPerfil{
+    width: 50%;
+    margin: auto;
+    margin-top: 1.2rem;
+    text-align: center;
+}
+
+.parrafoPerfil p{
+    font-weight: 400;
+    font-size: 1.5rem;
+    line-height: 2.23rem;
+    color: #505050;
+}
+
+.rowDatosDelJugador{
+    width: 80%;
+    margin: auto;
+}
+
+.divFotoJugadorPerfil{
+    background: #DEDEDE;
+    border-radius: 16px;
+    filter: drop-shadow(0px 10px 10px #a8aaae);
+    text-align: center;
+    padding-block: 2rem;
+}
+
+.divFotoJugadorPerfil img {
+    width: 45%;
+}
+
+.divDatosDelJugadorInfo{
+    padding-left: 3rem;
+}
+
+.datosDelJugador{
+    width: 100%;
+    background: #DEDEDE;
+    border-radius: 16px;
+    filter: drop-shadow(0px 10px 10px #a8aaae);
+    padding-left: 4rem;
+    padding-block: 1rem;
+}
+
+.datosDelJugador h2{
+    font-family: 'Anton';
+    font-weight: 400;
+    font-size: 3.4rem;
+    color: #323337;
+    margin: 0;
+}
+
+.datosDelJugadorInformacion{
+    background: #DEDEDE;
+    border-radius: 16px;
+    filter: drop-shadow(0px 10px 10px #a8aaae);
+}
+
+.datosJugadorSeccion {
+    width: 50%;
+    padding-block: 2rem;
+    padding-left: 4rem;
+    text-align: start;
+}
+
+.NombreSeccionDatosJugador{
+    font-family: 'Anton';
+    font-size: 1.7rem;
+    color: #323337;
+}
+
+.InfoSeccionDatosJugador{
+    font-weight: 400;
+    font-size: 1.5rem;
+    color: #323337;
+    margin-top: -0.5rem;
+}
+
+.datosJugadorSeccion1{
+    border-bottom: 1px solid #747474;
+    border-right: 1px solid #747474;
+}
+
+.datosJugadorSeccion2{
+    border-bottom: 1px solid #747474;
+}
+
+.datosJugadorSeccion3{
+    border-right: 1px solid #747474;
+}
+
+.nombreCardFIFA{
+    font-family: 'Anton';
+    font-weight: 400;
+    font-size: 1.3rem;
+    letter-spacing: 1.5px;
+    color: #FFFFFF;
+    position: absolute;
+    top: 175px;
+    right: 0;
+    left: 0;
+    /* border-bottom: 1px solid #FFFFFF; */
+    width: 40%;
+    margin: auto;
+}
+
+.puntosCardFIFA{
+    position: absolute;
+    top: 90px;
+    left: 160px;
+}
+
+.puntosNumeroCardFIFA{
+    font-family: 'Anton';
+    font-weight: 400;
+    font-size: 2.7rem;
+    color: #FFFFFF;
+}
+
+.puntosTextoCardFIFA{
+    font-weight: 200;
+    font-size: 1rem;
+    color: #FFFFFF;
+    letter-spacing: 0px;
+    margin-top: -1rem;
+}
+
+.puntajesDominiosPerfilFIFA{
+    width: 45%;
+    margin: auto;
+    position: absolute;
+    top: 220px;
+    right: 0;
+    left: 0;
+}
+
+.numeroPtsCardFIFA{
+    font-family: 'Anton';
+    font-weight: 400;
+    font-size: 1.5rem;
+    color: #FFFFFF;
+    width: 45px;
+}
+
+.dominioPtsCardFIFA{
+    font-family: 'Anton';
+    font-weight: 400;
+    font-size: 1.3rem;
+    color: #FFFFFF;
+}
+
+.segundaColumnaEstadisticas{
+    border-left: 1px solid #FFFFFF;
+}
+
+.cajaSeleccionarCardDominio{
+    width: 80%;
+    margin: auto;
+    margin-top: 3rem;
+    margin-bottom: 10rem;
+    background: #DEDEDE;
+    border-radius: 16px;
+    filter: drop-shadow(0px 10px 10px #a8aaae);
+    padding: 2rem;
+}
+
+.cardDominioPerfil{
+    background-color: #FFFFFF;
+    padding-inline: 2rem ;
+    padding-block: 1rem;
+}
+
+.tituloCardDominioPerfil{
+    font-weight: 700;
+    font-size: 1.2rem;
+    color: #323337;
+    border-bottom: 1px solid #b6b6b6;
+}
+
+.subtituloCardDominioPerfil{
+    margin-top: 0.5rem;
+    font-family: 'Anton';
+    font-weight: 400;
+    font-size: 1.7rem;
+    color: #323337;
+    border-bottom: 1px solid #b6b6b6;
+}
+
+.numeroCardDominioPerfil{
+    font-family: 'Anton';
+    font-weight: 400;
+    font-size: 2.1rem;
+    color: #323337;
+    width: 70%;
+    margin: auto;
+    border-bottom: 1px solid #b6b6b6;
+}
+
+.textoPuntosCardDominioPerfil{
+    font-weight: 600;
+    font-size: 1rem;
+    color: #323337;
+}
+
+.progress{
+    width: 100%;
+    border: 5px solid #333333;
+    background-color: #333333;
+    height: 20px;
+    border-radius: 0px;
+    position: relative;
+    top: 0px;
+}
+
+.progress-bar{
+    border: 5px solid #CD0133;
+    width: 50%;
+    background-color: #CD0133;
+    height: 20px;
+}
+
+

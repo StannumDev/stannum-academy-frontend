@@ -5,6 +5,7 @@ import Footer from './Components/Footer/Footer';
 import NavBar from './Components/NavBar/NavBar';
 import Inicio from './Pages/Inicio/Inicio';
 import Login from './Pages/Login/Login';
+import Perfil from './Pages/Perfil/Perfil';
 import Ranking from './Pages/Ranking/Inicio/Ranking';
 import RankingDirectivo from './Pages/Ranking/RankingDirectivo/RankingDirectivo';
 import RecuperarContraseñaSeccion1 from './Pages/RecuperarContraseña/RecuperarContraseñaSeccion1/RecuperarContraseñaSeccion1';
@@ -21,6 +22,7 @@ function App() {
     <Routes>
       <Route path="/Iniciar-sesion" element={<Login/>} />
       <Route path="/" element={<Inicio/>} />
+      <Route path="/Perfil" element={<Perfil/>} />
       <Route path="/Ranking/Inicio" element={<Ranking/>} />
       <Route path="/Ranking/Directivo" element={<RankingDirectivo/>} />
       <Route path="/Test/Dominio/Directivo" element={<InicioTestDirectivo/>} />
