@@ -105,7 +105,7 @@
     font-family: 'Anton';
     font-weight: 400;
     font-size: 1.3rem;
-    letter-spacing: 1.5px;
+    letter-spacing: 0px;
     color: #FFFFFF;
     position: absolute;
     top: 175px;
@@ -173,13 +173,16 @@
     background: #DEDEDE;
     border-radius: 16px;
     filter: drop-shadow(0px 10px 10px #a8aaae);
-    padding: 2rem;
+    padding-block: 2rem;
 }
 
 .cardDominioPerfil{
     background-color: #FFFFFF;
+    border-radius: 10px;
+    filter: drop-shadow(0px 5px 6px #a8aaae);
     padding-inline: 2rem ;
     padding-block: 1rem;
+    cursor: pointer;
 }
 
 .tituloCardDominioPerfil{
@@ -190,12 +193,16 @@
 }
 
 .subtituloCardDominioPerfil{
+    position: absolute;
+    text-align: center;
+    top: 45px;
+    left: 0;
+    right: 0;
     margin-top: 0.5rem;
     font-family: 'Anton';
     font-weight: 400;
     font-size: 1.7rem;
     color: #323337;
-    border-bottom: 1px solid #b6b6b6;
 }
 
 .numeroCardDominioPerfil{
@@ -215,7 +222,7 @@
 }
 
 .progress{
-    margin-top: 1rem;
+    margin-top: 3.2rem;
     width: 100%;
     background-color: #333333;
     height: 20px;
@@ -225,7 +232,158 @@
 }
 
 .progress-bar{
-    width: 50%;
-    background-color: #CD0133;
     height: 20px;
+}
+
+.progress-bar1{
+    background-color: #CD0133;
+}
+
+.progress-bar2{
+    width: 57%;
+    background-color: #35B4B6;
+}
+
+.progress-bar3{
+    width: 23%;
+    background-color: #FFCA1A;
+}
+
+.progress-bar4{
+    width: 65%;
+    background-color: #4EA86A;
+}
+
+.progress-bar5{
+    width: 96%;
+    background-color: #FE832F;
+}
+
+.progress-bar6{
+    width: 30%;
+    background-color: #6A279B;
+}
+
+.proximamenteCardDominioPerfil{
+    font-family: 'Anton';
+    font-weight: 400;
+    font-size: 1rem;
+    padding-bottom: 0.6rem;
+    border-bottom: 1px solid #b6b6b6;
+    width: 70%;
+    text-align: center;
+    margin: auto;
+}
+
+.proximamenteCardDominioPerfil span{
+    font-family: 'Anton';
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 10px;
+    display: block;
+}
+
+.proximamenteCardDominioPerfil2{
+    color: #35B4B6;
+}
+
+.proximamenteCardDominioPerfil3{
+    color: #FFCA1A;
+}
+
+.proximamenteCardDominioPerfil4{
+    color: #4EA86A;
+}
+
+.proximamenteCardDominioPerfil5{
+    color: #FE832F;
+}
+
+.proximamenteCardDominioPerfil6{
+    color: #6A279B;
+}
+
+.mesProximamenteCardDominioPerfil{
+    font-weight: 500;
+    font-size: 1.5rem;
+    margin-bottom: -0.7rem;
+}
+
+.mesProximamenteCardDominioPerfil2{
+    color: #35B4B6;
+}
+
+.mesProximamenteCardDominioPerfil3{
+    color: #FFCA1A;
+}
+
+.mesProximamenteCardDominioPerfil4{
+    color: #4EA86A;
+}
+
+.mesProximamenteCardDominioPerfil5{
+    color: #FE832F;
+}
+
+.mesProximamenteCardDominioPerfil6{
+    color: #6A279B;
+}
+
+.cardDominioPerfilPresionada{
+    background-color: #CD0133;;
+    border-radius: 10px;
+    filter: drop-shadow(0px 5px 6px #a8aaae);
+    padding-inline: 2rem ;
+    padding-block: 1rem;
+    cursor: pointer;
+}
+
+.tituloCardDominioPerfilPresionada{
+    font-weight: 700;
+    font-size: 1.2rem;
+    color: #FFFFFF;
+    border-bottom: 1px solid #b6b6b6;
+}
+
+.subtituloCardDominioPerfilPresionada{
+    position: absolute;
+    text-align: center;
+    top: 45px;
+    left: 0;
+    right: 0;
+    margin-top: 0.5rem;
+    font-family: 'Anton';
+    font-weight: 400;
+    font-size: 1.7rem;
+    color: #FFFFFF;
+}
+
+.progressPresionada{
+    margin-top: 1rem;
+    width: 100%;
+    background-color: #333333;
+    height: 20px;
+    border-radius: 0px;
+    position: relative;
+    top: 0px;
+}
+
+.progress-barPresionada{
+    background-color: #FFFFFF;
+}
+
+.numeroCardDominioPerfilPresionada{
+    color: #FFFFFF;
+    font-family: 'Anton';
+    font-weight: 400;
+    font-size: 2.1rem;
+    width: 70%;
+    margin: auto;
+    border-bottom: 1px solid #b6b6b6;
+}
+
+.textoPuntosCardDominioPerfilPresionada{
+    color: #FFFFFF;
+    font-weight: 600;
+    font-size: 1rem;
 }
