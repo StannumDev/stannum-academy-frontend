@@ -215,8 +215,8 @@
 }
 
 .progress{
+    margin-top: 1rem;
     width: 100%;
-    border: 5px solid #333333;
     background-color: #333333;
     height: 20px;
     border-radius: 0px;
@@ -225,10 +225,7 @@
 }
 
 .progress-bar{
-    border: 5px solid #CD0133;
     width: 50%;
     background-color: #CD0133;
     height: 20px;
 }
-
-

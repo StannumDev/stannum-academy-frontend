@@ -72,8 +72,8 @@ function Perfil() {
             <div className='cardDominioPerfil d-flex flex-column text-center'>
                 <div className='tituloCardDominioPerfil'>DOMINIO 1</div>
                 <div className='subtituloCardDominioPerfil'>DIRECTIVO</div>
-                <div class="progress">
-                    <div class="progress-bar" role="progressbar" aria-label="Basic example" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+                <div className="progress">
+                    <div className="progress-bar" role="progressbar" aria-label="Basic example" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
                 </div>
                 <div className='numeroCardDominioPerfil'>55</div>
                 <div className='textoPuntosCardDominioPerfil'>PUNTOS</div>
