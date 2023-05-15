@@ -42,7 +42,7 @@ function FormularioLogin() {
         <>
             <form onSubmit={handleSubmit(onSubmit)} className='mt-5'>
                 <div className="row">
-                    <div className={`form-group`}>
+                    <div className={`form-group d-flex flex-column`}>
                         <label htmlFor="email" className='labelFormLogin'>Correo electrónico</label>
                         <input
                             type="text"
@@ -53,6 +53,7 @@ function FormularioLogin() {
                                 maxLength: 40,
                             })}
                         />
+                        <span class="input-border input-border-alt"></span>
                     </div>
                 </div>
                 {errors.email && errors.email.type === "required" && (
@@ -67,7 +68,7 @@ function FormularioLogin() {
                     </p>
                 )}
                 <div className="row">
-                    <div className={`form-group mt-3`}>
+                    <div className={`form-group mt-3  d-flex flex-column`}>
                         <div className='d-flex justify-content-between'>
                         <label htmlFor="password" className='labelFormLogin'>Contraseña</label>
                         <a href="/Recuperar-contraseña/Email" className="text-decoration-none linkOlvideContraseña">Olvidé mi contraseña</a>
@@ -77,6 +78,7 @@ function FormularioLogin() {
                             className={`inputLogin form-control mt-2`}
                             {...register("password", { required: true, maxLength: 40 })}
                         />
+                        <span class="input-border input-border-alt"></span>
                     </div>
                 </div>
                 {errors.password && errors.password.type === "required" && (

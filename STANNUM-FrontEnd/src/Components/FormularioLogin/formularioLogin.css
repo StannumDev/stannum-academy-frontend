@@ -7,7 +7,10 @@
 .inputLogin{
     background-color: #FFFFFF;
     border: 1px solid #C6C6C6;
-    border-radius: 4px;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 0px;
+    border-bottom-left-radius: 0px;
     height: 40px;
 }
 
@@ -34,4 +37,20 @@
 
 .linkOlvideContraseña{
     color: #838282;
+}
+
+.input-border {
+    height: 2px;
+    transition: width 0.2s cubic-bezier(0.6, -0.28, 0.735, 0.045);
+  }
+
+.input-border-alt {
+    width: 0%;
+    height: 3px;
+    background: linear-gradient(90deg, #e1ecea 0%, #67CCB9 100%);
+    transition: width 0.2s cubic-bezier(0.42, 0, 0.58, 1.00);
+}
+
+.inputLogin:focus + .input-border-alt {
+    width: 100%;
 }
