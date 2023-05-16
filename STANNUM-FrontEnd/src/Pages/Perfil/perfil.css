@@ -38,7 +38,7 @@
 }
 
 .divFotoJugadorPerfil img {
-    width: 45%;
+    width: 50%;
 }
 
 .divDatosDelJugadorInfo{
@@ -169,7 +169,7 @@
     width: 80%;
     margin: auto;
     margin-top: 3rem;
-    margin-bottom: 10rem;
+    margin-bottom: 3rem;
     background: #DEDEDE;
     border-radius: 16px;
     filter: drop-shadow(0px 10px 10px #a8aaae);
@@ -221,7 +221,7 @@
     color: #323337;
 }
 
-.progress{
+.progressCard{
     margin-top: 3.2rem;
     width: 100%;
     background-color: #333333;
@@ -231,7 +231,7 @@
     top: 0px;
 }
 
-.progress-bar{
+.progress-barCard{
     height: 20px;
 }
 
@@ -386,4 +386,190 @@
     color: #FFFFFF;
     font-weight: 600;
     font-size: 1rem;
+}
+
+.cajaGrandeEstadisticasHexagono{
+    width: 80%;
+    margin: auto;
+}
+
+.CajaEstadisticasSecciones{
+    background: #DEDEDE;
+    border-radius: 14px;
+    filter: drop-shadow(0px 10px 10px #a8aaae);
+    margin-bottom: 4rem;
+    padding-block: 2rem;
+}
+
+.tituloCajaEstadisticasSecciones{
+    text-align: center;
+}
+
+.tituloCajaEstadisticasSecciones h2{
+    font-family: 'Anton';
+    font-weight: 400;
+    font-size: 2.2rem;
+    color: #323337;
+}
+
+.subtituloCajaEstadisticasSecciones{
+    text-align: center;
+    margin-top: -0.6rem;
+}
+
+.subtituloCajaEstadisticasSecciones h3{
+    font-family: 'Anton';
+    font-weight: 400;
+    font-size: 2.2rem;
+    color: #CD0133;
+}
+
+.parteSuperiorSeccionesDirectivo{
+    background-color: #FFFFFF;
+    padding-inline: 2rem;
+    padding-block: 0.5rem;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.titulosSeccionesPuntosTablaDirectivo span{
+    font-family: 'Anton', sans-serif;
+    font-weight: 400;
+    font-size: 1.6rem;
+    color: #020203;
+}
+
+.estadisticasTablaSecciones{
+    margin: auto;
+    margin-top: 1rem;
+    width: 80%;
+    filter: drop-shadow(0px 10px 10px #a8aaae);
+    border-radius: 20px;
+    background-color: #FFFFFF;
+
+}
+
+.categoriaSeccionesDirectivo{
+    background-color: #FFFFFF;
+    padding-inline: 2rem;
+    padding-block: 0.5rem;
+    padding-bottom: 0rem;
+}
+
+.categoriaTextoSeccionesPuntosTablaDirectivo span{
+    font-weight: 500;
+    font-size: 1.2rem;
+    color: #020203;
+}
+
+.progressEstadisticas{
+    margin-left: auto;
+    margin-right: 2rem;
+    margin-bottom: 1rem;
+    width: 75%;
+    height: 5px;
+    top: 0px;
+    right: 0px;
+    position: relative;
+    background: #a8a8a8;
+}
+
+.progress-barEstadisticas{
+    width: 50%;
+    background: #CD0133;
+}
+
+.parteInferiorEstadisticasDirectivo{
+    background-color: #CE1236;
+    padding-block: 1rem;
+    padding-inline: 2rem;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    text-align: start;
+}
+
+.parteInferiorEstadisticasDirectivo span{
+    font-family: 'Anton', sans-serif;
+    font-weight: 400;
+    font-size: 1.62rem;
+    color: #FFFFFF;
+}
+
+.tituloRosaDeLosVientos{
+    text-align: center;
+}
+
+.tituloRosaDeLosVientos h2{
+    font-family: 'Anton';
+    font-weight: 400;
+    font-size: 3.5rem;
+    color: #323337;   
+}
+
+.parrafoRosaDeLosVientos{
+    width: 70%;
+    margin: auto;
+    margin-top: 2rem;
+}
+
+.parrafoRosaDeLosVientos span{
+    display: block;
+}
+
+.parrafoRosaDeLosVientos p{
+    font-family: 'Poppins';
+    font-weight: 400;
+    font-size: 29.9468px;
+    line-height: 31px;
+    text-align: center;
+    color: #323337;   
+}
+
+.hexagonoImagen{
+    width: 50%;
+    margin: auto;
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+
+.hexagonoImagen img{
+    width: 100%;
+}
+
+.puntoRojoHexagono{
+    width: 10px;
+    height: 10px;
+    background-color: #CD0133;
+    border-radius: 50%;
+    position: absolute;
+    top: 340px;
+    right: -13px;
+    left: 0;
+    margin: auto;
+}
+
+.parrafoFooter1Perfil p{
+    font-weight: 400;
+    font-size: 1.5rem;
+    text-align: center;
+    color: #323337;
+    margin-bottom: 2rem;
+}
+
+.parrafoFooter2Perfil p{
+    font-weight: 400;
+    font-size: 1.5rem;
+    text-align: center;
+    color: #323337;
+    margin-bottom: 3rem;
+}
+
+.parrafoFooter2Perfil b{
+    display: block;
+    font-weight: 700;
+    font-size: 1.5rem;
+    line-height: 1.2rem;
+    text-align: center;
+    color: #323337;
 }
