@@ -12,7 +12,7 @@ body:not(.bg-white):not(.crear-usuario):not(.crear-edificio) {
 /* font-family: 'Anton', sans-serif;
 font-family: 'Poppins', sans-serif; */
 
-body:not(.recuperar-contraseña-body){
+body:not(.recuperar-contraseña-body):not(.iniciar-sesion){
     background-color: #FFFFFF;
     background-image: url("../src/assets/Concrete.png");
     background-size: cover;
@@ -47,4 +47,20 @@ input:-webkit-autofill:active {
 
 button {
     border: none;
+}
+
+@media (max-width: 576px){
+
+}
+
+@media (min-width: 576px) and (max-width: 992px){
+
+}
+
+@media (min-width: 992px) and (max-width: 1200px){
+
+}
+
+@media (min-width: 1200px){
+
 }

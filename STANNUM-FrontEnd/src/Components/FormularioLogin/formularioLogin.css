@@ -1,16 +1,6 @@
-.labelFormLogin{
-    font-size: 1rem;
-    font-weight: 500;
-    color: #505050;
-}
-
 .inputLogin{
     background-color: #FFFFFF;
     border: 1px solid #C6C6C6;
-    border-top-left-radius: 4px;
-    border-top-right-radius: 4px;
-    border-bottom-right-radius: 0px;
-    border-bottom-left-radius: 0px;
     height: 40px;
 }
 
@@ -20,37 +10,215 @@
     bottom: 2px;
 }
 
-.botonSubmitLogin{
-    width: 160px;
-    background: #67CCB9;
-    border: 1px solid #67CCB9;
-    border-radius: 4px;
-    color: white;
-    padding-inline: 0.2rem;
-    padding-block: 0.5rem;
-    font-size: 12px;
-    line-height: 18px;
-    font-weight: 600;
-    font-style: normal;
-    height: 44px;
+@media (max-width: 576px){
+    .labelFormLogin{
+        font-size: 1rem;
+        font-weight: 600;
+        color: #505050;
+    }
+    .inputLogin{
+        border-top-left-radius: 4px;
+        border-top-right-radius: 4px;
+        border-bottom-right-radius: 4px;
+        border-bottom-left-radius: 4px;
+    }
+
+    .linkOlvideContraseña{
+        display: none;
+    }
+
+    .linkOlvideContraseñaResponsive{
+        margin-top: 1rem;
+        font-weight: 500;
+        color: #838282;
+        transition: color 0.3s ease;
+    }
+    
+    .linkOlvideContraseñaResponsive:focus{
+        color: #67CCB9;
+    }
+
+    .divBotonIniciarSesion{
+        justify-content: center;
+    }       
+     
+    .botonSubmitLogin{
+        width: 100%;
+        background: #67CCB9;
+        border: 1px solid #67CCB9;
+        border-radius: 4px;
+        color: white;
+        padding-block: 0.6rem;
+        font-size: 1rem;
+        font-weight: 600;
+        box-shadow: 0px 8px 16px -2px #51AB9A;
+    }
 }
 
-.linkOlvideContraseña{
-    color: #838282;
+@media (min-width: 576px) and (max-width: 992px){
+    .labelFormLogin{
+        font-size: 1rem;
+        font-weight: 600;
+        color: #505050;
+    }
+    .inputLogin{
+        border-top-left-radius: 4px;
+        border-top-right-radius: 4px;
+        border-bottom-right-radius: 4px;
+        border-bottom-left-radius: 4px;
+    }
+
+    .linkOlvideContraseña{
+        display: none;
+    }
+
+    .linkOlvideContraseñaResponsive{
+        margin-top: 1rem;
+        font-weight: 500;
+        color: #838282;
+        transition: color 0.3s ease;
+    }
+    
+    .linkOlvideContraseñaResponsive:focus{
+        color: #67CCB9;
+    }
+
+    .divBotonIniciarSesion{
+        justify-content: center;
+    }
+        
+    .botonSubmitLogin{
+        width: 100%;
+        background: #67CCB9;
+        border: 1px solid #67CCB9;
+        border-radius: 4px;
+        color: white;
+        padding-block: 0.6rem;
+        font-size: 1rem;
+        font-weight: 600;
+        box-shadow: 0px 8px 16px -2px #51AB9A;
+    }
 }
 
-.input-border {
-    height: 2px;
-    transition: width 0.2s cubic-bezier(0.6, -0.28, 0.735, 0.045);
-  }
+@media (min-width: 992px) and (max-width: 1200px){
+    .labelFormLogin{
+        font-size: 1rem;
+        font-weight: 500;
+        color: #505050;
+    }
+    .input-border {
+        height: 2px;
+        transition: width 0.2s cubic-bezier(0.6, -0.28, 0.735, 0.045);
+      }
+    
+    .input-border-alt {
+        width: 0%;
+        height: 3px;
+        background: linear-gradient(90deg, #e1ecea 0%, #67CCB9 100%);
+        transition: width 0.2s cubic-bezier(0.42, 0, 0.58, 1.00);
+    }
+    
+    .inputLogin:focus + .input-border-alt {
+        width: 100%;
+    }
 
-.input-border-alt {
-    width: 0%;
-    height: 3px;
-    background: linear-gradient(90deg, #e1ecea 0%, #67CCB9 100%);
-    transition: width 0.2s cubic-bezier(0.42, 0, 0.58, 1.00);
+    .inputLogin{
+        border-top-left-radius: 4px;
+        border-top-right-radius: 4px;
+        border-bottom-right-radius: 0px;
+        border-bottom-left-radius: 0px;
+    }
+
+    .linkOlvideContraseña{
+        color: #838282;
+        transition: color 0.3s ease;
+    }
+    
+    .linkOlvideContraseña:hover{
+        color: #67CCB9;
+    }
+
+    .linkOlvideContraseñaResponsive{
+        display: none;
+    }
+    
+    .divBotonIniciarSesion{
+        justify-content: end;
+    }
+    .botonSubmitLogin{
+        width: 160px;
+        background: #67CCB9;
+        border: 1px solid #67CCB9;
+        border-radius: 4px;
+        color: white;
+        padding-inline: 0.2rem;
+        padding-block: 0.5rem;
+        font-size: 12px;
+        line-height: 18px;
+        font-weight: 600;
+        font-style: normal;
+        height: 44px;
+    }
 }
 
-.inputLogin:focus + .input-border-alt {
-    width: 100%;
+@media (min-width: 1200px){
+    .labelFormLogin{
+        font-size: 1rem;
+        font-weight: 500;
+        color: #505050;
+    }
+    .input-border {
+        height: 2px;
+        transition: width 0.2s cubic-bezier(0.6, -0.28, 0.735, 0.045);
+      }
+    
+    .input-border-alt {
+        width: 0%;
+        height: 3px;
+        background: linear-gradient(90deg, #e1ecea 0%, #67CCB9 100%);
+        transition: width 0.2s cubic-bezier(0.42, 0, 0.58, 1.00);
+    }
+    
+    .inputLogin:focus + .input-border-alt {
+        width: 100%;
+    }
+
+    .inputLogin{
+        border-top-left-radius: 4px;
+        border-top-right-radius: 4px;
+        border-bottom-right-radius: 0px;
+        border-bottom-left-radius: 0px;
+    }
+
+    .linkOlvideContraseña{
+        color: #838282;
+        transition: color 0.3s ease;
+    }
+    
+    .linkOlvideContraseña:hover{
+        color: #67CCB9;
+    }    
+
+    .divBotonIniciarSesion{
+        justify-content: end;
+    }
+
+    .linkOlvideContraseñaResponsive{
+        display: none;
+    }
+    
+    .botonSubmitLogin{
+        width: 160px;
+        background: #67CCB9;
+        border: 1px solid #67CCB9;
+        border-radius: 4px;
+        color: white;
+        padding-inline: 0.2rem;
+        padding-block: 0.5rem;
+        font-size: 12px;
+        line-height: 18px;
+        font-weight: 600;
+        font-style: normal;
+        height: 44px;
+    }
 }

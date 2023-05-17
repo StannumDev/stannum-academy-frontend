@@ -146,48 +146,48 @@ function Perfil() {
                                 <div className='categoriaTextoSeccionesPuntosTablaDirectivo flex-fill ms-5'><span>EMPRENDEDOR ESTRATÉGICO</span></div>
                                 <div className='categoriaTextoSeccionesPuntosTablaDirectivo'><span>70</span></div>
                             </div>
-                            <div class="progress progressEstadisticas">
-                                <div class="progress-bar progress-barEstadisticas" role="progressbar" aria-label="Basic example" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+                            <div className="progress progressEstadisticas">
+                                <div className="progress-bar progress-barEstadisticas" role="progressbar" aria-label="Basic example" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
                             </div>
                             <div className='d-flex categoriaSeccionesDirectivo'>
                                 <div className='categoriaTextoSeccionesPuntosTablaDirectivo'><span>2</span></div>
                                 <div className='categoriaTextoSeccionesPuntosTablaDirectivo flex-fill ms-5'><span>CONCEPTOS ESTRATEGICOS</span></div>
                                 <div className='categoriaTextoSeccionesPuntosTablaDirectivo'><span>56</span></div>
                             </div>
-                            <div class="progress progressEstadisticas">
-                                <div class="progress-bar progress-barEstadisticas" role="progressbar" aria-label="Basic example" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+                            <div className="progress progressEstadisticas">
+                                <div className="progress-bar progress-barEstadisticas" role="progressbar" aria-label="Basic example" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
                             </div>
                             <div className='d-flex categoriaSeccionesDirectivo'>
                                 <div className='categoriaTextoSeccionesPuntosTablaDirectivo'><span>3</span></div>
                                 <div className='categoriaTextoSeccionesPuntosTablaDirectivo flex-fill ms-5'><span>CONOCIMIENTO DE MERCADO</span></div>
                                 <div className='categoriaTextoSeccionesPuntosTablaDirectivo'><span>5</span></div>
                             </div>
-                            <div class="progress progressEstadisticas">
-                                <div class="progress-bar progress-barEstadisticas" role="progressbar" aria-label="Basic example" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+                            <div className="progress progressEstadisticas">
+                                <div className="progress-bar progress-barEstadisticas" role="progressbar" aria-label="Basic example" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
                             </div>
                             <div className='d-flex categoriaSeccionesDirectivo'>
                                 <div className='categoriaTextoSeccionesPuntosTablaDirectivo'><span>4</span></div>
                                 <div className='categoriaTextoSeccionesPuntosTablaDirectivo flex-fill ms-5'><span>CONOCIMIENTO EMPRENDEDOR</span></div>
                                 <div className='categoriaTextoSeccionesPuntosTablaDirectivo'><span>29</span></div>
                             </div>
-                            <div class="progress progressEstadisticas">
-                                <div class="progress-bar progress-barEstadisticas" role="progressbar" aria-label="Basic example" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+                            <div className="progress progressEstadisticas">
+                                <div className="progress-bar progress-barEstadisticas" role="progressbar" aria-label="Basic example" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
                             </div>
                             <div className='d-flex categoriaSeccionesDirectivo'>
                                 <div className='categoriaTextoSeccionesPuntosTablaDirectivo'><span>5</span></div>
                                 <div className='categoriaTextoSeccionesPuntosTablaDirectivo flex-fill ms-5'><span>HABILIDADES DIRECTIVAS</span></div>
                                 <div className='categoriaTextoSeccionesPuntosTablaDirectivo'><span>90</span></div>
                             </div>
-                            <div class="progress progressEstadisticas">
-                                <div class="progress-bar progress-barEstadisticas" role="progressbar" aria-label="Basic example" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+                            <div className="progress progressEstadisticas">
+                                <div className="progress-bar progress-barEstadisticas" role="progressbar" aria-label="Basic example" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
                             </div>
                             <div className='d-flex categoriaSeccionesDirectivo'>
                                 <div className='categoriaTextoSeccionesPuntosTablaDirectivo'><span>6</span></div>
                                 <div className='categoriaTextoSeccionesPuntosTablaDirectivo flex-fill ms-5'><span>HABILIDADES DIGITALES</span></div>
                                 <div className='categoriaTextoSeccionesPuntosTablaDirectivo'><span>80</span></div>
                             </div>
-                            <div class="progress progressEstadisticas">
-                                <div class="progress-bar progress-barEstadisticas" role="progressbar" aria-label="Basic example" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+                            <div className="progress progressEstadisticas">
+                                <div className="progress-bar progress-barEstadisticas" role="progressbar" aria-label="Basic example" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
                             </div>
                             <div className='d-flex parteInferiorEstadisticasDirectivo'>
                                 <div className='footerTextoSeccionesPuntosTablaDirectivo'><span>7</span></div>

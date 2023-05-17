@@ -45,6 +45,8 @@ function FormularioLogin() {
                     <div className={`form-group d-flex flex-column`}>
                         <label htmlFor="email" className='labelFormLogin'>Correo electrónico</label>
                         <input
+                            autoComplete='true'
+                            id='email'
                             type="text"
                             className={`inputLogin form-control  mt-2`}
                             {...register("email", {
@@ -53,7 +55,7 @@ function FormularioLogin() {
                                 maxLength: 40,
                             })}
                         />
-                        <span class="input-border input-border-alt"></span>
+                        <span className="input-border input-border-alt"></span>
                     </div>
                 </div>
                 {errors.email && errors.email.type === "required" && (
@@ -74,11 +76,13 @@ function FormularioLogin() {
                         <a href="/Recuperar-contraseña/Email" className="text-decoration-none linkOlvideContraseña">Olvidé mi contraseña</a>
                         </div>
                         <input
+                            id='password'
                             type="password"
                             className={`inputLogin form-control mt-2`}
                             {...register("password", { required: true, maxLength: 40 })}
                         />
-                        <span class="input-border input-border-alt"></span>
+                        <span className="input-border input-border-alt"></span>
+                        <a href="/Recuperar-contraseña/Email" className="text-decoration-none align-self-end linkOlvideContraseñaResponsive">Olvidé mi contraseña</a>
                     </div>
                 </div>
                 {errors.password && errors.password.type === "required" && (
@@ -96,7 +100,7 @@ function FormularioLogin() {
                 ) : (
                     <></>
                 )}
-                <div className='mt-5 d-flex justify-content-end'>
+                <div className='mt-5 d-flex divBotonIniciarSesion'>
                     <button type="submit" className="botonSubmitLogin">
                         {loading ? (
                             <span

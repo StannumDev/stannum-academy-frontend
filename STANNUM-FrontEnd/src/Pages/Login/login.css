@@ -1,4 +1,4 @@
-.imagenLogin{
+.imagenLogin img{
     min-height: 100vh;   
     max-height: 100vh;   
     object-fit: cover;
@@ -28,27 +28,224 @@
     color: #FFFFFF;
 }
 
-.textoNoTienesUnaCuenta{
-    font-weight: 300;
-    font-size: 14px;
-    line-height: 21px;
-    color: #838282;
+@media (max-width: 576px){
+    .imagenLogin{
+        display: none;
+    }
+    .formularioLoginDiv{
+        flex-direction: column;
+        justify-content: start;
+        background-image: url("../../assets/Concrete.png");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-blend-mode: multiply;
+        background: rgb(255, 255, 255, 0.7);
+    }
+
+    .iniciar-sesion{
+        background-image: url("../../assets/Login.png");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-blend-mode: multiply;
+    } 
+    .volverAlInicioLogin{
+        display: none;
+    }
+    .divSolicitarAcceso{
+        position: absolute;
+        bottom: 40px;
+        justify-content: center;
+        right: 0;
+        left: 0;
+        flex-direction: column;
+        gap: 0.4rem;
+    }
+    .textoNoTienesUnaCuenta{
+        font-weight: 400;
+        font-size: 1rem;
+        color: #3e3e3e;
+    }
+    .tituloInicioStannum{
+        display: none;
+    }
+    .completaTuInformacion{
+        display: none;
+    }
+    .logoIniciarSesion{
+        margin-top: 6rem;
+        width: 90%;
+    }
+    .logoIniciarSesion img{
+        width: 100%;
+        filter: invert(70%);
+    }
+    .divLoginFormulario{
+        width: 90%;
+    }
 }
 
-.divSolicitarAcceso{
-    position: absolute;
-    top: 30px;
-    right: 30px;
+@media (min-width: 576px) and (max-width: 992px){
+    .imagenLogin{
+        display: none;
+    }
+    .formularioLoginDiv{
+        flex-direction: column;
+        justify-content: start;
+        background-image: url("../../assets/Concrete.png");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-blend-mode: multiply;
+        background: rgb(255, 255, 255, 0.7);
+    }
+
+    .iniciar-sesion{
+        background-image: url("../../assets/Login.png");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-blend-mode: multiply;
+    } 
+    .volverAlInicioLogin{
+        display: none;
+    }
+    .divSolicitarAcceso{
+        position: absolute;
+        bottom: 50px;
+        justify-content: center;
+        right: 0;
+        left: 0;
+        gap: 1rem;
+    }
+    .textoNoTienesUnaCuenta{
+        font-weight: 400;
+        font-size: 1rem;
+        color: #3e3e3e;
+    }
+    .tituloInicioStannum{
+        display: none;
+    }
+    .completaTuInformacion{
+        display: none;
+    }
+    .logoIniciarSesion{
+        margin-top: 6rem;
+        width: 50%;
+    }
+    .logoIniciarSesion img{
+        filter: invert(70%);
+        width: 100%;
+    }
+    .divLoginFormulario{
+        width: 60%;
+    }
 }
 
-.logoStannumLogin{
-    position: absolute;
-    z-index: 100;
-    top: 10px;
-    left: 10px;
-    width: 300px;
+@media (min-width: 992px) and (max-width: 1200px){
+    .formularioLoginDiv{
+        padding-left: 3rem;
+        background-color: #FFFFFF;
+    }
+
+    .volverAlInicioLogin {
+        margin-bottom: 2rem;
+        transition: transform 0.3s ease;
+        transform-origin: center;
+    }
+
+    .volverAlInicioLogin a{
+        font-weight: 500;
+        font-size: 1rem;
+        color: #838282;
+        transition: color 0.3s ease;
+    }
+
+    .volverAlInicioLogin:hover {
+        transform: scale(1.03);
+        font-weight: 500;
+        font-size: 1rem;
+    }
+
+    .volverAlInicioLogin a:hover {
+        color: #67CCB9;
+        
+    }
+
+    .volverAlInicioLogin a:hover .svgInicioVolver {
+        fill: #67CCB9;
+    }
+
+    .svgInicioVolver{
+        fill: #838282;
+        transition: fill 0.3s ease;
+    }
+    .divSolicitarAcceso{
+        position: absolute;
+        top: 30px;
+        right: 30px;
+        justify-content: end;
+        gap: 1rem;
+    }
+    .textoNoTienesUnaCuenta{
+        font-weight: 400;
+        font-size: 1rem;
+        color: #838282;
+    }
+    .logoIniciarSesion{
+        display: none;
+    }
 }
 
-.formularioLoginDiv{
-    padding-left: 7rem;
+@media (min-width: 1200px){
+    .formularioLoginDiv{
+        padding-left: 5rem;
+        background-color: #FFFFFF;
+    }
+
+    
+    .volverAlInicioLogin {
+        margin-bottom: 2rem;
+        transition: transform 0.3s ease;
+        transform-origin: center;
+    }
+
+    .volverAlInicioLogin a{
+        font-weight: 500;
+        font-size: 1rem;
+        color: #838282;
+        transition: color 0.3s ease;
+    }
+
+    .volverAlInicioLogin:hover {
+        transform: scale(1.03);
+        font-weight: 500;
+        font-size: 1rem;
+    }
+
+    .volverAlInicioLogin a:hover {
+        color: #67CCB9;
+        
+    }
+
+    .volverAlInicioLogin a:hover .svgInicioVolver {
+        fill: #67CCB9;
+    }
+
+    .svgInicioVolver{
+        fill: #838282;
+        transition: fill 0.3s ease;
+    }
+    .divSolicitarAcceso{
+        position: absolute;
+        top: 30px;
+        right: 30px;
+        justify-content: end;
+        gap: 1rem;
+    }
+    .textoNoTienesUnaCuenta{
+        font-weight: 400;
+        font-size: 1rem;
+        color: #838282;
+    }
+    .logoIniciarSesion{
+        display: none;
+    }
 }

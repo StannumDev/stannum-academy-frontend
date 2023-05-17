@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import LogoChico from '../../../assets/LogoChico.png'
 import axios from "axios";
 import { useForm } from "react-hook-form";
-import './recuperarContraseñaSeccion2.css'
 
 function RecuperarContraseñaSeccion2() {
 
@@ -38,15 +37,26 @@ function RecuperarContraseñaSeccion2() {
 
     return (
       <>
-        <div className='cajaRecuperarContraseña'>
+        <div className='cajaVolverAlInicioRecuperarContraseña'>
+          <div className='volverAlInicioLoginRecuperarContraseña'>
+            <a href="/Iniciar-sesion" className='text-decoration-none'>
+                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" className="bi bi-arrow-left-short svgInicioVolverRecuperarContraseña" viewBox="0 0 16 16">
+                    <path fillRule="evenodd" d="M12 8a.5.5 0 0 1-.5.5H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5a.5.5 0 0 1 .5.5z"/>
+                </svg>
+                <span>Iniciar Sesion</span>
+            </a>
+          </div>
+        </div>
+        <div className='cajaRecuperarContraseña mb-5'>
           <div className='imagenRecuperarContraseña'><img src={LogoChico} alt="Logo Stannum" /></div>
           <div className='tituloOlvidasteTuContraseña'><h1><span>RESTAURAR</span> CONTRASEÑA</h1></div>
           <div className='explicacionOlvidasteTuContraseña'><p>Complete los siguientes campos para restaurar y cambiar su contraseña. Debe contener al menos una mayúscula y un número.</p></div>
-          <form onSubmit={handleSubmit(onSubmit)} className='mt-5'>
+          <form onSubmit={handleSubmit(onSubmit)} className='mt-4'>
             <div className="row">
-              <div className={`form-group`}>
-                <label htmlFor="password" className='labelFormLogin'>Nueva contraseña</label>
+              <div className={`form-group d-flex flex-column`}>
+                <label htmlFor="passwordNuevo" className='labelFormLogin'>Nueva contraseña</label>
                   <input
+                    id='passwordNuevo'
                     type="password"
                     className={`inputLogin form-control  mt-2`}
                     {...register("password", {
@@ -56,6 +66,7 @@ function RecuperarContraseñaSeccion2() {
                         maxLength: 25,
                     })}
                   />
+                  <span className="input-border input-border-alt"></span>
               </div>
             </div>
             {errors.password && errors.password.type === "required" && (
@@ -75,9 +86,10 @@ function RecuperarContraseñaSeccion2() {
                 </p>
             )}
             <div className="row mt-4">
-              <div className={`form-group`}>
-                <label htmlFor="email" className='labelFormLogin'>Repetir contraseña</label>
+              <div className={`form-group d-flex flex-column`}>
+                <label htmlFor="passwordNuevo2" className='labelFormLogin'>Repetir contraseña</label>
                 <input
+                  id='passwordNuevo2'
                   type="password"
                   className={`inputLogin form-control  mt-2`}
                   {...register("password2", {
@@ -85,6 +97,7 @@ function RecuperarContraseñaSeccion2() {
                     validate: (value) => value === watch("password") || "Las contraseñas no coinciden.",
                   })}
                 />
+                <span className="input-border input-border-alt"></span>
               </div>
             </div>
             {errors.password2 && errors.password2.type === "required" && (
@@ -94,7 +107,7 @@ function RecuperarContraseñaSeccion2() {
                 <p className="text-danger mt-2 ms-1 fs-6">Las contraseñas no coinciden.</p>
             )}
             <div className='mt-5 d-flex justify-content-center'>
-              <button type="submit" className="botonSubmitLogin">
+              <button type="submit" className="botonSubmitEmailRecuperar">
                 {loading ? (
                   <span
                     className="spinner-border spinner-border-sm mr-2"
