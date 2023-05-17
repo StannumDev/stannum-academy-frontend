@@ -133,7 +133,7 @@ function RecuperarContraseñaSeccion2() {
           <div className='tituloOlvidasteTuContraseña'><h1>CONTRASEÑA<span> RESTAURADA</span></h1></div>
           <div className='explicacionOlvidasteTuContraseña text-center'><p>¡Su contraseña fue restaurada con éxito!</p></div>
           <div className='mt-4 d-flex justify-content-center'>
-            <a href='/Iniciar-sesion'><button type="button" className="botonVolverRecuperarContraseña">Volver al inicio</button></a>
+            <a href='/Iniciar-sesion'><button type="button" className="botonVolverRecuperarContraseña">Iniciar sesión</button></a>
           </div>       
         </div>
       </>

@@ -7,7 +7,7 @@ function Perfil() {
 
     const [Dominio, setDominio] = useState(0);
 
-    const points = 30; 
+    const points = 50; 
 
     return (
         <>

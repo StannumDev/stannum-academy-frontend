@@ -10,10 +10,9 @@ function Footer() {
   if (location.pathname !== '/Iniciar-sesion' && !location.pathname.includes('/Recuperar-contrase%C3%B1a')){
     return (
       <>
-          <div className="footer text-center">
-              <img src={logoStannum} className="footerImagen" alt="Logo Stannum Footer" />
-              {/* <span className='text-muted'><small>&copy; 2023 <b>XPLAY</b> - Todos los derechos reservados - Powered by <b>Coilin</b> - V 1.0.8</small></span> */}
-          </div>
+        <div className="footer text-center">
+          <a href='/'><img src={logoStannum} className="footerImagen" alt="Logo Stannum Footer" /></a>
+        </div>
       </>
     )
   }

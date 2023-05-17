@@ -3,64 +3,34 @@
     text-align: center;
 }
 
-.tituloRankingH1{
+.tituloRanking h1{
     font-family: 'Anton', sans-serif;
     font-weight: 400;
-    font-size: 6rem;
     color: #323337;
 }
 
 .parrafoRanking{
     text-align: center;
     margin:auto;
-    width: 50%;
     font-family: 'Poppins';
     font-style: normal;
     font-weight: 400;
-    font-size: 1.5rem;
-    line-height: 2.34rem;
     text-align: center;
     color: #505050;
 }
 
 .divRankingYMedallero{
-    width: 70%;
     margin: auto;
-    margin-top: 4rem;
-    gap: 5%;
-}
-
-.divBotonRankingDominio{
-    width: 47.5%;
 }
 
 .botonRankingDominio{
     width: 100%;
     font-family: 'Anton';
     font-weight: 400;
-    font-size: 4rem;
-    line-height: 4.4rem;
     text-align: center;
     color: #FFFFFF;
     background: #63C4B2;
     border-radius: 16px;
-    padding-inline: 4rem;
-    padding-block: 4rem;
-    border: none;
-    
-}
-
-.botonRankingDominio{
-    width: 100%;
-    font-family: 'Anton';
-    font-weight: 400;
-    font-size: 4rem;
-    line-height: 4.4rem;
-    text-align: center;
-    color: #FFFFFF;
-    border-radius: 16px;
-    padding-inline: 4rem;
-    padding-block: 4rem;
     border: none;
 }
 
@@ -96,15 +66,9 @@
 .botonRankingDominio span{
     font-family: 'Anton';
     font-weight: 400;
-    font-size: 4rem;
-    line-height: 4.4rem;
     text-align: center;
     color: #FFFFFF;
     display: block;
-}
-
-.divBotonMedalleroMetal{
-    width: 47.5%;
 }
 
 .botonMedalleroMetal{
@@ -113,8 +77,6 @@
     color: #A7A7A9;
     font-family: 'Anton';
     font-weight: 400;
-    font-size: 4rem;
-    line-height: 4.4rem;
     background: rgba(217, 217, 217, 0.5);
     background-image: url("../../../assets/Concrete.png");
     background-size: cover;
@@ -122,99 +84,155 @@
     background-blend-mode: multiply;
     border: 2px dashed #A2A2A2;
     border-radius: 16px;
-    padding-inline: 4rem;
-    padding-block: 4rem;
 }
 
 .botonMedalleroMetal span{
     font-family: 'Anton';
     font-weight: 400;
-    font-size: 4rem;
-    line-height: 4.4rem;
     text-align: center;
     color: #A7A7A9;
     display: block;
 }
 
 .divBotonesRankingDominios{
-    width: 70%;
     margin: auto;
     margin-top: 2rem;
-    margin-bottom: 10rem;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
 }
 
-.botonRankingDominio1{
-    background: #C8204A;
+.divBotonRankingDominioChico button{
+    width: 100%;
     border-radius: 10px;
     font-weight: 600;
-    font-size: 25px;
-    line-height: 38px;
-    color: #FFFFFF;
-    border: none;
-    padding-inline: 1rem;
-    padding-block: 0.3rem;
+    padding-block: 1rem;
 }
 
-.botonRankingDominio2{
+.botonRankingDominio1{
+    color: #C8204A;
+    background-color: #FFFFFF;
+    outline: 3px solid #C8204A;
+    outline-offset: -3px;
+    transition: all 0.3s ease;
+}
+
+.botonRankingDominio1:hover{
+    color: #FFFFFF;
+    background-color: #C8204A;
+    outline: 3px solid #C8204A;
+    outline-offset: 4px;
+}
+
+.botonRankingDominioViejo1{
+    color: #FFFFFF;
+    background-color: #C8204A;
+}
+
+.botonRankingDominioViejo2{
+    color: #FFFFFF;
+    background-color: #35B4B6;
+}
+
+.botonRankingDominioViejo3{
+    color: #FFFFFF;
+    background-color: #FFCA1A;
+}
+
+.botonRankingDominioViejo4{
+    color: #FFFFFF;
+    background-color: #4EA86A;
+}
+
+.botonRankingDominioViejo5{
+    color: #FFFFFF;
+    background-color: #FE832F;
+}
+
+.botonRankingDominioViejo6{
+    color: #FFFFFF;
+    background-color: #6A279B;
+}
+
+.botonRankingDominioDesactivado{
     background: rgba(229, 229, 229, 0.5);
     border: 1px dashed #A1A1A1;
-    border-radius: 10px;
-    font-weight: 600;
-    font-size: 25px;
-    line-height: 38px;
     color: #A7A7A9;
-    padding-inline: 1rem;
-    padding-block: 0.3rem;
+} 
+
+.botonRankingDominio2{
+    color: #35B4B6;
+    background-color: #FFFFFF;
+    outline: 3px solid #35B4B6;
+    outline-offset: -3px;
+    transition: all 0.3s ease;
+}
+
+.botonRankingDominio2:hover{
+    color: #FFFFFF;
+    background-color: #35B4B6;
+    outline: 3px solid #35B4B6;
+    outline-offset: 4px;
 }
 
 .botonRankingDominio3{
-    background: rgba(229, 229, 229, 0.5);
-    border: 1px dashed #A1A1A1;
-    border-radius: 10px;
-    font-weight: 600;
-    font-size: 25px;
-    line-height: 38px;
-    color: #A7A7A9;
-    padding-inline: 1rem;
-    padding-block: 0.3rem;
+    color: #FFCA1A;
+    background-color: #FFFFFF;
+    outline: 3px solid #FFCA1A;
+    outline-offset: -3px;
+    transition: all 0.3s ease;
+}
+
+.botonRankingDominio3:hover{
+    color: #FFFFFF;
+    background-color: #FFCA1A;
+    outline: 3px solid #FFCA1A;
+    outline-offset: 4px;
 }
 
 .botonRankingDominio4{
-    background: rgba(229, 229, 229, 0.5);
-    border: 1px dashed #A1A1A1;
-    border-radius: 10px;
-    font-weight: 600;
-    font-size: 25px;
-    line-height: 38px;
-    color: #A7A7A9;
-    padding-inline: 1rem;
-    padding-block: 0.3rem;
+    color: #4EA86A;
+    background-color: #FFFFFF;
+    outline: 3px solid #4EA86A;
+    outline-offset: -3px;
+    transition: all 0.3s ease;
+}
+
+.botonRankingDominio4:hover{
+    color: #FFFFFF;
+    background-color: #4EA86A;
+    outline: 3px solid #4EA86A;
+    outline-offset: 4px;
 }
 
 .botonRankingDominio5{
-    background: rgba(229, 229, 229, 0.5);
-    border: 1px dashed #A1A1A1;
-    border-radius: 10px;
-    font-weight: 600;
-    font-size: 25px;
-    line-height: 38px;
-    color: #A7A7A9;
-    padding-inline: 1rem;
-    padding-block: 0.3rem;
+    color: #FE832F;
+    background-color: #FFFFFF;
+    outline: 3px solid #FE832F;
+    outline-offset: -3px;
+    transition: all 0.3s ease;
+}
+
+.botonRankingDominio5:hover{
+    color: #FFFFFF;
+    background-color: #FE832F;
+    outline: 3px solid #FE832F;
+    outline-offset: 4px;
 }
 
 .botonRankingDominio6{
-    background: rgba(229, 229, 229, 0.5);
-    border: 1px dashed #A1A1A1;
-    border-radius: 10px;
-    font-weight: 600;
-    font-size: 25px;
-    line-height: 38px;
-    color: #A7A7A9;
-    padding-inline: 1rem;
-    padding-block: 0.3rem;
+    color: #6A279B;
+    background-color: #FFFFFF;
+    outline: 3px solid #6A279B;
+    outline-offset: -3px;
+    transition: all 0.3s ease;
+}
+
+.botonRankingDominio6:hover{
+    color: #FFFFFF;
+    background-color: #6A279B;
+    outline: 3px solid #6A279B;
+    outline-offset: 4px;
 }
 
 .divBotonesRankingDominiosEsconder {
@@ -233,4 +251,275 @@
 
 .divBotonesRankingDominiosEsconder.animate__animated.animate__fadeOutLeftBig{
     --animate-duration: 0.8s;
+}
+
+@media (max-width: 576px){
+
+    .tituloRanking h1{
+        font-size: 5rem;
+    }
+    
+    .parrafoRanking{
+        width: 80%;
+        font-size: 1.5rem;
+        line-height: 2rem;
+    }
+
+    .divRankingYMedallero{
+        width: 80%;
+        margin-top: 4rem;
+        flex-direction: column-reverse;
+    }
+    
+    .divBotonMedalleroMetal{
+        width: 100%;
+    }
+
+    .botonMedalleroMetal{
+        font-size: 3rem;
+        line-height: 3rem;
+        padding-inline: 2rem;
+        padding-block: 3rem;
+    }
+    
+    .botonMedalleroMetal span{
+        font-size: 3rem;
+    }
+    
+    .botonRankingDominio{
+        font-size: 3rem;
+        line-height: 3rem;
+        padding-inline: 2rem;
+        padding-block: 3rem;
+    }
+
+    .divBotonRankingDominio{
+        width: 100%;
+        margin-top: 2rem;
+    }
+    
+    .botonRankingDominio span{
+        font-size: 3rem;
+    }
+        
+    .divBotonesRankingDominios{
+        width: 80%;
+    }
+    
+    .divBotonRankingDominioChico{
+        width: 33%;
+        margin-bottom: 1rem;
+    }
+        
+    .divBotonRankingDominioChico button{
+        font-size: 1rem;
+    }
+    
+    .divBotonesRankingDominios{
+        margin-bottom: 4rem;
+    }
+}
+
+@media (min-width: 576px) and (max-width: 992px){
+
+    .tituloRanking h1{
+        font-size: 5rem;
+    }
+
+    .parrafoRanking{
+        width: 70%;
+        font-size: 1.5rem;
+        line-height: 2rem;
+    }
+
+    .divRankingYMedallero{
+        width: 80%;
+        margin-top: 4rem;
+        gap: 5%;
+        flex-direction: column-reverse;
+    }
+
+    .divBotonMedalleroMetal{
+        width: 100%;
+    }
+
+    .botonMedalleroMetal{
+        font-size: 4rem;
+        line-height: 4.4rem;
+        padding-inline: 4rem;
+        padding-block: 4rem;
+    }
+    
+    .botonMedalleroMetal span{
+        font-size: 4rem;
+        line-height: 4.4rem;
+    }
+
+    .botonRankingDominio{
+        font-size: 4rem;
+        line-height: 4.4rem;
+        padding-inline: 4rem;
+        padding-block: 4rem;
+    }
+
+    .divBotonRankingDominio{
+        width: 100%;
+        margin-top: 2rem;
+    }
+        
+    .botonRankingDominio span{
+        font-size: 4rem;
+        line-height: 4.4rem;
+    }
+
+    .divBotonesRankingDominios{
+        width: 80%;
+    }
+        
+    .divBotonRankingDominioChico{
+        width: 27%;
+        margin-bottom: 1rem;
+    }
+        
+    .divBotonRankingDominioChico button{
+        font-size: 1.3rem;
+    }
+
+    .divBotonesRankingDominios{
+        margin-bottom: 5rem;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1200px){
+
+    .tituloRanking h1{
+        font-size: 6rem;
+    }
+
+    .parrafoRanking{
+        width: 60%;
+        font-size: 1.5rem;
+        line-height: 2rem;
+    }
+
+    .divRankingYMedallero{
+        width: 80%;
+        margin-top: 4rem;
+        gap: 5%;
+    }
+
+    .divBotonMedalleroMetal{
+        width: 47.5%;
+    }
+
+    .botonMedalleroMetal{
+        font-size: 4rem;
+        line-height: 4.4rem;
+        padding-inline: 2.2rem;
+        padding-block: 4rem;
+    }
+    
+    .botonMedalleroMetal span{
+        font-size: 4rem;
+        line-height: 4.4rem;
+    }
+    
+    .botonRankingDominio{
+        font-size: 4rem;
+        line-height: 4.4rem;
+        padding-inline: 2.2rem;
+        padding-block: 4rem;
+    }
+
+    .divBotonRankingDominio{
+        width: 47.5%;
+    }
+        
+    .botonRankingDominio span{
+        font-size: 4rem;
+        line-height: 4.4rem;
+    }
+
+    .divBotonesRankingDominios{
+        width: 80%;
+    }
+        
+    .divBotonRankingDominioChico{
+        width: 14%;
+    }
+    
+    .divBotonRankingDominioChico button{
+        font-size: 1rem;
+    }
+
+    .divBotonesRankingDominios{
+        margin-bottom: 5rem;
+    }
+}
+
+@media (min-width: 1200px){
+
+    .tituloRanking h1{
+        font-size: 6rem;
+    }
+
+    .parrafoRanking{
+        width: 50%;
+        font-size: 1.5rem;
+        line-height: 2.34rem;
+    }
+    
+    .divRankingYMedallero{
+        width: 70%;
+        margin-top: 4rem;
+        gap: 5%;
+    }
+
+    .divBotonMedalleroMetal{
+        width: 47.5%;
+    }
+    
+    .botonMedalleroMetal{
+        font-size: 4rem;
+        line-height: 3.5rem;
+        padding-inline: 2rem;
+        padding-block: 6rem;
+    }
+    
+    .botonMedalleroMetal span{
+        font-size: 4rem;
+        line-height: 4rem;
+    }
+
+    .botonRankingDominio{
+        font-size: 4rem;
+        line-height: 3.5rem;
+        padding-inline: 2rem;
+        padding-block: 6rem;
+    }
+
+    .divBotonRankingDominio{
+        width: 47.5%;
+    }
+        
+    .botonRankingDominio span{
+        font-size: 4rem;
+        line-height: 4rem;
+    }
+
+    .divBotonesRankingDominios{
+        width: 70%;
+    }
+        
+    .divBotonRankingDominioChico{
+        width: 14%;
+    }
+    
+    .divBotonRankingDominioChico button{
+        font-size: 1rem;
+    }
+
+    .divBotonesRankingDominios{
+        margin-bottom: 6rem;
+    }
 }

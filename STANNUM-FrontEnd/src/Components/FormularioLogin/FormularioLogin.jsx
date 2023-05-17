@@ -15,27 +15,29 @@ function FormularioLogin() {
 
     const onSubmit = async (data) => {
         setLoading(true);
-        const respuesta = await axios.post(
-            `link/users/login-user`,
-            {
-                email: data.email.trim().toLowerCase(),
-                password: data.password,
-            }
-        );
-        if (respuesta.status === 200) {
-            Cookies.set('id', respuesta.data.user._id, { expires: 365 });
-            if (respuesta.data.user.role === "admin") {
-                Cookies.set('token', respuesta.data.token, { expires: 365 });
-                window.location.replace("/");
-            } else {
-                window.location.replace("/");
-            }
-        }
-        if (respuesta.status === 206) {
-            setLoading(false);
-            setError(true);
-            setErrorMensaje(respuesta.data.message)
-        }
+        console.log(data);
+        setLoading(false)
+        // const respuesta = await axios.post(
+        //     `link/users/login-user`,
+        //     {
+        //         email: data.email.trim().toLowerCase(),
+        //         password: data.password,
+        //     }
+        // );
+        // if (respuesta.status === 200) {
+        //     Cookies.set('id', respuesta.data.user._id, { expires: 365 });
+        //     if (respuesta.data.user.role === "admin") {
+        //         Cookies.set('token', respuesta.data.token, { expires: 365 });
+        //         window.location.replace("/");
+        //     } else {
+        //         window.location.replace("/");
+        //     }
+        // }
+        // if (respuesta.status === 206) {
+        //     setLoading(false);
+        //     setError(true);
+        //     setErrorMensaje(respuesta.data.message)
+        // }
     };
 
     return (
