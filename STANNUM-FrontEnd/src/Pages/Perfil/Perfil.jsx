@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import './perfil.css'
 import EscudoPerfil from '../../assets/escudoPerfil2.png'
 import EscudoPerfil2 from '../../assets/escudoPerfil3.png'
-import FotoDePerfil from '../../assets/FotoDePerfil.jpg'
+import FotoDePerfil from '../../assets/Captura.jpg'
 import Hexagono from '../../assets/HexagonoPerfil.png'
 
 function Perfil() {

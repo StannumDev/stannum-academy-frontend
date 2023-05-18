@@ -1,16 +1,25 @@
 *{
     font-family: 'Poppins', sans-serif; 
 }
-/* 
+/*
+
 body:not(.bg-white):not(.crear-usuario):not(.crear-edificio) {
     background: url("../src/assets/fondo.jpg") no-repeat center center fixed;
     background-size: cover;
-  } */
+  }
+  
+*/
 
 /* document.body.classList.add('crear-usuario'); */
 
-/* font-family: 'Anton', sans-serif;
-font-family: 'Poppins', sans-serif; */
+/*
+
+font-family: 'Anton', sans-serif;
+font-family: 'Poppins', sans-serif;
+font-family: 'Oswald', sans-serif;
+font-family: 'Bebas Neue', sans-serif;
+
+*/
 
 body:not(.recuperar-contraseña-body):not(.iniciar-sesion){
     background-color: #FFFFFF;
