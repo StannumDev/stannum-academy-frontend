@@ -1,6 +1,8 @@
 import { useState, useEffect } from 'react';
 import './perfil.css'
-import EscudoPerfil from '../../assets/escudoPerfil.png'
+import EscudoPerfil from '../../assets/escudoPerfil2.png'
+import EscudoPerfil2 from '../../assets/escudoPerfil3.png'
+import FotoDePerfil from '../../assets/FotoDePerfil.jpg'
 import Hexagono from '../../assets/HexagonoPerfil.png'
 
 function Perfil() {
@@ -15,7 +17,9 @@ function Perfil() {
             <div className='parrafoPerfil'><p>Teniendo en cuenta los resultados de los diferentes Test, generamos la siguiente plantilla con tu información. A medida que completes los Test, esta se irá completando.</p></div>
             <div className='row rowDatosDelJugador'>
                 <div className='col-4 divFotoJugadorPerfil'>
-                    <img src={EscudoPerfil} alt="Perfil Stannum" />
+                    <div className='contenedorImagen'>
+                        <img src={FotoDePerfil} alt="Perfil Stannum" />
+                    </div>
                     <div className='puntosCardFIFA d-flex flex-column align-items-center'>
                         <div className='puntosNumeroCardFIFA'>55</div>
                         <div className='puntosTextoCardFIFA'>TOTAL</div>
