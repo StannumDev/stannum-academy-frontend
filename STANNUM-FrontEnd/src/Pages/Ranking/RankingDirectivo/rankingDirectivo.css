@@ -44,17 +44,18 @@
 }
 
 .parteSuperiorRankingDirectivo{
+    width: 100%;
     background-color: #FFFFFF;
     padding-inline: 2rem;
-    padding-block: 0.5rem;
+    padding-block: 0.2rem;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
 }
 
 .titulosRankingTablaDirectivo span{
-    font-family: 'Anton', sans-serif;
-    font-weight: 400;
-    font-size: 1.6rem;
+    font-family: 'Bebas Neue', sans-serif;
+    font-weight: 700;
+    font-size: 2.5rem;
     color: #020203;
 }
 
@@ -74,9 +75,9 @@
 }
 
 .jugadorARankingDirectivo{
-    padding-block: 0rem;
+    width: 100%;
+    padding-inline: 2rem;
     background-color: #CE1236;
-    padding-inline: 1.7rem;
     border-bottom: 0.5px solid #333438;
 }
 
@@ -85,10 +86,6 @@
     font-weight: 400;
     font-size: 4.52rem;
     color: #FFFFFF;
-}
-
-.nombreARankingTablaDirectivo{
-    text-align: start;
 }
 
 .nombreARankingTablaDirectivo span{
@@ -105,23 +102,23 @@
 }
 
 .jugadorB1RankingDirectivo{
-    padding-block: 0rem;
+    width: 100%;
+    padding-inline: 2rem;
     background-color: #FFFFFF;
-    padding-inline: 1.7rem;
     border-bottom: 0.5px solid #333438;
 }
 
 .jugadorB2RankingDirectivo{
-    padding-block: 0rem;
+    width: 100%;
     background-color: #FFFFFF;
-    padding-inline: 1.7rem;
+    padding-inline: 2rem;
     border-bottom: 0.5px solid #333438;
 }
 
 .jugadorCRankingDirectivo{
-    padding-block: 0rem;
+    width: 100%;
     background-color: #FFFFFF;
-    padding-inline: 1.7rem;
+    padding-inline: 2rem;
     border-bottom: 0.5px solid #333438;
 }
 
@@ -130,10 +127,6 @@
     font-weight: 400;
     font-size: 4.52rem;
     color: #333438;
-}
-
-.nombreBRankingTablaDirectivo{
-    text-align: start;
 }
 
 .nombreBRankingTablaDirectivo span{
@@ -149,11 +142,8 @@
     color: #333438;
 }
 
-.numeroJugadorRankingDirectivo{
-    width: 36px;
-}
-
 .parteInferiorRankingDirectivo{
+    width: 100%;
     background-color: #CE1236;
     padding-block: 1rem;
     padding-inline: 2rem;
