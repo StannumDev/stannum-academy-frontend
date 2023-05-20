@@ -3,6 +3,7 @@
 }   
 
 .footer{
+    border-top: 2px solid rgb(103,204,185, 1);
     background-blend-mode: multiply;
     background-color: #3A3A3A;
     background-image: url("../../assets/ConcreteIntenso.png");

@@ -3,6 +3,7 @@
     padding-top: 3rem;
     background-color: #D3214D;
     background-image: url("../../../assets/Concrete.png");
+    background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;
     background-blend-mode: multiply;
@@ -37,5 +38,6 @@
 }
 
 .labelInput1-3{
+    color: #FFFFFF;
     margin-left: 1rem;
 }

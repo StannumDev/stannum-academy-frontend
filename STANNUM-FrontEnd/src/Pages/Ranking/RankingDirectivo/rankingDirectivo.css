@@ -3,11 +3,11 @@
     text-align: center;
 }
 
-.tituloRankingH1Directivo{
+.tituloRankingDirectivo h1{
     font-family: 'Anton', sans-serif;
     font-weight: 400;
     font-size: 6rem;
-    color: #323337;
+    color: #FFFFFF;
 }
 
 .subtituloRankingDirectivo{
@@ -15,7 +15,7 @@
     text-align: center;
 }
 
-.subtituloRankingH2Directivo{
+.subtituloRankingDirectivo h2{
     font-family: 'Anton', sans-serif;
     font-weight: 400;
     font-size: 3rem;
@@ -167,4 +167,12 @@
     font-weight: 400;
     font-size: 1.62rem;
     color: #FFFFFF;
+}
+
+.botonRankingDominio1Activo{
+    color: #FFFFFF;
+    background-color: #C8204A;
+    outline: 3px solid #C8204A;
+    outline-offset: -3px;
+    transition: all 0.3s ease;
 }

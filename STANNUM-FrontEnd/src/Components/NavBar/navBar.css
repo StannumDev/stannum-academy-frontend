@@ -26,6 +26,8 @@
     background-repeat: no-repeat;
     background-blend-mode: multiply;
     background-color: #3A3A3A;;
+    border-bottom: 2px solid rgb(103,204,185, 1);
+    background-position: center center;
 }
   
 .animate__animated.animate__fadeInDown {

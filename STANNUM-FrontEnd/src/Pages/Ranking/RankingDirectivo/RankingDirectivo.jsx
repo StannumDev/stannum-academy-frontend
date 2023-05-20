@@ -5,10 +5,10 @@ function RankingDirectivo() {
 
     return (
         <>
-            <div className='tituloRankingDirectivo'><h1 className='tituloRankingH1Directivo'>RANKING DE DOMINIOS</h1></div>
-            <div className='subtituloRankingDirectivo'><h2 className='subtituloRankingH2Directivo'>DOMINIO 1 - DIRECTIVO</h2></div>
+            <div className='tituloRankingDirectivo'><h1>RANKING DE DOMINIOS</h1></div>
+            <div className='subtituloRankingDirectivo'><h2>DOMINIO 1 - DIRECTIVO</h2></div>
             <div className="divBotonesRankingDominiosDirectivo divBotonesRankingDominiosDirectivoMostrar">
-                <div className='divBotonRankingDominioChico'><a href="/Ranking/Directivo"><button className='botonRankingDominio1' disabled={true}>Dominio 1</button></a></div>
+                <div className='divBotonRankingDominioChico'><a href="/Ranking/Directivo"><button className='botonRankingDominio1Activo' disabled={true}>Dominio 1</button></a></div>
                 <div className='divBotonRankingDominioChico'><button className='botonRankingDominioDesactivado' disabled={true}>Dominio 2</button></div>
                 <div className='divBotonRankingDominioChico'><button className='botonRankingDominioDesactivado' disabled={true}>Dominio 3</button></div>
                 <div className='divBotonRankingDominioChico'><button className='botonRankingDominioDesactivado' disabled={true}>Dominio 4</button></div>
