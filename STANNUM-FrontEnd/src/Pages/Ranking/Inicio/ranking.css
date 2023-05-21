@@ -306,6 +306,7 @@
     }
         
     .divBotonesRankingDominios{
+        margin-bottom: 4rem;
         width: 80%;
     }
     
@@ -318,9 +319,6 @@
         font-size: 1rem;
     }
     
-    .divBotonesRankingDominios{
-        margin-bottom: 4rem;
-    }
 }
 
 @media (min-width: 576px) and (max-width: 992px){
@@ -377,6 +375,7 @@
 
     .divBotonesRankingDominios{
         width: 80%;
+        margin-bottom: 5rem;
     }
         
     .divBotonRankingDominioChico{
@@ -388,9 +387,6 @@
         font-size: 1.3rem;
     }
 
-    .divBotonesRankingDominios{
-        margin-bottom: 5rem;
-    }
 }
 
 @media (min-width: 992px) and (max-width: 1200px){
@@ -444,6 +440,7 @@
     }
 
     .divBotonesRankingDominios{
+        margin-bottom: 5rem;
         width: 80%;
     }
         
@@ -455,9 +452,6 @@
         font-size: 1rem;
     }
 
-    .divBotonesRankingDominios{
-        margin-bottom: 5rem;
-    }
 }
 
 @media (min-width: 1200px){
@@ -511,6 +505,7 @@
     }
 
     .divBotonesRankingDominios{
+        margin-bottom: 6rem;
         width: 70%;
     }
         
@@ -520,9 +515,5 @@
     
     .divBotonRankingDominioChico button{
         font-size: 1rem;
-    }
-
-    .divBotonesRankingDominios{
-        margin-bottom: 6rem;
     }
 }

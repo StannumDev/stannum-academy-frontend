@@ -1,42 +1,36 @@
 .tituloRankingDirectivo{
     margin-top: 3rem;
     text-align: center;
+    padding-inline: 1rem;
 }
 
 .tituloRankingDirectivo h1{
     font-family: 'Anton', sans-serif;
     font-weight: 400;
-    font-size: 6rem;
     color: #FFFFFF;
 }
 
 .subtituloRankingDirectivo{
     margin-top: -1rem;
     text-align: center;
+    padding-inline: 1rem;
 }
 
 .subtituloRankingDirectivo h2{
     font-family: 'Anton', sans-serif;
     font-weight: 400;
-    font-size: 3rem;
     color: #D3214D;
 }
 
 .divBotonesRankingDominiosDirectivo{
-    width: 70%;
     margin: auto;
     margin-top: 2rem;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
 }
 
-.divBotonesRankingDominiosDirectivoMostrar {
-    opacity: 1;
-    transition: opacity 0.5s;
-}
-
 .divGrandeRankingDirectivo{
-    width: 30%;
     margin: auto;
     margin-top: 3rem;
     filter: drop-shadow(5px 5px 10px #000);
@@ -63,13 +57,11 @@
     padding-block: 1rem;
     background-color: #A11733;
     text-align: center;
-    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
 }
 
 .tituloCategoriaRankingDirectivo h3{
     font-family: 'Anton', sans-serif;
     font-weight: 400;
-    font-size: 3.135rem;
     color: #FFFFFF;
     margin: 0;
 }
@@ -78,26 +70,23 @@
     width: 100%;
     padding-inline: 2rem;
     background-color: #CE1236;
-    border-bottom: 0.5px solid #333438;
+    border-bottom: 1px solid rgb(51,52,56, 0.1);
 }
 
 .puestoARankingTablaDirectivo span{
     font-family: 'Anton', sans-serif;
     font-weight: 400;
-    font-size: 4.52rem;
     color: #FFFFFF;
 }
 
 .nombreARankingTablaDirectivo span{
     font-weight: 600;
-    font-size: 2.1rem;
     color: #FFFFFF;
 }
 
 .puntosARankingTablaDirectivo span{
     font-family: 'Anton', sans-serif;
     font-weight: 400;
-    font-size: 3.1rem;
     color: #FFFFFF;
 }
 
@@ -105,48 +94,43 @@
     width: 100%;
     padding-inline: 2rem;
     background-color: #FFFFFF;
-    border-bottom: 0.5px solid #333438;
+    border-bottom: 1px solid rgb(51,52,56, 0.2);
 }
 
 .jugadorB2RankingDirectivo{
     width: 100%;
     background-color: #FFFFFF;
     padding-inline: 2rem;
-    border-bottom: 0.5px solid #333438;
+    border-bottom: 1px solid rgb(51,52,56, 0.2);
 }
 
 .jugadorCRankingDirectivo{
     width: 100%;
     background-color: #FFFFFF;
     padding-inline: 2rem;
-    border-bottom: 0.5px solid #333438;
+    border-bottom: 1px solid rgb(51,52,56, 0.2);
 }
 
 .puestoBRankingTablaDirectivo span{
     font-family: 'Anton', sans-serif;
     font-weight: 400;
-    font-size: 4.52rem;
     color: #333438;
 }
 
 .nombreBRankingTablaDirectivo span{
     font-weight: 600;
-    font-size: 2.1rem;
     color: #333438;
 }
 
 .puntosBRankingTablaDirectivo span{
     font-family: 'Anton', sans-serif;
     font-weight: 400;
-    font-size: 3.1rem;
     color: #333438;
 }
 
 .parteInferiorRankingDirectivo{
     width: 100%;
     background-color: #CE1236;
-    padding-block: 1rem;
-    padding-inline: 2rem;
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
     text-align: center;
@@ -155,7 +139,6 @@
 .parteInferiorRankingDirectivo span{
     font-family: 'Anton', sans-serif;
     font-weight: 400;
-    font-size: 1.62rem;
     color: #FFFFFF;
 }
 
@@ -165,4 +148,180 @@
     outline: 3px solid #C8204A;
     outline-offset: -3px;
     transition: all 0.3s ease;
+}
+
+@media (max-width: 576px){
+    .tituloRankingDirectivo h1{
+        font-size: 4.5rem;
+    }
+    
+    .subtituloRankingDirectivo h2{
+        font-size: 2rem;
+    }
+    
+    .divBotonesRankingDominiosDirectivo{
+        margin-bottom: 4rem;
+        width: 80%;
+    }
+    
+    .divGrandeRankingDirectivo{
+        width: 90%;
+    }
+    
+    .tituloCategoriaRankingDirectivo h3{
+        font-size: 2.3rem;
+    }
+    
+    .puestoTamañoRankingTablaDirectivo span{
+        font-size: 2.5rem;
+    }
+
+    .nombreTamañoRankingTablaDirectivo span{
+        font-size: 1.2rem;
+    }
+
+    .puntosTamañoRankingTablaDirectivo span{
+        font-size: 2.3rem;
+    }
+    
+    .parteInferiorRankingDirectivo{
+        padding-block: 1rem;
+        padding-inline: 1rem;
+    }
+
+    .parteInferiorRankingDirectivo span{
+        font-size: 1.5rem;
+    }
+}
+
+@media (min-width: 576px) and (max-width: 992px){
+    .tituloRankingDirectivo h1{
+        font-size: 5rem;
+    }
+        
+    .subtituloRankingDirectivo h2{
+        font-size: 2rem;
+    }
+        
+    .divBotonesRankingDominiosDirectivo{
+        width: 80%;
+        margin-bottom: 5rem;
+    }
+        
+    .divGrandeRankingDirectivo{
+        width: 70%;
+    }
+        
+    .tituloCategoriaRankingDirectivo h3{
+        font-size: 2.5rem;
+    }
+        
+    .puestoTamañoRankingTablaDirectivo span{
+        font-size: 3.5rem;
+    }
+
+    .nombreTamañoRankingTablaDirectivo span{
+        font-size: 1.3rem;
+    }
+
+    .puntosTamañoRankingTablaDirectivo span{
+        font-size: 2.5rem;
+    }
+        
+    .parteInferiorRankingDirectivo{
+        padding-block: 1rem;
+        padding-inline: 0rem;
+    }
+
+    .parteInferiorRankingDirectivo span{
+        font-size: 1.2rem;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1200px){
+    .tituloRankingDirectivo h1{
+        font-size: 6rem;
+    }
+        
+    .subtituloRankingDirectivo h2{
+        font-size: 3rem;
+    }
+        
+    .divBotonesRankingDominiosDirectivo{
+        margin-bottom: 5rem;
+        width: 80%;
+    }
+        
+    .divGrandeRankingDirectivo{
+        width: 50%;
+    }
+        
+    .tituloCategoriaRankingDirectivo h3{
+        font-size: 2.5rem;
+    }
+        
+    .puestoTamañoRankingTablaDirectivo span{
+        font-size: 3.5rem;
+    }
+
+    .nombreTamañoRankingTablaDirectivo span{
+        font-size: 1.7rem;
+    }
+
+    .puntosTamañoRankingTablaDirectivo span{
+        font-size: 2.5rem;
+    }
+        
+    .parteInferiorRankingDirectivo{
+        padding-block: 1rem;
+        padding-inline: 2rem;
+    }
+
+    .parteInferiorRankingDirectivo span{
+        font-size: 1.3rem;
+    }
+}
+
+@media (min-width: 1200px){
+    .tituloRankingDirectivo h1{
+        font-size: 6rem;
+    }
+        
+    .subtituloRankingDirectivo h2{
+        font-size: 3rem;
+    }
+        
+    .divBotonesRankingDominiosDirectivo{
+        margin-bottom: 6rem;
+        width: 70%;
+    }
+        
+    .divGrandeRankingDirectivo{
+        width: 50%;
+    }
+        
+    .tituloCategoriaRankingDirectivo h3{
+        font-size: 3rem;
+    }
+        
+    .puestoTamañoRankingTablaDirectivo span{
+        font-size: 4.5rem;
+    }
+
+    .nombreTamañoRankingTablaDirectivo span{
+        font-size: 2rem;
+    }
+
+    .puntosTamañoRankingTablaDirectivo span{
+        font-size: 3rem;
+    }
+        
+    .parteInferiorRankingDirectivo{
+        padding-block: 1rem;
+        padding-inline: 2rem;
+    }
+
+    .parteInferiorRankingDirectivo span{
+        font-size: 1.62rem;
+    }
 }

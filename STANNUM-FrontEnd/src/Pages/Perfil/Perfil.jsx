@@ -1,8 +1,7 @@
 import { useState, useEffect } from 'react';
 import './perfil.css'
-import EscudoPerfil from '../../assets/escudoPerfil2.png'
-import EscudoPerfil2 from '../../assets/escudoPerfil3.png'
 import FotoDePerfil from '../../assets/Captura.jpg'
+import SVGEscudo from '../../assets/escudoPerfilSVG.svg'
 import Hexagono from '../../assets/HexagonoPerfil.png'
 
 function Perfil() {
@@ -17,49 +16,51 @@ function Perfil() {
             <div className='tituloPerfil'><h1>FICHA DEL ENTRENADO</h1></div>
             <div className='parrafoPerfil'><p>Teniendo en cuenta los resultados de los diferentes Test, generamos la siguiente plantilla con tu información. A medida que completes los Test, esta se irá completando.</p></div>
             <div className='row rowDatosDelJugador'>
-                <div className='col-4 divFotoJugadorPerfil'>
+                <div className='divFotoJugadorPerfil'>
                     <div className='contenedorImagen'>
                         <img src={FotoDePerfil} alt="Perfil Stannum" />
-                    </div>
-                    <div className='puntosCardFIFA d-flex flex-column align-items-center'>
-                        <div className='puntosNumeroCardFIFA'>55</div>
-                        <div className='puntosTextoCardFIFA'>TOTAL</div>
-                    </div>
-                    <div className='nombreCardFIFA'>SIMÓN POLICHE</div>
-                    <div className='row puntajesDominiosPerfilFIFA'>
-                        <div className='col-6 d-flex flex-column'>
-                            <div className='d-flex align-items-end'>
-                                <div className='numeroPtsCardFIFA'>55</div>
-                                <div className='dominioPtsCardFIFA'>DM1</div>
+                        <div className='puntosCardFIFA d-flex flex-column align-items-center'>
+                            <div className='puntosNumeroCardFIFA'>55</div>
+                            <div className='puntosTextoCardFIFA'>TOTAL</div>
+                        </div>
+                    </div>                   
+                    <div className='descripcionCardPerfil d-flex flex-column align-items-center justify-content-center'>
+                        <div className='nombreCardFIFA'>SIMÓN POLICHE</div>
+                        <div className='row puntajesDominiosPerfilFIFA'>
+                            <div className='col-6 d-flex flex-column m-0 primeraColumnaEstadisticas'>
+                                <div className='d-flex align-items-end justify-content-end'>
+                                    <div className='numeroPtsCardFIFA text-end'>55</div>
+                                    <div className='dominioPtsCardFIFA text-start'>DM1</div>
+                                </div>
+                                <div className='d-flex align-items-end justify-content-end'>
+                                    <div className='numeroPtsCardFIFA text-end'>55</div>
+                                    <div className='dominioPtsCardFIFA text-start'>DM2</div>
+                                </div>
+                                <div className='d-flex align-items-end justify-content-end'>
+                                    <div className='numeroPtsCardFIFA text-end'>55</div>
+                                    <div className='dominioPtsCardFIFA text-start'>DM3</div>
+                                </div>
                             </div>
-                            <div className='d-flex align-items-end'>
-                                <div className='numeroPtsCardFIFA'>55</div>
-                                <div className='dominioPtsCardFIFA'>DM2</div>
-                            </div>
-                            <div className='d-flex align-items-end'>
-                                <div className='numeroPtsCardFIFA'>55</div>
-                                <div className='dominioPtsCardFIFA'>DM3</div>
+                            <div className='col-6 d-flex flex-column m-0 segundaColumnaEstadisticas'>
+                                <div className='d-flex align-items-end justify-content-start'>
+                                    <div className='numeroPtsCardFIFA text-end'>55</div>
+                                    <div className='dominioPtsCardFIFA text-start'>DM4</div>
+                                </div>
+                                <div className='d-flex align-items-end justify-content-start'>
+                                    <div className='numeroPtsCardFIFA text-end'>55</div>
+                                    <div className='dominioPtsCardFIFA text-start'>DM5</div>
+                                </div>
+                                <div className='d-flex align-items-end justify-content-start'>
+                                    <div className='numeroPtsCardFIFA text-end'>55</div>
+                                    <div className='dominioPtsCardFIFA text-start'>DM6</div>
+                                </div>
                             </div>
                         </div>
-                        <div className='col-6 d-flex flex-column segundaColumnaEstadisticas'>
-                            <div className='d-flex align-items-end'>
-                                <div className='numeroPtsCardFIFA'>55</div>
-                                <div className='dominioPtsCardFIFA'>DM4</div>
-                            </div>
-                            <div className='d-flex align-items-end'>
-                                <div className='numeroPtsCardFIFA'>55</div>
-                                <div className='dominioPtsCardFIFA'>DM5</div>
-                            </div>
-                            <div className='d-flex align-items-end'>
-                                <div className='numeroPtsCardFIFA'>55</div>
-                                <div className='dominioPtsCardFIFA'>DM6</div>
-                            </div>
-                        </div>
-                    </div>
+                    </div>                         
                 </div>
-                <div className='col-8 divDatosDelJugadorInfo d-flex flex-column'>
+                <div className='divDatosDelJugadorInfo d-flex flex-column'>
                     <div className='datosDelJugador'><h2>DATOS DEL JUGADOR</h2></div>
-                    <div className='mt-auto datosDelJugadorInformacion d-flex flex-wrap'>
+                    <div className='datosDelJugadorInformacion d-flex flex-wrap'>
                         <div className='datosJugadorSeccion datosJugadorSeccion1'>
                             <div className='NombreSeccionDatosJugador'>Nombre</div>
                             <div className='InfoSeccionDatosJugador'>Simón Poliche</div>
@@ -79,6 +80,7 @@ function Perfil() {
                     </div>
                 </div>
             </div>
+            {/* 
             <div className='cajaSeleccionarCardDominio d-flex justify-content-evenly'>
                 <div className={` ${ Dominio !== 1 ? 'cardDominioPerfil' : 'cardDominioPerfilPresionada'} d-flex flex-column text-center`} onClick={() => setDominio(1)}>
                     <div className={` ${ Dominio !== 1 ? 'tituloCardDominioPerfil' : 'tituloCardDominioPerfilPresionada' }`}>DOMINIO 1</div>
@@ -213,7 +215,7 @@ function Perfil() {
                 </div>
             </div>
             <div className='parrafoFooter1Perfil'><p>Toda esta información fue obtenida del <b>test de dominio!</b></p></div>
-            <div className='parrafoFooter2Perfil'><p>Mejora tus habilidades para<b>aumentar tus estadísticas</b></p></div>
+            <div className='parrafoFooter2Perfil'><p>Mejora tus habilidades para<b>aumentar tus estadísticas</b></p></div> */}
         </>
     )
 }

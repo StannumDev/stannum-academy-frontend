@@ -11,7 +11,6 @@
 }
 
 .parrafoPerfil{
-    width: 50%;
     margin: auto;
     margin-top: 1.2rem;
     text-align: center;
@@ -19,19 +18,12 @@
 
 .parrafoPerfil p{
     font-weight: 400;
-    font-size: 1.5rem;
-    line-height: 2.23rem;
     color: #FFFFFF;
 }
 
 .rowDatosDelJugador{
-    width: 80%;
     margin: auto;
     margin-top: 3rem;
-}
-
-.divDatosDelJugadorInfo{
-    padding-left: 3rem;
 }
 
 .datosDelJugador{
@@ -39,115 +31,59 @@
     background: #DEDEDE;
     border-radius: 16px;
     filter: drop-shadow(0px 10px 10px #101010);
-    padding-left: 4rem;
     padding-block: 1rem;
+    margin-bottom: 2rem;
 }
 
 .datosDelJugador h2{
     font-family: 'Anton';
     font-weight: 400;
-    font-size: 3.4rem;
     color: #323337;
     margin: 0;
 }
 
-.datosDelJugadorInformacion{
-    background: #DEDEDE;
-    border-radius: 16px;
-    filter: drop-shadow(0px 10px 10px #101010);
-}
-
-.datosJugadorSeccion {
-    width: 50%;
-    padding-block: 2rem;
-    padding-left: 4rem;
-    text-align: start;
-}
-
 .NombreSeccionDatosJugador{
     font-family: 'Anton';
-    font-size: 1.7rem;
     color: #323337;
 }
 
 .InfoSeccionDatosJugador{
     font-weight: 400;
-    font-size: 1.5rem;
     color: #323337;
-    margin-top: -0.5rem;
-}
-
-.datosJugadorSeccion1{
-    border-bottom: 1px solid #747474;
-    border-right: 1px solid #747474;
-}
-
-.datosJugadorSeccion2{
-    border-bottom: 1px solid #747474;
-}
-
-.datosJugadorSeccion3{
-    border-right: 1px solid #747474;
 }
 
 .nombreCardFIFA{
     font-family: 'Bebas Neue', sans-serif;
     font-weight: 400;
-    font-size: 1.6rem;
     color: #FFFFFF;
-    position: absolute;
-    top: 230px;
-    right: 0;
-    left: 0;
-    line-height: 1.5rem;
     border-bottom: 1px solid #FFFFFF;
-    width: 40%;
-    margin: auto;
-}
-
-.puntosCardFIFA{
-    position: absolute;
-    top: 20%;
-    left: 30%;
 }
 
 .puntosNumeroCardFIFA{
     font-family: 'Oswald';
     font-weight: 700;
-    font-size: 2.2rem;
     color: #FFFFFF;
 }
 
 .puntosTextoCardFIFA{
     font-family: 'Oswald';
     font-weight: 400;
-    font-size: 1rem;
     color: #FFFFFF;
+    font-size: 1rem;
     letter-spacing: 0px;
     margin-top: -0.8rem;
 }
 
-.puntajesDominiosPerfilFIFA{
-    width: 45%;
-    margin: auto;
-    position: absolute;
-    top: 255px;
-    right: 0;
-    left: 0;
-}
 
 .numeroPtsCardFIFA{
     font-family: 'Oswald';
     font-weight: 400;
-    font-size: 1.3rem;
     color: #FFFFFF;
-    width: 45px;
 }
 
 .dominioPtsCardFIFA{
     font-family: 'Oswald';
     font-weight: 400;
-    font-size: 1.3rem;
     color: #FFFFFF;
 }
 
@@ -558,24 +494,13 @@
     line-height: 1.2rem;
     text-align: center;
     color: #FFFFFF;
-}
-  
-.divFotoJugadorPerfil {
-    position: relative;
-    background: #DEDEDE;
-    border-radius: 16px;
-    filter: drop-shadow(0px 10px 10px #101010);
-    text-align: center;
-    padding-block: 2rem;
-    width: 33.333333%;
-}
+}    
 
 .contenedorImagen {
     position: relative;
-    height: 365px;
-    width: 50%;
+    width: 100%;
+    height: 100%;
     margin: auto;
-    overflow: hidden;
 }
 
 .contenedorImagen img {
@@ -583,10 +508,11 @@
     height: 100%;
     object-fit: cover;
     /* filter: grayscale(100%); */
-    -webkit-mask-image: url('../../assets/escudoPerfil2.png');
-    mask-image: url('../../assets/escudoPerfil2.png');
-    -webkit-mask-size: cover;
-    mask-size: cover;
+    -webkit-mask-image: url('../../assets/escudoPerfilSVG.svg');
+    mask-image: url('../../assets/escudoPerfilSVG.svg');
+    -webkit-mask-size: 100% 100%;
+    mask-origin: fill-box;
+    mask-size: 100% 100%;
 }
 
 .contenedorImagen::after {
@@ -598,8 +524,526 @@
     height: 100%;
     background-image: linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(140,141,143,0.3029586834733894) 60%, rgba(50,51,55,1) 90%);
     mix-blend-mode: multiply;
-    -webkit-mask-image: url('../../assets/escudoPerfil2.png');
-    mask-image: url('../../assets/escudoPerfil2.png');
-    -webkit-mask-size: cover;
-    mask-size: cover;
-  }
+    -webkit-mask-image: url('../../assets/escudoPerfilSVG.svg');
+    mask-image: url('../../assets/escudoPerfilSVG.svg');
+    -webkit-mask-size: 100% 100%;
+    mask-size: 100% 100%;
+}
+
+@media (max-width: 575px){
+
+    .tituloPerfil{
+        padding-inline: 0.5rem;
+    }
+    
+    .tituloPerfil h1{
+        font-size: 4rem;
+    }
+    
+    .parrafoPerfil{
+        width: 85%;
+    }
+
+    .parrafoPerfil p{
+        font-size: 1.1rem;
+    }
+    
+    .rowDatosDelJugador{
+        width: 90%;
+        background: #DEDEDE;
+        border-radius: 9px;
+        padding-block: 1rem;
+    }  
+
+    .divFotoJugadorPerfil {        
+        width: 100%;
+        position: relative;
+        text-align: center;
+    }
+    
+    .puntosCardFIFA{
+        position: absolute;
+        top: 15%;
+        left: 22%;
+        text-shadow: 1px 1px rgb(0,0,0,0.5);
+    }
+    
+    .puntosNumeroCardFIFA{
+        font-size: 2rem;
+    }
+
+    .puntosTextoCardFIFA{
+        display: none;
+    }
+    
+    .nombreCardFIFA{
+        font-size: 1.3rem;
+        bottom: 45%;
+        width: 50%;
+    }
+
+    .puntajesDominiosPerfilFIFA{
+        width: 45%;
+        bottom: 17%;
+    }
+    
+    .numeroPtsCardFIFA{
+        font-size: 1.2rem;
+        padding-right: 0.5rem;
+    }
+
+    .dominioPtsCardFIFA{
+        font-size: 1.2rem;
+    }
+
+    .descripcionCardPerfil{
+        position: absolute;
+        bottom: 13%;
+        right: 0;
+        left: 0;
+    }
+
+    .primeraColumnaEstadisticas{
+        padding-right: 0.5rem;
+        padding-left: 0rem;
+    }
+
+    .segundaColumnaEstadisticas{
+        padding-left: 0.5rem;
+        padding-right: 0rem;
+    }
+    
+    .divDatosDelJugadorInfo{
+        width: 100%;
+    }
+
+    .datosDelJugador{
+        display: none;
+    }
+    
+    .datosDelJugadorInformacion{
+        flex-direction: column;
+    }
+
+    .datosJugadorSeccion {
+        background-color: #3A3A3A;
+        background-image: url("../../assets/Concrete.png");
+        background-size: cover;
+        background-blend-mode: multiply;
+        background-position: center center;
+        text-align: center;
+        width: 90%;
+        margin: auto;
+        padding-inline: 1rem;
+        padding-block: 1rem;
+        text-align: center;
+    }
+
+    .NombreSeccionDatosJugador{
+        font-size: 1.7rem;
+        color: #FFFFFF;
+    }
+    
+    .InfoSeccionDatosJugador{
+        margin-top: -0.5rem;
+        font-size: 1.5rem;
+        color: #FFFFFF;
+    }
+    
+    .divDatosDelJugadorInfo{
+        margin-top: 2rem;
+        margin-bottom: 1rem;
+        padding-inline: 1rem;
+    }
+
+    .datosJugadorSeccion1{
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        border-bottom: 1px solid rgb(255,255,255,0.1);
+    }
+
+    .datosJugadorSeccion2{
+        border-bottom: 1px solid rgb(255,52552,255,0.1);
+    }
+
+    .datosJugadorSeccion3{
+        border-bottom: 1px solid rgb(255,255,255,0.1);
+    }
+
+    .datosJugadorSeccion4{
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+    }
+}
+
+@media (min-width: 576px) and (max-width: 991px){
+
+    .tituloPerfil{
+        padding-inline: 2rem ;
+    }
+    
+    .tituloPerfil h1{
+        font-size: 5rem;
+    }
+ 
+    .parrafoPerfil{
+        width: 80%;
+    }
+
+    .parrafoPerfil p{
+        font-size: 1.2rem;
+    }
+    
+    .rowDatosDelJugador{
+        width: 80%;
+        background: #DEDEDE;
+        border-radius: 9px;
+        padding-block: 1.5rem;
+    }  
+    
+    .divFotoJugadorPerfil {
+        width: 50%;
+        position: relative;
+        text-align: center;
+    }
+    
+    .puntosCardFIFA{
+        position: absolute;
+        top: 13%;
+        left: 15%;
+        text-shadow: 1px 1px rgb(0,0,0,0.5);
+    }
+    
+    .puntosNumeroCardFIFA{
+        font-size: 2rem;
+    }
+    
+    .nombreCardFIFA{
+        font-size: 1rem;
+        bottom: 45%;
+        width: 45%;
+    }
+
+    .puntajesDominiosPerfilFIFA{
+        width: 45%;
+        bottom: 17%;
+    }
+    
+    .numeroPtsCardFIFA{
+        font-size: 1rem;
+        padding-right: 0.5rem;
+    }
+
+    .dominioPtsCardFIFA{
+        font-size: 1rem;
+    }
+
+    .descripcionCardPerfil{
+        position: absolute;
+        bottom: 13%;
+        right: 0;
+        left: 0;
+    }
+
+    .primeraColumnaEstadisticas{
+        padding-right: 0.5rem;
+        padding-left: 0rem;
+    }
+
+    .segundaColumnaEstadisticas{
+        padding-left: 0.5rem;
+        padding-right: 0rem;
+    }
+    
+    .divDatosDelJugadorInfo{
+        width: 50%;
+    }
+
+    .datosDelJugador{
+        display: none;
+    }
+    
+    .datosDelJugadorInformacion{
+        flex-direction: column;
+    }
+
+    .datosJugadorSeccion {
+        width: 100%;
+        padding-block: 1rem;
+        padding-left: 0rem;
+        text-align: start;
+    }
+
+    .NombreSeccionDatosJugador{
+        font-size: 1.7rem;
+    }
+    
+    .InfoSeccionDatosJugador{
+        font-size: 1.5rem;
+        margin-top: -0.5rem;
+    }
+    
+    .divDatosDelJugadorInfo{
+        padding-left: 1rem;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1200px){
+
+    .tituloPerfil h1{
+        font-size: 6rem;
+    }
+    
+    .parrafoPerfil{
+        width: 60%;
+    }
+
+    .parrafoPerfil p{
+        font-size: 1.5rem;
+        line-height: 2.23rem;
+    }
+    
+    .rowDatosDelJugador{
+        width: 90%;
+    }  
+    
+    .divFotoJugadorPerfil {
+        width: 33.333333%;
+        background: #DEDEDE;
+        border-radius: 16px;
+        filter: drop-shadow(0px 10px 10px #101010);
+        text-align: center;
+        padding-block: 1rem;
+    }
+    
+    .puntosCardFIFA{
+        position: absolute;
+        top: 17%;
+        left: 13%;
+        text-shadow: 1px 1px rgb(0,0,0,0.5);
+    }
+           
+    .puntosNumeroCardFIFA{
+        font-size: 2.2rem;
+    }
+    
+    .nombreCardFIFA{
+        font-size: 1.3rem;
+        bottom: 45%;
+        width: 45%;
+    }
+
+    .puntajesDominiosPerfilFIFA{
+        width: 45%;
+        bottom: 17%;
+    }
+    
+    .numeroPtsCardFIFA{
+        font-size: 1rem;
+        padding-right: 0.5rem;
+    }
+
+    .dominioPtsCardFIFA{
+        font-size: 1rem;
+    }
+
+    .descripcionCardPerfil{
+        position: absolute;
+        bottom: 20%;
+        right: 0;
+        left: 0;
+    }
+
+    .primeraColumnaEstadisticas{
+        padding-right: 1rem;
+        padding-left: 0rem;
+    }
+
+    .segundaColumnaEstadisticas{
+        padding-left: 1rem;
+        padding-right: 0rem;
+    }
+    
+    .divDatosDelJugadorInfo{
+        width: 66.6666667%;
+    }
+
+    .datosDelJugador{
+        padding-left: 2rem;
+    }
+    
+    .datosDelJugador h2{
+        font-size: 3rem;
+    }
+
+    .datosJugadorSeccion {
+        width: 50%;
+        padding-block: 2rem;
+        padding-inline: 2rem;
+        text-align: start;
+    }
+
+    .NombreSeccionDatosJugador{
+        font-size: 1.5rem;
+    }
+    
+    .InfoSeccionDatosJugador{
+        font-size: 1.5rem;
+        margin-top: 0rem;
+    }
+    
+    .datosDelJugadorInformacion{
+        background: #DEDEDE;
+        border-radius: 16px;
+        filter: drop-shadow(0px 10px 10px #101010);
+    }
+    
+    .datosJugadorSeccion1{
+        border-bottom: 1px solid #747474;
+        border-right: 1px solid #747474;
+    }
+
+    .datosJugadorSeccion2{
+        border-bottom: 1px solid #747474;
+    }
+
+    .datosJugadorSeccion3{
+        border-right: 1px solid #747474;
+    }
+    
+    .divDatosDelJugadorInfo{
+        padding-left: 3rem;
+    }
+}
+
+@media (min-width: 1200px){
+
+    .tituloPerfil h1{
+        font-size: 6rem;
+    }
+    
+    .parrafoPerfil{
+        width: 50%;
+    }
+
+    .parrafoPerfil p{
+        font-size: 1.5rem;
+        line-height: 2.23rem;
+    }
+    
+    .rowDatosDelJugador{
+        width: 80%;
+    }  
+    
+    .divFotoJugadorPerfil {
+        width: 33.3333333%;
+        background: #DEDEDE;
+        border-radius: 16px;
+        filter: drop-shadow(0px 10px 10px #101010);
+        text-align: center;
+        padding-block: 1.5rem;
+        padding-inline: 2rem;
+    }
+    
+    .puntosCardFIFA {
+        position: absolute;
+        top: 14%;
+        left: 22%;
+        color: #FFFFFF;
+        text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+    }
+        
+    .puntosNumeroCardFIFA{
+        font-size: 2.2rem;
+    }
+    
+    .nombreCardFIFA{
+        font-size: 1.6rem;
+        bottom: 45%;
+        line-height: 1.5rem;
+        width: 45%;
+    }
+
+    .puntajesDominiosPerfilFIFA{
+        width: 45%;
+        bottom: 17%;
+    }
+    
+    .numeroPtsCardFIFA{
+        font-size: 1.3rem;
+        padding-right: 0.5rem;
+    }
+
+    .dominioPtsCardFIFA{
+        font-size: 1.3rem;
+    }
+    
+    .descripcionCardPerfil{
+        position: absolute;
+        bottom: 20%;
+        right: 0;
+        left: 0;
+    }
+
+    .primeraColumnaEstadisticas{
+        padding-right: 1rem;
+        padding-left: 0rem;
+    }
+
+    .segundaColumnaEstadisticas{
+        padding-left: 1rem;
+        padding-right: 0rem;
+    }
+
+    .divDatosDelJugadorInfo{
+        width: 66.6666667%;
+    }
+
+    .datosDelJugador{
+        padding-left: 4rem;
+    }
+    
+    .datosDelJugador h2{
+        font-size: 3.4rem;
+    }
+
+    .datosJugadorSeccion {
+        width: 50%;
+        padding-block: 2rem;
+        padding-left: 2rem;
+        text-align: start;
+    }
+
+    .NombreSeccionDatosJugador{
+        font-size: 1.7rem;
+    }
+    
+    .InfoSeccionDatosJugador{
+        font-size: 1.5rem;
+        margin-top: -0.5rem;
+    }
+    
+    .datosDelJugadorInformacion{
+        background: #DEDEDE;
+        border-radius: 16px;
+        filter: drop-shadow(0px 10px 10px #101010);
+    }
+    
+    .datosJugadorSeccion1{
+        border-bottom: 1px solid #747474;
+        border-right: 1px solid #747474;
+    }
+
+    .datosJugadorSeccion2{
+        border-bottom: 1px solid #747474;
+    }
+
+    .datosJugadorSeccion3{
+        border-right: 1px solid #747474;
+    }
+    
+    .divDatosDelJugadorInfo{
+        padding-left: 3rem;
+    }
+
+}
