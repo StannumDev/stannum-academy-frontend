@@ -36,7 +36,7 @@
 
 .botonRankingDominioSuelto{
     background: rgb(99,196,178,0.6);
-    background-image: url("../../../assets/Concrete.png");
+    background-image: url("../../../assets/Metalico.png");
     background-size: cover;
     background-repeat: no-repeat;
     background-blend-mode: multiply;
@@ -48,7 +48,7 @@
 .botonRankingDominioApretado{
     background: rgb(99,196,178,1);
     transition: background 0.5s;
-    background-image: url("../../../assets/Concrete.png");
+    background-image: url("../../../assets/Metalico.png");
     background-size: cover;
     background-repeat: no-repeat;
     background-blend-mode: multiply;
@@ -58,12 +58,12 @@
 
 .botonRankingDominio:hover{
     background: rgb(99,196,178,1);
-    background-image: url("../../../assets/Concrete.png");
+    background-image: url("../../../assets/Metalico.png");
+    transition: background 0.5s;
     background-size: cover;
     background-repeat: no-repeat;
     background-blend-mode: multiply;
     background-position: center center;
-    transition: background 0.5s;
 }
 
 .botonRankingDominio span{
@@ -80,8 +80,8 @@
     color: #A7A7A9;
     font-family: 'Anton';
     font-weight: 400;
-    background: rgba(58, 58, 58, 0.9);
-    background-image: url("../../../assets/Concrete.png");
+    background: rgba(58, 58, 58, 0.7);
+    background-image: url("../../../assets/Metalico.png");
     background-size: cover;
     background-repeat: no-repeat;
     background-blend-mode: multiply;

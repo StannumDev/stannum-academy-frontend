@@ -6,7 +6,7 @@ function Inicio() {
   return (
     <>
       <div className='d-flex flex-column align-items-center pb-5'>
-        <div className='text-center tituloBienvenido'><h1>¡Bienvenido a</h1> <span>Stannum Academy!</span></div>
+        <div className='text-center tituloBienvenido'><h1>¡Bienvenido a</h1> <span>STANNUM Academy!</span></div>
         <div className='parrafoBienvenidaCentro text-center'><p>Este es el <b>centro de alto rendimiento</b> en donde podrás adquirir los conocimientos y las habilidades necesarias para llevar a tu emprendimiento al siguiente nivel.</p></div>
         <div className='text-center mt-4 tusPrimerosPasos'><h2>Tus primeros pasos</h2></div>
         <div className='parrafoPrimerosPasos text-center'><p>Para poder comenzar tu camino dentro de Stannum Academy es necesario que completes los siguientes Tests de Dominio, ¡la información obtenida de ellos nos permitirá construir tu plantilla de jugador!.</p></div>

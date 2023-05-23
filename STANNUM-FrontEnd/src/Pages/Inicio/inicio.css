@@ -35,8 +35,8 @@
     /* margin-top: 3rem; */
     width: 100%;
     padding-block: 4rem;
-    background-color: #67cfbc;
-    background-image: url("../../assets/Concrete.png");
+    background-color: rgb(103,207,188, 1);
+    background-image: url("../../src/assets/Metalico.png");
     background-size: cover;
     background-repeat: no-repeat;
     background-blend-mode: multiply;

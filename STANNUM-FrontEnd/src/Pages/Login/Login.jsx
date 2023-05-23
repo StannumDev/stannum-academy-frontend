@@ -25,7 +25,7 @@ function Login() {
                             <span>Volver al inicio</span>
                         </a>
                     </div>
-                    <h1 className='fs-3 tituloInicioStannum'><span className='ingreseALogin'>Ingresa a</span><span className='stannumAcademyTituloLogin'> Stannum Academy!</span></h1>
+                    <h1 className='fs-3 tituloInicioStannum'><span className='ingreseALogin'>Ingresa a</span><span className='stannumAcademyTituloLogin'> STANNUM Academy!</span></h1>
                     <h3 className='fs-6 completaTuInformacion mt-3'>Completa tu información para ingresar.</h3>
                     <FormularioLogin/>
                 </div>

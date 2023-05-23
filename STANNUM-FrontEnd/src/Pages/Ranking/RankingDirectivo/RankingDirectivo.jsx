@@ -21,7 +21,7 @@ function RankingDirectivo() {
                     <div className='titulosRankingTablaDirectivo col-8 text-start m-0 p-0'><span>NOMBRE</span></div>
                     <div className='titulosRankingTablaDirectivo col-2 text-end m-0 p-0'><span>PTS</span></div>
                 </div>
-                <div className='tituloCategoriaRankingDirectivo'><h3>- CATEGORIA A -</h3></div>
+                <div className='tituloCategoriaRankingDirectivo'><h3>- CATEGORÍA A -</h3></div>
                 <div className='row jugadorARankingDirectivo mx-auto m-0 align-items-center'>
                     <div className='puestoARankingTablaDirectivo puestoTamañoRankingTablaDirectivo col-2 text-start m-0 p-0' ><span>1</span></div>
                     <div className='nombreARankingTablaDirectivo nombreTamañoRankingTablaDirectivo col-8 text-start m-0 p-0 py-2 pe-1'><span>Maxi Rodriguez</span></div>
