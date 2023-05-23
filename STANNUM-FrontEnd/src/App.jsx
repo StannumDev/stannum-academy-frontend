@@ -3,6 +3,7 @@ import { Route, Routes } from "react-router-dom";
 import './App.css'
 import Footer from './Components/Footer/Footer';
 import NavBar from './Components/NavBar/NavBar';
+import EditarPerfil from './Pages/EditarPerfil/EditarPerfil';
 import Inicio from './Pages/Inicio/Inicio';
 import Login from './Pages/Login/Login';
 import Perfil from './Pages/Perfil/Perfil';
@@ -23,6 +24,7 @@ function App() {
       <Route path="/Iniciar-sesion" element={<Login/>} />
       <Route path="/" element={<Inicio/>} />
       <Route path="/Perfil" element={<Perfil/>} />
+      <Route path="/Editar-perfil" element={<EditarPerfil/>} />
       <Route path="/Ranking/Inicio" element={<Ranking/>} />
       <Route path="/Ranking/Directivo" element={<RankingDirectivo/>} />
       <Route path="/Test/Dominio/Directivo" element={<InicioTestDirectivo/>} />

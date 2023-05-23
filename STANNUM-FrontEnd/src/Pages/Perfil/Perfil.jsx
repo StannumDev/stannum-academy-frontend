@@ -1,17 +1,23 @@
 import { useState, useEffect } from 'react';
 import './perfil.css'
-import FotoDePerfil from '../../assets/userDefecto.png'
+import FotoDePerfil from '../../assets/UserDefecto.png'
 import SVGEscudo from '../../assets/escudoPerfilSVG.svg'
 import Hexagono from '../../assets/HexagonoPerfil.png'
 
 function Perfil() {
 
     const [Dominio, setDominio] = useState(0);
+    const usuarioPuntaje = 97; 
 
-    // usuario: puntaje, nombre
-
-    const usuarioPuntaje = 100; 
-    const progressWidth = 85;
+    
+    const ballPosition = 47.3 + (usuarioPuntaje / 100 ) * (11.8 - 47.3)
+    // position = topMin + (points / maxPoints) * (topMax - topMin)
+    // Explanation of the formula:
+    // position is the calculated top position of the ball.
+    // topMin is the desired top position when points are at the minimum (47.3%).
+    // topMax is the desired top position when points are at the maximum (11.8%).
+    // points is the actual points value.
+    // maxPoints is the maximum points value (100).
 
     return (
         <>
@@ -19,7 +25,7 @@ function Perfil() {
             <div className='parrafoPerfil'><p>Teniendo en cuenta los resultados de los diferentes Test, generamos la siguiente plantilla con tu información. A medida que completes los Test, esta se irá completando.</p></div>
             <div className='row rowDatosDelJugador'>
                 <div className='divFotoJugadorPerfil'>
-                    <div className='contenedorImagen'>
+                        <div className='contenedorImagen'>
                         <img src={FotoDePerfil} alt="Perfil Stannum" />
                         <div className='puntosCardFIFA d-flex flex-column align-items-center'>
                             <div className='puntosNumeroCardFIFA'>55</div>
@@ -85,11 +91,9 @@ function Perfil() {
                         </div> */}
                     </div>
                 </div>
-            </div>            
+            </div>
             <div className='cajaSeleccionarCardDominio d-flex'>
-
-
-                <div className={` ${ Dominio !== 1 ? 'cardDominioPerfil' : 'cardDominioPerfilPresionada'} d-flex flex-column text-center`} onClick={() => setDominio(1)}>
+                <div className={` ${ Dominio !== 1 ? 'cardDominioPerfil' : 'cardDominioPerfilPresionada'} d-flex flex-column text-center`} onClick={() => setDominio(0)}>
                     <div className={` ${ Dominio !== 1 ? 'tituloCardDominioPerfil' : 'tituloCardDominioPerfilPresionada' }`}>DOMINIO 1</div>
                     <div className={` ${ Dominio !== 1 ?'subtituloCardDominioPerfil' : 'subtituloCardDominioPerfilPresionada' }`}>DIRECTIVO</div>
                     <div className="progress progressCard">
@@ -98,77 +102,65 @@ function Perfil() {
                     <div className={`${ Dominio !== 1 ?'numeroCardDominioPerfil' : 'numeroCardDominioPerfilPresionada'}`}>{usuarioPuntaje}</div>
                     <div className={`${ Dominio !== 1 ? 'textoPuntosCardDominioPerfil' : 'textoPuntosCardDominioPerfilPresionada'}`}>PUNTOS</div>
                 </div>
-
-
-                <div className='cardDominioPerfil d-flex flex-column text-center'>
-                    <div className='tituloCardDominioPerfil'>DOMINIO 2</div>
-                    <div className='subtituloCardDominioPerfil'>TIEMPO</div>
+                <div className='cardDominioPerfilDesactivado d-flex flex-column text-center'>
+                    <div className='tituloCardDominioPerfil desactivado'>DOMINIO 2</div>
+                    <div className='subtituloCardDominioPerfil desactivado'>TIEMPO</div>
                     <div className="progress progressCard">
                         <div className="progress-bar progress-barCard progress-bar2" role="progressbar" aria-label="Progreso estadisticas" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
                     </div>
-                    <div className='proximamenteCardDominioPerfil proximamenteCardDominioPerfil2'>PROXIMA<span>MENTE</span></div>
-                    <div className='mesProximamenteCardDominioPerfil mesProximamenteCardDominioPerfil2'>MARZO</div>
+                    <div className='proximamenteCardDominioPerfil desactivado'>PROXIMA<span>MENTE</span></div>
+                    <div className='mesProximamenteCardDominioPerfil desactivado'>MARZO</div>
                 </div>
-
-
-                <div className='cardDominioPerfil d-flex flex-column text-center'>
-                    <div className='tituloCardDominioPerfil'>DOMINIO 3</div>
-                    <div className='subtituloCardDominioPerfil'>COMUNICACION</div>
+                <div className='cardDominioPerfilDesactivado d-flex flex-column text-center'>
+                    <div className='tituloCardDominioPerfil desactivado'>DOMINIO 3</div>
+                    <div className='subtituloCardDominioPerfil desactivado'>COMUNICACION</div>
                     <div className="progress progressCard">
                         <div className="progress-bar progress-barCard progress-bar3" role="progressbar" aria-label="Progreso estadisticas" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
                     </div>
-                    <div className='proximamenteCardDominioPerfil proximamenteCardDominioPerfil3'>PROXIMA<span>MENTE</span></div>
-                    <div className='mesProximamenteCardDominioPerfil mesProximamenteCardDominioPerfil3'>MARZO</div>
+                    <div className='proximamenteCardDominioPerfil desactivado'>PROXIMA<span>MENTE</span></div>
+                    <div className='mesProximamenteCardDominioPerfil mesProximamenteCardDominioPerfil3 desactivado'>MARZO</div>
                 </div>
-
-
-                <div className='cardDominioPerfil d-flex flex-column text-center'>
-                    <div className='tituloCardDominioPerfil'>DOMINIO 4</div>
-                    <div className='subtituloCardDominioPerfil'>DELEGACION</div>
+                <div className='cardDominioPerfilDesactivado d-flex flex-column text-center'>
+                    <div className='tituloCardDominioPerfil desactivado'>DOMINIO 4</div>
+                    <div className='subtituloCardDominioPerfil desactivado'>DELEGACION</div>
                     <div className="progress progressCard">
                         <div className="progress-bar progress-barCard progress-bar4" role="progressbar" aria-label="Progreso estadisticas" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
                     </div>
-                    <div className='proximamenteCardDominioPerfil proximamenteCardDominioPerfil4'>PROXIMA<span>MENTE</span></div>
-                    <div className='mesProximamenteCardDominioPerfil mesProximamenteCardDominioPerfil4'>MARZO</div>
+                    <div className='proximamenteCardDominioPerfil desactivado'>PROXIMA<span>MENTE</span></div>
+                    <div className='mesProximamenteCardDominioPerfil desactivado'>MARZO</div>
                 </div>
-
-
-                <div className='cardDominioPerfil d-flex flex-column text-center'>
-                    <div className='tituloCardDominioPerfil'>DOMINIO 5</div>
-                    <div className='subtituloCardDominioPerfil'>ORGANIZACION</div>
+                <div className='cardDominioPerfilDesactivado d-flex flex-column text-center'>
+                    <div className='tituloCardDominioPerfil desactivado'>DOMINIO 5</div>
+                    <div className='subtituloCardDominioPerfil desactivado'>ORGANIZACION</div>
                     <div className="progress progressCard">
                         <div className="progress-bar progress-barCard progress-bar5" role="progressbar" aria-label="Progreso estadisticas" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
                     </div>
-                    <div className='proximamenteCardDominioPerfil proximamenteCardDominioPerfil5'>PROXIMA<span>MENTE</span></div>
-                    <div className='mesProximamenteCardDominioPerfil mesProximamenteCardDominioPerfil5'>MARZO</div>
+                    <div className='proximamenteCardDominioPerfil desactivado'>PROXIMA<span>MENTE</span></div>
+                    <div className='mesProximamenteCardDominioPerfil desactivado'>MARZO</div>
                 </div>
-
-
-                <div className='cardDominioPerfil d-flex flex-column text-center'>
-                    <div className='tituloCardDominioPerfil'>DOMINIO 6</div>
-                    <div className='subtituloCardDominioPerfil'>PLANIFICACION</div>
+                <div className='cardDominioPerfilDesactivado d-flex flex-column text-center'>
+                    <div className='tituloCardDominioPerfil desactivado'>DOMINIO 6</div>
+                    <div className='subtituloCardDominioPerfil desactivado'>PLANIFICACION</div>
                     <div className="progress progressCard">
                         <div className="progress-bar progress-barCard progress-bar6" role="progressbar" aria-label="Progreso estadisticas" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
                     </div>
-                    <div className='proximamenteCardDominioPerfil proximamenteCardDominioPerfil6'>PROXIMA<span>MENTE</span></div>
-                    <div className='mesProximamenteCardDominioPerfil mesProximamenteCardDominioPerfil6'>MARZO</div>
+                    <div className='proximamenteCardDominioPerfil desactivado'>PROXIMA<span>MENTE</span></div>
+                    <div className='mesProximamenteCardDominioPerfil desactivado'>MARZO</div>
                 </div>
-            </div>
-
-            
-            {/* <div className='row cajaGrandeEstadisticasHexagono justify-content-between'>
-                <div className='col-6 p-0 pe-3'>
+            </div>            
+            <div className='row cajaGrandeEstadisticasHexagono justify-content-between'>
+                <div className='col-xxl-6 col-xl-6 col-lg-6 col-sm-12 col-md-12 cajaEstadisticasIzquierda'>
                     <div className='CajaEstadisticasSecciones'>
                         <div className='tituloCajaEstadisticasSecciones'><h2>Resultados del test - Dominio 1</h2></div>
                         <div className='subtituloCajaEstadisticasSecciones'><h3>HABILIDADES DIRECTIVAS</h3></div>
                         <div className='d-flex flex-column estadisticasTablaSecciones'>
-                            <div className='row parteSuperiorSeccionesDirectivo mx-auto m-0 align-items-start'>
+                            <div className='row parteSuperiorSeccionesDirectivo mx-auto align-items-start'>
                                 <div className='titulosSeccionesPuntosTablaDirectivo col-2 text-start m-0 p-0'><span>N°</span></div>
                                 <div className='titulosSeccionesPuntosTablaDirectivo col-8 text-start m-0 p-0'><span>CATEGORIA</span></div>
                                 <div className='titulosSeccionesPuntosTablaDirectivo col-2 text-end m-0 p-0'><span>PTS</span></div>
                             </div>
 
-                            <div className='row categoriaSeccionesDirectivo mx-auto m-0 align-items-start'>
+                            <div className='row categoriaSeccionesDirectivo mx-auto align-items-start'>
                                 <div className='categoriaTextoSeccionesPuntosTablaDirectivo col-2 text-start m-0 p-0'><span>1</span></div>
                                 <div className='categoriaTextoSeccionesPuntosTablaDirectivo col-8 text-start m-0 p-0'><span>EMPRENDEDOR ESTRATÉGICO</span></div>
                                 <div className='categoriaTextoSeccionesPuntosTablaDirectivo col-2 text-end m-0 p-0'><span>{usuarioPuntaje}</span></div>
@@ -176,7 +168,7 @@ function Perfil() {
                                     <div className="progress-bar progress-barEstadisticas progress-barUnic'" style={{ width: `${usuarioPuntaje}%` }} role="progressbar" aria-label="Progreso estadisticas" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
                                 </div>
                             </div>
-                            <div className='row categoriaSeccionesDirectivo mx-auto m-0 align-items-start'>
+                            <div className='row categoriaSeccionesDirectivo mx-auto align-items-start'>
                                 <div className='categoriaTextoSeccionesPuntosTablaDirectivo col-2 text-start m-0 p-0'><span>2</span></div>
                                 <div className='categoriaTextoSeccionesPuntosTablaDirectivo col-8 text-start m-0 p-0'><span>CONCEPTOS ESTRATEGICOS</span></div>
                                 <div className='categoriaTextoSeccionesPuntosTablaDirectivo col-2 text-end m-0 p-0'><span>56</span></div>
@@ -184,7 +176,7 @@ function Perfil() {
                                     <div className="progress-bar progress-barEstadisticas" style={{ width: '56%' }} role="progressbar" aria-label="Progreso estadisticas" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
                                 </div>
                             </div>
-                            <div className='row categoriaSeccionesDirectivo mx-auto m-0 align-items-start'>
+                            <div className='row categoriaSeccionesDirectivo mx-auto align-items-start'>
                                 <div className='categoriaTextoSeccionesPuntosTablaDirectivo col-2 text-start m-0 p-0'><span>3</span></div>
                                 <div className='categoriaTextoSeccionesPuntosTablaDirectivo col-8 text-start m-0 p-0'><span>CONOCIMIENTO DE MERCADO</span></div>
                                 <div className='categoriaTextoSeccionesPuntosTablaDirectivo col-2 text-end m-0 p-0'><span>5</span></div>
@@ -192,7 +184,7 @@ function Perfil() {
                                     <div className="progress-bar progress-barEstadisticas" style={{ width: '5%' }} role="progressbar" aria-label="Progreso estadisticas" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
                                 </div>
                             </div>
-                            <div className='row categoriaSeccionesDirectivo mx-auto m-0 align-items-start'>
+                            <div className='row categoriaSeccionesDirectivo mx-auto align-items-start'>
                                 <div className='categoriaTextoSeccionesPuntosTablaDirectivo col-2 text-start m-0 p-0'><span>4</span></div>
                                 <div className='categoriaTextoSeccionesPuntosTablaDirectivo col-8 text-start m-0 p-0'><span>CONOCIMIENTO EMPRENDEDOR</span></div>
                                 <div className='categoriaTextoSeccionesPuntosTablaDirectivo col-2 text-end m-0 p-0'><span>29</span></div>
@@ -200,7 +192,7 @@ function Perfil() {
                                     <div className="progress-bar progress-barEstadisticas" style={{ width: '29%' }} role="progressbar" aria-label="Progreso estadisticas" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
                                 </div>
                             </div>
-                            <div className='row categoriaSeccionesDirectivo mx-auto m-0 align-items-start'>
+                            <div className='row categoriaSeccionesDirectivo mx-auto align-items-start'>
                                 <div className='categoriaTextoSeccionesPuntosTablaDirectivo col-2 text-start m-0 p-0'><span>5</span></div>
                                 <div className='categoriaTextoSeccionesPuntosTablaDirectivo col-8 text-start m-0 p-0'><span>HABILIDADES DIRECTIVAS</span></div>
                                 <div className='categoriaTextoSeccionesPuntosTablaDirectivo col-2 text-end m-0 p-0'><span>90</span></div>
@@ -208,7 +200,7 @@ function Perfil() {
                                     <div className="progress-bar progress-barEstadisticas" style={{ width: '90%' }} role="progressbar" aria-label="Progreso estadisticas" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
                                 </div>
                             </div>
-                            <div className='row categoriaSeccionesDirectivo mx-auto m-0 align-items-start'>
+                            <div className='row categoriaSeccionesDirectivo mx-auto align-items-start'>
                                 <div className='categoriaTextoSeccionesPuntosTablaDirectivo col-2 text-start m-0 p-0'><span>6</span></div>
                                 <div className='categoriaTextoSeccionesPuntosTablaDirectivo col-8 text-start m-0 p-0'><span>HABILIDADES DIGITALES</span></div>
                                 <div className='categoriaTextoSeccionesPuntosTablaDirectivo col-2 text-end m-0 p-0'><span>80</span></div>
@@ -216,7 +208,7 @@ function Perfil() {
                                     <div className="progress-bar progress-barEstadisticas" style={{ width: '90%' }} role="progressbar" aria-label="Progreso estadisticas" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
                                 </div>
                             </div>
-                            <div className='row parteInferiorEstadisticasDirectivo mx-auto m-0 align-items-start'>
+                            <div className='row parteInferiorEstadisticasDirectivo mx-auto align-items-start'>
                                 <div className='footerTextoSeccionesPuntosTablaDirectivo col-2 text-start m-0 p-0'><span>7</span></div>
                                 <div className='footerTextoSeccionesPuntosTablaDirectivo col-8 text-start m-0 p-0'><span>PUNTAJE TOTAL</span></div>
                                 <div className='footerTextoSeccionesPuntosTablaDirectivo col-2 text-end m-0 p-0'><span>55</span></div>
@@ -224,17 +216,19 @@ function Perfil() {
                         </div>
                     </div>
                 </div>
-                <div className='col-6 p-0 ps-3'>
-                    <div className='CajaEstadisticasSecciones'>
+                <div className='col-xxl-6 col-xl-6 col-lg-6 col-sm-12 col-md-12 cajaEstadisticasDerecha'>
+                    <div className='CajaEstadisticasSecciones cajaHexagonoGrande'>
                         <div className='tituloRosaDeLosVientos'><h2>ROSA DE LOS VIENTOS</h2></div>
                         <div className='parrafoRosaDeLosVientos'><p>SOBRE TU NIVEL<span>PROFESIONAL ACUMULADO</span></p></div>
-                        <div className='hexagonoImagen'><img src={Hexagono} alt="Estadisticas Stannum" /></div>
-                        <div className='puntoRojoHexagono' style={{ top: '276px' }}></div>
+                        <div className='hexagonoImagen'>
+                            <img src={Hexagono} alt="Estadisticas Stannum" />
+                            <div className='puntoRojoHexagono' style={{ top: `${ballPosition}%` }}></div>
+                        </div>                        
                     </div>
                 </div>
             </div>
             <div className='parrafoFooter1Perfil'><p>Toda esta información fue obtenida del <b>test de dominio!</b></p></div>
-            <div className='parrafoFooter2Perfil'><p>Mejora tus habilidades para<b>aumentar tus estadísticas</b></p></div> */}
+            <div className='parrafoFooter2Perfil'><p>Mejora tus habilidades para<b>aumentar tus estadísticas</b></p></div>
         </>
     )
 }
