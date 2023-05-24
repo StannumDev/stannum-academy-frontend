@@ -18,9 +18,11 @@ function EditarPerfil() {
     };
 
     const handleFileChange = (event) => {
-        const file = event.target.files[0];
-        setValue("photo", file); // Set the value of the "photo" field using setValue from react-hook-form
-        setArchivoSubido(URL.createObjectURL(file));
+        if (event.target.files[0]){
+            const file = event.target.files[0];
+            setValue("photo", file)
+            setArchivoSubido(URL.createObjectURL(file));
+        }
       };
 
     return (
@@ -45,7 +47,7 @@ function EditarPerfil() {
             </div>
             <div className='cajaFormularioEditarPerfil'>
                 <div className="row rowEditarPerfilInput">
-                    <div className='form-group col-6'>
+                    <div className='form-group col-xxl-6 col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12'>
                         <label htmlFor="name" className='labelFormEditarPerfil'>Nombre</label>
                         <input
                             autoComplete='false'
@@ -61,7 +63,7 @@ function EditarPerfil() {
                             <p className="text-danger mt-2 ms-1 fs-6">Nombre requerido.</p>
                         )}                        
                     </div>
-                    <div className='form-group col-6'>
+                    <div className='form-group col-xxl-6 col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12'>
                         <label htmlFor="surname" className='labelFormEditarPerfil'>Apellido</label>
                         <input
                             id='surname'
@@ -75,7 +77,7 @@ function EditarPerfil() {
                     </div>
                 </div>
                 <div className="row rowEditarPerfilInput">
-                    <div className='form-group col-12'>
+                    <div className='form-group col-xxl-6 col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12'>
                         <label htmlFor="emprendimiento" className='labelFormEditarPerfil'>Emprendimiento</label>
                         <input
                             autoComplete='false'
@@ -89,6 +91,22 @@ function EditarPerfil() {
                         />
                         {errors.emprendimiento && errors.emprendimiento.type === "required" && (
                             <p className="text-danger mt-2 ms-1 fs-6">Emprendimiento requerido.</p>
+                        )}
+                    </div>
+                    <div className='form-group col-xxl-6 col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12'>
+                        <label htmlFor="age" className='labelFormEditarPerfil'>Nacimiento</label>
+                        <input
+                            autoComplete='false'
+                            id='age'
+                            type="date"
+                            className={`inputEditarPerfil form-control  mt-2`}
+                            {...register("age", {
+                                required: true,
+                                maxLength: 40,
+                            })}
+                        />
+                        {errors.age && errors.age.type === "required" && (
+                            <p className="text-danger mt-2 ms-1 fs-6">Edad requerida.</p>
                         )}
                     </div>
                 </div>
@@ -119,12 +137,12 @@ function EditarPerfil() {
                             type="text"
                             className={`inputEditarPerfil form-control  mt-2`}
                             {...register("bio", {
-                                required: true,
-                                maxLength: 40,
+                                required: false,
+                                maxLength: 350,
                             })}
                         />
-                        {errors.bio && errors.bio.type === "required" && (
-                            <p className="text-danger mt-2 ms-1 fs-6">Cuéntanos algo, no seas tímido!</p>
+                        {errors.bio && errors.bio.type === "maxLength" && (
+                            <p className="text-danger mt-2 ms-1 fs-6">No puede contener mas de 350 caracteres.</p>
                         )}
                     </div>
                 </div>
@@ -140,7 +158,3 @@ function EditarPerfil() {
 }
 
 export default EditarPerfil
-
-// {errors.email && errors.email.type === "required" && (
-//     <p className="text-danger mt-2 ms-1 fs-6">Correo requerido</p>
-// )}

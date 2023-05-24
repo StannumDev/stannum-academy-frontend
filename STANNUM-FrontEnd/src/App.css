@@ -22,7 +22,7 @@ font-family: 'Bebas Neue', sans-serif;
 */
 
 body:not(.recuperar-contraseña-body):not(.iniciar-sesion){
-    background-color: rgb(58,58,58,0.8);
+    background-color: rgb(58,58,58,1);
     background-image: url("../src/assets/Metalico.png");
     background-size: cover;
     background-blend-mode: multiply;
@@ -77,5 +77,17 @@ button {
 }
 
 ::-webkit-scrollbar {
-  display: none;
-}
+    width: 6px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background-color: transparent;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background-color: #888;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: #555;
+  }

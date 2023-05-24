@@ -382,11 +382,10 @@
 
 .puntoRojoHexagono{
     position: absolute;
-    /* top: 47.3%; 0 puntos*/
-    top: 11.8%;
-    right: -4.18%;
-    width: 20px;
-    height: 20px;
+    right: -4.4%;
+    width: 4.7%;
+    height: 5%;
+    border: 2px solid rgb(57, 57, 57, 1);
     background-color: #CD0133;
     border-radius: 50%;
     left: 0;
@@ -457,6 +456,7 @@
 }
 
 .botonFotoPerfil{
+    z-index: 1000;
     position: absolute;
     background: #67CCB9;
     border-radius: 5px;
@@ -475,6 +475,7 @@
 }
 
 .botonFotoPerfilResponsive{
+    z-index: 1000;
     position: absolute;
     background: transparent;
     border-radius: 5px;

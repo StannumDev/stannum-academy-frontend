@@ -40,18 +40,34 @@ function NavBar() {
                         </div>
                         <div className="collapse navbar-collapse" id="navbarPrincipal">
                             <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
-                                <li className={`nav-item ${activeIndex === 0 ? 'active' : 'nonActive'}`}>
+                                <li className="nav-item nonActiveDropdown dropdown">
+                                    <a className="nav-link linkNavbar dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                        Mateo Bernabé Lohezic
+                                    </a>
+                                    <ul className="dropdown-menu dropdown-menu-end">
+                                        <li><a className="dropdown-item" href="/Perfil">Perfil</a></li>
+                                        <li><a className="dropdown-item" href="/Ranking/Inicio">Ranking</a></li>
+                                        <li><a className="dropdown-item ultimoItemDropdown" href="/Cerrar-sesion">Cerrar sesión</a></li>
+                                    </ul>
+                                </li>
+                                <li className='nav-item botonNavbarResponsive nombreNavBarResponsive'>
+                                    <span>Mateo Bernabé Lohezic</span>
+                                </li>
+                                <li className={`nav-item botonNavbarResponsive ${activeIndex === 0 ? 'active' : 'nonActive'}`}>
                                     <a className="nav-link linkNavbar" aria-current="page" href="/">Inicio</a>
                                 </li>
-                                <li className={`nav-item ${activeIndex === 1 ? 'active' : 'nonActive'}`}>
+                                <li className={`nav-item botonNavbarResponsive ${activeIndex === 1 ? 'active' : 'nonActive'}`}>
                                     <a className="nav-link linkNavbar" aria-current="page" href="/Ranking/Inicio">Ranking</a>
                                 </li>
-                                <li className={`nav-item ${activeIndex === 2 ? 'active' : 'nonActive'}`}>
-                                    <a className="nav-link linkNavbar" aria-current="page" href="/Perfil">Mi Perfil</a>
+                                <li className={`nav-item botonNavbarResponsive ${activeIndex === 2 ? 'active' : 'nonActive'}`}>
+                                    <a className="nav-link linkNavbar" aria-current="page" href="/Perfil">Perfil</a>
                                 </li>
-                                <li className={`nav-item ${activeIndex === 3 ? 'active' : 'nonActive'}`}>
+                                <li className={`nav-item botonNavbarResponsive ${activeIndex === 2 ? 'active' : 'nonActive'}`}>
+                                    <a className="nav-link linkNavbar" aria-current="page" href="/Perfil">Cerrar sesión</a>
+                                </li>
+                                {/* <li className='nav-item nonActive'>
                                     <a className="nav-link linkNavbar" aria-current="page" href="/Iniciar-sesion">Iniciar Sesión</a>
-                                </li>
+                                </li> */}
                             </ul>
                         </div>
                     </div>

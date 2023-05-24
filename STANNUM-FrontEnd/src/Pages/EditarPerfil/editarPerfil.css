@@ -1,17 +1,7 @@
 .rowEditarPerfil{
-    width: 80%;
     margin: auto;
     margin-top: 4rem;
-}
-
-.cajaFotoEditarPerfil{
-    width: 33.333%;
-}
-
-.cajaFormularioEditarPerfil{
-    padding-bottom: 2rem;
-    padding-left: 2rem;
-    width: 66.667%;
+    text-align: start;
 }
 
 .labelFormEditarPerfil{
@@ -26,16 +16,11 @@
     height: 45px;
     border-radius: 5px;
     color: rgb(255,255,255, 0.8);
-
 }
 
 .inputEditarPerfil:focus{
     background-color: rgb(198,198,198, 0.3);
     color: #FFFFFF;
-}
-
-.rowEditarPerfilInput:not(:first-child) {
-    margin-top: 1.5rem;
 }
 
 .rowEditarPerfilInput textarea {
@@ -69,11 +54,11 @@
 }
 
 .botonesEditarPerfil{
-    width: 25%;
+    width: 90%;
     margin: auto;
     display: flex;
     justify-content: center;
-    gap: 4%;
+    gap: 5%;
     margin-top: 2rem;
     margin-bottom: 5rem;
 }
@@ -83,7 +68,22 @@
     justify-content: center;
     align-items: center;
     text-decoration: none;
-    width: 45%;
+    width: 210px;
+    padding-block: 0.7rem;
+    padding-inline: 1rem;
+    background: #FFFFFF;
+    box-shadow: 0px 5px 8px rgb(0, 0, 0,1);
+    border-radius: 5px;
+    transition: transform 0.3s ease;
+}
+
+
+.descartarEditarPerfil{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    width: 210px;
     padding-block: 0.7rem;
     padding-inline: 1rem;
     background: #FFFFFF;
@@ -113,11 +113,100 @@
     font-size: 1rem;
     text-align: center;
     color: #FFFFFF;
-    width: 45%;
+    width: 210px;
     box-shadow: 0px 5px 8px rgb(0, 0, 0,1);
     transition: transform 0.3s ease;
 }
 
 .confirmarEditarPerfil:hover{
     transform: scale(1.05);
+}
+
+@media (max-width: 576px){
+    .rowEditarPerfil{
+        width: 100%;
+    }
+
+    .cajaFormularioEditarPerfil{
+        padding-bottom: 2rem;
+        padding-left: 0rem;
+        padding-right: 0rem;
+        width: 90%;
+        margin:auto;
+    }
+
+    .form-group{
+        margin-top: 1.5rem;
+    }
+    
+    .botonFotoEditarPerfil{
+        right: 5%;
+        top: -5%;
+        background: transparent;
+        font-size: 2rem;
+    }
+
+}
+
+@media (min-width: 576px) and (max-width: 992px){
+    .rowEditarPerfil{
+        width: 100%;
+    }
+
+    .divFotoJugadorPerfilEditarPerfil{
+        margin: auto;
+        margin-bottom: 2rem;
+    }
+    
+    .cajaFormularioEditarPerfil{
+        padding-bottom: 2rem;
+        padding-left: 0rem;
+        padding-right: 0rem;
+        width: 90%;
+        margin: auto;
+    }
+    
+    .form-group{
+        margin-top: 1.5rem;
+    }
+    
+    .botonFotoEditarPerfil{
+        right: 0%;
+        top: -7%;
+        font-size: 2rem;
+        background: transparent;
+    }
+
+}
+
+@media (min-width: 992px) and (max-width: 1200px){
+    .rowEditarPerfil{
+        width: 80%;
+    }
+    
+    .cajaFormularioEditarPerfil{
+        padding-bottom: 2rem;
+        padding-left: 2rem;
+        width: 66.667%;
+    }
+    
+    .rowEditarPerfilInput:not(:first-child) {
+        margin-top: 1.5rem;
+    }
+}
+
+@media (min-width: 1200px){
+    .rowEditarPerfil{
+        width: 80%;
+    }
+
+    .cajaFormularioEditarPerfil{
+        padding-bottom: 2rem;
+        padding-left: 2rem;
+        width: 66.667%;
+    }
+
+    .rowEditarPerfilInput:not(:first-child) {
+        margin-top: 1.5rem;
+    }
 }

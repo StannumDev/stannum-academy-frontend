@@ -7,15 +7,15 @@ import Hexagono from '../../assets/HexagonoPerfil.png'
 function Perfil() {
 
     const [Dominio, setDominio] = useState(0);
-    const usuarioPuntaje = 78 
+    const usuarioPuntaje = 87 
 
     
-    const ballPosition = 47.3 + (usuarioPuntaje / 100 ) * (11.8 - 47.3)
+    const ballPosition = 47.3 + (usuarioPuntaje / 100 ) * (11.5 - 47.3)
     // position = topMin + (points / maxPoints) * (topMax - topMin)
     // Explanation of the formula:
     // position is the calculated top position of the ball.
     // topMin is the desired top position when points are at the minimum (47.3%).
-    // topMax is the desired top position when points are at the maximum (11.8%).
+    // topMax is the desired top position when points are at the maximum (10%).
     // points is the actual points value.
     // maxPoints is the maximum points value (100).
 

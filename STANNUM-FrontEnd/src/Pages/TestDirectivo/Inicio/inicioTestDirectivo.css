@@ -1,25 +1,34 @@
-.tituloDominio1Test{
+.tituloDominio1Test h1{
     font-family: 'Anton', sans-serif;
     font-weight: 400;
-    font-size: 5rem;
-    line-height: 5rem;
     text-align: center;
     color: #FFFFFF;
 }
 
-.tituloDominio1TestRojo{
+.tituloDominio1Test span{
     font-family: 'Anton', sans-serif;
     font-weight: 400;
-    font-size: 5rem;
-    line-height: 5rem;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.tituloDominio1TestRojo h2{
+    font-family: 'Anton', sans-serif;
+    font-weight: 400;
     text-align: center;
     color: #D3214D;
 }
 
-.importanteDominio1TestRojo{
+.parrafoInicioTest{
+    margin-top: 1rem;
+}
+
+.parraforInicioTest2{
+    margin-top: 0rem;
+}
+
+.importanteDominio1TestRojo h3{
     font-weight: 700;
-    font-size: 30px;
-    line-height: 45px;
     color: #D3214D;
 }
 
@@ -36,26 +45,27 @@
 .contenedorInicioTestDominio{
     margin-top: 3rem;
     width: 100%;
-    padding-top: 3rem;
+    padding-inline: 1rem;
+    padding-block: 3rem;
     background-color: #D3214D;
-    background-image: url("../../../assets/Concrete.png");
+    background-image: url("../../../assets/Metalico.png");
     background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;
     background-blend-mode: multiply;
-    padding-bottom: 4rem;
-    padding-inline: 9rem;
 }
 
-.tituloInicioTestDominio{
+.tituloInicioTestDominio h2{
     font-family: 'Anton';
     font-weight: 400;
-    font-size: 5rem;
 }
 
 .subtituloInicioTestDominio{
     margin-top: 1rem;
-    font-weight: 300;
+}
+
+.subtituloInicioTestDominio h2{
+    font-weight: 400;
 }
 
 .subtituloInicioTestDominio b{
@@ -63,28 +73,24 @@
 }
 
 .textoInicioTestDominio{
-    margin-top: 3rem;
-    font-weight: 600;
-    font-size: 24px;
-    line-height: 36px;
+    margin-top: 1.5rem;
+}
+
+.textoInicioTestDominio p{
+    font-weight: 400;
 }
 
 .contenedorPreguntaTestDominio{
-    padding-left: 10rem;
-    padding-top: 4rem;
-    padding-bottom: 4rem;
     border-bottom: 0.5px solid rgb(255,255,255, 0.1);
 }
 
 .tituloPreguntaDominio{
     font-weight: 700;
-    font-size: 2.65rem;
     color: #FFFFFF;
 }
 
 .preguntaDominio{
     font-weight: 700;
-    font-size: 1.5rem;
     color: #FFFFFF;
 }
 
@@ -103,12 +109,9 @@
 .contenedorInputsPregunta1-10{
     margin-left: 3rem;
     margin-right: 3rem;
-}
-
-.contenedorInputsPregunta1-10 {
     display: flex;
     gap: 4px;
-  }
+}
   
 .radioInputContainer {
     display: inline-block;
@@ -186,4 +189,229 @@
     color: #D3214D;
     margin-left: 4rem;
     margin-top: 1rem;
+}
+
+.cajaPregunta1-10{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+}
+
+@media (max-width: 576px){
+
+    .tituloDominio1Test{
+        padding-inline: 1rem;
+    }
+    
+    .tituloDominio1Test h1{
+        font-size: 3.7rem;
+        line-height: 4rem;
+    }
+
+    .tituloDominio1Test span{
+        font-size: 3.7rem;
+        display: block;
+    }
+    
+    .tituloDominio1TestRojo{
+        margin-top: -0.5rem;
+    }
+    
+    .tituloDominio1TestRojo h2{
+        font-size: 3rem;
+    }
+    
+    .importanteDominio1TestRojo h3{
+        font-size: 1.4rem;
+    }
+
+    .tituloInicioTestDominio h2{
+        font-size: 3.7rem;
+    }
+    
+    .subtituloInicioTestDominio h2{
+        font-size: 1.4rem;
+    }
+
+    .subtituloInicioTestDominio b{
+        display: block;
+    }
+    
+    .textoInicioTestDominio p{
+        font-size: 1rem;
+        line-height: 1.4rem;
+    }
+    
+    .contenedorPreguntaTestDominio{
+        padding-inline: 1.5rem;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+    }
+    
+    .tituloPreguntaDominio{
+        font-size: 2rem;
+    }
+    
+    .preguntaDominio{
+        font-size: 1.2rem;
+    }
+    
+    .primerTexto1-10{
+        order: +1;
+    }
+}
+
+@media (min-width: 576px) and (max-width: 992px){
+    
+    .tituloDominio1Test h1{
+        font-size: 4rem;
+    }
+
+    .tituloDominio1Test span{
+        font-size: 4rem;
+    }
+    
+    .tituloDominio1TestRojo{
+        margin-top: -1rem;
+    }
+    
+    .tituloDominio1TestRojo h2{
+        font-size: 3.5rem;
+    }
+    
+    .importanteDominio1TestRojo h3{
+        font-size: 1.4rem;
+    }
+
+    .tituloInicioTestDominio h2{
+        font-size: 4rem;
+    }
+    
+    .subtituloInicioTestDominio h2{
+        font-size: 1.5rem;
+    }
+    
+    .textoInicioTestDominio p{
+        font-size: 1.2rem;
+        line-height: 1.5rem;
+    }
+    
+    .contenedorPreguntaTestDominio{
+        padding-inline: 2rem;
+        padding-block: 3rem;
+    }
+    
+    .tituloPreguntaDominio{
+        font-size: 2.3rem;
+    }
+    
+    .preguntaDominio{
+        font-size: 1.2rem;
+    }
+    
+    .primerTexto1-10{
+        order: +1;
+    }
+
+    .segundoTexto1-10{
+        order: +1;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1200px){
+
+    .tituloDominio1Test h1{
+        font-size: 5rem;
+    }
+
+    .tituloDominio1Test span{
+        font-size: 5rem;
+    }
+
+    .tituloDominio1TestRojo{
+        margin-top: -1rem;
+    }
+    
+    .tituloDominio1TestRojo h2{
+        font-size: 4.5rem;
+    }
+    
+    .importanteDominio1TestRojo h3{
+        font-size: 1.7rem;
+    }
+
+    .tituloInicioTestDominio h2{
+        font-size: 5rem;
+    }
+    
+    .subtituloInicioTestDominio h2{
+        font-size: 1.7rem;
+    }
+    
+    .textoInicioTestDominio p{
+        font-size: 1.2rem;
+        line-height: 1.6rem;
+    }
+    
+    .contenedorPreguntaTestDominio{
+        padding-inline: 6rem;
+        padding-block: 4rem;
+    }
+    
+    .tituloPreguntaDominio{
+        font-size: 2.65rem;
+    }
+    
+    .preguntaDominio{
+        font-size: 1.5rem;
+    }
+}
+
+@media (min-width: 1200px){
+    
+    .tituloDominio1Test h1{
+        font-size: 5rem;
+    }
+
+    .tituloDominio1Test span{
+        font-size: 5rem;
+    }
+    
+    .tituloDominio1TestRojo{
+        margin-top: -1rem;
+    }
+
+    .tituloDominio1TestRojo h2{
+        font-size: 4.5rem;
+    }
+
+    .importanteDominio1TestRojo h3{
+        font-size: 1.7rem;
+    }
+
+    .tituloInicioTestDominio h2{
+        font-size: 5rem;
+    }
+
+    .subtituloInicioTestDominio h2{
+        font-size: 2rem;
+    }
+
+    .textoInicioTestDominio p{
+        font-size: 1.4rem;
+        line-height: 1.9rem;
+    }
+
+    .contenedorPreguntaTestDominio{
+        padding-inline: 8rem;
+        padding-block: 4rem;
+    }
+
+    .tituloPreguntaDominio{
+        font-size: 2.65rem;
+    }
+
+    .preguntaDominio{
+        font-size: 1.5rem;
+    }
 }

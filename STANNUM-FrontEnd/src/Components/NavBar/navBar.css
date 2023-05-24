@@ -21,8 +21,9 @@
 }
 
 .navbar{
-    background-color: rgb(58,58,58,0.8);
-    background-image: url("../../src/assets/Metalico.png");
+    z-index: 10000000000;
+    background-color: rgb(58,58,58,1);
+    background-image: url("./Metalico.png");
     background-size: cover;
     background-repeat: no-repeat;
     background-blend-mode: multiply;
@@ -32,6 +33,51 @@
   
 .animate__animated.animate__fadeInDown {
     --animate-duration: 0.5s;
+}
+
+.navbar .nav-link,
+.navbar .nav-link:focus,
+.navbar .nav-link:hover {
+    color: #FFFFFF;
+}
+
+.navbar .nav-link.show,
+.navbar .nav-link.show:focus,
+.navbar .nav-link.show:hover {
+    color: #FFFFFF;
+}
+
+.dropdown-menu{
+    background-color: rgb(58,58,58,1);
+    background-image: url("./Metalico.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-blend-mode: multiply;
+    margin: 0;
+    padding: 0;
+}
+
+.dropdown-menu[data-bs-popper] {
+    margin-top: 0rem;
+    border: 2px solid rgb(103,204,185,0.9);
+    border-radius: 5px;
+}
+
+.dropdown-item{
+    background-color: rgb(103,204,185,0.9);
+    border-bottom: 1px solid rgb(58,58,58,0.1);
+    color: #FFFFFF;
+    padding-left: 0.6rem;
+}
+
+.ultimoItemDropdown{
+    border-bottom: none;
+}
+
+.dropdown-item:hover{
+    color: #FFFFFF;
+    background-color: rgb(103,204,185,1);
+    transition: background-color 0.3s ease;
 }
 
 @media (max-width: 576px){
@@ -53,12 +99,25 @@
         padding-block: 0rem;
     }
 
+    .nonActiveDropdown{
+        display: none;
+    }
+
     .containerFluidNavBar{
         padding: 0;
     }
 
     .navbar{
         padding: 0;
+    }
+    
+    .nombreNavBarResponsive{
+        border-bottom: 2px solid rgb(255,255,255,0.2);
+        color: #FFFFFF;
+        font-size: 1.3rem;
+        padding-inline: 1rem;
+        padding-bottom: 0.5rem;
+        margin-bottom: 0.5rem;
     }
 }
 
@@ -81,12 +140,25 @@
         padding-block: 0rem;
     }
 
+    .nonActiveDropdown{
+        display: none;
+    }
+
     .containerFluidNavBar{
         padding: 0;
     }
 
     .navbar{
         padding: 0;
+    }
+    
+    .nombreNavBarResponsive{
+        border-bottom: 2px solid rgb(255,255,255,0.2);
+        color: #FFFFFF;
+        font-size: 1.3rem;
+        padding-inline: 1rem;
+        padding-bottom: 0.5rem;
+        margin-bottom: 0.5rem;
     }
 }
 
@@ -124,8 +196,16 @@
         border-radius: 32px;
     }
 
+    .nonActiveDropdown{
+        padding-inline: 1rem;
+    }
+
     .navbar{
         padding-block: 1rem;
+    }
+
+    .botonNavbarResponsive{
+        display: none;
     }
 }
 
@@ -162,9 +242,17 @@
         padding-block: 0rem;
         border-radius: 32px;
     }
+
+    .nonActiveDropdown{
+        padding-inline: 1rem;
+    }
     
     .navbar{
         padding-block: 1rem;
+    }
+
+    .botonNavbarResponsive{
+        display: none;
     }
 }
 
