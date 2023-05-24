@@ -7,7 +7,7 @@ import Hexagono from '../../assets/HexagonoPerfil.png'
 function Perfil() {
 
     const [Dominio, setDominio] = useState(0);
-    const usuarioPuntaje = 97; 
+    const usuarioPuntaje = 78 
 
     
     const ballPosition = 47.3 + (usuarioPuntaje / 100 ) * (11.8 - 47.3)
@@ -24,6 +24,7 @@ function Perfil() {
             <div className='tituloPerfil'><h1>FICHA DEL ENTRENADO</h1></div>
             <div className='parrafoPerfil'><p>Teniendo en cuenta los resultados de los diferentes Test, generamos la siguiente plantilla con tu información. A medida que completes los Test, esta se irá completando.</p></div>
             <div className='row rowDatosDelJugador'>
+                <a href='/Editar-perfil'><button className='botonFotoPerfilResponsive'><i className="bi bi-pencil-square"></i></button> </a>
                 <div className='divFotoJugadorPerfil'>
                         <div className='contenedorImagen'>
                         <img src={FotoDePerfil} alt="Perfil Stannum" />
@@ -67,7 +68,10 @@ function Perfil() {
                     </div>                         
                 </div>
                 <div className='divDatosDelJugadorInfo d-flex flex-column'>
-                    <div className='datosDelJugador'><h2>DATOS DEL JUGADOR</h2></div>
+                    <div className='datosDelJugador'>
+                        <a href='/Editar-perfil'><button className='botonFotoPerfil'><i className="bi bi-pencil-square"></i></button></a>
+                        <h2>DATOS DEL JUGADOR</h2>
+                    </div>
                     <div className='datosDelJugadorInformacion d-flex flex-wrap'>
                         <div className='datosJugadorSeccion datosJugadorSeccion1'>
                             <div className='NombreSeccionDatosJugador'>Nombre</div>

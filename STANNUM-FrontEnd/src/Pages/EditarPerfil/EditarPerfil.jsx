@@ -131,7 +131,7 @@ function EditarPerfil() {
             </div>
         </div>
     <div className='botonesEditarPerfil'>
-        <a href="/Perfil" className='descartarEditarPerfil'><button>Descartar cambios</button></a>
+        <a href="/Perfil" className='descartarEditarPerfil'><button  type='button'>Descartar cambios</button></a>
         <button className='confirmarEditarPerfil' type='submit'>Guardar cambios</button>
     </div>
     </form>        

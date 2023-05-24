@@ -19,7 +19,7 @@ function NavBar() {
       if (location.pathname.includes('/Ranking')) {
         setActiveIndex(1);
       }
-      if (location.pathname === '/Perfil') {
+      if (location.pathname === '/Perfil' || location.pathname.includes('/Editar-perfil')) {
         setActiveIndex(2);
       }
       if (location.pathname === '/Iniciar-sesion') {
