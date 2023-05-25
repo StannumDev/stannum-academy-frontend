@@ -52,7 +52,7 @@ function NavBar() {
                                     <ul className="dropdown-menu dropdown-menu-end">
                                         <li><a className="dropdown-item" href="/Perfil">Perfil</a></li>
                                         <li><a className="dropdown-item" href="/Ranking/Inicio">Ranking</a></li>
-                                        <li><a className="dropdown-item ultimoItemDropdown" href="/Cerrar-sesion">Cerrar sesión</a></li>
+                                        <li><a className="dropdown-item ultimoItemDropdown" href="/Iniciar-sesion">Iniciar sesión</a></li>
                                     </ul>
                                 </li>
                                 <li className='nav-item botonNavbarResponsive nombreNavBarResponsive'>
