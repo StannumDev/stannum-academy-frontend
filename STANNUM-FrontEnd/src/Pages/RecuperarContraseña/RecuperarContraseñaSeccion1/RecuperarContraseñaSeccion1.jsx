@@ -3,7 +3,7 @@ import LogoChico from '../../../assets/LogoChico.png'
 import axios from "axios";
 import { useForm } from "react-hook-form";
 import keyIcon from '../../../assets/key.png'
-import './recuperarContraseñaSeccion1.css'
+import './recuperarContrasenia.css'
 
 function RecuperarContraseñaSeccion1() {
 
