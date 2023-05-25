@@ -68,7 +68,7 @@ function NavBar() {
                                 <li className={`nav-item botonNavbarResponsive ${activeIndex === 2 ? 'active' : 'nonActive'}`}>
                                     <a className="nav-link linkNavbar" aria-current="page" href="/Perfil">Perfil</a>
                                 </li>
-                                <li className={`nav-item botonNavbarResponsive ${activeIndex === 2 ? 'active' : 'nonActive'}`}>
+                                <li className='nav-item botonNavbarResponsive nonActive'>
                                     <a className="nav-link linkNavbar" aria-current="page" href="/Iniciar-sesion">Iniciar sesión</a>
                                 </li>
                                 {/* <li className='nav-item nonActive'>
