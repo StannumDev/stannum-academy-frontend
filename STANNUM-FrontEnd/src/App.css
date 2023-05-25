@@ -21,6 +21,64 @@ font-family: 'Bebas Neue', sans-serif;
 
 */
 
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #888;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #555;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    transition: background-color 5000s ease-in-out 0s;
+    -webkit-text-fill-color: black !important;
+}
+
+.form-control:focus {
+    box-shadow: none;
+    border-color: none;
+    border: 1px solid #67CCB9;
+}
+
+.form-control.is-invalid:focus {
+    box-shadow: none;
+    border-color: none;
+}
+
+button {
+    border: none;
+}
+
+@media (max-width: 576px){
+
+  .datosJugadorSeccion {
+    background-image: url("../src/assets/Metalico.png");
+  }
+}
+
+@media (min-width: 576px) and (max-width: 992px){
+
+}
+
+@media (min-width: 992px) and (max-width: 1200px){
+
+}
+
+@media (min-width: 1200px){
+
+}
+
 body:not(.recuperar-contraseña-body):not(.iniciar-sesion){
     background-color: rgb(58,58,58,1);
     background-image: url("../src/assets/Metalico.png");
@@ -51,57 +109,42 @@ body.recuperar-contraseña-body{
   z-index: -1;
 }
 
-input:-webkit-autofill,
-input:-webkit-autofill:hover,
-input:-webkit-autofill:focus,
-input:-webkit-autofill:active {
-    transition: background-color 5000s ease-in-out 0s;
-    -webkit-text-fill-color: black !important;
+.footer{
+  background-image: url("../src/assets/Metalico.png");
 }
 
-.form-control:focus {
-    box-shadow: none;
-    border-color: none;
-    border: 1px solid #67CCB9;
+.navbar{
+  background-image: url("../src/assets/Metalico.png");
 }
 
-.form-control.is-invalid:focus {
-    box-shadow: none;
-    border-color: none;
+.contenedorCardsTest{
+  background-image: url("../src/assets/Metalico.png");
 }
 
-button {
-    border: none;
+.formularioLoginDiv{
+  background-image: url("../src/assets/Metalico.png");
 }
 
-@media (max-width: 576px){
-
+.botonRankingDominioSuelto{
+  background-image: url("../src/assets/Metalico.png");
 }
 
-@media (min-width: 576px) and (max-width: 992px){
-
+.botonRankingDominioApretado{
+  background-image: url("../src/assets/Metalico.png");
 }
 
-@media (min-width: 992px) and (max-width: 1200px){
-
+.botonRankingDominio:hover{
+  background-image: url("../src/assets/Metalico.png");
 }
 
-@media (min-width: 1200px){
-
+.botonMedalleroMetal{
+  background-image: url("../src/assets/Metalico.png");
 }
 
-::-webkit-scrollbar {
-    width: 6px;
-  }
-  
-  ::-webkit-scrollbar-track {
-    background-color: transparent;
-  }
-  
-  ::-webkit-scrollbar-thumb {
-    background-color: #888;
-  }
-  
-  ::-webkit-scrollbar-thumb:hover {
-    background-color: #555;
-  }
+.contenedorInicioTestDominio{
+  background-image: url("../src/assets/Metalico.png");
+}
+
+.contenedorInicioTestDominioSeccion1{
+  background-image: url("../src/assets/Metalico.png");
+}

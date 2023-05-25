@@ -35,7 +35,6 @@
     .formularioLoginDiv{
         flex-direction: column;
         justify-content: start;
-        background-image: url("../../assets/Metalico.png");
         background-size: cover;
         background-repeat: no-repeat;
         background-blend-mode: multiply;
@@ -92,7 +91,6 @@
     .formularioLoginDiv{
         flex-direction: column;
         justify-content: start;
-        background-image: url("../../assets/Metalico.png");
         background-position: center center;
         background-size: cover;
         background-repeat: no-repeat;
