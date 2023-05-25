@@ -50,6 +50,7 @@ function NavBar() {
                                         Mateo Bernabé Lohezic
                                     </a>
                                     <ul className="dropdown-menu dropdown-menu-end">
+                                        <li><a className="dropdown-item" href="/">Inicio</a></li>
                                         <li><a className="dropdown-item" href="/Perfil">Perfil</a></li>
                                         <li><a className="dropdown-item" href="/Ranking/Inicio">Ranking</a></li>
                                         <li><a className="dropdown-item ultimoItemDropdown" href="/Iniciar-sesion">Iniciar sesión</a></li>
