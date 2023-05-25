@@ -54,7 +54,7 @@
 }
 
 .nombreCardFIFA{
-    font-family: 'Bebas Neue', sans-serif;
+    font-family: 'Anton', sans-serif;
     font-weight: 400;
     color: #FFFFFF;
     border-bottom: 1px solid #FFFFFF;
@@ -304,7 +304,7 @@
 }
 
 .titulosSeccionesPuntosTablaDirectivo span{
-    font-family: 'Bebas Neue', sans-serif;
+    font-family: 'Anton', sans-serif;
     font-weight: 600;
     font-size: 1.8rem;
     color: #020203;
@@ -319,7 +319,7 @@
 }
 
 .categoriaTextoSeccionesPuntosTablaDirectivo span{
-    font-family: 'Bebas Neue', sans-serif;
+    font-family: 'Anton', sans-serif;
     font-weight: 500;
     color: #020203;
 }
@@ -342,7 +342,7 @@
 }
 
 .parteInferiorEstadisticasDirectivo span{
-    font-family: 'Bebas Neue', sans-serif;
+    font-family: 'Anton', sans-serif;
     font-weight: 400;
     font-size: 1.62rem;
     color: #FFFFFF;
