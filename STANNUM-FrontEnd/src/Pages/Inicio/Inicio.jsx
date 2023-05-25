@@ -1,6 +1,6 @@
 import React from 'react'
 import ModalEditarPrimeraVez from '../../Components/ModalEditarPrimeraVez/ModalEditarPrimeraVez'
-import './Inicio.css'
+import './inicio.css'
 
 function Inicio() {
 
