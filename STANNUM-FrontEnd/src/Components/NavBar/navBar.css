@@ -15,7 +15,6 @@
 }
 
 .linkNavbar:hover{
-    transform: scale(1.08);
     color: #FFFFFF;
 }
 
@@ -269,6 +268,10 @@
     .botonNavbarResponsive{
         display: none;
     }
+    
+    .linkNavbar:hover{
+        transform: scale(1.08);
+    }
 }
 
 @media (min-width: 1200px){
@@ -315,5 +318,9 @@
 
     .botonNavbarResponsive{
         display: none;
+    }
+    
+    .linkNavbar:hover{
+        transform: scale(1.08);
     }
 }
