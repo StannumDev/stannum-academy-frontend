@@ -1,6 +1,6 @@
 import React from 'react'
 import { useForm } from "react-hook-form";
-import './TestDirectivoSeccion1.css'
+import './testDirectivoSeccion1.css'
 
 function TestDirectivoSeccion1() {
 
