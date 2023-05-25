@@ -21,28 +21,35 @@ font-family: 'Bebas Neue', sans-serif;
 
 */
 
-body:not(.recuperar-contraseña-body):not(.iniciar-sesion){
-    background-color: rgb(58,58,58,1);
-    background-image: url("../src/assets/Metalico.png");
-    background-size: cover;
-    background-blend-mode: multiply;
-    background-position: center center;
-    background-attachment: fixed;
-} 
+body:not(.recuperar-contraseña-body):not(.iniciar-sesion) {
+  background-color: rgb(58, 58, 58, 1);
+  background-image: url("../src/assets/Metalico.png");
+  background-size: cover;
+  background-blend-mode: multiply;
+  background-position: center center;
+  background-attachment: fixed;
+}
 
-body.recuperar-contraseña-body{
-    background: url("../src/assets/RecuperarContraseña.png") no-repeat center center fixed;
-    background-size: cover;
-    backdrop-filter: blur(5px);
-    background-blend-mode: multiply;
-    background-position: center center;
-    background-attachment: fixed;
-} 
+/* iOS-specific styles */
+@supports (-webkit-touch-callout: none) {
+  body:not(.recuperar-contraseña-body):not(.iniciar-sesion) {
+    background-attachment: scroll;
+  }
+}
 
-.contenedorCardsTest{
+body.recuperar-contraseña-body {
+  background: url("../src/assets/RecuperarContraseña.png") no-repeat center center fixed;
+  background-size: cover;
+  backdrop-filter: blur(5px);
+  background-blend-mode: multiply;
+  background-position: center center;
+  background-attachment: fixed;
+}
+
+.contenedorCardsTest {
   width: 100%;
   padding-block: 4rem;
-  background-color: rgb(103,207,188, 1);
+  background-color: rgb(103, 207, 188, 1);
   background-image: url("../src/assets/Metalico.png");
   background-attachment: fixed;
   background-size: cover;
