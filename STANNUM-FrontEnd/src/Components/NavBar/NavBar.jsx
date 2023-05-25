@@ -55,7 +55,7 @@ function NavBar() {
                                         <li><a className="dropdown-item" href="/Ranking/Inicio">Ranking</a></li>
                                         <li><a className="dropdown-item ultimoItemDropdown" href="/Iniciar-sesion">Iniciar sesión</a></li>
                                     </ul>
-                                </li>
+                                </li>image.png
                                 <li className='nav-item botonNavbarResponsive nombreNavBarResponsive'>
                                     <span>Mateo Bernabé Lohezic</span>
                                 </li>
