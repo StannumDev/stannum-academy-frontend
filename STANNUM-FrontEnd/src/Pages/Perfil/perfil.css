@@ -29,7 +29,7 @@
 
 .datosDelJugador{
     width: 100%;
-    background: #DEDEDE;
+    background: #FFFFFF;
     border-radius: 16px;
     filter: drop-shadow(0px 10px 10px #101010);
     padding-block: 1rem;
@@ -96,7 +96,7 @@
 }
 
 .cajaSeleccionarCardDominio{
-    background: #DEDEDE;
+    background: #FFFFFF;
     filter: drop-shadow(0px 10px 10px #101010);
     flex-wrap: wrap;
     justify-content: space-evenly;
@@ -274,7 +274,7 @@
 }
 
 .CajaEstadisticasSecciones{
-    background: #DEDEDE;
+    background: #FFFFFF;
     border-radius: 14px;
     filter: drop-shadow(0px 10px 10px #101010);
     margin-bottom: 4rem;
@@ -517,7 +517,7 @@
     
     .rowDatosDelJugador{
         width: 90%;
-        background: #DEDEDE;
+        background: #FFFFFF;
         border-radius: 9px;
         padding-block: 1rem;
     }  
@@ -737,12 +737,12 @@
     }
     
     .estadisticasTablaSecciones{
-        background-color: #DEDEDE;
+        background-color: #FFFFFF;
     }
 
     .parteSuperiorSeccionesDirectivo{
         padding-inline: 1.2rem;
-        background-color: rgb(239,239,239,0.3);
+        background-color: rgb(58,58,58,0.2);
     }
 
     .categoriaSeccionesDirectivo{
@@ -847,7 +847,7 @@
     
     .rowDatosDelJugador{
         width: 80%;
-        background: #DEDEDE;
+        background: #FFFFFF;
         border-radius: 9px;
         padding-block: 1.5rem;
     }  
@@ -1142,7 +1142,7 @@
     
     .divFotoJugadorPerfil {
         width: 33.333333%;
-        background: #DEDEDE;
+        background: #FFFFFF;
         border-radius: 16px;
         filter: drop-shadow(0px 10px 10px #101010);
         text-align: center;
@@ -1226,7 +1226,7 @@
     }
     
     .datosDelJugadorInformacion{
-        background: #DEDEDE;
+        background: #FFFFFF;
         border-radius: 16px;
         filter: drop-shadow(0px 10px 10px #101010);
     }
@@ -1444,7 +1444,7 @@
     
     .divFotoJugadorPerfil {
         width: 33.3333333%;
-        background: #DEDEDE;
+        background: #FFFFFF;
         border-radius: 16px;
         filter: drop-shadow(0px 10px 10px #101010);
         text-align: center;
@@ -1531,7 +1531,7 @@
     }
     
     .datosDelJugadorInformacion{
-        background: #DEDEDE;
+        background: #FFFFFF;
         border-radius: 16px;
         filter: drop-shadow(0px 10px 10px #101010);
     }
