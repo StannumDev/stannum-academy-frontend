@@ -818,6 +818,10 @@
         top: 0%;
         right: 0%;
     }
+
+    .botonAFotoPerfilResponsive{
+        color: #3A3A3A;
+    }
 }
 
 @media (min-width: 576px) and (max-width: 991px){
@@ -1106,6 +1110,10 @@
     .botonFotoPerfilResponsive{
         top: 0%;
         right: 0%;
+    }
+
+    .botonAFotoPerfilResponsive{
+        color: #3A3A3A;
     }
 }
 
@@ -1405,6 +1413,10 @@
     .botonFotoPerfilResponsive{
         display: none;
     } 
+
+    .botonAFotoPerfilResponsive{
+        color: #FFFFFF;
+    }
 }
 
 @media (min-width: 1200px){
@@ -1711,5 +1723,9 @@
 
     .botonFotoPerfilResponsive{
         display: none;
+    }
+
+    .botonAFotoPerfilResponsive{
+        color: #FFFFFF;
     }
 }
