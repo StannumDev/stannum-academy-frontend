@@ -71,9 +71,6 @@ function NavBar() {
                                 <li className='nav-item botonNavbarResponsive nonActive'>
                                     <a className="nav-link linkNavbar" aria-current="page" href="/Iniciar-sesion">Iniciar sesión</a>
                                 </li>
-                                {/* <li className='nav-item nonActive'>
-                                    <a className="nav-link linkNavbar" aria-current="page" href="/Iniciar-sesion">Iniciar Sesión</a>
-                                </li> */}
                             </ul>
                         </div>
                     </div>
