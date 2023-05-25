@@ -49,7 +49,7 @@ function FormularioLogin() {
                         <input
                             autoComplete='true'
                             id='email'
-                            type="text"
+                            type="email"
                             className={`inputLogin form-control  mt-2`}
                             {...register("email", {
                                 required: true,

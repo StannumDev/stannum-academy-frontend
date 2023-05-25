@@ -59,7 +59,7 @@ function RecuperarContraseñaSeccion1() {
                 <input
                     autoComplete='true'
                     id='emailRecuperar'
-                    type="text"
+                    type="email"
                     className={`inputLogin form-control  mt-2`}
                     {...register("email", {
                         required: true,
