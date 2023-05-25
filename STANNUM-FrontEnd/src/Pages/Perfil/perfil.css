@@ -54,8 +54,9 @@
 }
 
 .nombreCardFIFA{
-    font-family: 'Anton', sans-serif;
-    font-weight: 400;
+    text-shadow: 1px 1px rgb(0,0,0,0.5);
+    font-family: 'Bebas Neue', sans-serif;
+    font-weight: 500;
     color: #FFFFFF;
     border-bottom: 1px solid #FFFFFF;
 }
@@ -77,12 +78,14 @@
 
 
 .numeroPtsCardFIFA{
+    text-shadow: 1px 1px rgb(0,0,0,0.5);
     font-family: 'Oswald';
     font-weight: 400;
     color: #FFFFFF;
 }
 
 .dominioPtsCardFIFA{
+    text-shadow: 1px 1px rgb(0,0,0,0.5);
     font-family: 'Oswald';
     font-weight: 400;
     color: #FFFFFF;
