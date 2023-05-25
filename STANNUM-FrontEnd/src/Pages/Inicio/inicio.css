@@ -40,7 +40,7 @@
     background-size: cover;
     background-repeat: no-repeat;
     background-blend-mode: multiply;
-    background-position: center center;
+    background-position: 0% 0%;
 }
 
 .seleccioneTestTitulo{

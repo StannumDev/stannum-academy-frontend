@@ -62,9 +62,6 @@ button {
 
 @media (max-width: 576px){
 
-  .datosJugadorSeccion {
-    background-image: url("./assets/Metalico.png");
-  }
 }
 
 @media (min-width: 576px) and (max-width: 992px){
@@ -82,7 +79,8 @@ button {
 body:not(.recuperar-contraseña-body):not(.iniciar-sesion){
     background-color: rgb(58,58,58,1);
     background-image: url("./assets/Metalico.png");
-    background-size: cover;
+    background-size: 100vw 100vh;
+    background-position: 0% 0%;
     background-blend-mode: multiply;
     background-position: center center;
     background-attachment: fixed;
@@ -102,7 +100,8 @@ body.recuperar-contraseña-body{
   background-image: url("./assets/Metalico.png");
   background-blend-mode: multiply;
   background-repeat: no-repeat;
-  background-position: center;
+  background-size: 100vw 100vh;
+  background-position: 0% 0%;
   height: 100vh;
   width: 100vw;
   position: fixed;
