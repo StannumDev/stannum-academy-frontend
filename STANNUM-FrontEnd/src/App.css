@@ -41,7 +41,7 @@ body.recuperar-contraseña-body{
 
 .bg {
   background-color: rgb(58,58,58,1);
-  background-image: url("../assets/Metalico.png");
+  background-image: url("../src/assets/Metalico.png");
   background-blend-mode: multiply;
   background-repeat: no-repeat;
   background-position: center;
