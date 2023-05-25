@@ -3,13 +3,12 @@
     background-color: #D3214D;
     background-position: center center;
     background-size: 100vw 100vh;
-    background-image: url("./Metalico.png");
+    background-image: url("../../../assets/Metalico.png");
     background-repeat: no-repeat;
     background-blend-mode: multiply;
     background-attachment: fixed;
     padding-inline: 1rem;
     padding-block: 3rem;
-    color: #FFFFFF;
 }
 
 .titulo2InicioTestDominioSeccion1 h2{
