@@ -39,6 +39,18 @@ body.recuperar-contraseña-body{
     background-attachment: fixed;
 } 
 
+.contenedorCardsTest{
+  width: 100%;
+  padding-block: 4rem;
+  background-color: rgb(103,207,188, 1);
+  background-image: url("../src/assets/Metalico.png");
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-blend-mode: multiply;
+  background-position: center center;
+}
+
 input:-webkit-autofill,
 input:-webkit-autofill:hover,
 input:-webkit-autofill:focus,

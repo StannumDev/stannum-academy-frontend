@@ -68,7 +68,7 @@ function NavBar() {
                                     <a className="nav-link linkNavbar" aria-current="page" href="/Perfil">Perfil</a>
                                 </li>
                                 <li className={`nav-item botonNavbarResponsive ${activeIndex === 2 ? 'active' : 'nonActive'}`}>
-                                    <a className="nav-link linkNavbar" aria-current="page" href="/Perfil">Cerrar sesión</a>
+                                    <a className="nav-link linkNavbar" aria-current="page" href="/Iniciar-sesion">Iniciar sesión</a>
                                 </li>
                                 {/* <li className='nav-item nonActive'>
                                     <a className="nav-link linkNavbar" aria-current="page" href="/Iniciar-sesion">Iniciar Sesión</a>
