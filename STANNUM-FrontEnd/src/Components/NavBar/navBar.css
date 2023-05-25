@@ -22,7 +22,7 @@
     z-index: 10000000000;
     background-color: rgb(58,58,58,1);
     background-image: url("./Metalico.png");
-    background-size: cover;
+    background-size: 100vw 100vh;;
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-blend-mode: multiply;

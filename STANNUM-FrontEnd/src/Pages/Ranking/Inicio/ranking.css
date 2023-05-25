@@ -38,7 +38,7 @@
     background: rgb(99,196,178, 0.6);
     background-image: url("../../../assets/Metalico.png");
     background-attachment: fixed;
-    background-size: cover;
+    background-size: 100vw 100vh;;
     background-repeat: no-repeat;
     background-blend-mode: multiply;
     background-position: center center;
@@ -51,7 +51,7 @@
     transition: background 0.5s;
     background-attachment: fixed;
     background-image: url("../../../assets/Metalico.png");
-    background-size: cover;
+    background-size: 100vw 100vh;;
     background-repeat: no-repeat;
     background-blend-mode: multiply;
     background-position: center center;
@@ -63,7 +63,7 @@
     background-image: url("../../../assets/Metalico.png");
     background-attachment: fixed;
     transition: background 0.5s;
-    background-size: cover;
+    background-size: 100vw 100vh;;
     background-repeat: no-repeat;
     background-blend-mode: multiply;
     background-position: center center;
@@ -86,7 +86,7 @@
     background: rgba(58, 58, 58, 0.8);
     background-image: url("../../../assets/Metalico.png");
     background-attachment: fixed;
-    background-size: cover;
+    background-size: 100vw 100vh;;
     background-repeat: no-repeat;
     background-blend-mode: multiply;
     border: 2px dashed #A2A2A2;

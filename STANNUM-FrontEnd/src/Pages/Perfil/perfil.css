@@ -593,7 +593,7 @@
         background-color: #3A3A3A;
         background-image: url("../../assets/Metalico.png");
         background-attachment: fixed;
-        background-size: cover;
+        background-size: 100vw 100vh;;
         background-blend-mode: multiply;
         background-position: center center;
         text-align: center;

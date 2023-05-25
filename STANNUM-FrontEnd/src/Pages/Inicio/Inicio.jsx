@@ -6,6 +6,7 @@ function Inicio() {
 
   return (
     <>
+      <div class="bg"></div>
       <div className='d-flex flex-column align-items-center pb-5'>
         <div className='text-center tituloBienvenido'><h1>¡Bienvenido a</h1> <span>STANNUM Academy!</span></div>
         {/* <ModalEditarPrimeraVez/> */}
