@@ -5,7 +5,7 @@ function RankingDirectivo() {
 
     return (
         <>
-            <div class="bg"></div>
+            <div className="bg"></div>
             <div className='tituloRankingDirectivo'><h1>RANKING DE DOMINIOS</h1></div>
             <div className='subtituloRankingDirectivo'><h2>DOMINIO 1 - DIRECTIVO</h2></div>
             <div className="divBotonesRankingDominiosDirectivo">

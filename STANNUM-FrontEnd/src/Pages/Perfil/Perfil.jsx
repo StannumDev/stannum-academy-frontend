@@ -21,7 +21,7 @@ function Perfil() {
 
     return (
         <>
-            <div class="bg"></div>
+            <div className="bg"></div>
             <div className='tituloPerfil'><h1>FICHA DEL ENTRENADO</h1></div>
             <div className='parrafoPerfil'><p>Teniendo en cuenta los resultados de los diferentes Test, generamos la siguiente plantilla con tu información. A medida que completes los Test, esta se irá completando.</p></div>
             <div className='row rowDatosDelJugador'>

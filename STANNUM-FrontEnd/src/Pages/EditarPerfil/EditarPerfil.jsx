@@ -27,7 +27,7 @@ function EditarPerfil() {
 
     return (
     <>
-        <div class="bg"></div>
+        <div className="bg"></div>
         <div className='tituloPerfil'><h1>EDITAR MI PERFIL</h1></div>
         <form onSubmit={handleSubmit(onSubmit)}>
             <div className='row rowEditarPerfil'>

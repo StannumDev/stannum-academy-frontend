@@ -38,10 +38,10 @@
     background: rgb(99,196,178, 0.6);
     background-attachment: fixed;
     background-image: url("../../../assets/Metalico.png");
-    background-size: cover;
+    background-size: 100vw 100vh;
+    background-position: 0% 0%;
     background-repeat: no-repeat;
     background-blend-mode: multiply;
-    background-position: center center;
     transition: background 0.5s;
 
 }
@@ -50,11 +50,11 @@
     background: rgb(99,196,178,1);
     transition: background 0.5s;
     background-image: url("../../../assets/Metalico.png");
-    background-size: cover;
+    background-size: 100vw 100vh;
+    background-position: 0% 0%;
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-blend-mode: multiply;
-    background-position: center center;
     
 }
 
@@ -63,10 +63,10 @@
     background-attachment: fixed;
     transition: background 0.5s;
     background-image: url("../../../assets/Metalico.png");
-    background-size: cover;
+    background-size: 100vw 100vh;
+    background-position: 0% 0%;
     background-repeat: no-repeat;
     background-blend-mode: multiply;
-    background-position: center center;
 }
 
 .botonRankingDominio span{
@@ -85,7 +85,8 @@
     font-weight: 400;
     background: rgba(58, 58, 58, 0.8);
     background-attachment: fixed;
-    background-image: url("../../../assets/Metalico.png");
+    background-size: 100vw 100vh;
+    background-position: 0% 0%;
     background-size: cover;
     background-repeat: no-repeat;
     background-blend-mode: multiply;

@@ -18,7 +18,7 @@ function Ranking() {
 
     return (
         <>
-            <div class="bg"></div>
+            <div className="bg"></div>
             <div className='tituloRanking'><h1>RANKING</h1></div>
             <div className='parrafoRanking'><p>Dentro de nuestra estructura contamos con 2 tipos diferentes de rankings. Por un lado contamos con Ranking de dominio en donde se ve reflejado directamente tu puntuación obtenida en el test de dominio, y también con el medallero de las esferas de metal, en donde se ve reflejado los puntajes que vas obteniendo en tus diferentes entrenamientos.</p></div>
             <div className='d-flex justify-content-between divRankingYMedallero'>

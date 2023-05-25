@@ -12,7 +12,7 @@ function TestDirectivoSeccion2() {
 
   return (
     <>
-      <div class="bg"></div>
+      <div className="bg"></div>
       <div className='contenedorInicioTestDominioSeccion1'>
         <div className='text-center tituloDominio1Test'><h1>Test de <span>Dominio 1</span></h1></div>
         <div className='text-center titulo2InicioTestDominioSeccion1'><h2>DIRECTIVO</h2></div>

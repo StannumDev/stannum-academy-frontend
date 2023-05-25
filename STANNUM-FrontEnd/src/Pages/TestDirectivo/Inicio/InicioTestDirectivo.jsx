@@ -13,7 +13,7 @@ function InicioTestDirectivo() {
 
   return (
     <>
-      <div class="bg"></div>
+      <div className="bg"></div>
       <div className='d-flex flex-column align-items-center'>
           <div className='text-center mt-5 tituloDominio1Test'><h1>Test de <span>Dominio 1</span></h1></div>
           <div className='text-center tituloDominio1TestRojo'><h2>DIRECTIVO</h2></div>
