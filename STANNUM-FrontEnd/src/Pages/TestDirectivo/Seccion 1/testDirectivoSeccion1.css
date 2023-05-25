@@ -6,6 +6,7 @@
     background-size: cover;
     background-repeat: no-repeat;
     background-blend-mode: multiply;
+    background-attachment: fixed;
     padding-inline: 1rem;
     padding-block: 3rem;
     color: #FFFFFF;

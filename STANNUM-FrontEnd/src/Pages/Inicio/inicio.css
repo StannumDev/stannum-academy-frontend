@@ -37,6 +37,7 @@
     padding-block: 4rem;
     background-color: rgb(103,207,188, 1);
     background-image: url("../../src/assets/Metalico.png");
+    background-attachment: fixed;
     background-size: cover;
     background-repeat: no-repeat;
     background-blend-mode: multiply;

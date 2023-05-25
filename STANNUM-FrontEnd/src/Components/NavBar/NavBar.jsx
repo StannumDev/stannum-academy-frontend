@@ -32,8 +32,13 @@ function NavBar() {
             <>
                 <nav className="navbar navbar-expand-lg sticky-top animate__animated animate__fadeInDown">
                     <div className="container-fluid containerFluidNavBar">
-                        <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarPrincipal" aria-controls="navbarPrincipal" aria-expanded="false" aria-label="Expandir" onClick={() => setOpen(!open)}>
-                            <span className={`navbar-toggler-icon ${ open ? 'openNavBar' : '' }`}></span>
+                        <button className="navbar-toggler p-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarPrincipal" aria-controls="navbarPrincipal" aria-expanded="false" aria-label="Expandir" onClick={() => setOpen(!open)}>
+                            <label className="burger" htmlFor="burgerButton">
+                                <input type="checkbox" id="burgerButton"/>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </label>
                         </button>
                         <div className=''>
                             <a className="navbar-brand text-end" href="/"><img src={logo} className='logoNavbar'/></a>

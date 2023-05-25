@@ -8,7 +8,7 @@ function InicioTestDirectivo() {
 
   const onSubmit = (data) => {
     console.log(data);
-    window.location.replace('/Test/Dominio/Directivo/Seccion-1')
+    window.location.replace('/Test/Dominio/Directivo/1')
   };
 
   return (
@@ -34,24 +34,24 @@ function InicioTestDirectivo() {
             <div className="tituloPreguntaDominio">Pregunta 01</div>
             <div className="preguntaDominio">¿Qué tan sumergido en la operación estás?</div>
             <div className='cajaPregunta1-10'>
-              <div className='textoPregunta1-10 primerTexto1-10'>Muy sumergido<b>en la operación</b></div>
+              <div className='textoPregunta1-10 primerTexto1-10'>100% Sumergido<b>en la operación</b></div>
               <div className="contenedorInputsPregunta1-10">
                 {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((value) => (
                   <div key={value} className="d-flex flex-column align-items-center">
                     <label key={value} className="radioInputContainer">
-                      <input type="radio" {...register("rating", { required: true })} value={value} />
+                      <input type="radio" {...register("pregunta1", { required: true })} value={value} />
                       <span className="checkmark"></span>
                     </label>
                     <span className="labelInput1-10">{value}</span>
                   </div>
                 ))}
               </div>
-              <div className='textoPregunta1-10 segundoTexto1-10'>Totalmente<b>estratégico</b></div>
+              <div className='textoPregunta1-10 segundoTexto1-10'>80% Totalmente<b>estratégico</b></div>
             </div>
+            {errors.pregunta1 && <div className="error">Seleccione una respuesta.</div>}
           </div>          
           <div className='cajaBotonEnviarRespuestasDominio'>
             <button type="submit">Continuar (1/6)</button>
-            {errors.rating && <div className="error1-10">Hay preguntas sin responder.</div>}
           </div>
         </form>
     </>
