@@ -105,6 +105,7 @@
 }
 
 .cardDominioPerfil{
+    position: relative;
     width: 13%;
     background-color: #FFFFFF;
     border-radius: 10px;
@@ -113,6 +114,7 @@
 }
 
 .cardDominioPerfilDesactivado{
+    position: relative;
     width: 13%;
     background-color: transparent;
     border-radius: 10px;
