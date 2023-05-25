@@ -21,9 +21,8 @@ import TestDirectivoSeccion5 from './Pages/TestDirectivo/Seccion 5/TestDirectivo
 function App() {
 
   return (
-
     <>
-    <div className="bg-image"></div>
+    
     <NavBar />
     <Routes>
       <Route path="/Iniciar-sesion" element={<Login/>} />
