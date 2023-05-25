@@ -36,7 +36,7 @@
     padding-block: 4rem;
     background-color: rgb(103,207,188, 1);
     background-attachment: fixed;
-    background-size: cover;
+    background-size: 100vw 100vh;
     background-repeat: no-repeat;
     background-blend-mode: multiply;
     background-position: center center;
