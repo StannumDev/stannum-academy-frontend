@@ -39,6 +39,19 @@ body.recuperar-contraseña-body{
     background-attachment: fixed;
 } 
 
+.bg {
+  background-color: rgb(58,58,58,1);
+  background-image: url("../assets/Metalico.png");
+  background-size: cover;
+  background-blend-mode: multiply;
+  background-position: center center;
+  background-attachment: fixed;
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  z-index: -1;
+}
+
 input:-webkit-autofill,
 input:-webkit-autofill:hover,
 input:-webkit-autofill:focus,
