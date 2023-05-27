@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import LogoChico from '../../../assets/LogoChico.png'
+import { useParams } from 'react-router-dom';
 import axios from "axios";
 import { useForm } from "react-hook-form";
 
@@ -12,25 +13,26 @@ function RecuperarContraseñaSeccion2() {
   const [error, setError] = useState(false);
   const [errorMensaje, setErrorMensaje] = useState("");
   const { register, handleSubmit, watch, formState: { errors } } = useForm({ mode: "onBlur", defaultValues: { password: "" }, });
+  const { token } = useParams();
 
   const onSubmit = async (data) => {
-    console.log(data);
     setLoading(true);
-    setEnviado(true);
-    // const respuesta = await axios.post(
-    //     `link/users/login-user`,
-    //     {
-    //         email: data.email.trim().toLowerCase(),
-    //     }
-    // );
-    // if (respuesta.status === 200) {
-
-    // }
-    // if (respuesta.status === 206) {
-    //     setLoading(false);
-    //     setError(true);
-    //     setErrorMensaje(respuesta.data.message)
-    // }
+    const respuesta = await axios.post(
+        `http://localhost:8000/password-recovery/new-password`,
+        {
+          token,
+          password:data.password
+      }
+    );
+    if (respuesta.status === 200) {
+      setEnviado(true)
+      setLoading(false);
+    }
+    if (respuesta.status === 206) {
+      setLoading(false);
+      setError(true);
+      setErrorMensaje(respuesta.data.message)
+    }
 };
 
   if(!enviado){
@@ -121,6 +123,13 @@ function RecuperarContraseñaSeccion2() {
                 )}
               </button>
             </div>
+            {error ? (
+              <>
+                  <p className="text-danger mt-2 px-2 fs-6 text-center">{errorMensaje}</p>
+              </>
+            ) : (
+              <></>
+            )}
           </form>        
         </div>
       </>

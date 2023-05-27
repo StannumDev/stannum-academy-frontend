@@ -638,6 +638,10 @@
     }
 
     .datosJugadorSeccion4{
+        border-bottom: 1px solid rgb(255,255,255,0.1);
+    }
+
+    .datosJugadorSeccion5{
         border-bottom-left-radius: 10px;
         border-bottom-right-radius: 10px;
     }
@@ -918,6 +922,17 @@
         flex-direction: column;
     }
 
+    .datosJugadorSeccion5{
+        display: none;
+    }
+
+    .datosJugadorSeccion6{
+        width: 100%;
+        padding-block: 1rem;
+        padding-left: 2rem;
+        text-align: start;
+    }
+
     .datosJugadorSeccion {
         width: 100%;
         padding-block: 1rem;
@@ -932,6 +947,11 @@
     .InfoSeccionDatosJugador{
         font-size: 1.5rem;
         margin-top: -0.5rem;
+    }
+    
+    .InfoSeccionDatosJugadorBiografia{
+        line-height: 1.8rem;
+        margin-top: 0.5rem;
     }
     
     .divDatosDelJugadorInfo{
@@ -1242,6 +1262,11 @@
 
     .datosJugadorSeccion3{
         border-right: 1px solid #747474;
+    }
+
+    .datosJugadorSeccion5{
+        width: 100%;
+        border-top: 1px solid #747474;
     }
     
     .divDatosDelJugadorInfo{

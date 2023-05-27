@@ -40,7 +40,7 @@ function App() {
       <Route path="/Test/Dominio/Directivo/4" element={<TestDirectivoSeccion4/>} />
       <Route path="/Test/Dominio/Directivo/5" element={<TestDirectivoSeccion5/>} />
       <Route path="/Recuperar-contraseña/Email" element={<RecuperarContraseñaSeccion1/>} />
-      <Route path="/Recuperar-contraseña/Nueva-contraseña" element={<RecuperarContraseñaSeccion2/>} />
+      <Route path="/Recuperar-contraseña/Nueva-contraseña/:token" element={<RecuperarContraseñaSeccion2/>} />
     </Routes>
     <Footer/>
     

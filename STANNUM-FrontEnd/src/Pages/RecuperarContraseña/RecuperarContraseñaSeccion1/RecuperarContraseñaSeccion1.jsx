@@ -17,21 +17,20 @@ function RecuperarContraseñaSeccion1() {
 
   const onSubmit = async (data) => {
     setLoading(true);
-    setEnviado(true);
-    // const respuesta = await axios.post(
-    //     `link/users/login-user`,
-    //     {
-    //         email: data.email.trim().toLowerCase(),
-    //     }
-    // );
-    // if (respuesta.status === 200) {
-
-    // }
-    // if (respuesta.status === 206) {
-    //     setLoading(false);
-    //     setError(true);
-    //     setErrorMensaje(respuesta.data.message)
-    // }
+    const respuesta = await axios.post(
+        `http://localhost:8000/password-recovery`,
+        {
+            email: data.email.trim().toLowerCase(),
+        }
+    );
+    if (respuesta.status === 200) {
+      setEnviado(true);
+    }
+    if (respuesta.status === 206) {
+        setLoading(false);
+        setError(true);
+        setErrorMensaje(respuesta.data.message)
+    }
 };
 
   if(!enviado){
@@ -97,6 +96,13 @@ function RecuperarContraseñaSeccion1() {
                 )}
               </button>
             </div>
+            {error ? (
+              <>
+                  <p className="text-danger mt-2 px-2 fs-6 text-center">{errorMensaje}</p>
+              </>
+            ) : (
+              <></>
+            )}
           </form>        
         </div>
         <div className='d-flex solicitarAccesoDivRecuperar justify-content-center align-items-center mt-5 mb-5'>

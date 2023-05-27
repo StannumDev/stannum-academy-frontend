@@ -19,7 +19,6 @@ function NavBar() {
         const getUser = async () =>{
         if (token) {
             const respuesta = await axios.post(`http://localhost:8000/get-user/${token}`);
-            console.log(respuesta);
             setUser(respuesta.data)
         }}
         getUser()

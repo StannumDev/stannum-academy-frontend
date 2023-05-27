@@ -9,20 +9,61 @@ function EditarPerfil() {
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState(false);
     const [errorMensaje, setErrorMensaje] = useState("");
+    const [foto, setFoto] = useState("");
     const { register, handleSubmit, formState: { errors }, setValue } = useForm({ mode: "onBlur" });
     const [archivoSubido, setArchivoSubido] = useState(null);
     const [user, setUser] = useState({});
 
     const token = localStorage.getItem('token');
 
+    const formatDate = (fecha) =>{
+        if (fecha) {
+            const [day, month, year] = fecha.split('/');
+            return `${year}-${month}-${day}`;        
+        }
+    }
+
     useEffect(() => {
         const getUser = async () =>{
         if (token) {
             const respuesta = await axios.post(`http://localhost:8000/get-user/${token}`);
-            console.log(respuesta);
             setUser(respuesta.data)
+            if (respuesta.data.name !== "Undefined"){
+                setValue("name", respuesta.data.name);
+            }
+            if (respuesta.data.surname !== "Undefined"){
+                setValue("surname", respuesta.data.surname);
+            }
+            if (respuesta.data.venture !== "Undefined"){
+                setValue("venture", respuesta.data.venture);
+            }
+            if (respuesta.data.birthdate !== "Undefined"){
+                setValue("birthdate", formatDate(respuesta.data.birthdate));
+            }
+            if (respuesta.data.territory !== "Undefined"){
+                setValue("territory", respuesta.data.territory);
+            }
+            if (respuesta.data.biography !== "Undefined"){
+                setValue("biography", respuesta.data.biography);
+            }
         }}
         getUser()
+
+        const getPhoto = async () => {
+            try {
+              const response = await axios.get(`http://localhost:8000/get-photo/${token}`, {
+                responseType: 'blob',
+              });
+              if (response.status === 200) {              
+                const url = window.URL.createObjectURL(new Blob([response.data]));
+                setFoto(url)
+              }
+            } catch (error) {
+              console.error(error);
+            }
+        };
+
+        getPhoto();
     }, [token])
 
     const onSubmit = async (data) => {
@@ -32,14 +73,29 @@ function EditarPerfil() {
         const respuesta = await axios.patch(`http://localhost:8000/patch-user`,
             {
                 id: user._id,
-                name: data.name,
-                surname: data.surname,
-                venture: data.venture,
-                territory: data.territory,
+                name: data.name.trim(),
+                surname: data.surname.trim(),
+                venture: data.venture.trim(),
+                territory: data.territory.trim(),
                 birthdate: nacimiento,
-                biography: data.biography,
+                biography: data.biography.trim(),
             }
         );
+
+        if (data.photo) {
+            await axios.post(
+                "http://localhost:8000/upload-photo",
+                {
+                    file: data.photo,
+                    userId: user._id
+                },
+                {
+                    headers: {
+                        "Content-Type": "multipart/form-data",
+                    },
+                }
+            );
+        }
 
         if (respuesta.status === 200) {
             window.location.replace("/Perfil");        
@@ -78,7 +134,7 @@ function EditarPerfil() {
                     />
                     </label>
                     <div className='contenedorImagen'>
-                    <img src={archivoSubido || FotoDePerfil} alt="Perfil Stannum" />
+                    <img src={archivoSubido || foto || FotoDePerfil} alt="Perfil Stannum" />
                     </div>
                 </div>
                 <div className='cajaFormularioEditarPerfil'>
@@ -90,15 +146,14 @@ function EditarPerfil() {
                                 id='name'
                                 type="text"
                                 className={`inputEditarPerfil form-control  mt-2`}
-                                defaultValue={user.name !== 'Undefined' ? user.name : ''}
                                 {...register("name", {
-                                    required: true,
+                                    required: false,
                                     maxLength: 40,
                                 })}
-                            />
-                            {errors.name && errors.name.type === "required" && (
-                                <p className="text-danger mt-2 ms-1 fs-6">Nombre requerido.</p>
-                            )}                        
+                            />     
+                            {errors.name && errors.name.type === "maxLength" && (
+                                <p className="text-danger mt-2 ms-1 fs-6">No puede contener mas de 40 caracteres.</p>
+                            )}             
                         </div>
                         <div className='form-group col-xxl-6 col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12'>
                             <label htmlFor="surname" className='labelFormEditarPerfil'>Apellido</label>
@@ -106,11 +161,10 @@ function EditarPerfil() {
                                 id='surname'
                                 type="text"
                                 className={`inputEditarPerfil form-control mt-2`}
-                                defaultValue={user.surname !== 'Undefined' ? user.surname : ''}
-                                {...register("surname", { required: true, maxLength: 40 })}
+                                {...register("surname", { required: false, maxLength: 40 })}
                             />
-                            {errors.surname && errors.surname.type === "required" && (
-                                <p className="text-danger mt-2 ms-1 fs-6">Apellido requerido.</p>
+                            {errors.surname && errors.surname.type === "maxLength" && (
+                                <p className="text-danger mt-2 ms-1 fs-6">No puede contener mas de 40 caracteres.</p>
                             )}
                         </div>
                     </div>
@@ -122,14 +176,13 @@ function EditarPerfil() {
                                 id='venture'
                                 type="text"
                                 className={`inputEditarPerfil form-control  mt-2`}
-                                defaultValue={user.venture !== 'Undefined' ? user.venture : ''}
                                 {...register("venture", {
-                                    required: true,
+                                    required: false,
                                     maxLength: 40,
                                 })}
                             />
-                            {errors.venture && errors.venture.type === "required" && (
-                                <p className="text-danger mt-2 ms-1 fs-6">Emprendimiento requerido.</p>
+                            {errors.venture && errors.venture.type === "maxLength" && (
+                                <p className="text-danger mt-2 ms-1 fs-6">No puede contener mas de 40 caracteres.</p>
                             )}
                         </div>
                         <div className='form-group col-xxl-6 col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12'>
@@ -139,14 +192,13 @@ function EditarPerfil() {
                                 id='birthdate'
                                 type="date"
                                 className={`inputEditarPerfil form-control  mt-2`}
-                                defaultValue={user.birthdate !== 'Undefined' ? user.birthdate : ''}
                                 {...register("birthdate", {
-                                    required: true,
+                                    required: false,
                                     maxLength: 40,
                                 })}
                             />
-                            {errors.birthdate && errors.birthdate.type === "required" && (
-                                <p className="text-danger mt-2 ms-1 fs-6">Edad requerida.</p>
+                            {errors.birthdate && errors.birthdate.type === "maxLength" && (
+                                <p className="text-danger mt-2 ms-1 fs-6">No puede contener mas de 40 caracteres.</p>
                             )}
                         </div>
                     </div>
@@ -158,14 +210,13 @@ function EditarPerfil() {
                                 id='territory'
                                 type="text"
                                 className={`inputEditarPerfil form-control  mt-2`}
-                                defaultValue={user.territory !== 'Undefined' ? user.territory : ''}
                                 {...register("territory", {
-                                    required: true,
+                                    required: false,
                                     maxLength: 40,
                                 })}
                             />
-                            {errors.territory && errors.territory.type === "required" && (
-                                <p className="text-danger mt-2 ms-1 fs-6">Territorio requerido.</p>
+                            {errors.territory && errors.territory.type === "maxLength" && (
+                                <p className="text-danger mt-2 ms-1 fs-6">No puede contener mas de 40 caracteres.</p>
                             )}
                         </div>
                     </div>
@@ -177,7 +228,6 @@ function EditarPerfil() {
                                 id='biography'
                                 type="text"
                                 className={`inputEditarPerfil form-control  mt-2`}
-                                defaultValue={user.biography !== 'Undefined' ? user.biography : ''}
                                 {...register("biography", {
                                     required: false,
                                     maxLength: 350,
