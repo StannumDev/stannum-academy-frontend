@@ -18,7 +18,7 @@ function RecuperarContraseñaSeccion2() {
   const onSubmit = async (data) => {
     setLoading(true);
     const respuesta = await axios.post(
-        `http://localhost:8000/password-recovery/new-password`,
+        `https://prueba-back-mateolohezic.up.railway.app/password-recovery/new-password`,
         {
           token,
           password:data.password

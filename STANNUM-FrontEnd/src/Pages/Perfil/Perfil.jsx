@@ -35,7 +35,7 @@ function Perfil() {
     useEffect(() => {
         const getUser = async () =>{
         if (token) {
-            const respuesta = await axios.post(`http://localhost:8000/get-user/${token}`);
+            const respuesta = await axios.post(`https://prueba-back-mateolohezic.up.railway.app/get-user/${token}`);
             setUser(respuesta.data)
             console.log(respuesta.data);
             if(respuesta.data.birthdate !== "Undefined"){
@@ -51,7 +51,7 @@ function Perfil() {
 
         const getPhoto = async () => {
             try {
-              const response = await axios.get(`http://localhost:8000/get-photo/${token}`, {
+              const response = await axios.get(`https://prueba-back-mateolohezic.up.railway.app/get-photo/${token}`, {
                 responseType: 'blob',
               });
               if (response.status === 200) {              

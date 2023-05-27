@@ -18,7 +18,7 @@ function RecuperarContraseñaSeccion1() {
   const onSubmit = async (data) => {
     setLoading(true);
     const respuesta = await axios.post(
-        `http://localhost:8000/password-recovery`,
+        `https://prueba-back-mateolohezic.up.railway.app/password-recovery`,
         {
             email: data.email.trim().toLowerCase(),
         }
