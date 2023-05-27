@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import axios from "axios";
 import './perfil.css'
 import FotoDePerfil from '../../assets/UserDefecto.png'
 import SVGEscudo from '../../assets/escudoPerfilSVG.svg'
@@ -6,9 +7,43 @@ import Hexagono from '../../assets/HexagonoPerfil.png'
 
 function Perfil() {
 
+    
+    const [user, setUser] = useState({});
+    const [age, setAge] = useState("");
     const [Dominio, setDominio] = useState(0);
-    const usuarioPuntaje = 87 
+    const usuarioPuntaje = 45 
 
+    const token = localStorage.getItem('token');
+
+    const calculateAge = (birthdate) =>{
+        const today = new Date();
+        const parts = birthdate.split('/');
+        const birthDate = new Date(parts[2], parts[1] - 1, parts[0]);
+      
+        let age = today.getFullYear() - birthDate.getFullYear();
+        const monthDiff = today.getMonth() - birthDate.getMonth();
+      
+        if (monthDiff < 0 || (monthDiff === 0 && today.getDate() < birthDate.getDate())) {
+          age--;
+        }
+
+        setAge(age)
+      }
+
+    useEffect(() => {
+        const getUser = async () =>{
+        if (token) {
+            const respuesta = await axios.post(`http://localhost:8000/get-user/${token}`);
+            console.log(respuesta);
+            setUser(respuesta.data)
+            if(respuesta.data.birthdate !== "Undefined"){
+                calculateAge(respuesta.data.birthdate)
+            } else{
+                setAge('-')
+            }
+        }}
+        getUser()
+    }, [token])
     
     const ballPosition = 47.3 + (usuarioPuntaje / 100 ) * (11.5 - 47.3)
     // position = topMin + (points / maxPoints) * (topMax - topMin)
@@ -35,7 +70,19 @@ function Perfil() {
                         </div>
                     </div>                   
                     <div className='descripcionCardPerfil d-flex flex-column align-items-center justify-content-center'>
-                        <div className='nombreCardFIFA'>SIMÓN POLICHE</div>
+                        <div className='nombreCardFIFA'>
+                            {user.name !== "Undefined" && user.surname !== "Undefined" ? (
+                                <>
+                                {user.name} {user.surname}
+                                </>
+                            ) : user.name !== "Undefined" ? (
+                                <>{user.name}</>
+                            ) : user.surname !== "Undefined" ? (
+                                <>{user.surname}</>
+                            ) : (
+                                <>Perfil</>
+                            )}
+                        </div>
                         <div className='row puntajesDominiosPerfilFIFA'>
                             <div className='col-6 d-flex flex-column m-0 primeraColumnaEstadisticas'>
                                 <div className='d-flex align-items-end justify-content-end'>
@@ -76,19 +123,49 @@ function Perfil() {
                     <div className='datosDelJugadorInformacion d-flex flex-wrap'>
                         <div className='datosJugadorSeccion datosJugadorSeccion1'>
                             <div className='NombreSeccionDatosJugador'>Nombre</div>
-                            <div className='InfoSeccionDatosJugador'>Simón Poliche</div>
+                            <div className='InfoSeccionDatosJugador'>
+                                {user.name !== "Undefined" && user.surname !== "Undefined" ? (
+                                    <>
+                                    {user.name} {user.surname}
+                                    </>
+                                ) : user.name !== "Undefined" ? (
+                                    <>{user.name}</>
+                                ) : user.surname !== "Undefined" ? (
+                                    <>{user.surname}</>
+                                ) : (
+                                    <>-</>
+                                )}
+                            </div>
                         </div>
                         <div className='datosJugadorSeccion datosJugadorSeccion2'>
                             <div className='NombreSeccionDatosJugador'>Emprendimiento</div>
-                            <div className='InfoSeccionDatosJugador'>Finca San Ramón</div>
+                            <div className='InfoSeccionDatosJugador'>
+                                {user.venture !== "Undefined" ?
+                                    <>
+                                    {user.venture}
+                                    </>
+                                : 
+                                    <>-</>
+                                }
+                            </div>
                         </div>
                         <div className='datosJugadorSeccion datosJugadorSeccion3'>
                             <div className='NombreSeccionDatosJugador'>Territorio</div>
-                            <div className='InfoSeccionDatosJugador'>Argetina - Tucumán</div>
+                            <div className='InfoSeccionDatosJugador'>
+                                {user.territory !== "Undefined" ?
+                                    <>
+                                    {user.territory}
+                                    </>
+                                : 
+                                    <>-</>
+                                }
+                            </div>
                         </div>
                         <div className='datosJugadorSeccion datosJugadorSeccion4'>
                             <div className='NombreSeccionDatosJugador'>Edad</div>
-                            <div className='InfoSeccionDatosJugador'>28 años</div>
+                            <div className='InfoSeccionDatosJugador'>
+                                {age}
+                            </div>
                         </div>
                         {/* <div className='datosJugadorSeccion datosJugadorSeccion5'>
                             <div className='NombreSeccionDatosJugador'>Biografia</div>

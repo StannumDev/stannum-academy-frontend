@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
+import axios from "axios";
 import logo from '../../assets/LogoChico.png';
 import './navBar.css'
 import 'animate.css';
@@ -10,6 +11,20 @@ function NavBar() {
     const location = useLocation();
     const [activeIndex, setActiveIndex] = useState(0);
     const [open, setOpen] = useState(false);
+    const [user, setUser] = useState({});
+
+    const token = localStorage.getItem('token');
+
+    useEffect(() => {
+        const getUser = async () =>{
+        if (token) {
+            const respuesta = await axios.post(`http://localhost:8000/get-user/${token}`);
+            console.log(respuesta);
+            setUser(respuesta.data)
+        }}
+        getUser()
+    }, [token])
+    
   
     useEffect(() => {
         
@@ -44,20 +59,62 @@ function NavBar() {
                             <a className="navbar-brand text-end" href="/"><img src={logo} className='logoNavbar'/></a>
                         </div>
                         <div className="collapse navbar-collapse" id="navbarPrincipal">
-                            <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
+                            <ul className="navbar-nav ms-auto mb-0">
+                                { token ?
+                                <>
                                 <li className="nav-item nonActiveDropdown dropdown">
                                     <a className="nav-link linkNavbar dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                        Mateo Bernabé Lohezic
+                                    {user && (
+                                        <>
+                                        {user.name !== "Undefined" && user.surname !== "Undefined" ? (
+                                            <>
+                                            {user.name} {user.surname}
+                                            </>
+                                        ) : user.name !== "Undefined" ? (
+                                            <>{user.name}</>
+                                        ) : user.surname !== "Undefined" ? (
+                                            <>{user.surname}</>
+                                        ) : (
+                                            <>Perfil</>
+                                        )}
+                                        </>
+                                    )}
                                     </a>
                                     <ul className="dropdown-menu dropdown-menu-end">
                                         <li><a className="dropdown-item" href="/">Inicio</a></li>
                                         <li><a className="dropdown-item" href="/Perfil">Perfil</a></li>
                                         <li><a className="dropdown-item" href="/Ranking/Inicio">Ranking</a></li>
-                                        <li><a className="dropdown-item ultimoItemDropdown" href="/Iniciar-sesion">Iniciar sesión</a></li>
+                                        <li><a className="dropdown-item ultimoItemDropdown" href="/Cerrar-sesion">Cerrar sesión</a></li>
                                     </ul>
                                 </li>
+                                </>
+                                :
+                                <>
+                                <li className='nav-item nonActive botonLoginResponsivePC'>
+                                    <a className="nav-link linkNavbar" aria-current="page" href="/Iniciar-sesion">Iniciar sesión</a>
+                                </li>
+                                </>
+                                }
+                                { token ?
+                                <>
                                 <li className='nav-item botonNavbarResponsive nombreNavBarResponsive'>
-                                    <span>Mateo Bernabé Lohezic</span>
+                                    <span>
+                                        {user && (
+                                            <>
+                                            {user.name !== "Undefined" && user.surname !== "Undefined" ? (
+                                                <>
+                                                {user.name} {user.surname}
+                                                </>
+                                            ) : user.name !== "Undefined" ? (
+                                                <>{user.name}</>
+                                            ) : user.surname !== "Undefined" ? (
+                                                <>{user.surname}</>
+                                            ) : (
+                                                <>Perfil</>
+                                            )}
+                                            </>
+                                        )}
+                                    </span>
                                 </li>
                                 <li className={`nav-item botonNavbarResponsive ${activeIndex === 0 ? 'active' : 'nonActive'}`}>
                                     <a className="nav-link linkNavbar" aria-current="page" href="/">Inicio</a>
@@ -69,8 +126,17 @@ function NavBar() {
                                     <a className="nav-link linkNavbar" aria-current="page" href="/Perfil">Perfil</a>
                                 </li>
                                 <li className='nav-item botonNavbarResponsive nonActive'>
+                                    <a className="nav-link linkNavbar" aria-current="page" href="/Cerrar-sesion">Cerrar sesión</a>
+                                </li>
+                                </>
+                                :
+                                <>
+                                <li className='nav-item botonNavbarResponsive active '>
                                     <a className="nav-link linkNavbar" aria-current="page" href="/Iniciar-sesion">Iniciar sesión</a>
                                 </li>
+                                </>
+                                }
+                                
                             </ul>
                         </div>
                     </div>

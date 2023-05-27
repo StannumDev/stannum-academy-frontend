@@ -27,8 +27,8 @@
     background-repeat: no-repeat;
     background-blend-mode: multiply;
     background-image: url("../../assets/Metalico.png");
-    border-bottom: 2px solid rgb(103,204,185, 1);
     background-position: center center;
+    border-bottom: 2px solid rgb(103,204,185, 1);
 }
   
 .animate__animated.animate__fadeInDown {
@@ -181,6 +181,10 @@
         padding-bottom: 0.5rem;
         margin-bottom: 0.5rem;
     }
+
+    .botonLoginResponsivePC{
+        display: none;
+    }
 }
 
 @media (min-width: 576px) and (max-width: 992px){
@@ -221,6 +225,10 @@
         padding-inline: 1rem;
         padding-bottom: 0.5rem;
         margin-bottom: 0.5rem;
+    }
+
+    .botonLoginResponsivePC{
+        display: none;
     }
 }
 

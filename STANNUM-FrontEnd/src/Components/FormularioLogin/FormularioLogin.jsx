@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { useForm } from "react-hook-form";
 import axios from "axios";
-import Cookies from 'js-cookie'
 import keyIcon from '../../assets/key.png'
 import './formularioLogin.css'
 
@@ -15,29 +14,28 @@ function FormularioLogin() {
 
     const onSubmit = async (data) => {
         setLoading(true);
-        console.log(data);
+        const respuesta = await axios.post(`http://localhost:8000/login-user`,
+            {
+                email: data.email.trim().toLowerCase(),
+                password: data.password,
+            }
+        );
+
+        if (respuesta.status === 200) {
+                localStorage.setItem('token', respuesta.data.token);
+            if (respuesta.data.adminToken) {
+                localStorage.setItem('adminToken', respuesta.data.token);
+                window.location.replace("/");
+            } else {
+                window.location.replace("/");
+            }
+        }
+        if (respuesta.status === 206) {
+            setLoading(false);
+            setError(true);
+            setErrorMensaje(respuesta.data.message)
+        }
         setLoading(false)
-        // const respuesta = await axios.post(
-        //     `link/users/login-user`,
-        //     {
-        //         email: data.email.trim().toLowerCase(),
-        //         password: data.password,
-        //     }
-        // );
-        // if (respuesta.status === 200) {
-        //     Cookies.set('id', respuesta.data.user._id, { expires: 365 });
-        //     if (respuesta.data.user.role === "admin") {
-        //         Cookies.set('token', respuesta.data.token, { expires: 365 });
-        //         window.location.replace("/");
-        //     } else {
-        //         window.location.replace("/");
-        //     }
-        // }
-        // if (respuesta.status === 206) {
-        //     setLoading(false);
-        //     setError(true);
-        //     setErrorMensaje(respuesta.data.message)
-        // }
     };
 
     return (
