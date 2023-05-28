@@ -13,6 +13,7 @@ import RankingDirectivo from './Pages/Ranking/RankingDirectivo/RankingDirectivo'
 import RecuperarContraseñaSeccion1 from './Pages/RecuperarContraseña/RecuperarContraseñaSeccion1/RecuperarContraseñaSeccion1';
 import RecuperarContraseñaSeccion2 from './Pages/RecuperarContraseña/RecuperarContraseñaSeccion2/RecuperarContraseñaSeccion2';
 import InicioTestDirectivo from './Pages/TestDirectivo/Inicio/InicioTestDirectivo';
+import IntroduccionTestDirectivo from './Pages/TestDirectivo/Introducción/IntroduccionTestDirectivo';
 import TestDirectivoSeccion1 from './Pages/TestDirectivo/Seccion 1/TestDirectivoSeccion1';
 import TestDirectivoSeccion2 from './Pages/TestDirectivo/Seccion 2/TestDirectivoSeccion2';
 import TestDirectivoSeccion3 from './Pages/TestDirectivo/Seccion 3/TestDirectivoSeccion3';
@@ -33,7 +34,8 @@ function App() {
       <Route path="/Editar-perfil" element={<EditarPerfil/>} />
       <Route path="/Ranking/Inicio" element={<Ranking/>} />
       <Route path="/Ranking/Directivo" element={<RankingDirectivo/>} />
-      <Route path="/Test/Dominio/Directivo" element={<InicioTestDirectivo/>} />
+      <Route path="/Test/Dominio/Directivo" element={<IntroduccionTestDirectivo/>} />
+      <Route path="/Test/Dominio/Directivo/Inicio" element={<InicioTestDirectivo/>} />
       <Route path="/Test/Dominio/Directivo/1" element={<TestDirectivoSeccion1/>} />
       <Route path="/Test/Dominio/Directivo/2" element={<TestDirectivoSeccion2/>} />
       <Route path="/Test/Dominio/Directivo/3" element={<TestDirectivoSeccion3/>} />

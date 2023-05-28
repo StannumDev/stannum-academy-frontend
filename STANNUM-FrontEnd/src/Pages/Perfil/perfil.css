@@ -587,6 +587,10 @@
     .datosDelJugador{
         display: none;
     }
+
+    .datosJugadorSeccion6{
+        display: none;
+    }
     
     .datosDelJugadorInformacion{
         flex-direction: column;
@@ -1268,6 +1272,10 @@
         width: 100%;
         border-top: 1px solid #747474;
     }
+
+    .datosJugadorSeccion6{
+        display: none;
+    }
     
     .divDatosDelJugadorInfo{
         padding-left: 3rem;
@@ -1577,6 +1585,10 @@
     .datosJugadorSeccion5{
         width: 100%;
         border-top: 1px solid #747474;
+    }
+
+    .datosJugadorSeccion6{
+        display: none;
     }
     
     .divDatosDelJugadorInfo{

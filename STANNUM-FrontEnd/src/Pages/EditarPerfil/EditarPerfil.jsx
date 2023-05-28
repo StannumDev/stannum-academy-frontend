@@ -26,7 +26,7 @@ function EditarPerfil() {
     useEffect(() => {
         const getUser = async () =>{
         if (token) {
-            const respuesta = await axios.post(`https://prueba-back-mateolohezic.up.railway.app/get-user/${token}`);
+            const respuesta = await axios.post(`http://localhost:8000/get-user/${token}`);
             setUser(respuesta.data)
             if (respuesta.data.name !== "Undefined"){
                 setValue("name", respuesta.data.name);
@@ -51,7 +51,7 @@ function EditarPerfil() {
 
         const getPhoto = async () => {
             try {
-              const response = await axios.get(`https://prueba-back-mateolohezic.up.railway.app/get-photo/${token}`, {
+              const response = await axios.get(`http://localhost:8000/get-photo/${token}`, {
                 responseType: 'blob',
               });
               if (response.status === 200) {              
@@ -70,7 +70,7 @@ function EditarPerfil() {
         setLoading(true);
         const fecha = data.birthdate.split('-');
         const nacimiento = `${fecha[2]}/${fecha[1]}/${fecha[0]}`;
-        const respuesta = await axios.patch(`https://prueba-back-mateolohezic.up.railway.app/patch-user`,
+        const respuesta = await axios.patch(`http://localhost:8000/patch-user`,
             {
                 id: user._id,
                 name: data.name.trim(),
@@ -84,7 +84,7 @@ function EditarPerfil() {
 
         if (data.photo) {
             await axios.post(
-                "https://prueba-back-mateolohezic.up.railway.app/upload-photo",
+                "http://localhost:8000/upload-photo",
                 {
                     file: data.photo,
                     userId: user._id

@@ -28,7 +28,7 @@ function TestDirectivoSeccion1() {
           <div className="contenedorInputsPregunta1-3">
             <div className="contenedorInteriorPregunta1-3">
               <label className="radioInputContainer1-3">
-                <input type="radio" {...register("pregunta1", { required: true })} value='1' />
+                <input type="radio" {...register("pregunta1", { required: true })} value='Una descripción detallada de los productos y servicios que ofrece una empresa.' />
                 <span className="checkmark1-3"></span>
               </label>
               <span className="labelInput1-3">Una descripción detallada de los productos y servicios que ofrece una empresa.</span>
@@ -37,7 +37,7 @@ function TestDirectivoSeccion1() {
           <div className="contenedorInputsPregunta1-3">
             <div className="contenedorInteriorPregunta1-3">
               <label className="radioInputContainer1-3">
-                <input type="radio" {...register("pregunta1", { required: true })} value='2' />
+                <input type="radio" {...register("pregunta1", { required: true })} value='Un plan de acción para alcanzar los objetivos a corto plazo de la empresa.' />
                 <span className="checkmark1-3"></span>
               </label>
               <span className="labelInput1-3">Un plan de acción para alcanzar los objetivos a corto plazo de la empresa.</span>
@@ -46,7 +46,7 @@ function TestDirectivoSeccion1() {
           <div className="contenedorInputsPregunta1-3">
             <div className="contenedorInteriorPregunta1-3">
               <label className="radioInputContainer1-3">
-                <input type="radio" {...register("pregunta1", { required: true })} value='3' />
+                <input type="radio" {...register("pregunta1", { required: true })} value='Una declaración inspiradora que describe lo que la empresa quiere lograr a largo plazo.' />
                 <span className="checkmark1-3"></span>
               </label>
               <span className="labelInput1-3">Una declaración inspiradora que describe lo que la empresa quiere lograr a largo plazo.</span>
@@ -61,7 +61,7 @@ function TestDirectivoSeccion1() {
           <div className="contenedorInputsPregunta1-3">
             <div className="contenedorInteriorPregunta1-3">
               <label className="radioInputContainer1-3">
-                <input type="radio" {...register("pregunta2", { required: true })} value='1' />
+                <input type="radio" {...register("pregunta2", { required: true })} value='Una declaración que describe el propósito fundamental de la empresa y su razón de ser.' />
                 <span className="checkmark1-3"></span>
               </label>
               <span className="labelInput1-3">Una declaración que describe el propósito fundamental de la empresa y su razón de ser.</span>
@@ -70,7 +70,7 @@ function TestDirectivoSeccion1() {
           <div className="contenedorInputsPregunta1-3">
             <div className="contenedorInteriorPregunta1-3">
               <label className="radioInputContainer1-3">
-                <input type="radio" {...register("pregunta2", { required: true })} value='2' />
+                <input type="radio" {...register("pregunta2", { required: true })} value='Una lista de objetivos a corto plazo que la empresa quiere lograr en el próximo año.' />
                 <span className="checkmark1-3"></span>
               </label>
               <span className="labelInput1-3">Una lista de objetivos a corto plazo que la empresa quiere lograr en el próximo año.</span>
@@ -79,7 +79,7 @@ function TestDirectivoSeccion1() {
           <div className="contenedorInputsPregunta1-3">
             <div className="contenedorInteriorPregunta1-3">
               <label className="radioInputContainer1-3">
-                <input type="radio" {...register("pregunta2", { required: true })} value='3' />
+                <input type="radio" {...register("pregunta2", { required: true })} value='Una descripción de los productos y servicios que ofrece la empresa.' />
                 <span className="checkmark1-3"></span>
               </label>
               <span className="labelInput1-3">Una descripción de los productos y servicios que ofrece la empresa.</span>
@@ -94,7 +94,7 @@ function TestDirectivoSeccion1() {
           <div className="contenedorInputsPregunta1-3">
             <div className="contenedorInteriorPregunta1-3">
               <label className="radioInputContainer1-3">
-                <input type="radio" {...register("pregunta3", { required: true })} value='1' />
+                <input type="radio" {...register("pregunta3", { required: true })} value='La descripción de los productos y servicios de la empresa y su mercado objetivo.' />
                 <span className="checkmark1-3"></span>
               </label>
               <span className="labelInput1-3">La descripción de los productos y servicios de la empresa y su mercado objetivo.</span>
@@ -103,7 +103,7 @@ function TestDirectivoSeccion1() {
           <div className="contenedorInputsPregunta1-3">
             <div className="contenedorInteriorPregunta1-3">
               <label className="radioInputContainer1-3">
-                <input type="radio" {...register("pregunta3", { required: true })} value='2' />
+                <input type="radio" {...register("pregunta3", { required: true })} value='La definición de los valores y principios que rigen la conducta de la empresa.' />
                 <span className="checkmark1-3"></span>
               </label>
               <span className="labelInput1-3">La definición de los valores y principios que rigen la conducta de la empresa.</span>
@@ -112,7 +112,7 @@ function TestDirectivoSeccion1() {
           <div className="contenedorInputsPregunta1-3">
             <div className="contenedorInteriorPregunta1-3">
               <label className="radioInputContainer1-3">
-                <input type="radio" {...register("pregunta3", { required: true })} value='3' />
+                <input type="radio" {...register("pregunta3", { required: true })} value='Qué es, qué hace, para quien lo hace, cómo lo hace.' />
                 <span className="checkmark1-3"></span>
               </label>
               <span className="labelInput1-3">Qué es, qué hace, para quien lo hace, cómo lo hace.</span>
@@ -127,7 +127,7 @@ function TestDirectivoSeccion1() {
           <div className="contenedorInputsPregunta1-3">
             <div className="contenedorInteriorPregunta1-3">
               <label className="radioInputContainer1-3">
-                <input type="radio" {...register("pregunta4", { required: true })} value='1' />
+                <input type="radio" {...register("pregunta4", { required: true })} value='La misión describe los objetivos a corto plazo de la empresa, mientras que la visión describe los objetivos a largo plazo.' />
                 <span className="checkmark1-3"></span>
               </label>
               <span className="labelInput1-3">La misión describe los objetivos a corto plazo de la empresa, mientras que la visión describe los objetivos a largo plazo.</span>
@@ -136,7 +136,7 @@ function TestDirectivoSeccion1() {
           <div className="contenedorInputsPregunta1-3">
             <div className="contenedorInteriorPregunta1-3">
               <label className="radioInputContainer1-3">
-                <input type="radio" {...register("pregunta4", { required: true })} value='2' />
+                <input type="radio" {...register("pregunta4", { required: true })} value='La misión y la visión son lo mismo y se utilizan indistintamente.' />
                 <span className="checkmark1-3"></span>
               </label>
               <span className="labelInput1-3">La misión y la visión son lo mismo y se utilizan indistintamente.</span>
@@ -145,7 +145,7 @@ function TestDirectivoSeccion1() {
           <div className="contenedorInputsPregunta1-3">
             <div className="contenedorInteriorPregunta1-3">
               <label className="radioInputContainer1-3">
-                <input type="radio" {...register("pregunta4", { required: true })} value='3' />
+                <input type="radio" {...register("pregunta4", { required: true })} value='La misión describe lo que la empresa hace, mientras que la visión describe lo que la empresa quiere lograr a largo plazo.' />
                 <span className="checkmark1-3"></span>
               </label>
               <span className="labelInput1-3">La misión describe lo que la empresa hace, mientras que la visión describe lo que la empresa quiere lograr a largo plazo.</span>
@@ -160,7 +160,7 @@ function TestDirectivoSeccion1() {
           <div className="contenedorInputsPregunta1-3">
             <div className="contenedorInteriorPregunta1-3">
               <label className="radioInputContainer1-3">
-                <input type="radio" {...register("pregunta5", { required: true })} value='1' />
+                <input type="radio" {...register("pregunta5", { required: true })} value='Tener una idea general del mercado y la competencia.' />
                 <span className="checkmark1-3"></span>
               </label>
               <span className="labelInput1-3">Tener una idea general del mercado y la competencia.</span>
@@ -169,7 +169,7 @@ function TestDirectivoSeccion1() {
           <div className="contenedorInputsPregunta1-3">
             <div className="contenedorInteriorPregunta1-3">
               <label className="radioInputContainer1-3">
-                <input type="radio" {...register("pregunta5", { required: true })} value='2' />
+                <input type="radio" {...register("pregunta5", { required: true })} value='Tener una comprensión profunda de la industria y el entorno en el que se encuentra la empresa.' />
                 <span className="checkmark1-3"></span>
               </label>
               <span className="labelInput1-3">Tener una comprensión profunda de la industria y el entorno en el que se encuentra la empresa.</span>
@@ -178,7 +178,7 @@ function TestDirectivoSeccion1() {
           <div className="contenedorInputsPregunta1-3">
             <div className="contenedorInteriorPregunta1-3">
               <label className="radioInputContainer1-3">
-                <input type="radio" {...register("pregunta5", { required: true })} value='3' />
+                <input type="radio" {...register("pregunta5", { required: true })} value='Tener una idea clara de los objetivos a largo plazo de la empresa.' />
                 <span className="checkmark1-3"></span>
               </label>
               <span className="labelInput1-3">Tener una idea clara de los objetivos a largo plazo de la empresa.</span>
@@ -193,7 +193,7 @@ function TestDirectivoSeccion1() {
           <div className="contenedorInputsPregunta1-3">
             <div className="contenedorInteriorPregunta1-3">
               <label className="radioInputContainer1-3">
-                <input type="radio" {...register("pregunta6", { required: true })} value='1' />
+                <input type="radio" {...register("pregunta6", { required: true })} value='La estrategia de marketing de una empresa.' />
                 <span className="checkmark1-3"></span>
               </label>
               <span className="labelInput1-3">La estrategia de marketing de una empresa.</span>
@@ -202,7 +202,7 @@ function TestDirectivoSeccion1() {
           <div className="contenedorInputsPregunta1-3">
             <div className="contenedorInteriorPregunta1-3">
               <label className="radioInputContainer1-3">
-                <input type="radio" {...register("pregunta6", { required: true })} value='2' />
+                <input type="radio" {...register("pregunta6", { required: true })} value='El plan financiero de una empresa.' />
                 <span className="checkmark1-3"></span>
               </label>
               <span className="labelInput1-3">El plan financiero de una empresa.</span>
@@ -211,7 +211,7 @@ function TestDirectivoSeccion1() {
           <div className="contenedorInputsPregunta1-3">
             <div className="contenedorInteriorPregunta1-3">
               <label className="radioInputContainer1-3">
-                <input type="radio" {...register("pregunta6", { required: true })} value='3' />
+                <input type="radio" {...register("pregunta6", { required: true })} value='La forma en que una empresa crea, entrega y captura valor.' />
                 <span className="checkmark1-3"></span>
               </label>
               <span className="labelInput1-3">La forma en que una empresa crea, entrega y captura valor.</span>
@@ -226,7 +226,7 @@ function TestDirectivoSeccion1() {
           <div className="contenedorInputsPregunta1-3">
             <div className="contenedorInteriorPregunta1-3">
               <label className="radioInputContainer1-3">
-                <input type="radio" {...register("pregunta7", { required: true })} value='1' />
+                <input type="radio" {...register("pregunta7", { required: true })} value='Los productos y servicios que ofrece la empresa.' />
                 <span className="checkmark1-3"></span>
               </label>
               <span className="labelInput1-3">Los productos y servicios que ofrece la empresa.</span>
@@ -235,7 +235,7 @@ function TestDirectivoSeccion1() {
           <div className="contenedorInputsPregunta1-3">
             <div className="contenedorInteriorPregunta1-3">
               <label className="radioInputContainer1-3">
-                <input type="radio" {...register("pregunta7", { required: true })} value='2' />
+                <input type="radio" {...register("pregunta7", { required: true })} value='La propuesta de valor, el segmento de clientes, los canales, la forma de relación, actividades y recursos clave, socios estratégicos, fuentes de ingresos y los costos asociados a la oferta de productos y servicios de la empresa.' />
                 <span className="checkmark1-3"></span>
               </label>
               <span className="labelInput1-3">La propuesta de valor, el segmento de clientes, los canales, la forma de relación, actividades y recursos clave, socios estratégicos, fuentes de ingresos y los costos asociados a la oferta de productos y servicios de la empresa.</span>
@@ -244,7 +244,7 @@ function TestDirectivoSeccion1() {
           <div className="contenedorInputsPregunta1-3">
             <div className="contenedorInteriorPregunta1-3">
               <label className="radioInputContainer1-3">
-                <input type="radio" {...register("pregunta7", { required: true })} value='3' />
+                <input type="radio" {...register("pregunta7", { required: true })} value='Los canales de distribución que utiliza la empresa.' />
                 <span className="checkmark1-3"></span>
               </label>
               <span className="labelInput1-3">Los canales de distribución que utiliza la empresa.</span>
@@ -259,7 +259,7 @@ function TestDirectivoSeccion1() {
           <div className="contenedorInputsPregunta1-3">
             <div className="contenedorInteriorPregunta1-3">
               <label className="radioInputContainer1-3">
-                <input type="radio" {...register("pregunta8", { required: true })} value='1' />
+                <input type="radio" {...register("pregunta8", { required: true })} value='Un conjunto de promesas que una empresa hace a sus clientes.' />
                 <span className="checkmark1-3"></span>
               </label>
               <span className="labelInput1-3">Un conjunto de promesas que una empresa hace a sus clientes.</span>
@@ -268,7 +268,7 @@ function TestDirectivoSeccion1() {
           <div className="contenedorInputsPregunta1-3">
             <div className="contenedorInteriorPregunta1-3">
               <label className="radioInputContainer1-3">
-                <input type="radio" {...register("pregunta8", { required: true })} value='2' />
+                <input type="radio" {...register("pregunta8", { required: true })} value='Una descripción detallada de los productos y servicios que ofrece una empresa.' />
                 <span className="checkmark1-3"></span>
               </label>
               <span className="labelInput1-3">Una descripción detallada de los productos y servicios que ofrece una empresa.</span>
@@ -277,7 +277,7 @@ function TestDirectivoSeccion1() {
           <div className="contenedorInputsPregunta1-3">
             <div className="contenedorInteriorPregunta1-3">
               <label className="radioInputContainer1-3">
-                <input type="radio" {...register("pregunta8", { required: true })} value='3' />
+                <input type="radio" {...register("pregunta8", { required: true })} value='Una oferta especial de precios que una empresa hace a sus clientes.' />
                 <span className="checkmark1-3"></span>
               </label>
               <span className="labelInput1-3">Una oferta especial de precios que una empresa hace a sus clientes.</span>
@@ -292,7 +292,7 @@ function TestDirectivoSeccion1() {
           <div className="contenedorInputsPregunta1-3">
             <div className="contenedorInteriorPregunta1-3">
               <label className="radioInputContainer1-3">
-                <input type="radio" {...register("pregunta9", { required: true })} value='1' />
+                <input type="radio" {...register("pregunta9", { required: true })} value='Para que los clientes entiendan exactamente lo que ofrece la empresa.' />
                 <span className="checkmark1-3"></span>
               </label>
               <span className="labelInput1-3">Para que los clientes entiendan exactamente lo que ofrece la empresa.</span>
@@ -301,7 +301,7 @@ function TestDirectivoSeccion1() {
           <div className="contenedorInputsPregunta1-3">
             <div className="contenedorInteriorPregunta1-3">
               <label className="radioInputContainer1-3">
-                <input type="radio" {...register("pregunta9", { required: true })} value='2' />
+                <input type="radio" {...register("pregunta9", { required: true })} value='Para que la empresa pueda cobrar precios más altos por sus productos y servicios.' />
                 <span className="checkmark1-3"></span>
               </label>
               <span className="labelInput1-3">Para que la empresa pueda cobrar precios más altos por sus productos y servicios.</span>
@@ -310,7 +310,7 @@ function TestDirectivoSeccion1() {
           <div className="contenedorInputsPregunta1-3">
             <div className="contenedorInteriorPregunta1-3">
               <label className="radioInputContainer1-3">
-                <input type="radio" {...register("pregunta9", { required: true })} value='3' />
+                <input type="radio" {...register("pregunta9", { required: true })} value='Para que la empresa pueda reducir sus costos de producción.' />
                 <span className="checkmark1-3"></span>
               </label>
               <span className="labelInput1-3">Para que la empresa pueda reducir sus costos de producción.</span>
@@ -325,7 +325,7 @@ function TestDirectivoSeccion1() {
           <div className="contenedorInputsPregunta1-3">
             <div className="contenedorInteriorPregunta1-3">
               <label className="radioInputContainer1-3">
-                <input type="radio" {...register("pregunta10", { required: true })} value='1' />
+                <input type="radio" {...register("pregunta10", { required: true })} value='Tener precios bajos en comparación con la competencia.' />
                 <span className="checkmark1-3"></span>
               </label>
               <span className="labelInput1-3">Tener precios bajos en comparación con la competencia.</span>
@@ -334,7 +334,7 @@ function TestDirectivoSeccion1() {
           <div className="contenedorInputsPregunta1-3">
             <div className="contenedorInteriorPregunta1-3">
               <label className="radioInputContainer1-3">
-                <input type="radio" {...register("pregunta10", { required: true })} value='2' />
+                <input type="radio" {...register("pregunta10", { required: true })} value='Ofrecer productos y servicios de alta calidad.' />
                 <span className="checkmark1-3"></span>
               </label>
               <span className="labelInput1-3">Ofrecer productos y servicios de alta calidad.</span>
@@ -343,7 +343,7 @@ function TestDirectivoSeccion1() {
           <div className="contenedorInputsPregunta1-3">
             <div className="contenedorInteriorPregunta1-3">
               <label className="radioInputContainer1-3">
-                <input type="radio" {...register("pregunta10", { required: true })} value='3' />
+                <input type="radio" {...register("pregunta10", { required: true })} value='Tener una posición única en el mercado que permite a la empresa destacarse y tener éxito.' />
                 <span className="checkmark1-3"></span>
               </label>
               <span className="labelInput1-3">Tener una posición única en el mercado que permite a la empresa destacarse y tener éxito.</span>
@@ -358,7 +358,7 @@ function TestDirectivoSeccion1() {
           <div className="contenedorInputsPregunta1-3">
             <div className="contenedorInteriorPregunta1-3">
               <label className="radioInputContainer1-3">
-                <input type="radio" {...register("pregunta11", { required: true })} value='1' />
+                <input type="radio" {...register("pregunta11", { required: true })} value='Un documento que describe los objetivos y las estrategias de la empresa.' />
                 <span className="checkmark1-3"></span>
               </label>
               <span className="labelInput1-3">Un documento que describe los objetivos y las estrategias de la empresa.</span>
@@ -367,7 +367,7 @@ function TestDirectivoSeccion1() {
           <div className="contenedorInputsPregunta1-3">
             <div className="contenedorInteriorPregunta1-3">
               <label className="radioInputContainer1-3">
-                <input type="radio" {...register("pregunta11", { required: true })} value='2' />
+                <input type="radio" {...register("pregunta11", { required: true })} value='Un plan detallado que indica cómo la empresa llevará a cabo sus objetivos estratégicos.' />
                 <span className="checkmark1-3"></span>
               </label>
               <span className="labelInput1-3">Un plan detallado que indica cómo la empresa llevará a cabo sus objetivos estratégicos.</span>
@@ -376,7 +376,7 @@ function TestDirectivoSeccion1() {
           <div className="contenedorInputsPregunta1-3">
             <div className="contenedorInteriorPregunta1-3">
               <label className="radioInputContainer1-3">
-                <input type="radio" {...register("pregunta11", { required: true })} value='3' />
+                <input type="radio" {...register("pregunta11", { required: true })} value='Una lista de tareas diarias para los empleados.' />
                 <span className="checkmark1-3"></span>
               </label>
               <span className="labelInput1-3">Una lista de tareas diarias para los empleados.</span>

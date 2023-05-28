@@ -12,7 +12,7 @@ function Inicio() {
   useEffect(() => {
       const getUser = async () =>{
       if (token) {
-          const respuesta = await axios.post(`https://prueba-back-mateolohezic.up.railway.app/get-user/${token}`);
+          const respuesta = await axios.post(`http://localhost:8000/get-user/${token}`);
           setUser(respuesta.data)
       }}
       getUser()

@@ -14,22 +14,11 @@ function InicioTestDirectivo() {
   return (
     <>
       <div className="bg"></div>
-      <div className='d-flex flex-column align-items-center'>
-          <div className='text-center mt-5 tituloDominio1Test'><h1>Test de <span>Dominio 1</span></h1></div>
-          <div className='text-center tituloDominio1TestRojo'><h2>DIRECTIVO</h2></div>
-          <div className='parrafoBienvenidaCentro parrafoInicioTest text-center'><p>¡En este test se pondrán a prueba tus conocimientos sobre las capacidades directivas para saber que tipo de perfil tienes!</p></div>
-          <div className='text-center mt-3 importanteDominio1TestRojo'><h3>¡Importante!</h3></div>
-          <div className='parrafoBienvenidaCentro parraforInicioTest2 text-center'><p>El test dura aproximadamente 20 minutos y solo podrás hacerlo una vez al iniciar.</p></div>
-          <div className='parrafoBienvenidaCentro parraforInicioTest2 text-center'><p>En un futuro los test se volverán a habilitar para ir midiendo tu evolución</p></div>
+      <div className='contenedorInicioTestDominioSeccion1'>
+        <div className='text-center tituloDominio1Test'><h1>Test de <span>Dominio 1</span></h1></div>
+        <div className='text-center titulo2InicioTestDominioSeccion1'><h2>DIRECTIVO</h2></div>
+        <div className='text-center subtituloInicioTestDominioSeccion1'><h3>Sección 1 : <b>Conciencia del emprendedor estratégico</b></h3></div>
       </div>
-      <div className='contenedorInicioTestDominio text-white'>
-        <div className='text-center tituloInicioTestDominio'><h2>Inicio del Test</h2></div>
-        <div className='text-center subtituloInicioTestDominio'><h2>Sección 1 : <b>Conciencia del emprendedor estratégico</b></h2></div>
-        <div className='text-center textoInicioTestDominio'><p>Un Emprendedor <b>profesional</b> mantiene un equilibrio de actividades en donde el 80% son estratégicas y menos del 20% son operativas, por por lo tanto, vamos a repetir la pregunta 1 cada cierto tiempo hasta llegar a 80% <b>estratégico</b>.</p></div>
-      </div>
-
-
-
       <form onSubmit={handleSubmit(onSubmit)}>
         <div className="contenedorPreguntaTestDominio">
           <div className="tituloPreguntaDominio">Pregunta 01</div>
