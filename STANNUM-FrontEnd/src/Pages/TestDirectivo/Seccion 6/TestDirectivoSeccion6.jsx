@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import axios from "axios";
 import { useForm } from "react-hook-form";
 
-function TestDirectivoSeccion3() {
+function TestDirectivoSeccion6() {
 
   const { register, handleSubmit, formState: { errors } } = useForm();
   const [loading, setLoading] = useState(false);
@@ -15,11 +15,6 @@ function TestDirectivoSeccion3() {
     let justificacion1 = "Undefined"
     if (data.question1Justification && data.question1 != 'No.'){
       justificacion1= data.question1Justification.trim()
-    }
-
-    let justificacion2 = "Undefined"
-    if (data.question2Justification && data.question2 != 'No.'){
-      justificacion2= data.question2Justification.trim()
     }
 
     let justificacion3 = "Undefined"
@@ -37,13 +32,12 @@ function TestDirectivoSeccion3() {
       justificacion5= data.question5Justification.trim()
     }
 
-    const respuesta = await axios.post(`http://localhost:8000/directivo/seccion3`,
+    const respuesta = await axios.post(`http://localhost:8000/directivo/seccion6`,
       {
         token,
         question1: data.question1,
         question1Justification: justificacion1,
         question2: data.question2,
-        question2Justification: justificacion2,
         question3: data.question3,
         question3Justification: justificacion3,
         question4: data.question4,
@@ -52,26 +46,22 @@ function TestDirectivoSeccion3() {
         question5Justification: justificacion5
       }
     );
-    if (respuesta.status === 200) {
-      window.location.replace('/Test/Dominio/Directivo/4')
-    }
-    if (respuesta.status === 206) {
-      window.location.replace('/Cerrar-sesion')
-    }
+    // if (respuesta.status === 200) {
+    //   window.location.replace('/')
+    // }
+    // if (respuesta.status === 206) {
+    //   window.location.replace('/Cerrar-sesion')
+    // }
     setLoading(false);
   };
 
   const [showAdditionalInput1, setShowAdditionalInput1] = useState(false);
-  const [showAdditionalInput2, setShowAdditionalInput2] = useState(false);
   const [showAdditionalInput3, setShowAdditionalInput3] = useState(false);
   const [showAdditionalInput4, setShowAdditionalInput4] = useState(false);
   const [showAdditionalInput5, setShowAdditionalInput5] = useState(false);
-  
+
   const handleRadioChange1 = (event) => {
     setShowAdditionalInput1(event.target.value === 'Sí.');
-  };
-  const handleRadioChange2 = (event) => {
-    setShowAdditionalInput2(event.target.value === 'Sí.');
   };
   const handleRadioChange3 = (event) => {
     setShowAdditionalInput3(event.target.value === 'Sí.');
@@ -89,16 +79,16 @@ function TestDirectivoSeccion3() {
       <div className='contenedorInicioTestDominioSeccion1'>
         <div className='text-center tituloDominio1Test'><h1>Test de <span>Dominio 1</span></h1></div>
         <div className='text-center titulo2InicioTestDominioSeccion1'><h2>DIRECTIVO</h2></div>
-        <div className='text-center subtituloInicioTestDominioSeccion1'><h3>Sección 3 : <b>Conocimientos para ser PRO - Mercado</b></h3></div>
+        <div className='text-center subtituloInicioTestDominioSeccion1'><h3>Sección 6 : <b>Conocimientos para ser PRO - Habilidades Digitales</b></h3></div>
       </div>
       <form onSubmit={handleSubmit(onSubmit)}>
         <div className="contenedorPreguntaTestDominio">
           <div className="tituloPreguntaDominio">Pregunta 01</div>
-          <div className="preguntaDominio">¿Podrías identificar a los competidores directos e indirectos de tu Negocio?</div>
+          <div className="preguntaDominio">¿Utilizas una plataforma de almacenamiento de información en la Nube, como Dropbox o Google Drive?</div>
           <div className="contenedorInputsPregunta1-3">
             <div className="contenedorInteriorPregunta1-3">
               <label className="radioInputContainer1-3">
-                <input type="radio" {...register("question1", { required: true })} value='Sí.' onChange={handleRadioChange1} />
+                <input type="radio" {...register("question1", { required: true })} value='Sí.' onChange={handleRadioChange1}  />
                 <span className="checkmark1-3"></span>
               </label>
               <span className="labelInput1-3">Sí.</span>
@@ -107,7 +97,7 @@ function TestDirectivoSeccion3() {
           <div className="contenedorInputsPregunta1-3">
             <div className="contenedorInteriorPregunta1-3">
               <label className="radioInputContainer1-3">
-                <input type="radio" {...register("question1", { required: true })} value='No.' onChange={handleRadioChange1} />
+                <input type="radio" {...register("question1", { required: true })} value='No.' onChange={handleRadioChange1}  />
                 <span className="checkmark1-3"></span>
               </label>
               <span className="labelInput1-3">No.</span>
@@ -125,42 +115,31 @@ function TestDirectivoSeccion3() {
         </div>
         <div className="contenedorPreguntaTestDominio">
           <div className="tituloPreguntaDominio">Pregunta 02</div>
-          <div className="preguntaDominio">¿Podrías identificar a los referentes en tu mercado?</div>
-          <div className="contenedorInputsPregunta1-3">
-            <div className="contenedorInteriorPregunta1-3">
-              <label className="radioInputContainer1-3">
-                <input type="radio" {...register("question2", { required: true })} value='Sí.' onChange={handleRadioChange2} />
-                <span className="checkmark1-3"></span>
-              </label>
-              <span className="labelInput1-3">Sí.</span>
+          <div className="preguntaDominio">¿Qué tan avanzada/o estás en el manejo de la Nube?</div>
+          <div className='cajaPregunta1-10'>
+            <div className='textoPregunta1-10 primerTexto1-10'>No se<b>como funciona</b></div>
+            <div className="contenedorInputsPregunta1-10">
+              {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((value) => (
+                <div key={value} className="d-flex flex-column align-items-center">
+                  <label key={value} className="radioInputContainer">
+                    <input type="radio" {...register("question2", { required: true })} value={value} />
+                    <span className="checkmark"></span>
+                  </label>
+                  <span className="labelInput1-10">{value}</span>
+                </div>
+              ))}
             </div>
-          </div>
-          <div className="contenedorInputsPregunta1-3">
-            <div className="contenedorInteriorPregunta1-3">
-              <label className="radioInputContainer1-3">
-                <input type="radio" {...register("question2", { required: true })} value='No.' onChange={handleRadioChange2} />
-                <span className="checkmark1-3"></span>
-              </label>
-              <span className="labelInput1-3">No.</span>
-            </div>
+            <div className='textoPregunta1-10 segundoTexto1-10'>Soy un<b>experto</b></div>
           </div>
           {errors.question2 && <div className="error">Seleccione una respuesta.</div>}
-          {showAdditionalInput2 && (
-            <>
-            <div className="contenedorInputsPregunta1-3">
-              <input type="text" {...register("question2Justification", { required: true })} className='inputLogin mt-3 ps-2 rounded' placeholder="¿Cuál?" />
-            </div>
-            {errors.question2Justification && <div className="error">Campo requerido.</div>}
-            </>
-          )}
-        </div>
+        </div> 
         <div className="contenedorPreguntaTestDominio">
           <div className="tituloPreguntaDominio">Pregunta 03</div>
-          <div className="preguntaDominio">¿Podrías identificar 5 tendencias en tu mercado?</div>
+          <div className="preguntaDominio">¿Utilizas algún software de gestión?</div>
           <div className="contenedorInputsPregunta1-3">
             <div className="contenedorInteriorPregunta1-3">
               <label className="radioInputContainer1-3">
-                <input type="radio" {...register("question3", { required: true })} value='Sí.' onChange={handleRadioChange3} />
+                <input type="radio" {...register("question3", { required: true })} value='Sí.' onChange={handleRadioChange3}  />
                 <span className="checkmark1-3"></span>
               </label>
               <span className="labelInput1-3">Sí.</span>
@@ -169,7 +148,7 @@ function TestDirectivoSeccion3() {
           <div className="contenedorInputsPregunta1-3">
             <div className="contenedorInteriorPregunta1-3">
               <label className="radioInputContainer1-3">
-                <input type="radio" {...register("question3", { required: true })} value='No.' onChange={handleRadioChange3} />
+                <input type="radio" {...register("question3", { required: true })} value='No.' onChange={handleRadioChange3}  />
                 <span className="checkmark1-3"></span>
               </label>
               <span className="labelInput1-3">No.</span>
@@ -187,11 +166,11 @@ function TestDirectivoSeccion3() {
         </div>
         <div className="contenedorPreguntaTestDominio">
           <div className="tituloPreguntaDominio">Pregunta 04</div>
-          <div className="preguntaDominio">¿Podrías identificar 3 oportunidades del contexto de tu negocio?</div>
+          <div className="preguntaDominio">¿Usas un software de gestión de proyectos?</div>
           <div className="contenedorInputsPregunta1-3">
             <div className="contenedorInteriorPregunta1-3">
               <label className="radioInputContainer1-3">
-                <input type="radio" {...register("question4", { required: true })} value='Sí.' onChange={handleRadioChange4} />
+                <input type="radio" {...register("question4", { required: true })} value='Sí.' onChange={handleRadioChange4}  />
                 <span className="checkmark1-3"></span>
               </label>
               <span className="labelInput1-3">Sí.</span>
@@ -200,7 +179,7 @@ function TestDirectivoSeccion3() {
           <div className="contenedorInputsPregunta1-3">
             <div className="contenedorInteriorPregunta1-3">
               <label className="radioInputContainer1-3">
-                <input type="radio" {...register("question4", { required: true })} value='No.' onChange={handleRadioChange4} />
+                <input type="radio" {...register("question4", { required: true })} value='No.' onChange={handleRadioChange4}  />
                 <span className="checkmark1-3"></span>
               </label>
               <span className="labelInput1-3">No.</span>
@@ -218,7 +197,7 @@ function TestDirectivoSeccion3() {
         </div>
         <div className="contenedorPreguntaTestDominio">
           <div className="tituloPreguntaDominio">Pregunta 05</div>
-          <div className="preguntaDominio">¿Podrías identificar 3 amenazas del contexto de tu negocio?</div>
+          <div className="preguntaDominio">¿Utilizas alguna herramienta digital para gestión del tiempo?</div>
           <div className="contenedorInputsPregunta1-3">
             <div className="contenedorInteriorPregunta1-3">
               <label className="radioInputContainer1-3">
@@ -237,7 +216,7 @@ function TestDirectivoSeccion3() {
               <span className="labelInput1-3">No.</span>
             </div>
           </div>
-          {errors.question5 && <div className="error">Seleccione una respuesta.</div>}
+          {errors.question5 && <div className="error">Seleccione una respuesta.</div>}        
           {showAdditionalInput5 && (
             <>
             <div className="contenedorInputsPregunta1-3">
@@ -256,14 +235,13 @@ function TestDirectivoSeccion3() {
                 aria-hidden="true"
               ></span>
             ) : (
-              <>Continuar (3/6)</>
+              <>Continuar (6/6)</>
             )}  
           </button>
         </div>
-
       </form>
     </>
   )
 }
 
-export default TestDirectivoSeccion3
+export default TestDirectivoSeccion6

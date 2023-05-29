@@ -1,15 +1,7 @@
 import React from 'react'
-import { useForm } from "react-hook-form";
 
 function IntroduccionTestDirectivo() {
   
-  const { register, handleSubmit, formState: { errors } } = useForm();
-
-  const onSubmit = (data) => {
-    console.log(data);
-    window.location.replace('/Test/Dominio/Directivo/1')
-  };
-
   return (
     <>
       <div className="bg"></div>
@@ -27,7 +19,7 @@ function IntroduccionTestDirectivo() {
         <div className='text-center textoInicioTestDominio'><p>Responde con <b>honestidad</b> y <b>sinceridad</b>.</p></div>
       </div>
       <div className='cajaBotonEnviarRespuestasDominio'>
-        <a href="/Test/Dominio/Directivo/Inicio"><button type="button">Empezar</button></a>
+        <a href="/Test/Dominio/Directivo/1"><button type="button">Empezar</button></a>
       </div>
     </>
   )

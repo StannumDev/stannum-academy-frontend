@@ -1,35 +1,45 @@
 import React, { useState } from 'react';
+import axios from "axios";
 import { useForm } from "react-hook-form";
+import './testDirectivoSeccion.css'
 
 function TestDirectivoSeccion2() {
 
   const { register, handleSubmit, formState: { errors } } = useForm();
+  const [loading, setLoading] = useState(false);
 
-  const [showAdditionalInput1, setShowAdditionalInput1] = useState(false);
-  const [showAdditionalInput2, setShowAdditionalInput2] = useState(false);
-  const [showAdditionalInput3, setShowAdditionalInput3] = useState(false);
-  const [showAdditionalInput4, setShowAdditionalInput4] = useState(false);
-  const [showAdditionalInput5, setShowAdditionalInput5] = useState(false);
-  
-  const handleRadioChange1 = (event) => {
-    setShowAdditionalInput1(event.target.value === '1');
-  };
-  const handleRadioChange2 = (event) => {
-    setShowAdditionalInput2(event.target.value === '1');
-  };
-  const handleRadioChange3 = (event) => {
-    setShowAdditionalInput3(event.target.value === '1');
-  };
-  const handleRadioChange4 = (event) => {
-    setShowAdditionalInput4(event.target.value === '1');
-  };
-  const handleRadioChange5 = (event) => {
-    setShowAdditionalInput5(event.target.value === '1');
-  };
+  const token = localStorage.getItem('token');
 
-  const onSubmit = (data) => {
-    console.log(data);
-    window.location.replace('/Test/Dominio/Directivo/3')
+  const onSubmit = async (data) => {
+    setLoading(true);
+    const respuesta = await axios.post(`http://localhost:8000/directivo/seccion2`,
+      {
+        token,
+        question1: data.question1,
+        question2: data.question2,
+        question3: data.question3,
+        question4: data.question4,
+        question5: data.question5,
+        question6: data.question6,
+        question7: data.question7,
+        question8: data.question8,
+        question9: data.question9,
+        question10: data.question10,
+        question11: data.question11,
+        question12: data.question12,
+        question13: data.question13,
+        question14: data.question14,
+        question15: data.question15,
+        question16: data.question16
+      }
+    );
+    if (respuesta.status === 200) {
+      window.location.replace('/Test/Dominio/Directivo/3')
+    }
+    if (respuesta.status === 206) {
+      window.location.replace('/Cerrar-sesion')
+    }
+    setLoading(false);
   };
 
   return (
@@ -38,168 +48,492 @@ function TestDirectivoSeccion2() {
       <div className='contenedorInicioTestDominioSeccion1'>
         <div className='text-center tituloDominio1Test'><h1>Test de <span>Dominio 1</span></h1></div>
         <div className='text-center titulo2InicioTestDominioSeccion1'><h2>DIRECTIVO</h2></div>
-        <div className='text-center subtituloInicioTestDominioSeccion1'><h3>Sección 3 : <b>Conocimientos para ser PRO - Mercado</b></h3></div>
+        <div className='text-center subtituloInicioTestDominioSeccion1'><h3>Sección 2 : <b>Conocimientos para ser PRO - Conceptos</b></h3></div>
       </div>
       <form onSubmit={handleSubmit(onSubmit)}>
+
+        
         <div className="contenedorPreguntaTestDominio">
           <div className="tituloPreguntaDominio">Pregunta 01</div>
-          <div className="preguntaDominio">¿Podrías identificar a los competidores directos e indirectos de tu Negocio?</div>
+          <div className="preguntaDominio">¿Que es la visión?</div>
           <div className="contenedorInputsPregunta1-3">
             <div className="contenedorInteriorPregunta1-3">
               <label className="radioInputContainer1-3">
-                <input type="radio" {...register("question1", { required: true })} value='1' onChange={handleRadioChange1} />
+                <input type="radio" {...register("question1", { required: true })} value='Una descripción detallada de los productos y servicios que ofrece una empresa.' />
                 <span className="checkmark1-3"></span>
               </label>
-              <span className="labelInput1-3">Sí.</span>
+              <span className="labelInput1-3">Una descripción detallada de los productos y servicios que ofrece una empresa.</span>
             </div>
           </div>
           <div className="contenedorInputsPregunta1-3">
             <div className="contenedorInteriorPregunta1-3">
               <label className="radioInputContainer1-3">
-                <input type="radio" {...register("question1", { required: true })} value='2' onChange={handleRadioChange1} />
+                <input type="radio" {...register("question1", { required: true })} value='Un plan de acción para alcanzar los objetivos a corto plazo de la empresa.' />
                 <span className="checkmark1-3"></span>
               </label>
-              <span className="labelInput1-3">No.</span>
+              <span className="labelInput1-3">Un plan de acción para alcanzar los objetivos a corto plazo de la empresa.</span>
+            </div>
+          </div>
+          <div className="contenedorInputsPregunta1-3">
+            <div className="contenedorInteriorPregunta1-3">
+              <label className="radioInputContainer1-3">
+                <input type="radio" {...register("question1", { required: true })} value='Una declaración inspiradora que describe lo que la empresa quiere lograr a largo plazo.' />
+                <span className="checkmark1-3"></span>
+              </label>
+              <span className="labelInput1-3">Una declaración inspiradora que describe lo que la empresa quiere lograr a largo plazo.</span>
             </div>
           </div>
           {errors.question1 && <div className="error">Seleccione una respuesta.</div>}
-          {showAdditionalInput1 && (
-            <>
-            <div className="contenedorInputsPregunta1-3">
-              <input type="text" {...register("question1Justification", { required: true })} className='inputLogin mt-3 ps-2 rounded' placeholder="¿Cuál?" />
-            </div>
-            {errors.question1Justification && <div className="error">Campo requerido.</div>}
-            </>
-          )}
         </div>
+
         <div className="contenedorPreguntaTestDominio">
           <div className="tituloPreguntaDominio">Pregunta 02</div>
-          <div className="preguntaDominio">¿Podrías identificar a los referentes en tu mercado?</div>
+          <div className="preguntaDominio">¿Que es la misión?</div>
           <div className="contenedorInputsPregunta1-3">
             <div className="contenedorInteriorPregunta1-3">
               <label className="radioInputContainer1-3">
-                <input type="radio" {...register("question2", { required: true })} value='1' onChange={handleRadioChange2} />
+                <input type="radio" {...register("question2", { required: true })} value='Una declaración que describe el propósito fundamental de la empresa y su razón de ser.' />
                 <span className="checkmark1-3"></span>
               </label>
-              <span className="labelInput1-3">Sí.</span>
+              <span className="labelInput1-3">Una declaración que describe el propósito fundamental de la empresa y su razón de ser.</span>
             </div>
           </div>
           <div className="contenedorInputsPregunta1-3">
             <div className="contenedorInteriorPregunta1-3">
               <label className="radioInputContainer1-3">
-                <input type="radio" {...register("question2", { required: true })} value='2' onChange={handleRadioChange2} />
+                <input type="radio" {...register("question2", { required: true })} value='Una lista de objetivos a corto plazo que la empresa quiere lograr en el próximo año.' />
                 <span className="checkmark1-3"></span>
               </label>
-              <span className="labelInput1-3">No.</span>
+              <span className="labelInput1-3">Una lista de objetivos a corto plazo que la empresa quiere lograr en el próximo año.</span>
+            </div>
+          </div>
+          <div className="contenedorInputsPregunta1-3">
+            <div className="contenedorInteriorPregunta1-3">
+              <label className="radioInputContainer1-3">
+                <input type="radio" {...register("question2", { required: true })} value='Una descripción de los productos y servicios que ofrece la empresa.' />
+                <span className="checkmark1-3"></span>
+              </label>
+              <span className="labelInput1-3">Una descripción de los productos y servicios que ofrece la empresa.</span>
             </div>
           </div>
           {errors.question2 && <div className="error">Seleccione una respuesta.</div>}
-          {showAdditionalInput2 && (
-            <>
-            <div className="contenedorInputsPregunta1-3">
-              <input type="text" {...register("question2Justification", { required: true })} className='inputLogin mt-3 ps-2 rounded' placeholder="¿Cuál?" />
-            </div>
-            {errors.question2Justification && <div className="error">Campo requerido.</div>}
-            </>
-          )}
         </div>
+
         <div className="contenedorPreguntaTestDominio">
           <div className="tituloPreguntaDominio">Pregunta 03</div>
-          <div className="preguntaDominio">¿Podrías identificar 5 tendencias en tu mercado?</div>
+          <div className="preguntaDominio">¿Cuáles son los elementos que se incluyen en una misión empresarial?</div>
           <div className="contenedorInputsPregunta1-3">
             <div className="contenedorInteriorPregunta1-3">
               <label className="radioInputContainer1-3">
-                <input type="radio" {...register("question3", { required: true })} value='1' onChange={handleRadioChange3} />
+                <input type="radio" {...register("question3", { required: true })} value='La descripción de los productos y servicios de la empresa y su mercado objetivo.' />
                 <span className="checkmark1-3"></span>
               </label>
-              <span className="labelInput1-3">Sí.</span>
+              <span className="labelInput1-3">La descripción de los productos y servicios de la empresa y su mercado objetivo.</span>
             </div>
           </div>
           <div className="contenedorInputsPregunta1-3">
             <div className="contenedorInteriorPregunta1-3">
               <label className="radioInputContainer1-3">
-                <input type="radio" {...register("question3", { required: true })} value='2' onChange={handleRadioChange3} />
+                <input type="radio" {...register("question3", { required: true })} value='La definición de los valores y principios que rigen la conducta de la empresa.' />
                 <span className="checkmark1-3"></span>
               </label>
-              <span className="labelInput1-3">No.</span>
+              <span className="labelInput1-3">La definición de los valores y principios que rigen la conducta de la empresa.</span>
+            </div>
+          </div>
+          <div className="contenedorInputsPregunta1-3">
+            <div className="contenedorInteriorPregunta1-3">
+              <label className="radioInputContainer1-3">
+                <input type="radio" {...register("question3", { required: true })} value='Qué es, qué hace, para quien lo hace, cómo lo hace.' />
+                <span className="checkmark1-3"></span>
+              </label>
+              <span className="labelInput1-3">Qué es, qué hace, para quien lo hace, cómo lo hace.</span>
             </div>
           </div>
           {errors.question3 && <div className="error">Seleccione una respuesta.</div>}
-          {showAdditionalInput3 && (
-            <>
-            <div className="contenedorInputsPregunta1-3">
-              <input type="text" {...register("question3Justification", { required: true })} className='inputLogin mt-3 ps-2 rounded' placeholder="¿Cuál?" />
-            </div>
-            {errors.question3Justification && <div className="error">Campo requerido.</div>}
-            </>
-          )}
         </div>
+
         <div className="contenedorPreguntaTestDominio">
           <div className="tituloPreguntaDominio">Pregunta 04</div>
-          <div className="preguntaDominio">¿Podrías identificar 3 oportunidades del contexto de tu negocio?</div>
+          <div className="preguntaDominio">¿Cómo se diferencia la visión de la misión de una empresa?</div>
           <div className="contenedorInputsPregunta1-3">
             <div className="contenedorInteriorPregunta1-3">
               <label className="radioInputContainer1-3">
-                <input type="radio" {...register("question4", { required: true })} value='1' onChange={handleRadioChange4} />
+                <input type="radio" {...register("question4", { required: true })} value='La misión describe los objetivos a corto plazo de la empresa, mientras que la visión describe los objetivos a largo plazo.' />
                 <span className="checkmark1-3"></span>
               </label>
-              <span className="labelInput1-3">Sí.</span>
+              <span className="labelInput1-3">La misión describe los objetivos a corto plazo de la empresa, mientras que la visión describe los objetivos a largo plazo.</span>
             </div>
           </div>
           <div className="contenedorInputsPregunta1-3">
             <div className="contenedorInteriorPregunta1-3">
               <label className="radioInputContainer1-3">
-                <input type="radio" {...register("question4", { required: true })} value='2' onChange={handleRadioChange4} />
+                <input type="radio" {...register("question4", { required: true })} value='La misión y la visión son lo mismo y se utilizan indistintamente.' />
                 <span className="checkmark1-3"></span>
               </label>
-              <span className="labelInput1-3">No.</span>
+              <span className="labelInput1-3">La misión y la visión son lo mismo y se utilizan indistintamente.</span>
+            </div>
+          </div>
+          <div className="contenedorInputsPregunta1-3">
+            <div className="contenedorInteriorPregunta1-3">
+              <label className="radioInputContainer1-3">
+                <input type="radio" {...register("question4", { required: true })} value='La misión describe lo que la empresa hace, mientras que la visión describe lo que la empresa quiere lograr a largo plazo.' />
+                <span className="checkmark1-3"></span>
+              </label>
+              <span className="labelInput1-3">La misión describe lo que la empresa hace, mientras que la visión describe lo que la empresa quiere lograr a largo plazo.</span>
             </div>
           </div>
           {errors.question4 && <div className="error">Seleccione una respuesta.</div>}
-          {showAdditionalInput4 && (
-            <>
-            <div className="contenedorInputsPregunta1-3">
-              <input type="text" {...register("question4Justification", { required: true })} className='inputLogin mt-3 ps-2 rounded' placeholder="¿Cuál?" />
-            </div>
-            {errors.question4Justification && <div className="error">Campo requerido.</div>}
-            </>
-          )}
         </div>
+
         <div className="contenedorPreguntaTestDominio">
           <div className="tituloPreguntaDominio">Pregunta 05</div>
-          <div className="preguntaDominio">¿Podrías identificar 3 amenazas del contexto de tu negocio?</div>
+          <div className="preguntaDominio">¿Qué significa tener una visión estratégica?</div>
           <div className="contenedorInputsPregunta1-3">
             <div className="contenedorInteriorPregunta1-3">
               <label className="radioInputContainer1-3">
-                <input type="radio" {...register("question5", { required: true })} value='1' onChange={handleRadioChange5} />
+                <input type="radio" {...register("question5", { required: true })} value='Tener una idea general del mercado y la competencia.' />
                 <span className="checkmark1-3"></span>
               </label>
-              <span className="labelInput1-3">Sí.</span>
+              <span className="labelInput1-3">Tener una idea general del mercado y la competencia.</span>
             </div>
           </div>
           <div className="contenedorInputsPregunta1-3">
             <div className="contenedorInteriorPregunta1-3">
               <label className="radioInputContainer1-3">
-                <input type="radio" {...register("question5", { required: true })} value='2' onChange={handleRadioChange5} />
+                <input type="radio" {...register("question5", { required: true })} value='Tener una comprensión profunda de la industria y el entorno en el que se encuentra la empresa.' />
                 <span className="checkmark1-3"></span>
               </label>
-              <span className="labelInput1-3">No.</span>
+              <span className="labelInput1-3">Tener una comprensión profunda de la industria y el entorno en el que se encuentra la empresa.</span>
+            </div>
+          </div>
+          <div className="contenedorInputsPregunta1-3">
+            <div className="contenedorInteriorPregunta1-3">
+              <label className="radioInputContainer1-3">
+                <input type="radio" {...register("question5", { required: true })} value='Tener una idea clara de los objetivos a largo plazo de la empresa.' />
+                <span className="checkmark1-3"></span>
+              </label>
+              <span className="labelInput1-3">Tener una idea clara de los objetivos a largo plazo de la empresa.</span>
             </div>
           </div>
           {errors.question5 && <div className="error">Seleccione una respuesta.</div>}
-          {showAdditionalInput5 && (
-            <>
-            <div className="contenedorInputsPregunta1-3">
-              <input type="text" {...register("question5Justification", { required: true })} className='inputLogin mt-3 ps-2 rounded' placeholder="¿Cuál?" />
-            </div>
-            {errors.question5Justification && <div className="error">Campo requerido.</div>}
-            </>
-          )}
-        </div>
-        <div className='cajaBotonEnviarRespuestasDominio'>
-          <button type="submit">Continuar (3/6)</button>
         </div>
 
+        <div className="contenedorPreguntaTestDominio">
+          <div className="tituloPreguntaDominio">Pregunta 06</div>
+          <div className="preguntaDominio">¿Qué es el modelo de negocio?</div>
+          <div className="contenedorInputsPregunta1-3">
+            <div className="contenedorInteriorPregunta1-3">
+              <label className="radioInputContainer1-3">
+                <input type="radio" {...register("question6", { required: true })} value='La estrategia de marketing de una empresa.' />
+                <span className="checkmark1-3"></span>
+              </label>
+              <span className="labelInput1-3">La estrategia de marketing de una empresa.</span>
+            </div>
+          </div>
+          <div className="contenedorInputsPregunta1-3">
+            <div className="contenedorInteriorPregunta1-3">
+              <label className="radioInputContainer1-3">
+                <input type="radio" {...register("question6", { required: true })} value='El plan financiero de una empresa.' />
+                <span className="checkmark1-3"></span>
+              </label>
+              <span className="labelInput1-3">El plan financiero de una empresa.</span>
+            </div>
+          </div>
+          <div className="contenedorInputsPregunta1-3">
+            <div className="contenedorInteriorPregunta1-3">
+              <label className="radioInputContainer1-3">
+                <input type="radio" {...register("question6", { required: true })} value='La forma en que una empresa crea, entrega y captura valor.' />
+                <span className="checkmark1-3"></span>
+              </label>
+              <span className="labelInput1-3">La forma en que una empresa crea, entrega y captura valor.</span>
+            </div>
+          </div>
+          {errors.question6 && <div className="error">Seleccione una respuesta.</div>}
+        </div>
+
+        <div className="contenedorPreguntaTestDominio">
+          <div className="tituloPreguntaDominio">Pregunta 07</div>
+          <div className="preguntaDominio">¿Qué elementos se incluyen en el modelo de negocio?</div>
+          <div className="contenedorInputsPregunta1-3">
+            <div className="contenedorInteriorPregunta1-3">
+              <label className="radioInputContainer1-3">
+                <input type="radio" {...register("question7", { required: true })} value='Los productos y servicios que ofrece la empresa.' />
+                <span className="checkmark1-3"></span>
+              </label>
+              <span className="labelInput1-3">Los productos y servicios que ofrece la empresa.</span>
+            </div>
+          </div>
+          <div className="contenedorInputsPregunta1-3">
+            <div className="contenedorInteriorPregunta1-3">
+              <label className="radioInputContainer1-3">
+                <input type="radio" {...register("question7", { required: true })} value='La propuesta de valor, el segmento de clientes, los canales, la forma de relación, actividades y recursos clave, socios estratégicos, fuentes de ingresos y los costos asociados a la oferta de productos y servicios de la empresa.' />
+                <span className="checkmark1-3"></span>
+              </label>
+              <span className="labelInput1-3">La propuesta de valor, el segmento de clientes, los canales, la forma de relación, actividades y recursos clave, socios estratégicos, fuentes de ingresos y los costos asociados a la oferta de productos y servicios de la empresa.</span>
+            </div>
+          </div>
+          <div className="contenedorInputsPregunta1-3">
+            <div className="contenedorInteriorPregunta1-3">
+              <label className="radioInputContainer1-3">
+                <input type="radio" {...register("question7", { required: true })} value='Los canales de distribución que utiliza la empresa.' />
+                <span className="checkmark1-3"></span>
+              </label>
+              <span className="labelInput1-3">Los canales de distribución que utiliza la empresa.</span>
+            </div>
+          </div>
+          {errors.question7 && <div className="error">Seleccione una respuesta.</div>}
+        </div>
+
+        <div className="contenedorPreguntaTestDominio">
+          <div className="tituloPreguntaDominio">Pregunta 08</div>
+          <div className="preguntaDominio">¿Qué es una propuesta de valor?</div>
+          <div className="contenedorInputsPregunta1-3">
+            <div className="contenedorInteriorPregunta1-3">
+              <label className="radioInputContainer1-3">
+                <input type="radio" {...register("question8", { required: true })} value='Un conjunto de promesas que una empresa hace a sus clientes.' />
+                <span className="checkmark1-3"></span>
+              </label>
+              <span className="labelInput1-3">Un conjunto de promesas que una empresa hace a sus clientes.</span>
+            </div>
+          </div>
+          <div className="contenedorInputsPregunta1-3">
+            <div className="contenedorInteriorPregunta1-3">
+              <label className="radioInputContainer1-3">
+                <input type="radio" {...register("question8", { required: true })} value='Una descripción detallada de los productos y servicios que ofrece una empresa.' />
+                <span className="checkmark1-3"></span>
+              </label>
+              <span className="labelInput1-3">Una descripción detallada de los productos y servicios que ofrece una empresa.</span>
+            </div>
+          </div>
+          <div className="contenedorInputsPregunta1-3">
+            <div className="contenedorInteriorPregunta1-3">
+              <label className="radioInputContainer1-3">
+                <input type="radio" {...register("question8", { required: true })} value='Una oferta especial de precios que una empresa hace a sus clientes.' />
+                <span className="checkmark1-3"></span>
+              </label>
+              <span className="labelInput1-3">Una oferta especial de precios que una empresa hace a sus clientes.</span>
+            </div>
+          </div>
+          {errors.question8 && <div className="error">Seleccione una respuesta.</div>}
+        </div>
+
+        <div className="contenedorPreguntaTestDominio">
+          <div className="tituloPreguntaDominio">Pregunta 09</div>
+          <div className="preguntaDominio">¿Por qué es importante tener una propuesta de valor clara y concisa?</div>
+          <div className="contenedorInputsPregunta1-3">
+            <div className="contenedorInteriorPregunta1-3">
+              <label className="radioInputContainer1-3">
+                <input type="radio" {...register("question9", { required: true })} value='Para que los clientes entiendan exactamente lo que ofrece la empresa.' />
+                <span className="checkmark1-3"></span>
+              </label>
+              <span className="labelInput1-3">Para que los clientes entiendan exactamente lo que ofrece la empresa.</span>
+            </div>
+          </div>
+          <div className="contenedorInputsPregunta1-3">
+            <div className="contenedorInteriorPregunta1-3">
+              <label className="radioInputContainer1-3">
+                <input type="radio" {...register("question9", { required: true })} value='Para que la empresa pueda cobrar precios más altos por sus productos y servicios.' />
+                <span className="checkmark1-3"></span>
+              </label>
+              <span className="labelInput1-3">Para que la empresa pueda cobrar precios más altos por sus productos y servicios.</span>
+            </div>
+          </div>
+          <div className="contenedorInputsPregunta1-3">
+            <div className="contenedorInteriorPregunta1-3">
+              <label className="radioInputContainer1-3">
+                <input type="radio" {...register("question9", { required: true })} value='Para que la empresa pueda reducir sus costos de producción.' />
+                <span className="checkmark1-3"></span>
+              </label>
+              <span className="labelInput1-3">Para que la empresa pueda reducir sus costos de producción.</span>
+            </div>
+          </div>
+          {errors.question9 && <div className="error">Seleccione una respuesta.</div>}
+        </div>
+
+        <div className="contenedorPreguntaTestDominio">
+          <div className="tituloPreguntaDominio">Pregunta 10</div>
+          <div className="preguntaDominio">¿Qué significa el término "Ventaja competitiva"?</div>
+          <div className="contenedorInputsPregunta1-3">
+            <div className="contenedorInteriorPregunta1-3">
+              <label className="radioInputContainer1-3">
+                <input type="radio" {...register("question10", { required: true })} value='Tener precios bajos en comparación con la competencia.' />
+                <span className="checkmark1-3"></span>
+              </label>
+              <span className="labelInput1-3">Tener precios bajos en comparación con la competencia.</span>
+            </div>
+          </div>
+          <div className="contenedorInputsPregunta1-3">
+            <div className="contenedorInteriorPregunta1-3">
+              <label className="radioInputContainer1-3">
+                <input type="radio" {...register("question10", { required: true })} value='Ofrecer productos y servicios de alta calidad.' />
+                <span className="checkmark1-3"></span>
+              </label>
+              <span className="labelInput1-3">Ofrecer productos y servicios de alta calidad.</span>
+            </div>
+          </div>
+          <div className="contenedorInputsPregunta1-3">
+            <div className="contenedorInteriorPregunta1-3">
+              <label className="radioInputContainer1-3">
+                <input type="radio" {...register("question10", { required: true })} value='Tener una posición única en el mercado que permite a la empresa destacarse y tener éxito.' />
+                <span className="checkmark1-3"></span>
+              </label>
+              <span className="labelInput1-3">Tener una posición única en el mercado que permite a la empresa destacarse y tener éxito.</span>
+            </div>
+          </div>
+          {errors.question10 && <div className="error">Seleccione una respuesta.</div>}
+        </div>
+
+        <div className="contenedorPreguntaTestDominio">
+          <div className="tituloPreguntaDominio">Pregunta 11</div>
+          <div className="preguntaDominio">¿Qué es un plan estratégico?</div>
+          <div className="contenedorInputsPregunta1-3">
+            <div className="contenedorInteriorPregunta1-3">
+              <label className="radioInputContainer1-3">
+                <input type="radio" {...register("question11", { required: true })} value='Un documento que describe los objetivos y las estrategias de la empresa.' />
+                <span className="checkmark1-3"></span>
+              </label>
+              <span className="labelInput1-3">Un documento que describe los objetivos y las estrategias de la empresa.</span>
+            </div>
+          </div>
+          <div className="contenedorInputsPregunta1-3">
+            <div className="contenedorInteriorPregunta1-3">
+              <label className="radioInputContainer1-3">
+                <input type="radio" {...register("question11", { required: true })} value='Un plan detallado que indica cómo la empresa llevará a cabo sus objetivos estratégicos.' />
+                <span className="checkmark1-3"></span>
+              </label>
+              <span className="labelInput1-3">Un plan detallado que indica cómo la empresa llevará a cabo sus objetivos estratégicos.</span>
+            </div>
+          </div>
+          <div className="contenedorInputsPregunta1-3">
+            <div className="contenedorInteriorPregunta1-3">
+              <label className="radioInputContainer1-3">
+                <input type="radio" {...register("question11", { required: true })} value='Una lista de tareas diarias para los empleados.' />
+                <span className="checkmark1-3"></span>
+              </label>
+              <span className="labelInput1-3">Una lista de tareas diarias para los empleados.</span>
+            </div>
+          </div>
+          {errors.question11 && <div className="error">Seleccione una respuesta.</div>}
+        </div>
+        
+        <div className="contenedorPreguntaTestDominio">
+          <div className="tituloPreguntaDominio">Pregunta 12</div>
+          <div className="preguntaDominio">¿Cuánto sabes sobre desarrollo de negocios?</div>
+          <div className='cajaPregunta1-10'>
+            <div className='textoPregunta1-10 primerTexto1-10'>Muy<b>poco</b></div>
+            <div className="contenedorInputsPregunta1-10">
+              {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((value) => (
+                <div key={value} className="d-flex flex-column align-items-center">
+                  <label key={value} className="radioInputContainer">
+                    <input type="radio" {...register("question12", { required: true })} value={value} />
+                    <span className="checkmark"></span>
+                  </label>
+                  <span className="labelInput1-10">{value}</span>
+                </div>
+              ))}
+            </div>
+            <div className='textoPregunta1-10 segundoTexto1-10'>Avanzado<b>10 años + Master</b></div>
+          </div>
+          {errors.question12 && <div className="error">Seleccione una respuesta.</div>}
+        </div>   
+        
+        <div className="contenedorPreguntaTestDominio">
+          <div className="tituloPreguntaDominio">Pregunta 13</div>
+          <div className="preguntaDominio">¿Cuánto sabes sobre marketing?</div>
+          <div className='cajaPregunta1-10'>
+            <div className='textoPregunta1-10 primerTexto1-10'>Muy<b>poco</b></div>
+            <div className="contenedorInputsPregunta1-10">
+              {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((value) => (
+                <div key={value} className="d-flex flex-column align-items-center">
+                  <label key={value} className="radioInputContainer">
+                    <input type="radio" {...register("question13", { required: true })} value={value} />
+                    <span className="checkmark"></span>
+                  </label>
+                  <span className="labelInput1-10">{value}</span>
+                </div>
+              ))}
+            </div>
+            <div className='textoPregunta1-10 segundoTexto1-10'>Avanzado<b>10 años + Posgrado</b></div>
+          </div>
+          {errors.question13 && <div className="error">Seleccione una respuesta.</div>}
+        </div>   
+        
+        <div className="contenedorPreguntaTestDominio">
+          <div className="tituloPreguntaDominio">Pregunta 14</div>
+          <div className="preguntaDominio">¿Cuánto sabes sobre ventas?</div>
+          <div className='cajaPregunta1-10'>
+            <div className='textoPregunta1-10 primerTexto1-10'>Muy<b>poco</b></div>
+            <div className="contenedorInputsPregunta1-10">
+              {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((value) => (
+                <div key={value} className="d-flex flex-column align-items-center">
+                  <label key={value} className="radioInputContainer">
+                    <input type="radio" {...register("question14", { required: true })} value={value} />
+                    <span className="checkmark"></span>
+                  </label>
+                  <span className="labelInput1-10">{value}</span>
+                </div>
+              ))}
+            </div>
+            <div className='textoPregunta1-10 segundoTexto1-10'>Avanzado<b>10 años + Posgrado</b></div>
+          </div>
+          {errors.question14 && <div className="error">Seleccione una respuesta.</div>}
+        </div>   
+        
+        <div className="contenedorPreguntaTestDominio">
+          <div className="tituloPreguntaDominio">Pregunta 15</div>
+          <div className="preguntaDominio">¿Cuánto sabes sobre gestión del talento?</div>
+          <div className='cajaPregunta1-10'>
+            <div className='textoPregunta1-10 primerTexto1-10'>Muy<b>poco</b></div>
+            <div className="contenedorInputsPregunta1-10">
+              {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((value) => (
+                <div key={value} className="d-flex flex-column align-items-center">
+                  <label key={value} className="radioInputContainer">
+                    <input type="radio" {...register("question15", { required: true })} value={value} />
+                    <span className="checkmark"></span>
+                  </label>
+                  <span className="labelInput1-10">{value}</span>
+                </div>
+              ))}
+            </div>
+            <div className='textoPregunta1-10 segundoTexto1-10'>Avanzado<b>10 años + Posgrado</b></div>
+          </div>
+          {errors.question15 && <div className="error">Seleccione una respuesta.</div>}
+        </div>   
+        
+        <div className="contenedorPreguntaTestDominio">
+          <div className="tituloPreguntaDominio">Pregunta 16</div>
+          <div className="preguntaDominio">¿Cuánto sabes sobre finanzas?</div>
+          <div className='cajaPregunta1-10'>
+            <div className='textoPregunta1-10 primerTexto1-10'>Muy<b>poco</b></div>
+            <div className="contenedorInputsPregunta1-10">
+              {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((value) => (
+                <div key={value} className="d-flex flex-column align-items-center">
+                  <label key={value} className="radioInputContainer">
+                    <input type="radio" {...register("question16", { required: true })} value={value} />
+                    <span className="checkmark"></span>
+                  </label>
+                  <span className="labelInput1-10">{value}</span>
+                </div>
+              ))}
+            </div>
+            <div className='textoPregunta1-10 segundoTexto1-10'>Avanzado<b>10 años + Posgrado</b></div>
+          </div>
+          {errors.question16 && <div className="error">Seleccione una respuesta.</div>}
+        </div>   
+
+        <div className='cajaBotonEnviarRespuestasDominio'>
+          <button type="submit">
+            {loading ? (
+              <span
+                className="spinner-border spinner-border-sm mr-2"
+                role="status"
+                aria-hidden="true"
+              ></span>
+            ) : (
+              <>Continuar (2/6)</>
+            )}  
+          </button>
+        </div>
       </form>
     </>
   )

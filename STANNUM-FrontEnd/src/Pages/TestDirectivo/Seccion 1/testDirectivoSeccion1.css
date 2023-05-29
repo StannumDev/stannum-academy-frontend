@@ -1,7 +1,51 @@
-.contenedorInicioTestDominioSeccion1{
+.tituloDominio1Test h1{
+    font-family: 'Anton', sans-serif;
+    font-weight: 400;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.tituloDominio1Test span{
+    font-family: 'Anton', sans-serif;
+    font-weight: 400;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.tituloDominio1TestRojo h2{
+    font-family: 'Anton', sans-serif;
+    font-weight: 400;
+    text-align: center;
+    color: #D3214D;
+}
+
+.parrafoInicioTest{
+    margin-top: 1rem;
+}
+
+.parraforInicioTest2{
+    margin-top: 0rem;
+}
+
+.importanteDominio1TestRojo h3{
+    font-weight: 700;
+    color: #D3214D;
+}
+
+.parrafoImportanteDominio1Test{
+    margin-top: 0rem;
+    width: 30%;
+    font-weight: 400;
+    font-size: 1.2rem;
+    line-height: 1.8rem;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.contenedorInicioTestDominio{
     width: 100%;
     background-color: #D3214D;
-    background-position: 0% 0%; 
+    background-position: 0% 50%; 
     background-size: 100vw 100vh;
     background-image: url("../../../assets/Metalico.png");
     background-repeat: no-repeat;
@@ -9,56 +53,86 @@
     background-attachment: fixed;
     padding-inline: 1rem;
     padding-block: 3rem;
+    margin-top: 3rem;
 }
 
-.titulo2InicioTestDominioSeccion1 h2{
+.tituloInicioTestDominio h2{
     font-family: 'Anton';
     font-weight: 400;
-    color: #FFFFFF;
 }
 
-.subtituloInicioTestDominioSeccion1{
+.subtituloInicioTestDominio{
     margin-top: 1rem;
-    color: #FFFFFF;
 }
 
-.subtituloInicioTestDominioSeccion1 h3{
+.subtituloInicioTestDominio h2{
     font-weight: 400;
 }
 
-.subtituloInicioTestDominioSeccion1 b{
+.subtituloInicioTestDominio b{
     font-weight: 600;
 }
 
-.labelInput1-3{
-    text-align: start;
+.textoInicioTestDominio{
+    margin-top: 1.5rem;
+}
+
+.textoInicioTestDominio p{
+    font-weight: 400;
+}
+
+.contenedorPreguntaTestDominio{
+    border-bottom: 0.5px solid rgb(255,255,255, 0.1);
+}
+
+.tituloPreguntaDominio{
+    font-weight: 700;
     color: #FFFFFF;
 }
 
-.radioInputContainer1-3 {
+.preguntaDominio{
+    font-weight: 700;
+    color: #FFFFFF;
+}
+
+.textoPregunta1-10{
+    font-weight: 500;
+    color: #FFFFFF;
+    text-align: center;
+}
+
+.textoPregunta1-10 b {
+    display: block;
+}
+  
+.contenedorInputsPregunta1-10{
+    display: flex;
+}
+
+.radioInputContainer {
     position: relative;
     width: 20px;
     height: 20px;
 }
 
-.radioInputContainer1-3 input[type="radio"] {
+.radioInputContainer input[type="radio"] {
     position: absolute;
     opacity: 0;
     cursor: pointer;
 }
 
-.checkmark1-3 {
+.checkmark {
     position: absolute;
     top: 0;
     left: 0;
-    width: 20px;
-    height: 20px;
+    width: 100%;
+    height: 100%;
     border-radius: 50%;
     background-color: #FFFFFF;
     cursor: pointer;
 }
 
-.radioInputContainer1-3 input:checked ~ .checkmark1-3::after {
+.radioInputContainer input:checked ~ .checkmark::after {
     content: "";
     position: absolute;
     top: 50%;
@@ -70,104 +144,361 @@
     background-color: #3A3A3A;
 }
 
-.contenedorInteriorPregunta1-3{
-    display: flex;
-    gap: 25px;
+.labelInput1-10 {
+    font-size: 1.1rem;
+    color: #FFFFFF;
+    text-align: center;
+    margin-top: 0.5rem;
+}
+
+.cajaBotonEnviarRespuestasDominio{
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+    text-align: center;
+}
+
+.cajaBotonEnviarRespuestasDominio button{
+    color: #FFFFFF;
+    background-color: #C8204A;
+    transition: all 0.3s ease;
+    border-radius: 8px;
+    font-weight: 500;
+    text-align: center;
+    padding-block: 1rem;
+    padding-inline: 2rem;
+}
+
+.cajaBotonEnviarRespuestasDominio button:hover{
+    scale: 1.1;
+}
+
+.error1-10{
+    color: #D3214D;
+    text-align: center;
     margin-top: 1rem;
 }
 
+.error{
+    color: #D3214D;
+    margin-top: 2rem;
+}
+
+.cajaPregunta1-10{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+}
+
 @media (max-width: 576px){
-    .titulo2InicioTestDominioSeccion1{
+
+    .tituloDominio1Test{
+        padding-inline: 1rem;
+    }
+    
+    .tituloDominio1Test h1{
+        font-size: 3.7rem;
+        line-height: 4rem;
+    }
+
+    .tituloDominio1Test span{
+        font-size: 3.7rem;
+        display: block;
+    }
+    
+    .tituloDominio1TestRojo{
         margin-top: -0.5rem;
     }
     
-    .titulo2InicioTestDominioSeccion1 h2{
+    .tituloDominio1TestRojo h2{
         font-size: 3rem;
     }
     
-    .subtituloInicioTestDominioSeccion1 h3{
+    .importanteDominio1TestRojo h3{
         font-size: 1.4rem;
     }
 
-    .subtituloInicioTestDominioSeccion1 b{
-        display: block;
-    }
-
-    .contenedorInputsPregunta1-3{
-        margin-left: 0rem;
+    .tituloInicioTestDominio h2{
+        font-size: 3.7rem;
     }
     
-    .labelInput1-3{
+    .subtituloInicioTestDominio h2{
+        font-size: 1.4rem;
+    }
+
+    .subtituloInicioTestDominio b{
+        display: block;
+    }
+    
+    .textoInicioTestDominio p{
+        font-size: 1rem;
+        line-height: 1.4rem;
+    }
+    
+    .contenedorPreguntaTestDominio{
+        padding-inline: 1.5rem;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+    }
+    
+    .tituloPreguntaDominio{
+        font-size: 2rem;
+    }
+    
+    .preguntaDominio{
+        font-size: 1.2rem;
+    }
+    
+    .contenedorInputsPregunta1-10{
+        justify-content: space-between;
+        width: 100%;
+        margin-left: 0rem;
+        margin-right: 0rem;
+    }
+      
+    .primerTexto1-10{
+        order: +1;
+    }
+
+    .segundoTexto1-10{
+        order: +1;
+    }
+
+    .cajaPregunta1-10{
+        justify-content: space-between;
+    }
+
+    .textoPregunta1-10{
+        margin-top: 1.5rem;
         font-size: 1rem;
         line-height: 1.2rem;
+    }
+    
+    .cajaBotonEnviarRespuestasDominio button{
+        font-size: 1rem;
+    }
+
+    .error{
+        text-align: center;
     }
 }
 
 @media (min-width: 576px) and (max-width: 992px){
-    .titulo2InicioTestDominioSeccion1{
+    
+    .tituloDominio1Test h1{
+        font-size: 4rem;
+    }
+
+    .tituloDominio1Test span{
+        font-size: 4rem;
+    }
+    
+    .tituloDominio1TestRojo{
         margin-top: -1rem;
     }
     
-    .titulo2InicioTestDominioSeccion1 h2{
+    .tituloDominio1TestRojo h2{
         font-size: 3.5rem;
     }
     
-    .subtituloInicioTestDominioSeccion1 h3{
-        font-size: 1.5rem;
+    .importanteDominio1TestRojo h3{
+        font-size: 1.4rem;
     }
 
-    .contenedorInputsPregunta1-3{
-        margin-left: 0.5rem;
+    .tituloInicioTestDominio h2{
+        font-size: 4rem;
     }
     
-    .labelInput1-3{
-        font-size: 1.3rem;
+    .subtituloInicioTestDominio h2{
+        font-size: 1.5rem;
+    }
+    
+    .textoInicioTestDominio p{
+        font-size: 1.2rem;
+        line-height: 1.5rem;
+    }
+    
+    .contenedorPreguntaTestDominio{
+        padding-inline: 2rem;
+        padding-block: 3rem;
+    }
+    
+    .tituloPreguntaDominio{
+        font-size: 2.3rem;
+    }
+    
+    .preguntaDominio{
+        font-size: 1.2rem;
+    }
+    
+    .contenedorInputsPregunta1-10{
+        margin: auto;
+        width: 100%;
+        justify-content: space-between;
+        margin-left: 3rem;
+        margin-right: 3rem;
+    }
+      
+    .primerTexto1-10{
+        order: +1;
+    }
+
+    .segundoTexto1-10{
+        order: +1;
+    }
+
+    .cajaPregunta1-10{
+        justify-content: space-between;
+    }
+
+    .textoPregunta1-10{
+        margin-top: 1.5rem;
+        font-size: 1.1rem;
         line-height: 1.3rem;
+    }
+    
+    .cajaBotonEnviarRespuestasDominio button{
+        font-size: 1.2rem;
+    }
+
+    .error{
+        text-align: start;
     }
 }
 
 @media (min-width: 992px) and (max-width: 1200px){
-    .titulo2InicioTestDominioSeccion1{
+
+    .tituloDominio1Test h1{
+        font-size: 5rem;
+    }
+
+    .tituloDominio1Test span{
+        font-size: 5rem;
+    }
+
+    .tituloDominio1TestRojo{
         margin-top: -1rem;
     }
     
-    .titulo2InicioTestDominioSeccion1 h2{
+    .tituloDominio1TestRojo h2{
         font-size: 4.5rem;
     }
     
-    .subtituloInicioTestDominioSeccion1 h3{
+    .importanteDominio1TestRojo h3{
         font-size: 1.7rem;
     }
 
-    .contenedorInputsPregunta1-3{
-        margin-left: 4rem;
+    .tituloInicioTestDominio h2{
+        font-size: 5rem;
     }
     
-    .labelInput1-3{
-        font-size: 1.3rem;
+    .subtituloInicioTestDominio h2{
+        font-size: 1.7rem;
+    }
+    
+    .textoInicioTestDominio p{
+        font-size: 1.2rem;
+        line-height: 1.6rem;
+    }
+    
+    .contenedorPreguntaTestDominio{
+        padding-inline: 6rem;
+        padding-block: 4rem;
+    }
+    
+    .tituloPreguntaDominio{
+        font-size: 2.65rem;
+    }
+    
+    .preguntaDominio{
+        font-size: 1.5rem;
+    }
+    
+    .contenedorInputsPregunta1-10{
+        margin-left: 3rem;
+        margin-right: 3rem;
+        gap: 15px;
+    }
+    
+    .textoPregunta1-10{
+        font-size: 1.1rem;
         line-height: 1.3rem;
+    }
+    
+    .cajaBotonEnviarRespuestasDominio button{
+        font-size: 1.3rem;
+    }
+
+    .error{
+        text-align: start;
+        margin-left: 4rem;
     }
 }
 
 @media (min-width: 1200px){
-    .titulo2InicioTestDominioSeccion1{
-        margin-top: -0.5rem;
-    }
     
-    .titulo2InicioTestDominioSeccion1 h2{
-        font-size: 3rem;
+    .tituloDominio1Test h1{
+        font-size: 5rem;
     }
 
-    .subtituloInicioTestDominioSeccion1 h3{
+    .tituloDominio1Test span{
+        font-size: 5rem;
+    }
+    
+    .tituloDominio1TestRojo{
+        margin-top: -1rem;
+    }
+
+    .tituloDominio1TestRojo h2{
+        font-size: 4.5rem;
+    }
+
+    .importanteDominio1TestRojo h3{
+        font-size: 1.7rem;
+    }
+
+    .tituloInicioTestDominio h2{
+        font-size: 5rem;
+    }
+
+    .subtituloInicioTestDominio h2{
         font-size: 2rem;
     }
 
-    .contenedorInputsPregunta1-3{
-        margin-left: 4rem;
+    .textoInicioTestDominio p{
+        font-size: 1.4rem;
+        line-height: 1.9rem;
     }
 
-    .labelInput1-3{
-        font-size: 1.3rem;
+    .contenedorPreguntaTestDominio{
+        padding-inline: 8rem;
+        padding-block: 4rem;
+    }
+
+    .tituloPreguntaDominio{
+        font-size: 2.65rem;
+    }
+
+    .preguntaDominio{
+        font-size: 1.5rem;
+    }
+    
+    .contenedorInputsPregunta1-10{
+        margin-left: 3rem;
+        margin-right: 3rem;
+        gap: 15px;
+    } 
+    
+    .textoPregunta1-10{
+        font-size: 1.1rem;
         line-height: 1.3rem;
+    }
+    
+    .cajaBotonEnviarRespuestasDominio button{
+        font-size: 1.5rem;
+    }
+
+    .error{
+        text-align: start;
+        margin-left: 4rem;
     }
 }
