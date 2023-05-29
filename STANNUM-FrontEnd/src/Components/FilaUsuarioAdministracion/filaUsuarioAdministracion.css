@@ -1,0 +1,74 @@
+.botonIrAlPerfilAdmin{
+    background-color: #67CCB9;
+    font-weight: 700;
+    border-radius: 5px;
+    width: 100px;
+    height: 50px;
+    font-size: 1rem;
+    line-height: 1rem;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.botonBorrarUsuarioAdmin{
+    background-color: #d61d42;
+    font-weight: 700;
+    border-radius: 5px;
+    width: 100px;
+    height: 50px;
+    font-size: 1rem;
+    line-height: 1rem;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.botonConfirmarAlert{
+    margin-left: 1rem;
+    background-color: #67CCB9;
+    font-weight: 700;
+    border-radius: 5px;
+    width: 100px;
+    height: 50px;
+    font-size: 1rem;
+    line-height: 1rem;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.botonCancelarAlert{
+    margin-right: 1rem;
+    background-color: #A11733;
+    font-weight: 700;
+    border-radius: 5px;
+    width: 100px;
+    height: 50px;
+    font-size: 1rem;
+    line-height: 1rem;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.botonIrAlTestAdmin{
+    background-color: #67CCB9;
+    font-weight: 700;
+    border-radius: 5px;
+    width: 100px;
+    height: 50px;
+    font-size: 1rem;
+    line-height: 1rem;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.botonIrAlTestAdminDesactivado{
+    background-color: transparent;
+    border: 1px dashed #A1A1A1;
+    font-weight: 700;
+    border-radius: 5px;
+    width: 100px;
+    height: 50px;
+    font-size: 1rem;
+    line-height: 1rem;
+    text-align: center;
+    color: #A1A1A1;
+}

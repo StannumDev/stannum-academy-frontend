@@ -531,16 +531,19 @@
     .puntosCardFIFA{
         position: absolute;
         top: 15%;
-        left: 15%;
+        left: 12%;
+        text-shadow: 1px 1px rgb(0,0,0,0.5);
+    }
+    
+    .rankingCardFIFA{
+        position: absolute;
+        top: 15%;
+        right: 12%;
         text-shadow: 1px 1px rgb(0,0,0,0.5);
     }
     
     .puntosNumeroCardFIFA{
         font-size: 2rem;
-    }
-
-    .puntosTextoCardFIFA{
-        display: none;
     }
     
     .nombreCardFIFA{
@@ -873,6 +876,13 @@
         text-shadow: 1px 1px rgb(0,0,0,0.5);
     }
     
+    .rankingCardFIFA{
+        position: absolute;
+        top: 13%;
+        right: 15%;
+        text-shadow: 1px 1px rgb(0,0,0,0.5);
+    }
+    
     .puntosNumeroCardFIFA{
         font-size: 2rem;
     }
@@ -1177,6 +1187,13 @@
         position: absolute;
         top: 17%;
         left: 13%;
+        text-shadow: 1px 1px rgb(0,0,0,0.5);
+    }
+    
+    .rankingCardFIFA{
+        position: absolute;
+        top: 17%;
+        right: 13%;
         text-shadow: 1px 1px rgb(0,0,0,0.5);
     }
            
@@ -1487,9 +1504,17 @@
     
     .puntosCardFIFA {
         position: absolute;
-        top: 14%;
-        left: 22%;
+        top: 17%;
+        left: 12%;
         color: #FFFFFF;
+        text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+    }
+    
+    .rankingCardFIFA {
+        position: absolute;
+        top: 17%;
+        right: 12%;
+        color: #3A3A3A;
         text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
     }
         

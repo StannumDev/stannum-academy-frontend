@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import axios from "axios";
 import { useForm } from "react-hook-form";
 import keyIcon from '../../assets/key.png'
+import Cookies from 'js-cookie'
 import './formularioLogin.css'
 
 function FormularioLogin() {
@@ -14,7 +15,7 @@ function FormularioLogin() {
 
     const onSubmit = async (data) => {
         setLoading(true);
-        const respuesta = await axios.post(`http://localhost:8000/login-user`,
+        const respuesta = await axios.post(`https://prueba-back-mateolohezic.up.railway.app/login-user`,
             {
                 email: data.email.trim().toLowerCase(),
                 password: data.password,
@@ -22,9 +23,9 @@ function FormularioLogin() {
         );
 
         if (respuesta.status === 200) {
-                localStorage.setItem('token', respuesta.data.token);
+                Cookies.set('token', respuesta.data.token, { expires: 1 });
             if (respuesta.data.adminToken) {
-                localStorage.setItem('adminToken', respuesta.data.token);
+                Cookies.set('adminToken', respuesta.data.adminToken, { expires: 1 });
                 window.location.replace("/");
             } else {
                 window.location.replace("/");

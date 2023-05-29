@@ -31,7 +31,9 @@ function Login() {
                 </div>
                 <div className='d-flex align-items-center divSolicitarAcceso'>
                     <span className='textoNoTienesUnaCuenta'>¿No tienes una cuenta?</span>
-                    <button className='botonSolicitarAcceso'>Solicitar acceso</button>
+                    <a href='https://stannum.com.ar/' target="_blank">
+                        <button className='botonSolicitarAcceso'>Solicitar acceso</button>
+                    </a>
                 </div>
             </div>
         </div>

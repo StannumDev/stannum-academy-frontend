@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import axios from "axios";
 import logo from '../../assets/LogoChico.png';
+import Cookies from 'js-cookie'
 import './navBar.css'
 import 'animate.css';
 
@@ -12,13 +13,15 @@ function NavBar() {
     const [activeIndex, setActiveIndex] = useState(0);
     const [open, setOpen] = useState(false);
     const [user, setUser] = useState({});
+    const [admin, setAdmin] = useState(false);
 
-    const token = localStorage.getItem('token');
+    const token = Cookies.get('token');
+    const adminToken = Cookies.get('adminToken');
 
     useEffect(() => {
         const getUser = async () =>{
         if (token) {
-            const respuesta = await axios.post(`http://localhost:8000/get-user/${token}`);
+            const respuesta = await axios.post(`https://prueba-back-mateolohezic.up.railway.app/get-user/${token}`);
             setUser(respuesta.data)
         }}
         getUser()
@@ -38,6 +41,9 @@ function NavBar() {
       }
       if (location.pathname === '/Iniciar-sesion') {
         setActiveIndex(3);
+      }
+      if (location.pathname.includes('/Administracion')) {
+        setActiveIndex(4);
       }
     }, [location.pathname]);
 
@@ -81,8 +87,14 @@ function NavBar() {
                                     </a>
                                     <ul className="dropdown-menu dropdown-menu-end">
                                         <li><a className="dropdown-item" href="/">Inicio</a></li>
-                                        <li><a className="dropdown-item" href="/Perfil">Perfil</a></li>
+                                        <li><a className="dropdown-item" href={`/Perfil/${user._id}`}>Perfil</a></li>
                                         <li><a className="dropdown-item" href="/Ranking/Inicio">Ranking</a></li>
+                                        {
+                                            user.role === 'admin' ?
+                                            <><li><a className="dropdown-item" href="/Administracion/Jugadores">Administración</a></li></>
+                                            :
+                                            <></>                                        
+                                        }
                                         <li><a className="dropdown-item ultimoItemDropdown" href="/Cerrar-sesion">Cerrar sesión</a></li>
                                     </ul>
                                 </li>
@@ -122,8 +134,18 @@ function NavBar() {
                                     <a className="nav-link linkNavbar" aria-current="page" href="/Ranking/Inicio">Ranking</a>
                                 </li>
                                 <li className={`nav-item botonNavbarResponsive ${activeIndex === 2 ? 'active' : 'nonActive'}`}>
-                                    <a className="nav-link linkNavbar" aria-current="page" href="/Perfil">Perfil</a>
+                                    <a className="nav-link linkNavbar" aria-current="page" href={`/Perfil/${user._id}`}>Perfil</a>
                                 </li>
+                                {
+                                            user.role === 'admin' ?
+                                            <>
+                                                <li className={`nav-item botonNavbarResponsive ${activeIndex === 4 ? 'active' : 'nonActive'}`}>
+                                                    <a className="nav-link linkNavbar" aria-current="page" href="/Administracion/Jugadores">Administración</a>
+                                                </li>
+                                            </>
+                                            :
+                                            <></>                                        
+                                        }
                                 <li className='nav-item botonNavbarResponsive nonActive'>
                                     <a className="nav-link linkNavbar" aria-current="page" href="/Cerrar-sesion">Cerrar sesión</a>
                                 </li>

@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import Cookies from 'js-cookie'
 import axios from "axios";
 import { useForm } from "react-hook-form";
 
@@ -6,8 +7,25 @@ function TestDirectivoSeccion6() {
 
   const { register, handleSubmit, formState: { errors } } = useForm();
   const [loading, setLoading] = useState(false);
+  const token = Cookies.get('token');
 
-  const token = localStorage.getItem('token');
+  if(token === undefined){
+    window.location.replace('/Cerrar-sesion');
+  }
+  
+  useEffect(() => {
+    const getUser = async () =>{
+
+    if (token) {
+        const respuesta = await axios.post(`https://prueba-back-mateolohezic.up.railway.app/get-user/${token}`);
+        if(respuesta.data.dominioDirectivoTestInicial.habilidadesDigitales.sectionScore != "Undefined"){
+          window.location.replace('/Test/Dominio/Directivo/Felicidades')
+        }
+    }}
+
+    getUser()
+
+  }, [token])
 
   const onSubmit = async (data) => {
     setLoading(true);
@@ -32,7 +50,7 @@ function TestDirectivoSeccion6() {
       justificacion5= data.question5Justification.trim()
     }
 
-    const respuesta = await axios.post(`http://localhost:8000/directivo/seccion6`,
+    const respuesta = await axios.post(`https://prueba-back-mateolohezic.up.railway.app/directivo/seccion6`,
       {
         token,
         question1: data.question1,
@@ -46,12 +64,12 @@ function TestDirectivoSeccion6() {
         question5Justification: justificacion5
       }
     );
-    // if (respuesta.status === 200) {
-    //   window.location.replace('/')
-    // }
-    // if (respuesta.status === 206) {
-    //   window.location.replace('/Cerrar-sesion')
-    // }
+    if (respuesta.status === 200) {
+      window.location.replace('/Test/Dominio/Directivo/Felicidades')
+    }
+    if (respuesta.status === 206) {
+      window.location.replace('/Cerrar-sesion')
+    }
     setLoading(false);
   };
 
@@ -84,7 +102,7 @@ function TestDirectivoSeccion6() {
       <form onSubmit={handleSubmit(onSubmit)}>
         <div className="contenedorPreguntaTestDominio">
           <div className="tituloPreguntaDominio">Pregunta 01</div>
-          <div className="preguntaDominio">¿Utilizas una plataforma de almacenamiento de información en la Nube, como Dropbox o Google Drive?</div>
+          <div className="preguntaDominio">¿Utilizas una plataforma de <b>almacenamiento</b> de información en la <b>Nube</b>, como Dropbox o Google Drive?</div>
           <div className="contenedorInputsPregunta1-3">
             <div className="contenedorInteriorPregunta1-3">
               <label className="radioInputContainer1-3">
@@ -115,7 +133,7 @@ function TestDirectivoSeccion6() {
         </div>
         <div className="contenedorPreguntaTestDominio">
           <div className="tituloPreguntaDominio">Pregunta 02</div>
-          <div className="preguntaDominio">¿Qué tan avanzada/o estás en el manejo de la Nube?</div>
+          <div className="preguntaDominio">¿Qué tan avanzada/o estás en el <b>manejo</b> de la Nube?</div>
           <div className='cajaPregunta1-10'>
             <div className='textoPregunta1-10 primerTexto1-10'>No se<b>como funciona</b></div>
             <div className="contenedorInputsPregunta1-10">
@@ -135,7 +153,7 @@ function TestDirectivoSeccion6() {
         </div> 
         <div className="contenedorPreguntaTestDominio">
           <div className="tituloPreguntaDominio">Pregunta 03</div>
-          <div className="preguntaDominio">¿Utilizas algún software de gestión?</div>
+          <div className="preguntaDominio">¿Utilizas algún software de <b>gestión</b>?</div>
           <div className="contenedorInputsPregunta1-3">
             <div className="contenedorInteriorPregunta1-3">
               <label className="radioInputContainer1-3">
@@ -166,7 +184,7 @@ function TestDirectivoSeccion6() {
         </div>
         <div className="contenedorPreguntaTestDominio">
           <div className="tituloPreguntaDominio">Pregunta 04</div>
-          <div className="preguntaDominio">¿Usas un software de gestión de proyectos?</div>
+          <div className="preguntaDominio">¿Utilizas algún software de <b>gestión de proyectos</b>?</div>
           <div className="contenedorInputsPregunta1-3">
             <div className="contenedorInteriorPregunta1-3">
               <label className="radioInputContainer1-3">
@@ -197,7 +215,7 @@ function TestDirectivoSeccion6() {
         </div>
         <div className="contenedorPreguntaTestDominio">
           <div className="tituloPreguntaDominio">Pregunta 05</div>
-          <div className="preguntaDominio">¿Utilizas alguna herramienta digital para gestión del tiempo?</div>
+          <div className="preguntaDominio">¿Utilizas alguna herramienta digital para <b>gestión del tiempo</b>?</div>
           <div className="contenedorInputsPregunta1-3">
             <div className="contenedorInteriorPregunta1-3">
               <label className="radioInputContainer1-3">

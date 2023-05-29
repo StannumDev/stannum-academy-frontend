@@ -1,5 +1,6 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import axios from "axios";
+import Cookies from 'js-cookie'
 import { useForm } from "react-hook-form";
 import './testDirectivoSeccion1.css'
 
@@ -8,11 +9,26 @@ function TestDirectivoSeccion1() {
   const { register, handleSubmit, formState: { errors } } = useForm();
   const [loading, setLoading] = useState(false);
 
-  const token = localStorage.getItem('token');
+  const token = Cookies.get('token');
+
+  if(token === undefined){
+    window.location.replace('/Cerrar-sesion');
+  }
   
+  useEffect(() => {
+    const getUser = async () =>{
+    if (token) {
+        const respuesta = await axios.post(`https://prueba-back-mateolohezic.up.railway.app/get-user/${token}`);
+        if(respuesta.data.dominioDirectivoTestInicial.estrategico.sectionScore != "Undefined"){
+          window.location.replace('/Test/Dominio/Directivo/2')
+        }
+    }}
+    getUser()
+  }, [token])
+
   const onSubmit = async (data) => {
     setLoading(true);
-    const respuesta = await axios.post(`http://localhost:8000/directivo/seccion1`,
+    const respuesta = await axios.post(`https://prueba-back-mateolohezic.up.railway.app/directivo/seccion1`,
       {
         token,
         question1: data.question1,

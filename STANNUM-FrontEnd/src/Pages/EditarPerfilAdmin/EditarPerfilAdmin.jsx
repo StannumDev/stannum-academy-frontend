@@ -1,21 +1,25 @@
 import { useState, useEffect } from 'react';
+import { useParams } from 'react-router-dom';
 import { useForm } from "react-hook-form";
 import Cookies from 'js-cookie'
-import './editarPerfil.css'
 import axios from "axios";
 import FotoDePerfil from '../../assets/UserDefecto.png'
 
-function EditarPerfil() {
+function EditarPerfilAdmin() {
 
     const [loading, setLoading] = useState(false);
+    const [error, setError] = useState(false);
+    const [errorMensaje, setErrorMensaje] = useState("");
     const [foto, setFoto] = useState("");
     const { register, handleSubmit, formState: { errors }, setValue } = useForm({ mode: "onBlur" });
     const [archivoSubido, setArchivoSubido] = useState(null);
     const [user, setUser] = useState({});
 
+    const adminToken = Cookies.get('adminToken');
     const token = Cookies.get('token');
-        
-    if(token === undefined){
+    const { id } = useParams();
+    
+    if(adminToken === undefined){
         window.location.replace('/Cerrar-sesion');
     }
 
@@ -27,34 +31,61 @@ function EditarPerfil() {
     }
 
     useEffect(() => {
+
+        const verifyToken = async () =>{
+            if (adminToken) {
+                const respuesta = await axios.post(`https://prueba-back-mateolohezic.up.railway.app/verify-token`,
+                    {
+                        adminToken
+                    }
+                );
+                if (respuesta.status === 206) {
+                    window.location.replace('/Cerrar-sesion');
+                }
+            } else{
+                window.location.replace('/Cerrar-sesion');
+            }
+        }
+
+        verifyToken()
+
         const getUser = async () =>{
-        if (token) {
-            const respuesta = await axios.post(`https://prueba-back-mateolohezic.up.railway.app/get-user/${token}`);
-            setUser(respuesta.data)
-            if (respuesta.data.name !== "Undefined"){
-                setValue("name", respuesta.data.name);
+            if (id) {
+                const respuesta = await axios.post(`https://prueba-back-mateolohezic.up.railway.app/get-user-id/${id}`,
+                    {
+                        token
+                    }
+                );
+                if (respuesta.status === 200) {
+                setUser(respuesta.data)
+                if (respuesta.data.name !== "Undefined"){
+                    setValue("name", respuesta.data.name);
+                }
+                if (respuesta.data.surname !== "Undefined"){
+                    setValue("surname", respuesta.data.surname);
+                }
+                if (respuesta.data.venture !== "Undefined"){
+                    setValue("venture", respuesta.data.venture);
+                }
+                if (respuesta.data.birthdate !== "Undefined"){
+                    setValue("birthdate", formatDate(respuesta.data.birthdate));
+                }
+                if (respuesta.data.territory !== "Undefined"){
+                    setValue("territory", respuesta.data.territory);
+                }
+                if (respuesta.data.biography !== "Undefined"){
+                    setValue("biography", respuesta.data.biography);
+                }} else {
+                    window.location.replace('/Cerrar-sesion');
+                }
             }
-            if (respuesta.data.surname !== "Undefined"){
-                setValue("surname", respuesta.data.surname);
-            }
-            if (respuesta.data.venture !== "Undefined"){
-                setValue("venture", respuesta.data.venture);
-            }
-            if (respuesta.data.birthdate !== "Undefined"){
-                setValue("birthdate", formatDate(respuesta.data.birthdate));
-            }
-            if (respuesta.data.territory !== "Undefined"){
-                setValue("territory", respuesta.data.territory);
-            }
-            if (respuesta.data.biography !== "Undefined"){
-                setValue("biography", respuesta.data.biography);
-            }
-        }}
+        }
+
         getUser()
 
         const getPhoto = async () => {
             try {
-              const response = await axios.get(`https://prueba-back-mateolohezic.up.railway.app/get-photo/${token}`, {
+              const response = await axios.get(`https://prueba-back-mateolohezic.up.railway.app/get-photo-id/${id}`, {
                 responseType: 'blob',
               });
               if (response.status === 200) {              
@@ -67,7 +98,7 @@ function EditarPerfil() {
         };
 
         getPhoto();
-    }, [token])
+    }, [id])
 
     const onSubmit = async (data) => {
         setLoading(true);
@@ -102,11 +133,12 @@ function EditarPerfil() {
         }
 
         if (respuesta.status === 200) {
-            window.location.replace(`/Perfil/${user._id}`);        
+            window.location.replace("/Administracion/Jugadores");        
         }
         if (respuesta.status === 206) {
             setLoading(false);
-            window.location.replace(`/Cerrar-sesion`);        
+            setError(true);
+            setErrorMensaje(respuesta.data.message)
         }
         setLoading(false)
     };
@@ -122,7 +154,7 @@ function EditarPerfil() {
     return (
     <>
         <div className="bg"></div>
-        <div className='tituloPerfil'><h1>EDITAR MI PERFIL</h1></div>
+        <div className='tituloPerfil'><h1>EDITAR PERFIL</h1></div>
         <form onSubmit={handleSubmit(onSubmit)}>
             <div className='row rowEditarPerfil'>
                 <div className='divFotoJugadorPerfil divFotoJugadorPerfilEditarPerfil'>
@@ -244,7 +276,7 @@ function EditarPerfil() {
                 </div>
             </div>
             <div className='botonesEditarPerfil'>
-                <a href={`Perfil/${user._id}`} className='descartarEditarPerfil'><button  type='button'>Descartar cambios</button></a>
+                <a href="/Administracion/Jugadores" className='descartarEditarPerfil'><button  type='button'>Descartar cambios</button></a>
                 <button className='confirmarEditarPerfil' type='submit'>
                     {loading ? (
                         <span
@@ -259,9 +291,16 @@ function EditarPerfil() {
                     )}
                 </button>
             </div>
+            {error ? (
+                <>
+                    <p className="text-danger mt-2 text-center mx-auto fs-5">{errorMensaje}</p>
+                </>
+            ) : (
+                <></>
+            )}
         </form>        
     </>
     )
 }
 
-export default EditarPerfil
+export default EditarPerfilAdmin

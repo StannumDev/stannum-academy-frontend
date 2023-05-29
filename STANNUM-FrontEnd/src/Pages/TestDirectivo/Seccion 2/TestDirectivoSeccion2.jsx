@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import Cookies from 'js-cookie'
 import axios from "axios";
 import { useForm } from "react-hook-form";
 import './testDirectivoSeccion.css'
@@ -7,12 +8,26 @@ function TestDirectivoSeccion2() {
 
   const { register, handleSubmit, formState: { errors } } = useForm();
   const [loading, setLoading] = useState(false);
+  const token = Cookies.get('token');
+  
+  if(token === undefined){
+    window.location.replace('/Cerrar-sesion');
+  }
 
-  const token = localStorage.getItem('token');
+  useEffect(() => {
+    const getUser = async () =>{
+    if (token) {
+        const respuesta = await axios.post(`https://prueba-back-mateolohezic.up.railway.app/get-user/${token}`);
+        if(respuesta.data.dominioDirectivoTestInicial.conceptos.sectionScore != "Undefined"){
+          window.location.replace('/Test/Dominio/Directivo/3')
+        }
+    }}
+    getUser()
+  }, [token])
 
   const onSubmit = async (data) => {
     setLoading(true);
-    const respuesta = await axios.post(`http://localhost:8000/directivo/seccion2`,
+    const respuesta = await axios.post(`https://prueba-back-mateolohezic.up.railway.app/directivo/seccion2`,
       {
         token,
         question1: data.question1,
@@ -51,11 +66,9 @@ function TestDirectivoSeccion2() {
         <div className='text-center subtituloInicioTestDominioSeccion1'><h3>Sección 2 : <b>Conocimientos para ser PRO - Conceptos</b></h3></div>
       </div>
       <form onSubmit={handleSubmit(onSubmit)}>
-
-        
         <div className="contenedorPreguntaTestDominio">
           <div className="tituloPreguntaDominio">Pregunta 01</div>
-          <div className="preguntaDominio">¿Que es la visión?</div>
+          <div className="preguntaDominio">¿Que es la <b>visión</b>?</div>
           <div className="contenedorInputsPregunta1-3">
             <div className="contenedorInteriorPregunta1-3">
               <label className="radioInputContainer1-3">
@@ -83,12 +96,20 @@ function TestDirectivoSeccion2() {
               <span className="labelInput1-3">Una declaración inspiradora que describe lo que la empresa quiere lograr a largo plazo.</span>
             </div>
           </div>
+          <div className="contenedorInputsPregunta1-3">
+            <div className="contenedorInteriorPregunta1-3">
+              <label className="radioInputContainer1-3">
+                <input type="radio" {...register("question1", { required: true })} value='No sé.' />
+                <span className="checkmark1-3"></span>
+              </label>
+              <span className="labelInput1-3">No sé.</span>
+            </div>
+          </div>
           {errors.question1 && <div className="error">Seleccione una respuesta.</div>}
         </div>
-
         <div className="contenedorPreguntaTestDominio">
           <div className="tituloPreguntaDominio">Pregunta 02</div>
-          <div className="preguntaDominio">¿Que es la misión?</div>
+          <div className="preguntaDominio">¿Que es la <b>misión</b>?</div>
           <div className="contenedorInputsPregunta1-3">
             <div className="contenedorInteriorPregunta1-3">
               <label className="radioInputContainer1-3">
@@ -116,12 +137,20 @@ function TestDirectivoSeccion2() {
               <span className="labelInput1-3">Una descripción de los productos y servicios que ofrece la empresa.</span>
             </div>
           </div>
+          <div className="contenedorInputsPregunta1-3">
+            <div className="contenedorInteriorPregunta1-3">
+              <label className="radioInputContainer1-3">
+                <input type="radio" {...register("question2", { required: true })} value='No sé.' />
+                <span className="checkmark1-3"></span>
+              </label>
+              <span className="labelInput1-3">No sé.</span>
+            </div>
+          </div>
           {errors.question2 && <div className="error">Seleccione una respuesta.</div>}
         </div>
-
         <div className="contenedorPreguntaTestDominio">
           <div className="tituloPreguntaDominio">Pregunta 03</div>
-          <div className="preguntaDominio">¿Cuáles son los elementos que se incluyen en una misión empresarial?</div>
+          <div className="preguntaDominio">¿Cuáles son los <b>elementos</b> que se incluyen en una misión empresarial?</div>
           <div className="contenedorInputsPregunta1-3">
             <div className="contenedorInteriorPregunta1-3">
               <label className="radioInputContainer1-3">
@@ -149,12 +178,20 @@ function TestDirectivoSeccion2() {
               <span className="labelInput1-3">Qué es, qué hace, para quien lo hace, cómo lo hace.</span>
             </div>
           </div>
+          <div className="contenedorInputsPregunta1-3">
+            <div className="contenedorInteriorPregunta1-3">
+              <label className="radioInputContainer1-3">
+                <input type="radio" {...register("question3", { required: true })} value='No sé.' />
+                <span className="checkmark1-3"></span>
+              </label>
+              <span className="labelInput1-3">No sé.</span>
+            </div>
+          </div>
           {errors.question3 && <div className="error">Seleccione una respuesta.</div>}
         </div>
-
         <div className="contenedorPreguntaTestDominio">
           <div className="tituloPreguntaDominio">Pregunta 04</div>
-          <div className="preguntaDominio">¿Cómo se diferencia la visión de la misión de una empresa?</div>
+          <div className="preguntaDominio">¿Cómo se <b>diferencia</b> la visión de la misión de una empresa?</div>
           <div className="contenedorInputsPregunta1-3">
             <div className="contenedorInteriorPregunta1-3">
               <label className="radioInputContainer1-3">
@@ -182,12 +219,20 @@ function TestDirectivoSeccion2() {
               <span className="labelInput1-3">La misión describe lo que la empresa hace, mientras que la visión describe lo que la empresa quiere lograr a largo plazo.</span>
             </div>
           </div>
+          <div className="contenedorInputsPregunta1-3">
+            <div className="contenedorInteriorPregunta1-3">
+              <label className="radioInputContainer1-3">
+                <input type="radio" {...register("question4", { required: true })} value='No sé.' />
+                <span className="checkmark1-3"></span>
+              </label>
+              <span className="labelInput1-3">No sé.</span>
+            </div>
+          </div>
           {errors.question4 && <div className="error">Seleccione una respuesta.</div>}
         </div>
-
         <div className="contenedorPreguntaTestDominio">
           <div className="tituloPreguntaDominio">Pregunta 05</div>
-          <div className="preguntaDominio">¿Qué significa tener una visión estratégica?</div>
+          <div className="preguntaDominio">¿Qué significa tener una <b>visión estratégica</b>?</div>
           <div className="contenedorInputsPregunta1-3">
             <div className="contenedorInteriorPregunta1-3">
               <label className="radioInputContainer1-3">
@@ -215,12 +260,20 @@ function TestDirectivoSeccion2() {
               <span className="labelInput1-3">Tener una idea clara de los objetivos a largo plazo de la empresa.</span>
             </div>
           </div>
+          <div className="contenedorInputsPregunta1-3">
+            <div className="contenedorInteriorPregunta1-3">
+              <label className="radioInputContainer1-3">
+                <input type="radio" {...register("question5", { required: true })} value='No sé.' />
+                <span className="checkmark1-3"></span>
+              </label>
+              <span className="labelInput1-3">No sé.</span>
+            </div>
+          </div>
           {errors.question5 && <div className="error">Seleccione una respuesta.</div>}
         </div>
-
         <div className="contenedorPreguntaTestDominio">
           <div className="tituloPreguntaDominio">Pregunta 06</div>
-          <div className="preguntaDominio">¿Qué es el modelo de negocio?</div>
+          <div className="preguntaDominio">¿Qué es el <b>modelo de negocio</b>?</div>
           <div className="contenedorInputsPregunta1-3">
             <div className="contenedorInteriorPregunta1-3">
               <label className="radioInputContainer1-3">
@@ -248,12 +301,20 @@ function TestDirectivoSeccion2() {
               <span className="labelInput1-3">La forma en que una empresa crea, entrega y captura valor.</span>
             </div>
           </div>
+          <div className="contenedorInputsPregunta1-3">
+            <div className="contenedorInteriorPregunta1-3">
+              <label className="radioInputContainer1-3">
+                <input type="radio" {...register("question6", { required: true })} value='No sé.' />
+                <span className="checkmark1-3"></span>
+              </label>
+              <span className="labelInput1-3">No sé.</span>
+            </div>
+          </div>
           {errors.question6 && <div className="error">Seleccione una respuesta.</div>}
         </div>
-
         <div className="contenedorPreguntaTestDominio">
           <div className="tituloPreguntaDominio">Pregunta 07</div>
-          <div className="preguntaDominio">¿Qué elementos se incluyen en el modelo de negocio?</div>
+          <div className="preguntaDominio">¿Qué <b>elementos</b> se incluyen en el modelo de negocio?</div>
           <div className="contenedorInputsPregunta1-3">
             <div className="contenedorInteriorPregunta1-3">
               <label className="radioInputContainer1-3">
@@ -281,12 +342,20 @@ function TestDirectivoSeccion2() {
               <span className="labelInput1-3">Los canales de distribución que utiliza la empresa.</span>
             </div>
           </div>
+          <div className="contenedorInputsPregunta1-3">
+            <div className="contenedorInteriorPregunta1-3">
+              <label className="radioInputContainer1-3">
+                <input type="radio" {...register("question7", { required: true })} value='No sé.' />
+                <span className="checkmark1-3"></span>
+              </label>
+              <span className="labelInput1-3">No sé.</span>
+            </div>
+          </div>
           {errors.question7 && <div className="error">Seleccione una respuesta.</div>}
         </div>
-
         <div className="contenedorPreguntaTestDominio">
           <div className="tituloPreguntaDominio">Pregunta 08</div>
-          <div className="preguntaDominio">¿Qué es una propuesta de valor?</div>
+          <div className="preguntaDominio">¿Qué es una <b>propuesta de valor</b>?</div>
           <div className="contenedorInputsPregunta1-3">
             <div className="contenedorInteriorPregunta1-3">
               <label className="radioInputContainer1-3">
@@ -314,12 +383,20 @@ function TestDirectivoSeccion2() {
               <span className="labelInput1-3">Una oferta especial de precios que una empresa hace a sus clientes.</span>
             </div>
           </div>
+          <div className="contenedorInputsPregunta1-3">
+            <div className="contenedorInteriorPregunta1-3">
+              <label className="radioInputContainer1-3">
+                <input type="radio" {...register("question8", { required: true })} value='No sé.' />
+                <span className="checkmark1-3"></span>
+              </label>
+              <span className="labelInput1-3">No sé.</span>
+            </div>
+          </div>
           {errors.question8 && <div className="error">Seleccione una respuesta.</div>}
         </div>
-
         <div className="contenedorPreguntaTestDominio">
           <div className="tituloPreguntaDominio">Pregunta 09</div>
-          <div className="preguntaDominio">¿Por qué es importante tener una propuesta de valor clara y concisa?</div>
+          <div className="preguntaDominio">¿Por qué es importante tener una <b>propuesta de valor clara y concisa</b>?</div>
           <div className="contenedorInputsPregunta1-3">
             <div className="contenedorInteriorPregunta1-3">
               <label className="radioInputContainer1-3">
@@ -347,12 +424,20 @@ function TestDirectivoSeccion2() {
               <span className="labelInput1-3">Para que la empresa pueda reducir sus costos de producción.</span>
             </div>
           </div>
+          <div className="contenedorInputsPregunta1-3">
+            <div className="contenedorInteriorPregunta1-3">
+              <label className="radioInputContainer1-3">
+                <input type="radio" {...register("question9", { required: true })} value='No sé.' />
+                <span className="checkmark1-3"></span>
+              </label>
+              <span className="labelInput1-3">No sé.</span>
+            </div>
+          </div>
           {errors.question9 && <div className="error">Seleccione una respuesta.</div>}
         </div>
-
         <div className="contenedorPreguntaTestDominio">
           <div className="tituloPreguntaDominio">Pregunta 10</div>
-          <div className="preguntaDominio">¿Qué significa el término "Ventaja competitiva"?</div>
+          <div className="preguntaDominio">¿Qué significa el término "<b>Ventaja competitiva</b>"?</div>
           <div className="contenedorInputsPregunta1-3">
             <div className="contenedorInteriorPregunta1-3">
               <label className="radioInputContainer1-3">
@@ -380,12 +465,20 @@ function TestDirectivoSeccion2() {
               <span className="labelInput1-3">Tener una posición única en el mercado que permite a la empresa destacarse y tener éxito.</span>
             </div>
           </div>
+          <div className="contenedorInputsPregunta1-3">
+            <div className="contenedorInteriorPregunta1-3">
+              <label className="radioInputContainer1-3">
+                <input type="radio" {...register("question10", { required: true })} value='No sé.' />
+                <span className="checkmark1-3"></span>
+              </label>
+              <span className="labelInput1-3">No sé.</span>
+            </div>
+          </div>
           {errors.question10 && <div className="error">Seleccione una respuesta.</div>}
         </div>
-
         <div className="contenedorPreguntaTestDominio">
           <div className="tituloPreguntaDominio">Pregunta 11</div>
-          <div className="preguntaDominio">¿Qué es un plan estratégico?</div>
+          <div className="preguntaDominio">¿Qué es un <b>plan estratégico</b>?</div>
           <div className="contenedorInputsPregunta1-3">
             <div className="contenedorInteriorPregunta1-3">
               <label className="radioInputContainer1-3">
@@ -413,12 +506,20 @@ function TestDirectivoSeccion2() {
               <span className="labelInput1-3">Una lista de tareas diarias para los empleados.</span>
             </div>
           </div>
+          <div className="contenedorInputsPregunta1-3">
+            <div className="contenedorInteriorPregunta1-3">
+              <label className="radioInputContainer1-3">
+                <input type="radio" {...register("question11", { required: true })} value='No sé.' />
+                <span className="checkmark1-3"></span>
+              </label>
+              <span className="labelInput1-3">No sé.</span>
+            </div>
+          </div>
           {errors.question11 && <div className="error">Seleccione una respuesta.</div>}
         </div>
-        
         <div className="contenedorPreguntaTestDominio">
           <div className="tituloPreguntaDominio">Pregunta 12</div>
-          <div className="preguntaDominio">¿Cuánto sabes sobre desarrollo de negocios?</div>
+          <div className="preguntaDominio">¿Cuánto sabes sobre desarrollo de <b>negocios</b>?</div>
           <div className='cajaPregunta1-10'>
             <div className='textoPregunta1-10 primerTexto1-10'>Muy<b>poco</b></div>
             <div className="contenedorInputsPregunta1-10">
@@ -439,7 +540,7 @@ function TestDirectivoSeccion2() {
         
         <div className="contenedorPreguntaTestDominio">
           <div className="tituloPreguntaDominio">Pregunta 13</div>
-          <div className="preguntaDominio">¿Cuánto sabes sobre marketing?</div>
+          <div className="preguntaDominio">¿Cuánto sabes sobre <b>marketing</b>?</div>
           <div className='cajaPregunta1-10'>
             <div className='textoPregunta1-10 primerTexto1-10'>Muy<b>poco</b></div>
             <div className="contenedorInputsPregunta1-10">
@@ -460,7 +561,7 @@ function TestDirectivoSeccion2() {
         
         <div className="contenedorPreguntaTestDominio">
           <div className="tituloPreguntaDominio">Pregunta 14</div>
-          <div className="preguntaDominio">¿Cuánto sabes sobre ventas?</div>
+          <div className="preguntaDominio">¿Cuánto sabes sobre <b>ventas</b>?</div>
           <div className='cajaPregunta1-10'>
             <div className='textoPregunta1-10 primerTexto1-10'>Muy<b>poco</b></div>
             <div className="contenedorInputsPregunta1-10">
@@ -481,7 +582,7 @@ function TestDirectivoSeccion2() {
         
         <div className="contenedorPreguntaTestDominio">
           <div className="tituloPreguntaDominio">Pregunta 15</div>
-          <div className="preguntaDominio">¿Cuánto sabes sobre gestión del talento?</div>
+          <div className="preguntaDominio">¿Cuánto sabes sobre <b>gestión del talento</b>?</div>
           <div className='cajaPregunta1-10'>
             <div className='textoPregunta1-10 primerTexto1-10'>Muy<b>poco</b></div>
             <div className="contenedorInputsPregunta1-10">
@@ -502,7 +603,7 @@ function TestDirectivoSeccion2() {
         
         <div className="contenedorPreguntaTestDominio">
           <div className="tituloPreguntaDominio">Pregunta 16</div>
-          <div className="preguntaDominio">¿Cuánto sabes sobre finanzas?</div>
+          <div className="preguntaDominio">¿Cuánto sabes sobre <b>finanzas</b>?</div>
           <div className='cajaPregunta1-10'>
             <div className='textoPregunta1-10 primerTexto1-10'>Muy<b>poco</b></div>
             <div className="contenedorInputsPregunta1-10">

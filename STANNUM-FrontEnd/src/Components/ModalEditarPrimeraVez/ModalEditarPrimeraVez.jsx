@@ -22,7 +22,7 @@ function ModalEditarPrimeraVez() {
           <div className="modal-content cuerpoModal">
             <div className="modal-body d-flex flex-column justify-content-center align-items-center p-0">
               <div className='completarPerfilTitulo'><h3>¡Completa tu perfil!</h3></div>
-              <div className='completarPerfilParrafo'><p>Ingresa tus datos para poder generar una plantilla de jugador a tu medida</p></div>
+              <div className='completarPerfilParrafo'><p>Ingresa tus datos para poder generar una plantilla de jugador a tu medida.</p></div>
               <div className='completarPerfilBotones d-flex'>
                 <button className='completarPerfilDespues align-middle' data-bs-dismiss="modal" aria-label="Close">Hacerlo luego</button>
                 <a href='/Editar-perfil' className='completarPerfilCompletar d-flex justify-content-center align-items-middle text-decoration-none'><button>Editar perfil</button></a>

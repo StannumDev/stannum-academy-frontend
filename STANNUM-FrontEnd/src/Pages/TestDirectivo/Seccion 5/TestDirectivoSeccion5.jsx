@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import Cookies from 'js-cookie'
 import axios from "axios";
 import { useForm } from "react-hook-form";
 
@@ -6,12 +7,29 @@ function TestDirectivoSeccion5() {
 
   const { register, handleSubmit, formState: { errors } } = useForm();
   const [loading, setLoading] = useState(false);
+  const token = Cookies.get('token');
 
-  const token = localStorage.getItem('token');
+  if(token === undefined){
+    window.location.replace('/Cerrar-sesion');
+  }
+  
+  useEffect(() => {
+    const getUser = async () =>{
+
+    if (token) {
+        const respuesta = await axios.post(`https://prueba-back-mateolohezic.up.railway.app/get-user/${token}`);
+        if(respuesta.data.dominioDirectivoTestInicial.habilidadesDirectivas.sectionScore != "Undefined"){
+          window.location.replace('/Test/Dominio/Directivo/6')
+        }
+    }}
+
+    getUser()
+
+  }, [token])
 
   const onSubmit = async (data) => {
     setLoading(true);
-    const respuesta = await axios.post(`http://localhost:8000/directivo/seccion5`,
+    const respuesta = await axios.post(`https://prueba-back-mateolohezic.up.railway.app/directivo/seccion5`,
       {
         token,
         question1: data.question1,
@@ -44,7 +62,7 @@ function TestDirectivoSeccion5() {
       <form onSubmit={handleSubmit(onSubmit)}>
         <div className="contenedorPreguntaTestDominio">
           <div className="tituloPreguntaDominio">Pregunta 01</div>
-          <div className="preguntaDominio">¿Comprendes y desarrollas el negocio a partir de su visión y misión?</div>
+          <div className="preguntaDominio">¿Comprendes y desarrollas el negocio a partir de su <b>visión</b> y <b>misión</b>?</div>
           <div className='cajaPregunta1-10'>
             <div className='textoPregunta1-10 primerTexto1-10'>No se<b>cuales son</b></div>
             <div className="contenedorInputsPregunta1-10">
@@ -64,7 +82,7 @@ function TestDirectivoSeccion5() {
         </div> 
         <div className="contenedorPreguntaTestDominio">
           <div className="tituloPreguntaDominio">Pregunta 02</div>
-          <div className="preguntaDominio">¿Eres capaz de desarrollar el modelo de negocio de manera efectiva para cumplir la visión?</div>
+          <div className="preguntaDominio">¿Eres capaz de desarrollar el <b>modelo de negocio</b> de manera efectiva para cumplir la visión?</div>
           <div className='cajaPregunta1-10'>
             <div className='textoPregunta1-10 primerTexto1-10'>No tengo<b>habilidades</b></div>
             <div className="contenedorInputsPregunta1-10">
@@ -84,7 +102,7 @@ function TestDirectivoSeccion5() {
         </div> 
         <div className="contenedorPreguntaTestDominio">
           <div className="tituloPreguntaDominio">Pregunta 03</div>
-          <div className="preguntaDominio">¿Eres capaz de crear y ejecutar planes estratégicos para lograr los objetivos?</div>
+          <div className="preguntaDominio">¿Eres capaz de crear y ejecutar <b>planes estratégicos</b> para lograr los objetivos?</div>
           <div className='cajaPregunta1-10'>
             <div className='textoPregunta1-10 primerTexto1-10'>No tengo<b>habilidades</b></div>
             <div className="contenedorInputsPregunta1-10">
@@ -104,7 +122,7 @@ function TestDirectivoSeccion5() {
         </div> 
         <div className="contenedorPreguntaTestDominio">
           <div className="tituloPreguntaDominio">Pregunta 04</div>
-          <div className="preguntaDominio">¿Eres capaz de analizar y utilizar datos y estadísticas para medir la evolución del negocio?</div>
+          <div className="preguntaDominio">¿Eres capaz de analizar y utilizar <b>datos</b> y <b>estadísticas</b> para medir la evolución del negocio?</div>
           <div className='cajaPregunta1-10'>
             <div className='textoPregunta1-10 primerTexto1-10'>No tengo<b>habilidades</b></div>
             <div className="contenedorInputsPregunta1-10">
@@ -124,7 +142,7 @@ function TestDirectivoSeccion5() {
         </div> 
         <div className="contenedorPreguntaTestDominio">
           <div className="tituloPreguntaDominio">Pregunta 05</div>
-          <div className="preguntaDominio">¿Que grado de dominio tienes para aterrizar la visión en objetivos estratégicos?</div>
+          <div className="preguntaDominio">¿Que grado de dominio tienes para aterrizar la <b>visión en objetivos estratégicos</b>?</div>
           <div className='cajaPregunta1-10'>
             <div className='textoPregunta1-10 primerTexto1-10'>No tengo<b>habilidades</b></div>
             <div className="contenedorInputsPregunta1-10">
@@ -144,7 +162,7 @@ function TestDirectivoSeccion5() {
         </div> 
         <div className="contenedorPreguntaTestDominio">
           <div className="tituloPreguntaDominio">Pregunta 06</div>
-          <div className="preguntaDominio">¿Que grado de dominio tienes para el desarrollo integrado de las áreas funcionales para cumplir con los objetivos estratégicos? (Recursos humano, Administración y Finanzas, Operaciones, Marketing, Ventas, Legales, I+D, Logística, etc.)</div>
+          <div className="preguntaDominio">¿Que grado de dominio tienes para el desarrollo integrado de las <b>áreas funcionales</b> para cumplir con los objetivos estratégicos? (Recursos humano, Administración y Finanzas, Operaciones, Marketing, Ventas, Legales, I+D, Logística, etc.)</div>
           <div className='cajaPregunta1-10'>
             <div className='textoPregunta1-10 primerTexto1-10'>No tengo<b>habilidades</b></div>
             <div className="contenedorInputsPregunta1-10">
@@ -164,7 +182,7 @@ function TestDirectivoSeccion5() {
         </div> 
         <div className="contenedorPreguntaTestDominio">
           <div className="tituloPreguntaDominio">Pregunta 07</div>
-          <div className="preguntaDominio">¿Podrías identificar el grado de dominio sobre tu habilidad para liderar equipos y motivar a los empleados?</div>
+          <div className="preguntaDominio">¿Podrías identificar el grado de dominio sobre tu habilidad para <b>liderar</b> equipos y motivar a los empleados?</div>
           <div className='cajaPregunta1-10'>
             <div className='textoPregunta1-10 primerTexto1-10'>No tengo<b>habilidades</b></div>
             <div className="contenedorInputsPregunta1-10">
@@ -184,7 +202,7 @@ function TestDirectivoSeccion5() {
         </div> 
         <div className="contenedorPreguntaTestDominio">
           <div className="tituloPreguntaDominio">Pregunta 08</div>
-          <div className="preguntaDominio">¿Podrías identificar el grado de dominio sobre tu habilidad para para entender los números de tu negocio en los estados contables y utilizar los informes financiero para evaluar la rentabilidad de los planes estratégicos, y tomar decisiones en base a indicadores de desempeño?</div>
+          <div className="preguntaDominio">¿Podrías identificar el grado de dominio sobre tu habilidad para <b>entender</b> los números de tu negocio en los estados <b>contables</b> y utilizar los informes financiero para evaluar la <b>rentabilidad</b> de los planes estratégicos, y tomar decisiones en base a <b>indicadores</b> de desempeño?</div>
           <div className='cajaPregunta1-10'>
             <div className='textoPregunta1-10 primerTexto1-10'>No tengo<b>habilidades</b></div>
             <div className="contenedorInputsPregunta1-10">

@@ -95,6 +95,11 @@
     color: #FFFFFF;
 }
 
+.preguntaDominio b{
+    font-weight: 700;
+    color: #D3214D;
+}
+
 .textoPregunta1-10{
     font-weight: 500;
     color: #FFFFFF;

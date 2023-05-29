@@ -1,8 +1,10 @@
+import Cookies from 'js-cookie'
 import React from 'react'
 
 function CerrarSesion() {
 
-    localStorage.clear();
+    Cookies.remove('adminToken');
+    Cookies.remove('token');
     window.location.replace('/');
 
     return (

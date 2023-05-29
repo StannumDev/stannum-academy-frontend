@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import Cookies from 'js-cookie'
 import axios from "axios";
 import { useForm } from "react-hook-form";
 
@@ -6,8 +7,25 @@ function TestDirectivoSeccion4() {
 
   const { register, handleSubmit, formState: { errors } } = useForm();
   const [loading, setLoading] = useState(false);
+  const token = Cookies.get('token');
 
-  const token = localStorage.getItem('token');
+  if(token === undefined){
+    window.location.replace('/Cerrar-sesion');
+  }
+  
+  useEffect(() => {
+    const getUser = async () =>{
+
+    if (token) {
+        const respuesta = await axios.post(`https://prueba-back-mateolohezic.up.railway.app/get-user/${token}`);
+        if(respuesta.data.dominioDirectivoTestInicial.emprendimiento.sectionScore != "Undefined"){
+          window.location.replace('/Test/Dominio/Directivo/5')
+        }
+    }}
+
+    getUser()
+
+  }, [token])
 
   const [showAdditionalInput1, setShowAdditionalInput1] = useState(false);
   const [showAdditionalInput2, setShowAdditionalInput2] = useState(false);
@@ -86,7 +104,7 @@ function TestDirectivoSeccion4() {
       justificacion15= data.question15Justification.trim()
     }
 
-    const respuesta = await axios.post(`http://localhost:8000/directivo/seccion4`,
+    const respuesta = await axios.post(`https://prueba-back-mateolohezic.up.railway.app/directivo/seccion4`,
       {
         token,
         question1: data.question1,
@@ -134,7 +152,7 @@ function TestDirectivoSeccion4() {
       <form onSubmit={handleSubmit(onSubmit)}>
         <div className="contenedorPreguntaTestDominio">
           <div className="tituloPreguntaDominio">Pregunta 01</div>
-          <div className="preguntaDominio">¿La visión de tu negocio está formalizada?</div>
+          <div className="preguntaDominio">¿La <b>visión</b> de tu negocio está formalizada?</div>
           <div className="contenedorInputsPregunta1-3">
             <div className="contenedorInteriorPregunta1-3">
               <label className="radioInputContainer1-3">
@@ -165,7 +183,7 @@ function TestDirectivoSeccion4() {
         </div>
         <div className="contenedorPreguntaTestDominio">
           <div className="tituloPreguntaDominio">Pregunta 02</div>
-          <div className="preguntaDominio">¿La misión de tu negocio está formalizada?</div>
+          <div className="preguntaDominio">¿La <b>misión</b> de tu negocio está formalizada?</div>
           <div className="contenedorInputsPregunta1-3">
             <div className="contenedorInteriorPregunta1-3">
               <label className="radioInputContainer1-3">
@@ -196,7 +214,7 @@ function TestDirectivoSeccion4() {
         </div>
         <div className="contenedorPreguntaTestDominio">
           <div className="tituloPreguntaDominio">Pregunta 03</div>
-          <div className="preguntaDominio">¿Los objetivos estratégicos están escritos?</div>
+          <div className="preguntaDominio">¿Los <b>objetivos estratégicos</b> están escritos?</div>
           <div className="contenedorInputsPregunta1-3">
             <div className="contenedorInteriorPregunta1-3">
               <label className="radioInputContainer1-3">
@@ -227,7 +245,7 @@ function TestDirectivoSeccion4() {
         </div>
         <div className="contenedorPreguntaTestDominio">
           <div className="tituloPreguntaDominio">Pregunta 04</div>
-          <div className="preguntaDominio">¿La propuesta de valor de tu negocio está escrita?</div>
+          <div className="preguntaDominio">¿La <b>propuesta de valor</b> de tu negocio está escrita?</div>
           <div className="contenedorInputsPregunta1-3">
             <div className="contenedorInteriorPregunta1-3">
               <label className="radioInputContainer1-3">
@@ -258,7 +276,7 @@ function TestDirectivoSeccion4() {
         </div>
         <div className="contenedorPreguntaTestDominio">
           <div className="tituloPreguntaDominio">Pregunta 05</div>
-          <div className="preguntaDominio">¿Tienes un documento que describe a la perfección "Quién es tu Cliente"?</div>
+          <div className="preguntaDominio">¿Tienes un documento que describe a la perfección "<b>Quién es tu Cliente</b>"?</div>
           <div className="contenedorInputsPregunta1-3">
             <div className="contenedorInteriorPregunta1-3">
               <label className="radioInputContainer1-3">
@@ -289,7 +307,7 @@ function TestDirectivoSeccion4() {
         </div>
         <div className="contenedorPreguntaTestDominio">
           <div className="tituloPreguntaDominio">Pregunta 06</div>
-          <div className="preguntaDominio">¿Las áreas funcionales de tu negocio están definidas formalmente?</div>
+          <div className="preguntaDominio">¿Las <b>áreas funcionales</b> de tu negocio están definidas formalmente?</div>
           <div className="contenedorInputsPregunta1-3">
             <div className="contenedorInteriorPregunta1-3">
               <label className="radioInputContainer1-3">
@@ -320,7 +338,7 @@ function TestDirectivoSeccion4() {
         </div>
         <div className="contenedorPreguntaTestDominio">
           <div className="tituloPreguntaDominio">Pregunta 07</div>
-          <div className="preguntaDominio">¿Planificas a largo plazo? (5 años o más)</div>
+          <div className="preguntaDominio">¿Planificas a <b>largo plazo</b>? (5 años o más)</div>
           <div className="contenedorInputsPregunta1-3">
             <div className="contenedorInteriorPregunta1-3">
               <label className="radioInputContainer1-3">
@@ -343,7 +361,7 @@ function TestDirectivoSeccion4() {
         </div>
         <div className="contenedorPreguntaTestDominio">
           <div className="tituloPreguntaDominio">Pregunta 08</div>
-          <div className="preguntaDominio">¿Tienes metas económicas concretas y escritas?</div>
+          <div className="preguntaDominio">¿Tienes <b>metas económicas</b> concretas y escritas?</div>
           <div className="contenedorInputsPregunta1-3">
             <div className="contenedorInteriorPregunta1-3">
               <label className="radioInputContainer1-3">
@@ -366,7 +384,7 @@ function TestDirectivoSeccion4() {
         </div>
         <div className="contenedorPreguntaTestDominio">
           <div className="tituloPreguntaDominio">Pregunta 09</div>
-          <div className="preguntaDominio">¿Evalúas formalmente la satisfacción de los clientes?</div>
+          <div className="preguntaDominio">¿Evalúas formalmente la <b>satisfacción</b> de los clientes?</div>
           <div className="contenedorInputsPregunta1-3">
             <div className="contenedorInteriorPregunta1-3">
               <label className="radioInputContainer1-3">
@@ -389,7 +407,7 @@ function TestDirectivoSeccion4() {
         </div>
         <div className="contenedorPreguntaTestDominio">
           <div className="tituloPreguntaDominio">Pregunta 10</div>
-          <div className="preguntaDominio">¿Tienes indicadores para medir el desempeño en tu negocio?</div>
+          <div className="preguntaDominio">¿Tienes <b>indicadores</b> para medir el desempeño en tu negocio?</div>
           <div className="contenedorInputsPregunta1-3">
             <div className="contenedorInteriorPregunta1-3">
               <label className="radioInputContainer1-3">
@@ -412,7 +430,7 @@ function TestDirectivoSeccion4() {
         </div>
         <div className="contenedorPreguntaTestDominio">
           <div className="tituloPreguntaDominio">Pregunta 11</div>
-          <div className="preguntaDominio">¿Tienes reuniones estratégicas?</div>
+          <div className="preguntaDominio">¿Tienes <b>reuniones estratégicas</b>?</div>
           <div className="contenedorInputsPregunta1-3">
             <div className="contenedorInteriorPregunta1-3">
               <label className="radioInputContainer1-3">
@@ -435,7 +453,7 @@ function TestDirectivoSeccion4() {
         </div>
         <div className="contenedorPreguntaTestDominio">
           <div className="tituloPreguntaDominio">Pregunta 12</div>
-          <div className="preguntaDominio">¿Tienes la reunión anual para cerrar el año?</div>
+          <div className="preguntaDominio">¿Tienes la <b>reunión anual</b> para cerrar el año?</div>
           <div className="contenedorInputsPregunta1-3">
             <div className="contenedorInteriorPregunta1-3">
               <label className="radioInputContainer1-3">
@@ -458,7 +476,7 @@ function TestDirectivoSeccion4() {
         </div>
         <div className="contenedorPreguntaTestDominio">
           <div className="tituloPreguntaDominio">Pregunta 13</div>
-          <div className="preguntaDominio">¿Planificas formalmente el año completo antes de arrancar?</div>
+          <div className="preguntaDominio">¿Planificas formalmente el <b>año completo</b> antes de arrancar?</div>
           <div className="contenedorInputsPregunta1-3">
             <div className="contenedorInteriorPregunta1-3">
               <label className="radioInputContainer1-3">
@@ -481,7 +499,7 @@ function TestDirectivoSeccion4() {
         </div>
         <div className="contenedorPreguntaTestDominio">
           <div className="tituloPreguntaDominio">Pregunta 14</div>
-          <div className="preguntaDominio">¿Utilizas alguna metodología de gestión de proyectos?</div>
+          <div className="preguntaDominio">¿Utilizas alguna metodología de <b>gestión de proyectos</b>?</div>
           <div className="contenedorInputsPregunta1-3">
             <div className="contenedorInteriorPregunta1-3">
               <label className="radioInputContainer1-3">
@@ -512,7 +530,7 @@ function TestDirectivoSeccion4() {
         </div>
         <div className="contenedorPreguntaTestDominio">
           <div className="tituloPreguntaDominio">Pregunta 15</div>
-          <div className="preguntaDominio">¿Utilizas alguna herramienta digital de gestión del tiempo?</div>
+          <div className="preguntaDominio">¿Utilizas alguna metodología de <b>gestión del tiempo</b>?</div>
           <div className="contenedorInputsPregunta1-3">
             <div className="contenedorInteriorPregunta1-3">
               <label className="radioInputContainer1-3">

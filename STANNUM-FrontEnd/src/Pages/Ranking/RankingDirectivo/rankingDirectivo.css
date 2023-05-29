@@ -90,24 +90,10 @@
     color: #FFFFFF;
 }
 
-.jugadorB1RankingDirectivo{
+.jugadorBCRankingDirectivo{
     width: 100%;
     padding-inline: 2rem;
     background-color: #FFFFFF;
-    border-bottom: 1px solid rgb(51,52,56, 0.2);
-}
-
-.jugadorB2RankingDirectivo{
-    width: 100%;
-    background-color: #FFFFFF;
-    padding-inline: 2rem;
-    border-bottom: 1px solid rgb(51,52,56, 0.2);
-}
-
-.jugadorCRankingDirectivo{
-    width: 100%;
-    background-color: #FFFFFF;
-    padding-inline: 2rem;
     border-bottom: 1px solid rgb(51,52,56, 0.2);
 }
 

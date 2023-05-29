@@ -18,7 +18,7 @@ function RecuperarContraseñaSeccion1() {
   const onSubmit = async (data) => {
     setLoading(true);
     const respuesta = await axios.post(
-        `http://localhost:8000/password-recovery`,
+        `https://prueba-back-mateolohezic.up.railway.app/password-recovery`,
         {
             email: data.email.trim().toLowerCase(),
         }
@@ -43,14 +43,14 @@ function RecuperarContraseñaSeccion1() {
                 <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" className="bi bi-arrow-left-short svgInicioVolverRecuperarContraseña" viewBox="0 0 16 16">
                     <path fillRule="evenodd" d="M12 8a.5.5 0 0 1-.5.5H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5a.5.5 0 0 1 .5.5z"/>
                 </svg>
-                <span>Iniciar Sesion</span>
+                <span>Iniciar Sesión</span>
             </a>
           </div>
         </div>
         <div className='cajaRecuperarContraseña'>
           <div className='imagenRecuperarContraseña'><img src={LogoChico} alt="" /></div>
           <div className='tituloOlvidasteTuContraseña'><h1><span>¿OLVIDASTE</span> TU CONTRASEÑA?</h1></div>
-          <div className='explicacionOlvidasteTuContraseña'><p>Ingrese su correo electrónico y le enviaremos un enlace para cambiar su contraseña.</p></div>
+          <div className='explicacionOlvidasteTuContraseña'><p>Ingresa tu correo electrónico y te enviaremos un enlace para cambiar tu contraseña.</p></div>
           <form onSubmit={handleSubmit(onSubmit)} className='mt-4'>
             <div className="row">
               <div className={`form-group d-flex flex-column`}>
@@ -107,7 +107,9 @@ function RecuperarContraseñaSeccion1() {
         </div>
         <div className='d-flex solicitarAccesoDivRecuperar justify-content-center align-items-center mt-5 mb-5'>
           <span className='textoNoTienesUnaCuentaRecuperarContraseña'>¿No tienes una cuenta?</span>
-          <button className='botonSolicitarAccesoRecuperarContraseña'>Solicitar acceso</button>
+          <a href='https://stannum.com.ar/' target="_blank">
+            <button className='botonSolicitarAccesoRecuperarContraseña'>Solicitar acceso</button>
+          </a>
         </div>
       </>
     )
@@ -117,7 +119,7 @@ function RecuperarContraseñaSeccion1() {
         <div className='cajaRecuperarContraseña'>
           <div className='imagenRecuperarContraseña'><img src={LogoChico} alt="" /></div>
           <div className='tituloOlvidasteTuContraseña'><h1>SOLICITUD<span> COMPLETADA</span></h1></div>
-          <div className='explicacionOlvidasteTuContraseña'><p>Se ha enviado un email a su correo electrónico! siga los pasos para cambiar su contraseña.</p></div>
+          <div className='explicacionOlvidasteTuContraseña'><p>Se ha enviado un email a tu correo electrónico!. Sigue los pasos para cambiar tu contraseña.</p></div>
           <div className='mt-4 d-flex justify-content-center'>
             <a href='/Iniciar-sesion'><button type="button" className="botonVolverRecuperarContraseña">Volver al inicio</button></a>
           </div>       

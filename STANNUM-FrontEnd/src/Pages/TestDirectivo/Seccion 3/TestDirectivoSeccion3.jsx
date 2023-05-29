@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import Cookies from 'js-cookie'
 import axios from "axios";
 import { useForm } from "react-hook-form";
 
@@ -6,8 +7,22 @@ function TestDirectivoSeccion3() {
 
   const { register, handleSubmit, formState: { errors } } = useForm();
   const [loading, setLoading] = useState(false);
+  const token = Cookies.get('token');
+  
+  if(token === undefined){
+    window.location.replace('/Cerrar-sesion');
+  }
 
-  const token = localStorage.getItem('token');
+  useEffect(() => {
+    const getUser = async () =>{
+    if (token) {
+        const respuesta = await axios.post(`https://prueba-back-mateolohezic.up.railway.app/get-user/${token}`);
+        if(respuesta.data.dominioDirectivoTestInicial.mercado.sectionScore != "Undefined"){
+          window.location.replace('/Test/Dominio/Directivo/4')
+        }
+    }}
+    getUser()
+  }, [token])
 
   const onSubmit = async (data) => {
     setLoading(true);
@@ -37,7 +52,7 @@ function TestDirectivoSeccion3() {
       justificacion5= data.question5Justification.trim()
     }
 
-    const respuesta = await axios.post(`http://localhost:8000/directivo/seccion3`,
+    const respuesta = await axios.post(`https://prueba-back-mateolohezic.up.railway.app/directivo/seccion3`,
       {
         token,
         question1: data.question1,
@@ -94,7 +109,7 @@ function TestDirectivoSeccion3() {
       <form onSubmit={handleSubmit(onSubmit)}>
         <div className="contenedorPreguntaTestDominio">
           <div className="tituloPreguntaDominio">Pregunta 01</div>
-          <div className="preguntaDominio">¿Podrías identificar a los competidores directos e indirectos de tu Negocio?</div>
+          <div className="preguntaDominio">¿Podrías identificar a los <b>competidores</b> directos e indirectos de tu Negocio?</div>
           <div className="contenedorInputsPregunta1-3">
             <div className="contenedorInteriorPregunta1-3">
               <label className="radioInputContainer1-3">
@@ -125,7 +140,7 @@ function TestDirectivoSeccion3() {
         </div>
         <div className="contenedorPreguntaTestDominio">
           <div className="tituloPreguntaDominio">Pregunta 02</div>
-          <div className="preguntaDominio">¿Podrías identificar a los referentes en tu mercado?</div>
+          <div className="preguntaDominio">¿Podrías identificar a los <b>referentes</b> en tu mercado?</div>
           <div className="contenedorInputsPregunta1-3">
             <div className="contenedorInteriorPregunta1-3">
               <label className="radioInputContainer1-3">
@@ -156,7 +171,7 @@ function TestDirectivoSeccion3() {
         </div>
         <div className="contenedorPreguntaTestDominio">
           <div className="tituloPreguntaDominio">Pregunta 03</div>
-          <div className="preguntaDominio">¿Podrías identificar 5 tendencias en tu mercado?</div>
+          <div className="preguntaDominio">¿Podrías identificar 5 <b>tendencias</b> en tu mercado?</div>
           <div className="contenedorInputsPregunta1-3">
             <div className="contenedorInteriorPregunta1-3">
               <label className="radioInputContainer1-3">
@@ -187,7 +202,7 @@ function TestDirectivoSeccion3() {
         </div>
         <div className="contenedorPreguntaTestDominio">
           <div className="tituloPreguntaDominio">Pregunta 04</div>
-          <div className="preguntaDominio">¿Podrías identificar 3 oportunidades del contexto de tu negocio?</div>
+          <div className="preguntaDominio">¿Podrías identificar 3 <b>oportunidades</b> del contexto de tu negocio?</div>
           <div className="contenedorInputsPregunta1-3">
             <div className="contenedorInteriorPregunta1-3">
               <label className="radioInputContainer1-3">
@@ -218,7 +233,7 @@ function TestDirectivoSeccion3() {
         </div>
         <div className="contenedorPreguntaTestDominio">
           <div className="tituloPreguntaDominio">Pregunta 05</div>
-          <div className="preguntaDominio">¿Podrías identificar 3 amenazas del contexto de tu negocio?</div>
+          <div className="preguntaDominio">¿Podrías identificar 3 <b>amenazas</b> del contexto de tu negocio?</div>
           <div className="contenedorInputsPregunta1-3">
             <div className="contenedorInteriorPregunta1-3">
               <label className="radioInputContainer1-3">

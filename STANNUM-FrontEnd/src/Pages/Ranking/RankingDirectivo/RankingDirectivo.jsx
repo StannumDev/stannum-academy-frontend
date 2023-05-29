@@ -1,7 +1,71 @@
-import React from 'react'
+import { useState, useEffect } from 'react';
+import axios from "axios";
+import Cookies from 'js-cookie'
 import './rankingDirectivo.css'
 
 function RankingDirectivo() {
+    
+    const [users, setUsers] = useState([]);
+    const [usersCategoriaA, setUsersCategoriaA] = useState([]);
+    const [usersCategoriaB1, setUsersCategoriaB1] = useState([]);
+    const [usersCategoriaB2, setUsersCategoriaB2] = useState([]);
+    const [usersCategoriaC, setUsersCategoriaC] = useState([]);
+    const token = Cookies.get('token');
+
+    if(token === undefined){
+        window.location.replace('/Cerrar-sesion');
+    }
+
+    const categorizeUsers = (users) => {
+        const categoriaA = users.filter(user => user.dominioDirectivoTestInicial.totalScore > 66).sort((a, b) => b.totalScore - a.totalScore);
+        const categoriaB1 = users.filter(user => user.dominioDirectivoTestInicial.totalScore > 50 && user.dominioDirectivoTestInicial.totalScore <= 66).sort((a, b) => b.totalScore - a.totalScore);
+        const categoriaB2 = users.filter(user => user.dominioDirectivoTestInicial.totalScore > 33 && user.dominioDirectivoTestInicial.totalScore <= 50).sort((a, b) => b.totalScore - a.totalScore);
+        const categoriaC = users.filter(user => user.dominioDirectivoTestInicial.totalScore <= 33).sort((a, b) => b.totalScore - a.totalScore);
+      
+        return { categoriaA, categoriaB1, categoriaB2, categoriaC };
+    };
+
+    useEffect(() => {
+
+        const verifyToken = async () =>{
+            if (token) {
+                const respuesta = await axios.post(`https://prueba-back-mateolohezic.up.railway.app/verify-token-user`,
+                    {
+                        token
+                    }
+                );
+                if (respuesta.status === 206) {
+                    window.location.replace('/Cerrar-sesion');
+                }
+            } else{
+                window.location.replace('/Cerrar-sesion');
+            }
+        }
+        
+        verifyToken()
+
+        const getUsers = async () =>{
+
+            if (token) {
+                const respuesta = await axios.post(`https://prueba-back-mateolohezic.up.railway.app/get-users/`,
+                    {
+                        token
+                    }
+                );
+                const categorizedUsers = await categorizeUsers(respuesta.data);
+                setUsers(respuesta.data.sort((a, b) => b.totalScore - a.totalScore));
+                setUsersCategoriaA(categorizedUsers.categoriaA);
+                setUsersCategoriaB1(categorizedUsers.categoriaB1);
+                setUsersCategoriaB2(categorizedUsers.categoriaB2);
+                setUsersCategoriaC(categorizedUsers.categoriaC);
+            } else{
+                window.location.replace('/Cerrar-sesion');
+            }
+        }
+
+        getUsers()
+        
+    }, [token])
 
     return (
         <>
@@ -22,195 +86,105 @@ function RankingDirectivo() {
                     <div className='titulosRankingTablaDirectivo col-8 text-start m-0 p-0'><span>NOMBRE</span></div>
                     <div className='titulosRankingTablaDirectivo col-2 text-end m-0 p-0'><span>PTS</span></div>
                 </div>
-                <div className='tituloCategoriaRankingDirectivo'><h3>- CATEGORÍA A -</h3></div>
-                <div className='row jugadorARankingDirectivo mx-auto m-0 align-items-center'>
-                    <div className='puestoARankingTablaDirectivo puestoTamañoRankingTablaDirectivo col-2 text-start m-0 p-0' ><span>1</span></div>
-                    <div className='nombreARankingTablaDirectivo nombreTamañoRankingTablaDirectivo col-8 text-start m-0 p-0 py-2 pe-1'><span>Maxi Rodriguez</span></div>
-                    <div className='puntosARankingTablaDirectivo puntosTamañoRankingTablaDirectivo col-2 text-end m-0 p-0'><span>82</span></div>
-                </div>
-                <div className='row jugadorARankingDirectivo mx-auto m-0 align-items-center'>
-                    <div className='puestoARankingTablaDirectivo puestoTamañoRankingTablaDirectivo col-2 text-start m-0 p-0' ><span>2</span></div>
-                    <div className='nombreARankingTablaDirectivo nombreTamañoRankingTablaDirectivo col-8 text-start m-0 p-0 py-2 pe-1'><span>Pablo Hatem</span></div>
-                    <div className='puntosARankingTablaDirectivo puntosTamañoRankingTablaDirectivo col-2 text-end m-0 p-0'><span>78</span></div>
-                </div>
-                <div className='row jugadorARankingDirectivo mx-auto m-0 align-items-center'>
-                    <div className='puestoARankingTablaDirectivo puestoTamañoRankingTablaDirectivo col-2 text-start m-0 p-0' ><span>3</span></div>
-                    <div className='nombreARankingTablaDirectivo nombreTamañoRankingTablaDirectivo col-8 text-start m-0 p-0 py-2 pe-1'><span>Mariana Cueto</span></div>
-                    <div className='puntosARankingTablaDirectivo puntosTamañoRankingTablaDirectivo col-2 text-end m-0 p-0'><span>72</span></div>
-                </div>
-                <div className='row jugadorARankingDirectivo mx-auto m-0 align-items-center'>
-                    <div className='puestoARankingTablaDirectivo puestoTamañoRankingTablaDirectivo col-2 text-start m-0 p-0' ><span>4</span></div>
-                    <div className='nombreARankingTablaDirectivo nombreTamañoRankingTablaDirectivo col-8 text-start m-0 p-0 py-2 pe-1'><span>Mariana Compay</span></div>
-                    <div className='puntosARankingTablaDirectivo puntosTamañoRankingTablaDirectivo col-2 text-end m-0 p-0'><span>72</span></div>
-                </div>
-                <div className='row jugadorARankingDirectivo mx-auto m-0 align-items-center'>
-                    <div className='puestoARankingTablaDirectivo puestoTamañoRankingTablaDirectivo col-2 text-start m-0 p-0' ><span>5</span></div>
-                    <div className='nombreARankingTablaDirectivo nombreTamañoRankingTablaDirectivo col-8 text-start m-0 p-0 py-2 pe-1'><span>Rodolfo Durba</span></div>
-                    <div className='puntosARankingTablaDirectivo puntosTamañoRankingTablaDirectivo col-2 text-end m-0 p-0'><span>69</span></div>
-                </div>
-                <div className='row jugadorARankingDirectivo mx-auto m-0 align-items-center'>
-                    <div className='puestoARankingTablaDirectivo puestoTamañoRankingTablaDirectivo col-2 text-start m-0 p-0' ><span>6</span></div>
-                    <div className='nombreARankingTablaDirectivo nombreTamañoRankingTablaDirectivo col-8 text-start m-0 p-0 py-2 pe-1'><span>Alejandro De La Zerda</span></div>
-                    <div className='puntosARankingTablaDirectivo puntosTamañoRankingTablaDirectivo col-2 text-end m-0 p-0'><span>67</span></div>
-                </div>
-                <div className='tituloCategoriaRankingDirectivo'><h3>- CATEGORIA B1 -</h3></div>
-                <div className='row jugadorB1RankingDirectivo mx-auto m-0 align-items-center'>
-                    <div className='puestoBRankingTablaDirectivo puestoTamañoRankingTablaDirectivo col-2 text-start m-0 p-0'><span>7</span></div>
-                    <div className='nombreBRankingTablaDirectivo nombreTamañoRankingTablaDirectivo col-8 text-start m-0 p-0'><span>Josefina Hübner</span></div>
-                    <div className='puntosBRankingTablaDirectivo puntosTamañoRankingTablaDirectivo col-2 text-end m-0 p-0'><span>66</span></div>
-                </div>
-                <div className='row jugadorB1RankingDirectivo mx-auto m-0 align-items-center'>
-                    <div className='puestoBRankingTablaDirectivo puestoTamañoRankingTablaDirectivo col-2 text-start m-0 p-0'><span>8</span></div>
-                    <div className='nombreBRankingTablaDirectivo nombreTamañoRankingTablaDirectivo col-8 text-start m-0 p-0'><span>Cecilia Conti</span></div>
-                    <div className='puntosBRankingTablaDirectivo puntosTamañoRankingTablaDirectivo col-2 text-end m-0 p-0'><span>65</span></div>
-                </div>
-                <div className='row jugadorB1RankingDirectivo mx-auto m-0 align-items-center'>
-                    <div className='puestoBRankingTablaDirectivo puestoTamañoRankingTablaDirectivo col-2 text-start m-0 p-0'><span>9</span></div>
-                    <div className='nombreBRankingTablaDirectivo nombreTamañoRankingTablaDirectivo col-8 text-start m-0 p-0'><span>Ezze Bermudez</span></div>
-                    <div className='puntosBRankingTablaDirectivo puntosTamañoRankingTablaDirectivo col-2 text-end m-0 p-0'><span>65</span></div>
-                </div>
-                <div className='row jugadorB1RankingDirectivo mx-auto m-0 align-items-center'>
-                    <div className='puestoBRankingTablaDirectivo puestoTamañoRankingTablaDirectivo col-2 text-start m-0 p-0'><span>10</span></div>
-                    <div className='nombreBRankingTablaDirectivo nombreTamañoRankingTablaDirectivo col-8 text-start m-0 p-0'><span>Cintia Murad</span></div>
-                    <div className='puntosBRankingTablaDirectivo puntosTamañoRankingTablaDirectivo col-2 text-end m-0 p-0'><span>64</span></div>
-                </div>
-                <div className='row jugadorB1RankingDirectivo mx-auto m-0 align-items-center'>
-                    <div className='puestoBRankingTablaDirectivo puestoTamañoRankingTablaDirectivo col-2 text-start m-0 p-0'><span>11</span></div>
-                    <div className='nombreBRankingTablaDirectivo nombreTamañoRankingTablaDirectivo col-8 text-start m-0 p-0'><span>Gaston Hansen</span></div>
-                    <div className='puntosBRankingTablaDirectivo puntosTamañoRankingTablaDirectivo col-2 text-end m-0 p-0'><span>64</span></div>
-                </div>
-                <div className='row jugadorB1RankingDirectivo mx-auto m-0 align-items-center'>
-                    <div className='puestoBRankingTablaDirectivo puestoTamañoRankingTablaDirectivo col-2 text-start m-0 p-0'><span>12</span></div>
-                    <div className='nombreBRankingTablaDirectivo nombreTamañoRankingTablaDirectivo col-8 text-start m-0 p-0'><span>Nicolás Darelli</span></div>
-                    <div className='puntosBRankingTablaDirectivo puntosTamañoRankingTablaDirectivo col-2 text-end m-0 p-0'><span>63</span></div>
-                </div>
-                <div className='row jugadorB1RankingDirectivo mx-auto m-0 align-items-center'>
-                    <div className='puestoBRankingTablaDirectivo puestoTamañoRankingTablaDirectivo col-2 text-start m-0 p-0'><span>13</span></div>
-                    <div className='nombreBRankingTablaDirectivo nombreTamañoRankingTablaDirectivo col-8 text-start m-0 p-0'><span>Mariano Ghiotto</span></div>
-                    <div className='puntosBRankingTablaDirectivo puntosTamañoRankingTablaDirectivo col-2 text-end m-0 p-0'><span>63</span></div>
-                </div>
-                <div className='row jugadorB1RankingDirectivo mx-auto m-0 align-items-center'>
-                    <div className='puestoBRankingTablaDirectivo puestoTamañoRankingTablaDirectivo col-2 text-start m-0 p-0'><span>14</span></div>
-                    <div className='nombreBRankingTablaDirectivo nombreTamañoRankingTablaDirectivo col-8 text-start m-0 p-0'><span>Bruno De Faveri</span></div>
-                    <div className='puntosBRankingTablaDirectivo puntosTamañoRankingTablaDirectivo col-2 text-end m-0 p-0'><span>62</span></div>
-                </div>
-                <div className='row jugadorB1RankingDirectivo mx-auto m-0 align-items-center'>
-                    <div className='puestoBRankingTablaDirectivo puestoTamañoRankingTablaDirectivo col-2 text-start m-0 p-0'><span>15</span></div>
-                    <div className='nombreBRankingTablaDirectivo nombreTamañoRankingTablaDirectivo col-8 text-start m-0 p-0'><span>Hugo Bazan</span></div>
-                    <div className='puntosBRankingTablaDirectivo puntosTamañoRankingTablaDirectivo col-2 text-end m-0 p-0'><span>61</span></div>
-                </div>
-                <div className='row jugadorB1RankingDirectivo mx-auto m-0 align-items-center'>
-                    <div className='puestoBRankingTablaDirectivo puestoTamañoRankingTablaDirectivo col-2 text-start m-0 p-0'><span>16</span></div>
-                    <div className='nombreBRankingTablaDirectivo nombreTamañoRankingTablaDirectivo col-8 text-start m-0 p-0'><span>Simón Poliche</span></div>
-                    <div className='puntosBRankingTablaDirectivo puntosTamañoRankingTablaDirectivo col-2 text-end m-0 p-0'><span>56</span></div>
-                </div>
-                <div className='row jugadorB1RankingDirectivo mx-auto m-0 align-items-center'>
-                    <div className='puestoBRankingTablaDirectivo puestoTamañoRankingTablaDirectivo col-2 text-start m-0 p-0'><span>17</span></div>
-                    <div className='nombreBRankingTablaDirectivo nombreTamañoRankingTablaDirectivo col-8 text-start m-0 p-0'><span>Lucas Gomez</span></div>
-                    <div className='puntosBRankingTablaDirectivo puntosTamañoRankingTablaDirectivo col-2 text-end m-0 p-0'><span>55</span></div>
-                </div>
-                <div className='row jugadorB1RankingDirectivo mx-auto m-0 align-items-center'>
-                    <div className='puestoBRankingTablaDirectivo puestoTamañoRankingTablaDirectivo col-2 text-start m-0 p-0'><span>18</span></div>
-                    <div className='nombreBRankingTablaDirectivo nombreTamañoRankingTablaDirectivo col-8 text-start m-0 p-0'><span>Luz Leiva</span></div>
-                    <div className='puntosBRankingTablaDirectivo puntosTamañoRankingTablaDirectivo col-2 text-end m-0 p-0'><span>53</span></div>
-                </div>
-                <div className='row jugadorB1RankingDirectivo mx-auto m-0 align-items-center'>
-                    <div className='puestoBRankingTablaDirectivo puestoTamañoRankingTablaDirectivo col-2 text-start m-0 p-0'><span>19</span></div>
-                    <div className='nombreBRankingTablaDirectivo nombreTamañoRankingTablaDirectivo col-8 text-start m-0 p-0'><span>Pedro Silvano</span></div>
-                    <div className='puntosBRankingTablaDirectivo puntosTamañoRankingTablaDirectivo col-2 text-end m-0 p-0'><span>53</span></div>
-                </div>
-                <div className='row jugadorB1RankingDirectivo mx-auto m-0 align-items-center'>
-                    <div className='puestoBRankingTablaDirectivo puestoTamañoRankingTablaDirectivo col-2 text-start m-0 p-0'><span>20</span></div>
-                    <div className='nombreBRankingTablaDirectivo nombreTamañoRankingTablaDirectivo col-8 text-start m-0 p-0'><span>Darío Alzogaray</span></div>
-                    <div className='puntosBRankingTablaDirectivo puntosTamañoRankingTablaDirectivo col-2 text-end m-0 p-0'><span>53</span></div>
-                </div>
-                <div className='row jugadorB1RankingDirectivo mx-auto m-0 align-items-center'>
-                    <div className='puestoBRankingTablaDirectivo puestoTamañoRankingTablaDirectivo col-2 text-start m-0 p-0'><span>21</span></div>
-                    <div className='nombreBRankingTablaDirectivo nombreTamañoRankingTablaDirectivo col-8 text-start m-0 p-0'><span>Josefina</span></div>
-                    <div className='puntosBRankingTablaDirectivo puntosTamañoRankingTablaDirectivo col-2 text-end m-0 p-0'><span>51</span></div>
-                </div>
-                <div className='tituloCategoriaRankingDirectivo'><h3>- CATEGORIA B2 -</h3></div>
-                <div className='row jugadorB2RankingDirectivo mx-auto m-0 align-items-center'>
-                    <div className='puestoBRankingTablaDirectivo puestoTamañoRankingTablaDirectivo col-2 text-start m-0 p-0'><span>22</span></div>
-                    <div className='nombreBRankingTablaDirectivo nombreTamañoRankingTablaDirectivo col-8 text-start m-0 p-0'><span>Verónica Picco</span></div>
-                    <div className='puntosBRankingTablaDirectivo puntosTamañoRankingTablaDirectivo col-2 text-end m-0 p-0'><span>50</span></div>
-                </div>
-                <div className='row jugadorB2RankingDirectivo mx-auto m-0 align-items-center'>
-                    <div className='puestoBRankingTablaDirectivo puestoTamañoRankingTablaDirectivo col-2 text-start m-0 p-0'><span>23</span></div>
-                    <div className='nombreBRankingTablaDirectivo nombreTamañoRankingTablaDirectivo col-8 text-start m-0 p-0'><span>Laura Bitar</span></div>
-                    <div className='puntosBRankingTablaDirectivo puntosTamañoRankingTablaDirectivo col-2 text-end m-0 p-0'><span>48</span></div>
-                </div>
-                <div className='row jugadorB2RankingDirectivo mx-auto m-0 align-items-center'>
-                    <div className='puestoBRankingTablaDirectivo puestoTamañoRankingTablaDirectivo col-2 text-start m-0 p-0'><span>24</span></div>
-                    <div className='nombreBRankingTablaDirectivo nombreTamañoRankingTablaDirectivo col-8 text-start m-0 p-0'><span>Erik Novello</span></div>
-                    <div className='puntosBRankingTablaDirectivo puntosTamañoRankingTablaDirectivo col-2 text-end m-0 p-0'><span>46</span></div>
-                </div>
-                <div className='row jugadorB2RankingDirectivo mx-auto m-0 align-items-center'>
-                    <div className='puestoBRankingTablaDirectivo puestoTamañoRankingTablaDirectivo col-2 text-start m-0 p-0'><span>25</span></div>
-                    <div className='nombreBRankingTablaDirectivo nombreTamañoRankingTablaDirectivo col-8 text-start m-0 p-0'><span>Tere Vidal</span></div>
-                    <div className='puntosBRankingTablaDirectivo puntosTamañoRankingTablaDirectivo col-2 text-end m-0 p-0'><span>45</span></div>
-                </div>
-                <div className='row jugadorB2RankingDirectivo mx-auto m-0 align-items-center'>
-                    <div className='puestoBRankingTablaDirectivo puestoTamañoRankingTablaDirectivo col-2 text-start m-0 p-0'><span>26</span></div>
-                    <div className='nombreBRankingTablaDirectivo nombreTamañoRankingTablaDirectivo col-8 text-start m-0 p-0'><span>Constanza Proserpio</span></div>
-                    <div className='puntosBRankingTablaDirectivo puntosTamañoRankingTablaDirectivo col-2 text-end m-0 p-0'><span>44</span></div>
-                </div>
-                <div className='row jugadorB2RankingDirectivo mx-auto m-0 align-items-center'>
-                    <div className='puestoBRankingTablaDirectivo puestoTamañoRankingTablaDirectivo col-2 text-start m-0 p-0'><span>27</span></div>
-                    <div className='nombreBRankingTablaDirectivo nombreTamañoRankingTablaDirectivo col-8 text-start m-0 p-0'><span>Pablo Martín Frias</span></div>
-                    <div className='puntosBRankingTablaDirectivo puntosTamañoRankingTablaDirectivo col-2 text-end m-0 p-0'><span>44</span></div>
-                </div>
-                <div className='row jugadorB2RankingDirectivo mx-auto m-0 align-items-center'>
-                    <div className='puestoBRankingTablaDirectivo puestoTamañoRankingTablaDirectivo col-2 text-start m-0 p-0'><span>28</span></div>
-                    <div className='nombreBRankingTablaDirectivo nombreTamañoRankingTablaDirectivo col-8 text-start m-0 p-0'><span>Eugenia Caceres</span></div>
-                    <div className='puntosBRankingTablaDirectivo puntosTamañoRankingTablaDirectivo col-2 text-end m-0 p-0'><span>43</span></div>
-                </div>
-                <div className='row jugadorB2RankingDirectivo mx-auto m-0 align-items-center'>
-                    <div className='puestoBRankingTablaDirectivo puestoTamañoRankingTablaDirectivo col-2 text-start m-0 p-0'><span>29</span></div>
-                    <div className='nombreBRankingTablaDirectivo nombreTamañoRankingTablaDirectivo col-8 text-start m-0 p-0'><span>Rodrigo Lizondo</span></div>
-                    <div className='puntosBRankingTablaDirectivo puntosTamañoRankingTablaDirectivo col-2 text-end m-0 p-0'><span>41</span></div>
-                </div>
-                <div className='row jugadorB2RankingDirectivo mx-auto m-0 align-items-center'>
-                    <div className='puestoBRankingTablaDirectivo puestoTamañoRankingTablaDirectivo col-2 text-start m-0 p-0'><span>30</span></div>
-                    <div className='nombreBRankingTablaDirectivo nombreTamañoRankingTablaDirectivo col-8 text-start m-0 p-0'><span>Andrea Serrano</span></div>
-                    <div className='puntosBRankingTablaDirectivo puntosTamañoRankingTablaDirectivo col-2 text-end m-0 p-0'><span>41</span></div>
-                </div>
-                <div className='row jugadorB2RankingDirectivo mx-auto m-0 align-items-center'>
-                    <div className='puestoBRankingTablaDirectivo puestoTamañoRankingTablaDirectivo col-2 text-start m-0 p-0'><span>31</span></div>
-                    <div className='nombreBRankingTablaDirectivo nombreTamañoRankingTablaDirectivo col-8 text-start m-0 p-0'><span>Carolina Chehin</span></div>
-                    <div className='puntosBRankingTablaDirectivo puntosTamañoRankingTablaDirectivo col-2 text-end m-0 p-0'><span>37</span></div>
-                </div>
-                <div className='row jugadorB2RankingDirectivo mx-auto m-0 align-items-center'>
-                    <div className='puestoBRankingTablaDirectivo puestoTamañoRankingTablaDirectivo col-2 text-start m-0 p-0'><span>32</span></div>
-                    <div className='nombreBRankingTablaDirectivo nombreTamañoRankingTablaDirectivo col-8 text-start m-0 p-0'><span>Celia Diaz</span></div>
-                    <div className='puntosBRankingTablaDirectivo puntosTamañoRankingTablaDirectivo col-2 text-end m-0 p-0'><span>34</span></div>
-                </div>
-                <div className='row jugadorB2RankingDirectivo mx-auto m-0 align-items-center'>
-                    <div className='puestoBRankingTablaDirectivo puestoTamañoRankingTablaDirectivo col-2 text-start m-0 p-0'><span>33</span></div>
-                    <div className='nombreBRankingTablaDirectivo nombreTamañoRankingTablaDirectivo col-8 text-start m-0 p-0'><span>José Bazan</span></div>
-                    <div className='puntosBRankingTablaDirectivo puntosTamañoRankingTablaDirectivo col-2 text-end m-0 p-0'><span>34</span></div>
-                </div>
-                <div className='tituloCategoriaRankingDirectivo'><h3>- CATEGORIA C -</h3></div>
-                <div className='row jugadorCRankingDirectivo mx-auto m-0 align-items-center'>
-                    <div className='puestoBRankingTablaDirectivo puestoTamañoRankingTablaDirectivo col-2 text-start m-0 p-0'><span>34</span></div>
-                    <div className='nombreBRankingTablaDirectivo nombreTamañoRankingTablaDirectivo col-8 text-start m-0 p-0'><span>Alejandro Diaz</span></div>
-                    <div className='puntosBRankingTablaDirectivo puntosTamañoRankingTablaDirectivo col-2 text-end m-0 p-0'><span>32</span></div>
-                </div>
-                <div className='row jugadorCRankingDirectivo mx-auto m-0 align-items-center'>
-                    <div className='puestoBRankingTablaDirectivo puestoTamañoRankingTablaDirectivo col-2 text-start m-0 p-0'><span>35</span></div>
-                    <div className='nombreBRankingTablaDirectivo nombreTamañoRankingTablaDirectivo col-8 text-start m-0 p-0'><span>Jorge Delaporte</span></div>
-                    <div className='puntosBRankingTablaDirectivo puntosTamañoRankingTablaDirectivo col-2 text-end m-0 p-0'><span>29</span></div>
-                </div>
-                <div className='row jugadorCRankingDirectivo mx-auto m-0 align-items-center'>
-                    <div className='puestoBRankingTablaDirectivo puestoTamañoRankingTablaDirectivo col-2 text-start m-0 p-0'><span>36</span></div>
-                    <div className='nombreBRankingTablaDirectivo nombreTamañoRankingTablaDirectivo col-8 text-start m-0 p-0'><span>Lucia Alvarez Cruz</span></div>
-                    <div className='puntosBRankingTablaDirectivo puntosTamañoRankingTablaDirectivo col-2 text-end m-0 p-0'><span>27</span></div>
-                </div>
-                <div className='row jugadorCRankingDirectivo mx-auto m-0 align-items-center'>
-                    <div className='puestoBRankingTablaDirectivo puestoTamañoRankingTablaDirectivo col-2 text-start m-0 p-0'><span>37</span></div>
-                    <div className='nombreBRankingTablaDirectivo nombreTamañoRankingTablaDirectivo col-8 text-start m-0 p-0'><span>Juan Pincheira</span></div>
-                    <div className='puntosBRankingTablaDirectivo puntosTamañoRankingTablaDirectivo col-2 text-end m-0 p-0'><span>26</span></div>
-                </div>        
+                {
+                    usersCategoriaA.length !== 0 ? (
+                        <>
+                        <div className='tituloCategoriaRankingDirectivo'>
+                            <h3>- CATEGORÍA A -</h3>
+                        </div>
+                        {usersCategoriaA.map((user) => {
+                            const globalIndex = users.findIndex((dataUser) => dataUser._id === user._id);
+                            return (
+                            <div className='row jugadorARankingDirectivo mx-auto m-0 align-items-center' key={user._id}>
+                                <div className='puestoARankingTablaDirectivo puestoTamañoRankingTablaDirectivo col-2 text-start m-0 p-0'>
+                                <span>{globalIndex + 1}</span>
+                                </div>
+                                <div className='nombreARankingTablaDirectivo nombreTamañoRankingTablaDirectivo col-8 text-start m-0 p-0 py-2 pe-1'>
+                                <span>{user.name} {user.surname}</span>
+                                </div>
+                                <div className='puntosARankingTablaDirectivo puntosTamañoRankingTablaDirectivo col-2 text-end m-0 p-0'>
+                                <span>{user.dominioDirectivoTestInicial.totalScore}</span>
+                                </div>
+                            </div>
+                            );
+                        })}
+                        </>
+                    ) : (
+                        <></>
+                    )
+                }
+                {
+                    usersCategoriaB1.length !== 0 ? 
+                    <>
+                    <div className='tituloCategoriaRankingDirectivo'>
+                        <h3>- CATEGORÍA B1 -</h3>
+                    </div>
+                    {usersCategoriaB1.map((user) => {
+                        const globalIndex = users.findIndex((dataUser) => dataUser._id === user._id);
+                        return (
+                        <div className='row jugadorBCRankingDirectivo mx-auto m-0 align-items-center' key={user._id}>
+                            <div className='puestoBRankingTablaDirectivo puestoTamañoRankingTablaDirectivo col-2 text-start m-0 p-0'>
+                                <span>{globalIndex + 1}</span>
+                            </div>
+                            <div className='nombreBRankingTablaDirectivo nombreTamañoRankingTablaDirectivo col-8 text-start m-0 p-0'>
+                                <span>{user.name} {user.surname}</span>
+                            </div>
+                            <div className='puntosBRankingTablaDirectivo puntosTamañoRankingTablaDirectivo col-2 text-end m-0 p-0'>
+                                <span>{user.dominioDirectivoTestInicial.totalScore}</span>
+                            </div>
+                        </div>
+                        );
+                    })}
+                    </> : <></>
+                }
+                {
+                    usersCategoriaB2.length !== 0 ? 
+                    <>
+                    <div className='tituloCategoriaRankingDirectivo'>
+                        <h3>- CATEGORÍA B2 -</h3>
+                    </div>
+                    {usersCategoriaB2.map((user) => {
+                        const globalIndex = users.findIndex((dataUser) => dataUser._id === user._id);
+                        return (
+                        <div className='row jugadorBCRankingDirectivo mx-auto m-0 align-items-center' key={user._id}>
+                            <div className='puestoBRankingTablaDirectivo puestoTamañoRankingTablaDirectivo col-2 text-start m-0 p-0'>
+                                <span>{globalIndex + 1}</span>
+                            </div>
+                            <div className='nombreBRankingTablaDirectivo nombreTamañoRankingTablaDirectivo col-8 text-start m-0 p-0'>
+                                <span>{user.name} {user.surname}</span>
+                            </div>
+                            <div className='puntosBRankingTablaDirectivo puntosTamañoRankingTablaDirectivo col-2 text-end m-0 p-0'>
+                                <span>{user.dominioDirectivoTestInicial.totalScore}</span>
+                            </div>
+                        </div>
+                        );
+                    })}
+                    </> : <></>
+                }
+                {
+                    usersCategoriaC.length !== 0 ? 
+                    <>
+                    <div className='tituloCategoriaRankingDirectivo'>
+                        <h3>- CATEGORÍA C -</h3>
+                    </div>
+                    {usersCategoriaC.map((user) => {
+                        const globalIndex = users.findIndex((dataUser) => dataUser._id === user._id);
+                        return (
+                        <div className='row jugadorBCRankingDirectivo mx-auto m-0 align-items-center' key={user._id}>
+                            <div className='puestoBRankingTablaDirectivo puestoTamañoRankingTablaDirectivo col-2 text-start m-0 p-0'>
+                                <span>{globalIndex + 1}</span>
+                            </div>
+                            <div className='nombreBRankingTablaDirectivo nombreTamañoRankingTablaDirectivo col-8 text-start m-0 p-0'>
+                                <span>{user.name} {user.surname}</span>
+                            </div>
+                            <div className='puntosBRankingTablaDirectivo puntosTamañoRankingTablaDirectivo col-2 text-end m-0 p-0'>
+                                <span>{user.dominioDirectivoTestInicial.totalScore}</span>
+                            </div>
+                        </div>
+                        );
+                    })}
+                    </> : <></>
+                }
                 <div className='parteInferiorRankingDirectivo'>
                     <span>MEJORA TU PUNTAJE Y ALCANZA UN LUGAR MAS ALTO</span>
                 </div>
