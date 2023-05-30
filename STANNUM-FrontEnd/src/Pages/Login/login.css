@@ -2,7 +2,6 @@
     min-height: 100vh;   
     max-height: 100vh;   
     object-fit: cover;
-
 }
 
 .stannumAcademyTituloLogin{
@@ -53,11 +52,8 @@
         display: none;
     }
     .divSolicitarAcceso{
-        position: absolute;
-        bottom: 40px;
+        margin-top: 2rem;
         justify-content: center;
-        right: 0;
-        left: 0;
         flex-direction: column;
         gap: 0.4rem;
     }
@@ -111,11 +107,8 @@
         display: none;
     }
     .divSolicitarAcceso{
-        position: absolute;
-        bottom: 50px;
+        margin-top: 2rem;
         justify-content: center;
-        right: 0;
-        left: 0;
         gap: 1rem;
     }
     .textoNoTienesUnaCuenta{
