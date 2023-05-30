@@ -145,6 +145,8 @@ function Perfil() {
     // points is the actual points value.
     // maxPoints is the maximum points value (100).
 
+    console.log(user);
+
     return (
         <>
             <div className="bg"></div>
@@ -274,7 +276,9 @@ function Perfil() {
                         <div className='datosJugadorSeccion datosJugadorSeccion4'>
                             <div className='NombreSeccionDatosJugador'>Edad</div>
                             <div className='InfoSeccionDatosJugador'>
-                                {age} años
+                                {
+                                    user.birthdate !== "Undefined" ? <>{age} años</> : "-"
+                                }
                             </div>
                         </div>
                         <div className='datosJugadorSeccion datosJugadorSeccion5'>
