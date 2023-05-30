@@ -3,6 +3,7 @@ import './login.css'
 import imagenLogin from '../../assets/Login.png'
 import logoStannum from '../../assets/LogoChico.png'
 import FormularioLogin from '../../Components/FormularioLogin/FormularioLogin'
+import { Helmet, HelmetProvider } from 'react-helmet-async'
 
 function Login() {
 
@@ -10,6 +11,15 @@ function Login() {
 
     return (
     <>
+        <HelmetProvider>        
+            <Helmet>
+                <meta name="description" content="Iniciar sesión en STANNUM Academy" />
+                <meta name="keywords" content="stannum, academia, academy, iniciar, sesión, login" />
+                <meta name="subject" content="Iniciar sesión" />
+                <meta name="theme-color" content="#3A3A3A" />
+                <title>Iniciar sesión | STANNUM Academy</title>
+            </Helmet>
+        </HelmetProvider>
         <div className='row w-100 m-0 p-0 align-items-stretch divLoginPrincipal'>
             <div className='col-6 p-0 imagenLogin'>
                 <img src={imagenLogin} alt="Iniciar Sesion" className='w-100'/>

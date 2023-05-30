@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from "axios";
 import Cookies from 'js-cookie'
+import { Helmet, HelmetProvider } from 'react-helmet-async'
 
 function IntroduccionTestDirectivo() {
   
@@ -39,6 +40,15 @@ function IntroduccionTestDirectivo() {
 
   return (
     <>
+      <HelmetProvider>
+        <Helmet>
+          <meta name="description" content="Introducción a test Dominio 1: Directivo para jugador en STANNUM Academy" />
+          <meta name="keywords" content="stannum, academia, academy, test, dominio, directivo, respuestas, puntos, sección, preguntas, conocimiento, prueba, examen" />
+          <meta name="subject" content="Introducción a test Dominio 1: Directivo" />
+          <meta name="theme-color" content="#3A3A3A" />
+          <title>Introducción - Test directivo | STANNUM Academy</title>
+        </Helmet>
+      </HelmetProvider>
       <div className="bg"></div>
       <div className='d-flex flex-column align-items-center'>
           <div className='text-center mt-5 tituloDominio1Test'><h1>Test de <span>Dominio 1</span></h1></div>

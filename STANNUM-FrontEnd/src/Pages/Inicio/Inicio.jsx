@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import axios from "axios";
 import ModalEditarPrimeraVez from '../../Components/ModalEditarPrimeraVez/ModalEditarPrimeraVez'
 import Cookies from 'js-cookie'
+import { Helmet, HelmetProvider } from 'react-helmet-async';
 import './inicio.css'
 
 function Inicio() {
@@ -21,6 +22,15 @@ function Inicio() {
 
   return (
     <>
+      <HelmetProvider>
+        <Helmet>
+          <meta name="description" content="Página principal STANNUM Academy" />
+          <meta name="keywords" content="stannum, academia, academy, página, principal, inicio" />
+          <meta name="subject" content="Inicio" />
+          <meta name="theme-color" content="#3A3A3A" />
+          <title>Inicio | STANNUM Academy</title>
+        </Helmet>
+      </HelmetProvider>
       <div className="bg"></div>
       <div className='d-flex flex-column align-items-center pb-5'>
         <div className='text-center tituloBienvenido'><h1>¡Bienvenido a</h1> <span>STANNUM Academy!</span></div>

@@ -3,6 +3,7 @@ import LogoChico from '../../../assets/LogoChico.png'
 import { useParams } from 'react-router-dom';
 import axios from "axios";
 import { useForm } from "react-hook-form";
+import { Helmet, HelmetProvider } from 'react-helmet-async'
 
 function RecuperarContraseñaSeccion2() {
 
@@ -39,6 +40,15 @@ function RecuperarContraseñaSeccion2() {
 
     return (
       <>
+        <HelmetProvider>
+          <Helmet>
+            <meta name="description" content="Nueva contraseña en STANNUM Academy" />
+            <meta name="keywords" content="stannum, academia, academy, iniciar, sesión, login, olvide, recuperar, contraseña, nueva, usuario, olvidar" />
+            <meta name="subject" content="Nueva contraseña" />
+            <meta name="theme-color" content="#3A3A3A" />
+            <title>Nueva contraseña | STANNUM Academy</title>
+          </Helmet>
+        </HelmetProvider>
         <div className='cajaVolverAlInicioRecuperarContraseña'>
           <div className='volverAlInicioLoginRecuperarContraseña'>
             <a href="/Iniciar-sesion" className='text-decoration-none'>

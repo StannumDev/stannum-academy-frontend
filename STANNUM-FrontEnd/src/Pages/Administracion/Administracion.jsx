@@ -4,6 +4,7 @@ import Cookies from 'js-cookie'
 import './administracion.css'
 import FilaUsuarioAdministracion from '../../Components/FilaUsuarioAdministracion/FilaUsuarioAdministracion';
 import ModalCrearUsuario from '../../Components/ModalCrearUsuario/ModalCrearUsuario';
+import { Helmet, HelmetProvider } from 'react-helmet-async'
 
 function Administracion() {
 
@@ -54,6 +55,15 @@ function Administracion() {
 
   return (
     <>
+      <HelmetProvider>
+        <Helmet>
+          <meta name="description" content="Administración STANNUM Academy" />
+          <meta name="keywords" content="stannum, academia, academy, administracion, jugadores, admin, staff" />
+          <meta name="subject" content="Administración" />
+          <meta name="theme-color" content="#3A3A3A" />
+          <title>Administración | STANNUM Academy</title>
+        </Helmet>
+      </HelmetProvider>
       <div className='tituloAdministracion'><h1>ADMINISTRACIÓN</h1></div>
       <div className='parrafoBienvenidaCentro text-center'><p>Información de los <b>jugadores</b>.</p></div>
       <div className='d-flex justify-content-end divBotonCrearUsuarioAdmin'>

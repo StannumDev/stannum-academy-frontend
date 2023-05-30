@@ -4,6 +4,7 @@ import Cookies from 'js-cookie'
 import './editarPerfil.css'
 import axios from "axios";
 import FotoDePerfil from '../../assets/UserDefecto.png'
+import { Helmet, HelmetProvider } from 'react-helmet-async'
 
 function EditarPerfil() {
 
@@ -121,6 +122,15 @@ function EditarPerfil() {
 
     return (
     <>
+        <HelmetProvider>
+            <Helmet>
+                <meta name="description" content="Editar mi perfil STANNUM Academy" />
+                <meta name="keywords" content="stannum, academia, academy, editar, perfil, jugadores, usuario, foto, nombre, datos" />
+                <meta name="subject" content="Editar mi perfil" />
+                <meta name="theme-color" content="#3A3A3A" />
+                <title>Editar mi perfil | STANNUM Academy</title>
+            </Helmet>
+        </HelmetProvider>
         <div className="bg"></div>
         <div className='tituloPerfil'><h1>EDITAR MI PERFIL</h1></div>
         <form onSubmit={handleSubmit(onSubmit)}>

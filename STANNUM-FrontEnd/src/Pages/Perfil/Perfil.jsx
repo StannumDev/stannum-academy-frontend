@@ -6,6 +6,7 @@ import { useParams } from 'react-router-dom';
 import FotoDePerfil from '../../assets/UserDefecto.png'
 import SVGEscudo from '../../assets/escudoPerfilSVG.svg'
 import Hexagono from '../../assets/HexagonoPerfil.png'
+import { Helmet, HelmetProvider } from 'react-helmet-async'
 
 function Perfil() {
 
@@ -144,11 +145,29 @@ function Perfil() {
     // topMax is the desired top position when points are at the maximum (10%).
     // points is the actual points value.
     // maxPoints is the maximum points value (100).
-
-    console.log(user);
-
     return (
         <>
+            <HelmetProvider>
+                <Helmet>
+                    <meta name="description" content="Perfil de jugador STANNUM Academy" />
+                    <meta name="keywords" content="stannum, academia, academy, perfil, jugadores, usuario, jugador, " />
+                    <meta name="subject" content="Administración" />
+                    <meta name="theme-color" content="#3A3A3A" />               
+                </Helmet>
+                {user && (
+                    <Helmet>
+                        <title>
+                        {user.name !== "Undefined" && user.surname !== "Undefined" && user.name !== undefined
+                            ? `${user.name} ${user.surname} - Perfil | STANNUM Academy`
+                            : user.name !== "Undefined" && user.name !== undefined
+                            ? `${user.name} - Perfil | STANNUM Academy`
+                            : user.surname !== "Undefined" && user.surname !== undefined
+                            ? `${user.surname} - Perfil | STANNUM Academy`
+                            : "Perfil | STANNUM Academy"}
+                        </title>
+                    </Helmet>
+                )}
+            </HelmetProvider>
             <div className="bg"></div>
             <div className='tituloPerfil'><h1>FICHA DEL ENTRENADO</h1></div>
             <div className='parrafoPerfil'><p>Teniendo en cuenta los resultados de los diferentes test, generamos la siguiente plantilla. A medida que se completen los test, esta se irá completando.</p></div>

@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import axios from "axios";
 import Cookies from 'js-cookie'
+import { Helmet, HelmetProvider } from 'react-helmet-async'
 import './rankingDirectivo.css'
 
 function RankingDirectivo() {
@@ -69,6 +70,15 @@ function RankingDirectivo() {
 
     return (
         <>
+            <HelmetProvider>
+                <Helmet>
+                    <meta name="description" content="Ranking del Dominio 1: Directivo en STANNUM Academy" />
+                    <meta name="keywords" content="stannum, academia, academy, ranking, usuarios, jugadores, dominio, 1, directivo, puntos, jugador, puesto" />
+                    <meta name="subject" content="Ranking Dominio 1: Directivo" />
+                    <meta name="theme-color" content="#3A3A3A" />
+                    <title>Directivo - Ranking | STANNUM Academy</title>
+                </Helmet>
+            </HelmetProvider>
             <div className="bg"></div>
             <div className='tituloRankingDirectivo'><h1>RANKING DE DOMINIOS</h1></div>
             <div className='subtituloRankingDirectivo'><h2>DOMINIO 1 - DIRECTIVO</h2></div>

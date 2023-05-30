@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Cookies from 'js-cookie'
 import axios from "axios";
 import { useForm } from "react-hook-form";
+import { Helmet, HelmetProvider } from 'react-helmet-async'
 import './testDirectivoSeccion.css'
 
 function TestDirectivoSeccion2() {
@@ -59,6 +60,15 @@ function TestDirectivoSeccion2() {
 
   return (
     <>
+      <HelmetProvider>
+        <Helmet>
+          <meta name="description" content="Sección 2 test Dominio 1: Directivo para jugador en STANNUM Academy" />
+          <meta name="keywords" content="stannum, academia, academy, test, dominio, directivo, respuestas, puntos, sección, preguntas, conocimiento, prueba, examen" />
+          <meta name="subject" content="Sección 2 test Dominio 1: Directivo" />
+          <meta name="theme-color" content="#3A3A3A" />
+          <title>Sección 2 - Test directivo | STANNUM Academy</title>
+        </Helmet>
+      </HelmetProvider>
       <div className="bg"></div>
       <div className='contenedorInicioTestDominioSeccion1'>
         <div className='text-center tituloDominio1Test'><h1>Test de <span>Dominio 1</span></h1></div>
@@ -536,8 +546,7 @@ function TestDirectivoSeccion2() {
             <div className='textoPregunta1-10 segundoTexto1-10'>Avanzado<b>10 años + Master</b></div>
           </div>
           {errors.question12 && <div className="error">Seleccione una respuesta.</div>}
-        </div>   
-        
+        </div>           
         <div className="contenedorPreguntaTestDominio">
           <div className="tituloPreguntaDominio">Pregunta 13</div>
           <div className="preguntaDominio">¿Cuánto sabes sobre <b>marketing</b>?</div>
@@ -558,7 +567,6 @@ function TestDirectivoSeccion2() {
           </div>
           {errors.question13 && <div className="error">Seleccione una respuesta.</div>}
         </div>   
-        
         <div className="contenedorPreguntaTestDominio">
           <div className="tituloPreguntaDominio">Pregunta 14</div>
           <div className="preguntaDominio">¿Cuánto sabes sobre <b>ventas</b>?</div>
@@ -578,8 +586,7 @@ function TestDirectivoSeccion2() {
             <div className='textoPregunta1-10 segundoTexto1-10'>Avanzado<b>10 años + Posgrado</b></div>
           </div>
           {errors.question14 && <div className="error">Seleccione una respuesta.</div>}
-        </div>   
-        
+        </div>           
         <div className="contenedorPreguntaTestDominio">
           <div className="tituloPreguntaDominio">Pregunta 15</div>
           <div className="preguntaDominio">¿Cuánto sabes sobre <b>gestión del talento</b>?</div>
@@ -599,8 +606,7 @@ function TestDirectivoSeccion2() {
             <div className='textoPregunta1-10 segundoTexto1-10'>Avanzado<b>10 años + Posgrado</b></div>
           </div>
           {errors.question15 && <div className="error">Seleccione una respuesta.</div>}
-        </div>   
-        
+        </div>           
         <div className="contenedorPreguntaTestDominio">
           <div className="tituloPreguntaDominio">Pregunta 16</div>
           <div className="preguntaDominio">¿Cuánto sabes sobre <b>finanzas</b>?</div>
@@ -621,7 +627,6 @@ function TestDirectivoSeccion2() {
           </div>
           {errors.question16 && <div className="error">Seleccione una respuesta.</div>}
         </div>   
-
         <div className='cajaBotonEnviarRespuestasDominio'>
           <button type="submit">
             {loading ? (

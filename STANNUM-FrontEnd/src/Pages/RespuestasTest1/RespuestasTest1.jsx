@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import Cookies from 'js-cookie'
 import axios from "axios";
+import { Helmet, HelmetProvider } from 'react-helmet-async'
 import './respuestasTest1.css'
 
 function RespuestasTest1() {
@@ -55,6 +56,15 @@ function RespuestasTest1() {
         return (
 
         <>
+            <HelmetProvider>
+                <Helmet>
+                    <meta name="description" content="Respuestas del test Dominio 1: Directivo de jugador en STANNUM Academy" />
+                    <meta name="keywords" content="stannum, academia, academy, respuestas, usuario, dominio, directivo, jugador, puntos" />
+                    <meta name="subject" content="Respuestas del test Dominio 1: Directivo" />
+                    <meta name="theme-color" content="#3A3A3A" />
+                    <title>Respuestas | STANNUM Academy</title>
+                </Helmet>
+            </HelmetProvider>
             <div className='tituloAdministracion'><h1>RESULTADOS</h1></div>
             <div className='parrafoBienvenidaCentro text-center'><p>Estas viendo los resultados de <b>{user.email}</b>.</p></div>
             <div className='tituloSeccionRespuestasTest'><h3>Sección 1</h3></div>

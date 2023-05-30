@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import axios from "axios";
 import Cookies from 'js-cookie'
+import { Helmet, HelmetProvider } from 'react-helmet-async'
 import './ranking.css'
 import 'animate.css';
 
@@ -46,6 +47,15 @@ function Ranking() {
 
     return (
         <>
+            <HelmetProvider>
+                <Helmet>
+                    <meta name="description" content="Ranking de jugadores STANNUM Academy" />
+                    <meta name="keywords" content="stannum, academia, academy, ranking, jugadores, dominios, usuarios, directivo, puntos" />
+                    <meta name="subject" content="Ranking" />
+                    <meta name="theme-color" content="#3A3A3A" />
+                    <title>Ranking | STANNUM Academy</title>
+                </Helmet>
+            </HelmetProvider>
             <div className="bg"></div>
             <div className='tituloRanking'><h1>RANKING</h1></div>
             <div className='parrafoRanking'><p>Dentro de nuestra estructura contamos con 2 tipos diferentes de rankings. Por un lado contamos con el "Ranking de dominio" en donde se ve reflejada directamente tu puntuación obtenida en el test de dominio, y también con el medallero de las esferas de metal, en donde se ven reflejados los puntajes que irás obteniendo en tus diferentes entrenamientos.</p></div>

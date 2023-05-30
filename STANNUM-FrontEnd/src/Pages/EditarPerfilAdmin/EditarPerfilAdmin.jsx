@@ -4,6 +4,7 @@ import { useForm } from "react-hook-form";
 import Cookies from 'js-cookie'
 import axios from "axios";
 import FotoDePerfil from '../../assets/UserDefecto.png'
+import { Helmet, HelmetProvider } from 'react-helmet-async'
 
 function EditarPerfilAdmin() {
 
@@ -153,6 +154,15 @@ function EditarPerfilAdmin() {
 
     return (
     <>
+        <HelmetProvider>
+            <Helmet>
+                <meta name="description" content="Editar perfil de usuario en administración STANNUM Academy" />
+                <meta name="keywords" content="stannum, academia, academy, administracion, jugadores, admin, staff, editar, usuario, perfil" />
+                <meta name="subject" content="Editar usuario en administración" />
+                <meta name="theme-color" content="#3A3A3A" />
+                <title>Editar perfil - Administración | STANNUM Academy</title>
+            </Helmet>
+        </HelmetProvider>
         <div className="bg"></div>
         <div className='tituloPerfil'><h1>EDITAR PERFIL</h1></div>
         <form onSubmit={handleSubmit(onSubmit)}>
