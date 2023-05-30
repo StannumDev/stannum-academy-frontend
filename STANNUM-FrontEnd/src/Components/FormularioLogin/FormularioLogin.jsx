@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import axios from "axios";
 import { useForm } from "react-hook-form";
+import { Navigate } from 'react-router-dom'
 import keyIcon from '../../assets/key.png'
 import Cookies from 'js-cookie'
 import './formularioLogin.css'
@@ -9,6 +10,7 @@ function FormularioLogin() {
 
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState(false);
+    const [submitted, setSubmitted] = useState(false);
     const [errorMensaje, setErrorMensaje] = useState("");
     const [passwordVisible, setPasswordVisible] = useState(false);
     const { register, handleSubmit, formState: { errors } } = useForm({ mode: "onBlur", defaultValues: { email: "", password: "", }, });
@@ -26,9 +28,9 @@ function FormularioLogin() {
                 Cookies.set('token', respuesta.data.token, { expires: 1 });
             if (respuesta.data.adminToken) {
                 Cookies.set('adminToken', respuesta.data.adminToken, { expires: 1 });
-                window.location.replace("/");
+                setSubmitted(true)
             } else {
-                window.location.replace("/");
+                setSubmitted(true)
             }
         }
         if (respuesta.status === 206) {
@@ -39,6 +41,7 @@ function FormularioLogin() {
         setLoading(false)
     };
 
+    if(!submitted){
     return (
         <>
             <form onSubmit={handleSubmit(onSubmit)} className='mt-5'>
@@ -122,6 +125,9 @@ function FormularioLogin() {
             </form>        
         </>
     )
+    } else{
+        return <Navigate to={'/'}/>
+    }
 }
 
 export default FormularioLogin

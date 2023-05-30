@@ -1,11 +1,11 @@
 import Cookies from 'js-cookie'
 import React from 'react'
+import { Navigate } from 'react-router-dom'
 import { Helmet, HelmetProvider } from 'react-helmet-async'
 function CerrarSesion() {
 
     Cookies.remove('adminToken');
     Cookies.remove('token');
-    window.location.replace('/');
 
     return (
     <>
@@ -18,6 +18,7 @@ function CerrarSesion() {
                 <title>Cargando | STANNUM Academy</title>
             </Helmet>
         </HelmetProvider>
+        <Navigate to='/'/>
     </>
     )
 }
