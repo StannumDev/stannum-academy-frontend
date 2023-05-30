@@ -107,13 +107,13 @@ function RankingDirectivo() {
                             return (
                             <a href={`/Perfil/${user._id}`} className="text-decoration-none" key={user._id}>
                                 <div className='row jugadorARankingDirectivo mx-auto m-0 align-items-center'>
-                                    <div className='puestoARankingTablaDirectivo puestoTamañoRankingTablaDirectivo col-2 text-start m-0 p-0'>
+                                    <div className='puestoARankingTablaDirectivo puestoTamañoRankingTablaDirectivo col-1 text-start m-0 p-0'>
                                     <span>{globalIndex + 1}</span>
                                     </div>
-                                    <div className='nombreARankingTablaDirectivo nombreTamañoRankingTablaDirectivo col-8 text-start m-0 p-0 py-2 pe-1'>
+                                    <div className='nombreARankingTablaDirectivo nombreTamañoRankingTablaDirectivo col-10 text-start m-0 p-0 py-2 pe-1'>
                                     <span>{user.name} {user.surname}</span>
                                     </div>
-                                    <div className='puntosARankingTablaDirectivo puntosTamañoRankingTablaDirectivo col-2 text-end m-0 p-0'>
+                                    <div className='puntosARankingTablaDirectivo puntosTamañoRankingTablaDirectivo col-1 text-end m-0 p-0'>
                                     <span>{user.dominioDirectivoTestInicial.totalScore}</span>
                                     </div>
                                 </div>
@@ -136,13 +136,13 @@ function RankingDirectivo() {
                         return (
                         <a href={`/Perfil/${user._id}`} className="text-decoration-none" key={user._id}>
                             <div className='row jugadorBCRankingDirectivo mx-auto m-0 align-items-center'>
-                                <div className='puestoBRankingTablaDirectivo puestoTamañoRankingTablaDirectivo col-2 text-start m-0 p-0'>
+                                <div className='puestoBRankingTablaDirectivo puestoTamañoRankingTablaDirectivo col-1 text-start m-0 p-0'>
                                     <span>{globalIndex + 1}</span>
                                 </div>
-                                <div className='nombreBRankingTablaDirectivo nombreTamañoRankingTablaDirectivo col-8 text-start m-0 p-0'>
+                                <div className='nombreBRankingTablaDirectivo nombreTamañoRankingTablaDirectivo col-10 text-start m-0 p-0'>
                                     <span>{user.name} {user.surname}</span>
                                 </div>
-                                <div className='puntosBRankingTablaDirectivo puntosTamañoRankingTablaDirectivo col-2 text-end m-0 p-0'>
+                                <div className='puntosBRankingTablaDirectivo puntosTamañoRankingTablaDirectivo col-1 text-end m-0 p-0'>
                                     <span>{user.dominioDirectivoTestInicial.totalScore}</span>
                                 </div>
                             </div>
@@ -162,13 +162,13 @@ function RankingDirectivo() {
                         return (
                         <a href={`/Perfil/${user._id}`} className="text-decoration-none" key={user._id}>
                             <div className='row jugadorBCRankingDirectivo mx-auto m-0 align-items-center'>
-                                <div className='puestoBRankingTablaDirectivo puestoTamañoRankingTablaDirectivo col-2 text-start m-0 p-0'>
+                                <div className='puestoBRankingTablaDirectivo puestoTamañoRankingTablaDirectivo col-1 text-start m-0 p-0'>
                                     <span>{globalIndex + 1}</span>
                                 </div>
-                                <div className='nombreBRankingTablaDirectivo nombreTamañoRankingTablaDirectivo col-8 text-start m-0 p-0'>
+                                <div className='nombreBRankingTablaDirectivo nombreTamañoRankingTablaDirectivo col-10 text-start m-0 p-0'>
                                     <span>{user.name} {user.surname}</span>
                                 </div>
-                                <div className='puntosBRankingTablaDirectivo puntosTamañoRankingTablaDirectivo col-2 text-end m-0 p-0'>
+                                <div className='puntosBRankingTablaDirectivo puntosTamañoRankingTablaDirectivo col-1 text-end m-0 p-0'>
                                     <span>{user.dominioDirectivoTestInicial.totalScore}</span>
                                 </div>
                             </div>
@@ -188,13 +188,13 @@ function RankingDirectivo() {
                         return (
                         <a href={`/Perfil/${user._id}`} className="text-decoration-none" key={user._id}>
                             <div className='row jugadorBCRankingDirectivo mx-auto m-0 align-items-center'>
-                                <div className='puestoBRankingTablaDirectivo puestoTamañoRankingTablaDirectivo col-2 text-start m-0 p-0'>
+                                <div className='puestoBRankingTablaDirectivo puestoTamañoRankingTablaDirectivo col-1 text-start m-0 p-0'>
                                     <span>{globalIndex + 1}</span>
                                 </div>
-                                <div className='nombreBRankingTablaDirectivo nombreTamañoRankingTablaDirectivo col-8 text-start m-0 p-0'>
+                                <div className='nombreBRankingTablaDirectivo nombreTamañoRankingTablaDirectivo col-10 text-start m-0 p-0'>
                                     <span>{user.name} {user.surname}</span>
                                 </div>
-                                <div className='puntosBRankingTablaDirectivo puntosTamañoRankingTablaDirectivo col-2 text-end m-0 p-0'>
+                                <div className='puntosBRankingTablaDirectivo puntosTamañoRankingTablaDirectivo col-1 text-end m-0 p-0'>
                                     <span>{user.dominioDirectivoTestInicial.totalScore}</span>
                                 </div>
                             </div>

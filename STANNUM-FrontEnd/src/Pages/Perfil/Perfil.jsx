@@ -391,63 +391,63 @@ function Perfil() {
                         <div className='subtituloCajaEstadisticasSecciones'><h3>HABILIDADES DIRECTIVAS</h3></div>
                         <div className='d-flex flex-column estadisticasTablaSecciones'>
                             <div className='row parteSuperiorSeccionesDirectivo mx-auto align-items-start'>
-                                <div className='titulosSeccionesPuntosTablaDirectivo col-2 text-start m-0 p-0'><span>N°</span></div>
-                                <div className='titulosSeccionesPuntosTablaDirectivo col-8 text-start m-0 p-0'><span>CATEGORÍA</span></div>
-                                <div className='titulosSeccionesPuntosTablaDirectivo col-2 text-end m-0 p-0'><span>PTS</span></div>
+                                <div className='titulosSeccionesPuntosTablaDirectivo numeroSeccionesPuntosTablaDirectivo col-1 text-start m-0 p-0'><span>N°</span></div>
+                                <div className='titulosSeccionesPuntosTablaDirectivo col-10 text-start m-0 p-0'><span>CATEGORÍA</span></div>
+                                <div className='titulosSeccionesPuntosTablaDirectivo col-1 text-end m-0 p-0'><span>PTS</span></div>
                             </div>
 
                             <div className='row categoriaSeccionesDirectivo mx-auto align-items-start'>
-                                <div className='categoriaTextoSeccionesPuntosTablaDirectivo col-2 text-start m-0 p-0'><span>1</span></div>
-                                <div className='categoriaTextoSeccionesPuntosTablaDirectivo col-8 text-start m-0 p-0'><span>CONCIENCIA DE EMPRENDEDOR ESTRATÉGICO</span></div>
-                                <div className='categoriaTextoSeccionesPuntosTablaDirectivo col-2 text-end m-0 p-0'><span>{scoreSeccion1}</span></div>
-                                <div className="progress progressEstadisticas col-10 align-self-end ms-auto p-0">
+                                <div className='categoriaTextoSeccionesPuntosTablaDirectivo col-1 text-start m-0 p-0'><span>1</span></div>
+                                <div className='categoriaTextoSeccionesPuntosTablaDirectivo col-10 text-start m-0 p-0'><span>CONCIENCIA DE EMPRENDEDOR ESTRATÉGICO</span></div>
+                                <div className='categoriaTextoSeccionesPuntosTablaDirectivo col-1 text-end m-0 p-0'><span>{scoreSeccion1}</span></div>
+                                <div className="progress progressEstadisticas col-11 align-self-end ms-auto p-0">
                                     <div className="progress-bar progress-barEstadisticas progress-barUnic'" style={{ width: `${scoreSeccion1}%` }} role="progressbar" aria-label="Progreso estadisticas" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
                                 </div>
                             </div>
                             <div className='row categoriaSeccionesDirectivo mx-auto align-items-start'>
-                                <div className='categoriaTextoSeccionesPuntosTablaDirectivo col-2 text-start m-0 p-0'><span>2</span></div>
-                                <div className='categoriaTextoSeccionesPuntosTablaDirectivo col-8 text-start m-0 p-0'><span>CONOCIMIENTO DE CONCEPTOS ESTRATÉGICOS</span></div>
-                                <div className='categoriaTextoSeccionesPuntosTablaDirectivo col-2 text-end m-0 p-0'><span>{scoreSeccion2}</span></div>
-                                <div className="progress progressEstadisticas col-10 align-self-end ms-auto p-0">
+                                <div className='categoriaTextoSeccionesPuntosTablaDirectivo col-1 text-start m-0 p-0'><span>2</span></div>
+                                <div className='categoriaTextoSeccionesPuntosTablaDirectivo col-10 text-start m-0 p-0'><span>CONOCIMIENTO DE CONCEPTOS ESTRATÉGICOS</span></div>
+                                <div className='categoriaTextoSeccionesPuntosTablaDirectivo col-1 text-end m-0 p-0'><span>{scoreSeccion2}</span></div>
+                                <div className="progress progressEstadisticas col-11 align-self-end ms-auto p-0">
                                     <div className="progress-bar progress-barEstadisticas" style={{ width: `${scoreSeccion2}%` }} role="progressbar" aria-label="Progreso estadisticas" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
                                 </div>
                             </div>
                             <div className='row categoriaSeccionesDirectivo mx-auto align-items-start'>
-                                <div className='categoriaTextoSeccionesPuntosTablaDirectivo col-2 text-start m-0 p-0'><span>3</span></div>
-                                <div className='categoriaTextoSeccionesPuntosTablaDirectivo col-8 text-start m-0 p-0'><span>CONOCIMIENTO DE MERCADO</span></div>
-                                <div className='categoriaTextoSeccionesPuntosTablaDirectivo col-2 text-end m-0 p-0'><span>{scoreSeccion3}</span></div>
-                                <div className="progress progressEstadisticas col-10 align-self-end ms-auto p-0">
+                                <div className='categoriaTextoSeccionesPuntosTablaDirectivo col-1 text-start m-0 p-0'><span>3</span></div>
+                                <div className='categoriaTextoSeccionesPuntosTablaDirectivo col-10 text-start m-0 p-0'><span>CONOCIMIENTO DE MERCADO</span></div>
+                                <div className='categoriaTextoSeccionesPuntosTablaDirectivo col-1 text-end m-0 p-0'><span>{scoreSeccion3}</span></div>
+                                <div className="progress progressEstadisticas col-11 align-self-end ms-auto p-0">
                                     <div className="progress-bar progress-barEstadisticas" style={{ width: `${scoreSeccion3}%` }} role="progressbar" aria-label="Progreso estadisticas" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
                                 </div>
                             </div>
                             <div className='row categoriaSeccionesDirectivo mx-auto align-items-start'>
-                                <div className='categoriaTextoSeccionesPuntosTablaDirectivo col-2 text-start m-0 p-0'><span>4</span></div>
-                                <div className='categoriaTextoSeccionesPuntosTablaDirectivo col-8 text-start m-0 p-0'><span>CONOCIMIENTO DE SU EMPRENDIMIENTO</span></div>
-                                <div className='categoriaTextoSeccionesPuntosTablaDirectivo col-2 text-end m-0 p-0'><span>{scoreSeccion4}</span></div>
-                                <div className="progress progressEstadisticas col-10 align-self-end ms-auto p-0">
+                                <div className='categoriaTextoSeccionesPuntosTablaDirectivo col-1 text-start m-0 p-0'><span>4</span></div>
+                                <div className='categoriaTextoSeccionesPuntosTablaDirectivo col-10 text-start m-0 p-0'><span>CONOCIMIENTO DE SU EMPRENDIMIENTO</span></div>
+                                <div className='categoriaTextoSeccionesPuntosTablaDirectivo col-1 text-end m-0 p-0'><span>{scoreSeccion4}</span></div>
+                                <div className="progress progressEstadisticas col-11 align-self-end ms-auto p-0">
                                     <div className="progress-bar progress-barEstadisticas" style={{ width: `${scoreSeccion4}%` }} role="progressbar" aria-label="Progreso estadisticas" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
                                 </div>
                             </div>
                             <div className='row categoriaSeccionesDirectivo mx-auto align-items-start'>
-                                <div className='categoriaTextoSeccionesPuntosTablaDirectivo col-2 text-start m-0 p-0'><span>5</span></div>
-                                <div className='categoriaTextoSeccionesPuntosTablaDirectivo col-8 text-start m-0 p-0'><span>HABILIDADES DIRECTIVAS</span></div>
-                                <div className='categoriaTextoSeccionesPuntosTablaDirectivo col-2 text-end m-0 p-0'><span>{scoreSeccion5}</span></div>
-                                <div className="progress progressEstadisticas col-10 align-self-end ms-auto p-0">
+                                <div className='categoriaTextoSeccionesPuntosTablaDirectivo col-1 text-start m-0 p-0'><span>5</span></div>
+                                <div className='categoriaTextoSeccionesPuntosTablaDirectivo col-10 text-start m-0 p-0'><span>HABILIDADES DIRECTIVAS</span></div>
+                                <div className='categoriaTextoSeccionesPuntosTablaDirectivo col-1 text-end m-0 p-0'><span>{scoreSeccion5}</span></div>
+                                <div className="progress progressEstadisticas col-11 align-self-end ms-auto p-0">
                                     <div className="progress-bar progress-barEstadisticas" style={{ width: `${scoreSeccion5}%` }} role="progressbar" aria-label="Progreso estadisticas" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
                                 </div>
                             </div>
                             <div className='row categoriaSeccionesDirectivo mx-auto align-items-start'>
-                                <div className='categoriaTextoSeccionesPuntosTablaDirectivo col-2 text-start m-0 p-0'><span>6</span></div>
-                                <div className='categoriaTextoSeccionesPuntosTablaDirectivo col-8 text-start m-0 p-0'><span>HABILIDADES DIGITALES</span></div>
-                                <div className='categoriaTextoSeccionesPuntosTablaDirectivo col-2 text-end m-0 p-0'><span>{scoreSeccion6}</span></div>
-                                <div className="progress progressEstadisticas col-10 align-self-end ms-auto p-0">
+                                <div className='categoriaTextoSeccionesPuntosTablaDirectivo col-1 text-start m-0 p-0'><span>6</span></div>
+                                <div className='categoriaTextoSeccionesPuntosTablaDirectivo col-10 text-start m-0 p-0'><span>HABILIDADES DIGITALES</span></div>
+                                <div className='categoriaTextoSeccionesPuntosTablaDirectivo col-1 text-end m-0 p-0'><span>{scoreSeccion6}</span></div>
+                                <div className="progress progressEstadisticas col-11 align-self-end ms-auto p-0">
                                     <div className="progress-bar progress-barEstadisticas" style={{ width: `${scoreSeccion6}%` }} role="progressbar" aria-label="Progreso estadisticas" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
                                 </div>
                             </div>
                             <div className='row parteInferiorEstadisticasDirectivo mx-auto align-items-start'>
-                                <div className='footerTextoSeccionesPuntosTablaDirectivo col-2 text-start m-0 p-0'><span>7</span></div>
-                                <div className='footerTextoSeccionesPuntosTablaDirectivo col-8 text-start m-0 p-0'><span>PUNTAJE TOTAL</span></div>
-                                <div className='footerTextoSeccionesPuntosTablaDirectivo col-2 text-end m-0 p-0'><span>{scoreDominio1}</span></div>
+                                <div className='footerTextoSeccionesPuntosTablaDirectivo col-1 text-start m-0 p-0'><span>7</span></div>
+                                <div className='footerTextoSeccionesPuntosTablaDirectivo col-10 text-start m-0 p-0'><span>PUNTAJE TOTAL</span></div>
+                                <div className='footerTextoSeccionesPuntosTablaDirectivo col-1 text-end m-0 p-0'><span>{scoreDominio1}</span></div>
                             </div>
                         </div>
                     </div>

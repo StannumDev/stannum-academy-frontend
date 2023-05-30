@@ -322,8 +322,9 @@
 }
 
 .categoriaTextoSeccionesPuntosTablaDirectivo span{
-    font-family: 'Anton', sans-serif;
-    font-weight: 500;
+    font-family: 'Roboto Condensed', sans-serif;
+    letter-spacing: -2px;
+    font-weight: 400;
     color: #020203;
 }
 
@@ -767,7 +768,11 @@
         border-bottom-left-radius: 14px;
         border-bottom-right-radius: 14px;
     }
-    
+        
+    .numeroSeccionesPuntosTablaDirectivo span{
+        letter-spacing: -2.5px;
+    }
+
     .categoriaTextoSeccionesPuntosTablaDirectivo span{
         font-size: 1.14rem;
     }
@@ -1730,7 +1735,7 @@
     }
 
     .categoriaTextoSeccionesPuntosTablaDirectivo span{
-        font-size: 1.45rem;
+        font-size: 1.4rem;
     }
 
     .tituloRosaDeLosVientos{
