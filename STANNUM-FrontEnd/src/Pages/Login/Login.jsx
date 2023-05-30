@@ -10,7 +10,7 @@ function Login() {
 
     return (
     <>
-        <div className='row w-100 m-0 p-0 align-items-stretch vh-100'>
+        <div className='row w-100 m-0 p-0 align-items-stretch divLoginPrincipal'>
             <div className='col-6 p-0 imagenLogin'>
                 <img src={imagenLogin} alt="Iniciar Sesion" className='w-100'/>
             </div>

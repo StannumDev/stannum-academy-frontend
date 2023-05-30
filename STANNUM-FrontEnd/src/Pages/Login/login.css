@@ -3,6 +3,10 @@
     object-fit: cover;
 }
 
+.divLoginPrincipal{
+    min-height: 100vh;   
+}
+
 .stannumAcademyTituloLogin{
     color: #67CCB9;
     letter-spacing: -1px;
@@ -31,6 +35,7 @@
         display: none;
     }
     .formularioLoginDiv{
+        padding-bottom: 4rem;
         flex-direction: column;
         justify-content: start;
         background-size: cover;
@@ -85,6 +90,7 @@
         display: none;
     }
     .formularioLoginDiv{
+        padding-bottom: 4rem;
         flex-direction: column;
         justify-content: start;
         background-position: center center;
@@ -184,8 +190,17 @@
         font-size: 1rem;
         color: #838282;
     }
+
     .logoIniciarSesion{
         display: none;
+    }
+    
+    .divLoginPrincipal{
+        max-height: 100vh;   
+    }
+
+    .imagenLogin img{
+        max-height: 100vh;   
     }
 }
 
@@ -243,4 +258,13 @@
     .logoIniciarSesion{
         display: none;
     }
+    
+    .divLoginPrincipal{
+        max-height: 100vh;   
+    }
+
+    .imagenLogin img{
+        max-height: 100vh;   
+    }
+
 }
