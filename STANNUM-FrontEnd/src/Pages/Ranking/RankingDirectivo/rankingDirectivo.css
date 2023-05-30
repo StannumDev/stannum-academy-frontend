@@ -71,6 +71,9 @@
     padding-inline: 2rem;
     background-color: #CE1236;
     border-bottom: 1px solid rgb(51,52,56, 0.1);
+    outline: 1px solid #CE1236;
+    outline-offset: -1px;
+    transition: all 0.3s ease;
 }
 
 .puestoARankingTablaDirectivo span{
@@ -95,7 +98,11 @@
     padding-inline: 2rem;
     background-color: #FFFFFF;
     border-bottom: 1px solid rgb(51,52,56, 0.2);
+    outline: 1px solid #FFFFFF;
+    outline-offset: -1px;
+    transition: all 0.3s ease;
 }
+
 
 .puestoBRankingTablaDirectivo span{
     font-family: 'Anton', sans-serif;
@@ -266,6 +273,16 @@
     .parteInferiorRankingDirectivo span{
         font-size: 1.3rem;
     }
+    
+    .jugadorARankingDirectivo:hover{
+        transform: scale(1.02);
+        outline: 3px solid rgb(58, 58, 58, 0.1);
+    }
+
+    .jugadorBCRankingDirectivo:hover{
+        transform: scale(1.02);
+        outline: 3px solid rgb(58, 58, 58, 0.1);
+    }
 }
 
 @media (min-width: 1200px){
@@ -309,5 +326,15 @@
 
     .parteInferiorRankingDirectivo span{
         font-size: 1.62rem;
+    }
+    
+    .jugadorARankingDirectivo:hover{
+        transform: scale(1.02);
+        outline: 3px solid rgb(58, 58, 58, 0.1);
+    }
+
+    .jugadorBCRankingDirectivo:hover{
+        transform: scale(1.02);
+        outline: 3px solid rgb(58, 58, 58, 0.1);
     }
 }

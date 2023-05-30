@@ -145,6 +145,7 @@ function Perfil() {
     // topMax is the desired top position when points are at the maximum (10%).
     // points is the actual points value.
     // maxPoints is the maximum points value (100).
+    
     return (
         <>
             <HelmetProvider>
@@ -397,7 +398,7 @@ function Perfil() {
 
                             <div className='row categoriaSeccionesDirectivo mx-auto align-items-start'>
                                 <div className='categoriaTextoSeccionesPuntosTablaDirectivo col-2 text-start m-0 p-0'><span>1</span></div>
-                                <div className='categoriaTextoSeccionesPuntosTablaDirectivo col-8 text-start m-0 p-0'><span>EMPRENDEDOR ESTRATÉGICO</span></div>
+                                <div className='categoriaTextoSeccionesPuntosTablaDirectivo col-8 text-start m-0 p-0'><span>CONCIENCIA DE EMPRENDEDOR ESTRATÉGICO</span></div>
                                 <div className='categoriaTextoSeccionesPuntosTablaDirectivo col-2 text-end m-0 p-0'><span>{scoreSeccion1}</span></div>
                                 <div className="progress progressEstadisticas col-10 align-self-end ms-auto p-0">
                                     <div className="progress-bar progress-barEstadisticas progress-barUnic'" style={{ width: `${scoreSeccion1}%` }} role="progressbar" aria-label="Progreso estadisticas" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
@@ -405,7 +406,7 @@ function Perfil() {
                             </div>
                             <div className='row categoriaSeccionesDirectivo mx-auto align-items-start'>
                                 <div className='categoriaTextoSeccionesPuntosTablaDirectivo col-2 text-start m-0 p-0'><span>2</span></div>
-                                <div className='categoriaTextoSeccionesPuntosTablaDirectivo col-8 text-start m-0 p-0'><span>CONCEPTOS ESTRATÉGICOS</span></div>
+                                <div className='categoriaTextoSeccionesPuntosTablaDirectivo col-8 text-start m-0 p-0'><span>CONOCIMIENTO DE CONCEPTOS ESTRATÉGICOS</span></div>
                                 <div className='categoriaTextoSeccionesPuntosTablaDirectivo col-2 text-end m-0 p-0'><span>{scoreSeccion2}</span></div>
                                 <div className="progress progressEstadisticas col-10 align-self-end ms-auto p-0">
                                     <div className="progress-bar progress-barEstadisticas" style={{ width: `${scoreSeccion2}%` }} role="progressbar" aria-label="Progreso estadisticas" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
@@ -421,7 +422,7 @@ function Perfil() {
                             </div>
                             <div className='row categoriaSeccionesDirectivo mx-auto align-items-start'>
                                 <div className='categoriaTextoSeccionesPuntosTablaDirectivo col-2 text-start m-0 p-0'><span>4</span></div>
-                                <div className='categoriaTextoSeccionesPuntosTablaDirectivo col-8 text-start m-0 p-0'><span>CONOCIMIENTO EMPRENDEDOR</span></div>
+                                <div className='categoriaTextoSeccionesPuntosTablaDirectivo col-8 text-start m-0 p-0'><span>CONOCIMIENTO DE SU EMPRENDIMIENTO</span></div>
                                 <div className='categoriaTextoSeccionesPuntosTablaDirectivo col-2 text-end m-0 p-0'><span>{scoreSeccion4}</span></div>
                                 <div className="progress progressEstadisticas col-10 align-self-end ms-auto p-0">
                                     <div className="progress-bar progress-barEstadisticas" style={{ width: `${scoreSeccion4}%` }} role="progressbar" aria-label="Progreso estadisticas" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>

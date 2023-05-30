@@ -53,7 +53,7 @@ function ModalCrearUsuario() {
                                             className={`inputLogin form-control  mt-2`}
                                             {...register("email", {
                                                 required: true,
-                                                pattern: /^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/i,
+                                                pattern: /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/i,
                                                 maxLength: 40,
                                             })}
                                         />

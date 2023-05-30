@@ -44,13 +44,12 @@ function Inicio() {
           <p>
             {
               token ? <>Para poder comenzar tu camino dentro de STANNUM Academy es necesario que completes los siguientes Tests de Dominio, ¡la información obtenida de ellos nos permitirá construir tu plantilla de jugador!.</> : <>Para poder comenzar tu camino dentro de STANNUM Academy solicita acceso a una cuenta, y empieza a entrenar para sacar el <b>PRO</b> que tenes adentro!</>
-            }
-            
+            }            
           </p>
         </div>
       </div>
       <div className='contenedorCardsTest'>
-        <div className='text-center seleccioneTestTitulo'>Seleccione el Test que<span>desea responder</span></div>
+        <div className='text-center seleccioneTestTitulo'>{ token ? <>Seleccione el Test que<span>desea responder</span></> : <>Existen 6 dominios diferentes<span>que necesitas para convertirte en un PRO</span></>}</div>
         <div className='d-flex justify-content-evenly align-items-center flex-wrap cajaCardsTest'>
             <div className='cardTest'>
               <div className='tituloDominio tituloDominio1 text-center'>DOMINIO 1</div>
