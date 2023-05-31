@@ -179,7 +179,7 @@ function Perfil() {
                 <div className='divFotoJugadorPerfil'>
                         <div className='contenedorImagen'>
                         {
-                            foto ? <img src={foto} alt="Perfil Stannum" /> : <img src={FotoDePerfil} alt="Perfil Stannum" />
+                            foto ? <img src={foto} alt="Foto de perfil STANNUM" /> : <img src={FotoDePerfil} alt="Foto de perfil STANNUM" />
                         } 
                         {
                             scoreTotal !== 0 &&
@@ -457,7 +457,7 @@ function Perfil() {
                         <div className='tituloRosaDeLosVientos'><h2>ROSA DE LOS VIENTOS</h2></div>
                         <div className='parrafoRosaDeLosVientos'><p>SOBRE TU NIVEL<span>PROFESIONAL ACUMULADO</span></p></div>
                         <div className='hexagonoImagen'>
-                            <img src={Hexagono} alt="Estadisticas Stannum" />
+                            <img src={Hexagono} alt="Mapa de estadisticas STANNUM" />
                             <div className='puntoRojoHexagono' style={{ top: `${ballPosition}%` }}></div>
                         </div>                        
                     </div>

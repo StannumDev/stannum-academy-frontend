@@ -61,7 +61,7 @@ function NavBar() {
                             </label>
                         </button>
                         <div className=''>
-                            <a className="navbar-brand text-end" href="/"><img src={logo} className='logoNavbar'/></a>
+                            <a className="navbar-brand text-end" href="/"><img src={logo} className='logoNavbar' alt="Logo STANNUM"/></a>
                         </div>
                         <div className="collapse navbar-collapse" id="navbarPrincipal">
                             <ul className="navbar-nav ms-auto mb-0">

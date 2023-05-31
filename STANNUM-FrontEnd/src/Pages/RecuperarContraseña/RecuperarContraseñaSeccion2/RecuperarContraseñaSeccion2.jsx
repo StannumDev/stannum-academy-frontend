@@ -60,7 +60,7 @@ function RecuperarContraseñaSeccion2() {
           </div>
         </div>
         <div className='cajaRecuperarContraseña mb-5'>
-          <div className='imagenRecuperarContraseña'><img src={LogoChico} alt="Logo Stannum" /></div>
+          <div className='imagenRecuperarContraseña'><img src={LogoChico} alt="Logo STANNUM" /></div>
           <div className='tituloOlvidasteTuContraseña'><h1><span>RESTAURAR</span> CONTRASEÑA</h1></div>
           <div className='explicacionOlvidasteTuContraseña'><p>Complete los siguientes campos para restaurar y cambiar su contraseña. Debe contener al menos una mayúscula y un número.</p></div>
           <form onSubmit={handleSubmit(onSubmit)} className='mt-4'>
@@ -148,7 +148,7 @@ function RecuperarContraseñaSeccion2() {
     return (
       <>
         <div className='cajaRecuperarContraseña'>
-          <div className='imagenRecuperarContraseña'><img src={LogoChico} alt="" /></div>
+          <div className='imagenRecuperarContraseña'><img src={LogoChico} alt="Logo STANNUM" /></div>
           <div className='tituloOlvidasteTuContraseña'><h1>CONTRASEÑA<span> RESTAURADA</span></h1></div>
           <div className='explicacionOlvidasteTuContraseña text-center'><p>¡Su contraseña fue restaurada con éxito!</p></div>
           <div className='mt-4 d-flex justify-content-center'>

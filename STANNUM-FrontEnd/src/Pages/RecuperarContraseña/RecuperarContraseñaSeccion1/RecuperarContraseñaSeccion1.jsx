@@ -100,7 +100,7 @@ function RecuperarContraseñaSeccion1() {
                   ></span>
                 ) : (
                   <>
-                    <img src={keyIcon} alt="Llave Iniciar Sesión" className='keyIconLogin me-1'/>
+                    <img src={keyIcon} alt="Recuperar contraseña STANNUM" className='keyIconLogin me-1'/>
                     <span>Enviar correo</span>
                   </>
                 )}
@@ -127,7 +127,7 @@ function RecuperarContraseñaSeccion1() {
     return (
       <>
         <div className='cajaRecuperarContraseña'>
-          <div className='imagenRecuperarContraseña'><img src={LogoChico} alt="" /></div>
+          <div className='imagenRecuperarContraseña'><img src={LogoChico} alt="Logo STANNUM" /></div>
           <div className='tituloOlvidasteTuContraseña'><h1>SOLICITUD<span> COMPLETADA</span></h1></div>
           <div className='explicacionOlvidasteTuContraseña'><p>Se ha enviado un email a tu correo electrónico!. Sigue los pasos para cambiar tu contraseña.</p></div>
           <div className='mt-4 d-flex justify-content-center'>

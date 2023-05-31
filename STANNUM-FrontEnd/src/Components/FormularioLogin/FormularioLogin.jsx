@@ -114,7 +114,7 @@ function FormularioLogin() {
                             ></span>
                         ) : (
                             <>
-                            <img src={keyIcon} alt="Llave Iniciar Sesión" className='keyIconLogin me-1'/>
+                            <img src={keyIcon} alt="Iniciar Sesión STANNUM" className='keyIconLogin me-1'/>
                             <span>
                                 Iniciar sesión
                             </span>
