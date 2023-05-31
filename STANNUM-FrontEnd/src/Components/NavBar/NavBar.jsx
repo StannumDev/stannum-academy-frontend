@@ -22,7 +22,11 @@ function NavBar() {
         const getUser = async () =>{
         if (token) {
             const respuesta = await axios.post(`https://prueba-back-mateolohezic.up.railway.app/get-user/${token}`);
-            setUser(respuesta.data)
+            if(respuesta.status === 200){
+                setUser(respuesta.data)
+            } else{
+                window.location.replace('/Cerrar-sesion')
+            }
         }}
         getUser()
     }, [token])

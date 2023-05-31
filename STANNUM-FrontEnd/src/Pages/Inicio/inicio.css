@@ -35,13 +35,7 @@
 .contenedorCardsTest{
     width: 100%;
     padding-block: 4rem;
-    background-image: url("../../assets/Metalico.png");
     background-color: rgb(103,207,188, 1);
-    background-attachment: fixed;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-blend-mode: multiply;
-    background-position: 0% 0%;
 }
 
 .seleccioneTestTitulo{
@@ -354,6 +348,15 @@
         font-size: 1.4rem;
         margin-top: -0.5rem;
     }
+    
+    .contenedorCardsTest{
+        background-image: url("../../assets/Metalico.png");
+        background-attachment: fixed;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-blend-mode: multiply;
+        background-position: 0% 0%;
+    }
 }
 
 @media (min-width: 1200px){
@@ -419,5 +422,14 @@
     .subtituloDominio{
         font-size: 1.4rem;
         margin-top: -0.5rem;
+    }
+    
+    .contenedorCardsTest{
+        background-image: url("../../assets/Metalico.png");
+        background-attachment: fixed;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-blend-mode: multiply;
+        background-position: 0% 0%;
     }
 }

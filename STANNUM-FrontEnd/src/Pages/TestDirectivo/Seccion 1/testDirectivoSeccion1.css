@@ -45,12 +45,6 @@
 .contenedorInicioTestDominio{
     width: 100%;
     background-color: #D3214D;
-    background-position: 0% 50%; 
-    background-size: 100vw 100vh;
-    background-image: url("../../../assets/Metalico.png");
-    background-repeat: no-repeat;
-    background-blend-mode: multiply;
-    background-attachment: fixed;
     padding-inline: 1rem;
     padding-block: 3rem;
     margin-top: 3rem;
@@ -437,6 +431,15 @@
         text-align: start;
         margin-left: 4rem;
     }
+    
+    .contenedorInicioTestDominio{
+        background-position: 0% 50%; 
+        background-size: 100vw 100vh;
+        background-image: url("../../../assets/Metalico.png");
+        background-repeat: no-repeat;
+        background-blend-mode: multiply;
+        background-attachment: fixed;
+    }
 }
 
 @media (min-width: 1200px){
@@ -505,5 +508,14 @@
     .error{
         text-align: start;
         margin-left: 4rem;
+    }
+
+    .contenedorInicioTestDominio{
+        background-position: 0% 50%; 
+        background-size: 100vw 100vh;
+        background-image: url("../../../assets/Metalico.png");
+        background-repeat: no-repeat;
+        background-blend-mode: multiply;
+        background-attachment: fixed;
     }
 }
