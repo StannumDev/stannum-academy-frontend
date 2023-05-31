@@ -70,7 +70,7 @@ button {
 
 @media (min-width: 992px) and (max-width: 1200px){
 
-  body:not(.recuperar-contraseña-body):not(.iniciar-sesion){
+  body:not(.recuperar-contraseña-body):not(.iniciar-sesion):not(.error404){
     background-color: rgb(58,58,58,1);
     background-image: url("./assets/Metalico.png");
     background-size: 100vw 100vh;
@@ -89,7 +89,7 @@ body.recuperar-contraseña-body{
     background-attachment: fixed;
 }
 
-.bg {
+.bg{
   background-color: rgb(58,58,58,1);
   background-image: url("./assets/Metalico.png");
   background-blend-mode: multiply;
@@ -105,7 +105,7 @@ body.recuperar-contraseña-body{
 
 @media (min-width: 1200px){
 
-  body:not(.recuperar-contraseña-body):not(.iniciar-sesion){
+  body:not(.recuperar-contraseña-body):not(.iniciar-sesion):not(.error404){
     background-color: rgb(58,58,58,1);
     background-image: url("./assets/Metalico.png");
     background-size: 100vw 100vh;
@@ -124,7 +124,7 @@ body.recuperar-contraseña-body{
     background-attachment: fixed;
 } 
 
-.bg {
+.bg{
   background-color: rgb(58,58,58,1);
   background-image: url("./assets/Metalico.png");
   background-blend-mode: multiply;
@@ -138,14 +138,28 @@ body.recuperar-contraseña-body{
 }
 }
 
-body:not(.recuperar-contraseña-body):not(.iniciar-sesion){
-    background-color: rgb(58,58,58,1);
+body:not(.recuperar-contraseña-body):not(.iniciar-sesion):not(.error404){
+  background-color: rgb(58,58,58,1);
 } 
 
-.bg {
+.bg{
   background-color: rgb(58,58,58,1);
   height: 100vh;
   width: 100vw;
   position: fixed;
   z-index: -1;
 }
+
+body.error404{
+  background: url("./assets/error404Fondo.jpg") no-repeat center center fixed;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(58,58,58,0.7);
+  backdrop-filter: blur(4px);
+  background-size: cover;
+  background-blend-mode: multiply;
+  background-position: center center;
+  background-attachment: fixed;
+} 

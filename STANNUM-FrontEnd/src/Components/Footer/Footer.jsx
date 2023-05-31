@@ -7,7 +7,7 @@ function Footer() {
 
   const location = useLocation();
 
-  if (location.pathname !== '/Iniciar-sesion' && !location.pathname.includes('/Recuperar-contrase%C3%B1a')){
+  if (location.pathname !== '/Iniciar-sesion' && !location.pathname.includes('/Recuperar-contrase%C3%B1a') && location.pathname !== '/404'){
     return (
       <>
         <div className="footer text-center">

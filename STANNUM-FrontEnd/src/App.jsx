@@ -1,5 +1,5 @@
 import React from 'react'
-import { Route, Routes } from "react-router-dom";
+import { Navigate, Route, Routes } from "react-router-dom";
 import './App.css'
 import Footer from './Components/Footer/Footer';
 import NavBar from './Components/NavBar/NavBar';
@@ -7,6 +7,7 @@ import Administracion from './Pages/Administracion/Administracion';
 import CerrarSesion from './Pages/CerrarSesion/CerrarSesion';
 import EditarPerfil from './Pages/EditarPerfil/EditarPerfil';
 import EditarPerfilAdmin from './Pages/EditarPerfilAdmin/EditarPerfilAdmin';
+import Error404 from './Pages/Error404/Error404';
 import Inicio from './Pages/Inicio/Inicio';
 import Login from './Pages/Login/Login';
 import Perfil from './Pages/Perfil/Perfil';
@@ -51,6 +52,8 @@ function App() {
       <Route path="/Recuperar-contraseña/Email" element={<RecuperarContraseñaSeccion1/>} />
       <Route path="/Recuperar-contraseña/Nueva-contraseña/:token" element={<RecuperarContraseñaSeccion2/>} />
       <Route path="/Administracion/Jugadores" element={<Administracion/>} />
+      <Route path="/404" element={<Error404/>} />
+      <Route path="*" element={<Navigate to="/404" />} />
     </Routes>
     <Footer/>
     

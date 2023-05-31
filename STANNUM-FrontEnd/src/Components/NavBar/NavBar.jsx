@@ -51,7 +51,7 @@ function NavBar() {
       }
     }, [location.pathname]);
 
-    if (location.pathname !== '/Iniciar-sesion' && !location.pathname.includes('/Recuperar-contrase%C3%B1a')) {
+    if (location.pathname !== '/Iniciar-sesion' && !location.pathname.includes('/Recuperar-contrase%C3%B1a') && location.pathname !== '/404') {
         return (
             <>
                 <nav className="navbar navbar-expand-lg sticky-top animate__animated animate__fadeInDown">
