@@ -8,6 +8,7 @@ import CerrarSesion from './Pages/CerrarSesion/CerrarSesion';
 import EditarPerfil from './Pages/EditarPerfil/EditarPerfil';
 import EditarPerfilAdmin from './Pages/EditarPerfilAdmin/EditarPerfilAdmin';
 import Error404 from './Pages/Error404/Error404';
+import Historial from './Pages/Historial/Historial';
 import Inicio from './Pages/Inicio/Inicio';
 import Login from './Pages/Login/Login';
 import Perfil from './Pages/Perfil/Perfil';
@@ -52,6 +53,7 @@ function App() {
       <Route path="/Recuperar-contraseña/Email" element={<RecuperarContraseñaSeccion1/>} />
       <Route path="/Recuperar-contraseña/Nueva-contraseña/:token" element={<RecuperarContraseñaSeccion2/>} />
       <Route path="/Administracion/Jugadores" element={<Administracion/>} />
+      <Route path="/Historial/Acciones" element={<Historial/>} />
       <Route path="/404" element={<Error404/>} />
       <Route path="*" element={<Navigate to="/404" />} />
     </Routes>

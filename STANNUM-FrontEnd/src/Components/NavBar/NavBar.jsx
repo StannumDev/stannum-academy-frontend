@@ -49,6 +49,9 @@ function NavBar() {
       if (location.pathname.includes('/Administracion')) {
         setActiveIndex(4);
       }
+      if (location.pathname.includes('/Historial')) {
+        setActiveIndex(5);
+      }
     }, [location.pathname]);
 
     if (location.pathname !== '/Iniciar-sesion' && !location.pathname.includes('/Recuperar-contrase%C3%B1a') && location.pathname !== '/404') {
@@ -95,7 +98,10 @@ function NavBar() {
                                         <li><a className="dropdown-item" href="/Ranking/Inicio">Ranking</a></li>
                                         {
                                             user.role === 'admin' ?
-                                            <><li><a className="dropdown-item" href="/Administracion/Jugadores">Administración</a></li></>
+                                            <>
+                                                <li><a className="dropdown-item" href="/Administracion/Jugadores">Administración</a></li>
+                                                <li><a className="dropdown-item" href="/Historial/Acciones">Historial</a></li>
+                                            </>
                                             :
                                             <></>                                        
                                         }
@@ -145,6 +151,9 @@ function NavBar() {
                                             <>
                                                 <li className={`nav-item botonNavbarResponsive ${activeIndex === 4 ? 'active' : 'nonActive'}`}>
                                                     <a className="nav-link linkNavbar" aria-current="page" href="/Administracion/Jugadores">Administración</a>
+                                                </li>
+                                                <li className={`nav-item botonNavbarResponsive ${activeIndex === 5 ? 'active' : 'nonActive'}`}>
+                                                    <a className="nav-link linkNavbar" aria-current="page" href="/Historial/Acciones">Historial</a>
                                                 </li>
                                             </>
                                             :
