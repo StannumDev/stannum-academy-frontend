@@ -55,6 +55,7 @@ function App() {
       <Route path="/Administracion/Jugadores" element={<Administracion/>} />
       <Route path="/Historial/Acciones" element={<Historial/>} />
       <Route path="/404" element={<Error404/>} />
+      <Route path="/sitemap.xml" element="sitemap.xml"/>
       {/* <Route path="*" element={<Navigate to="/404" />} /> */}
     </Routes>
     <Footer/>
