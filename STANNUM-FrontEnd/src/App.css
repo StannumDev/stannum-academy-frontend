@@ -60,6 +60,10 @@ button {
     border: none;
 }
 
+body{
+  background-color: #05100E;
+}
+
 @media (max-width: 576px){
 
 }
@@ -69,7 +73,7 @@ button {
 }
 
 @media (min-width: 992px) and (max-width: 1200px){
-
+/* 
   body:not(.recuperar-contraseña-body):not(.iniciar-sesion):not(.error404){
     background-color: rgb(58,58,58,1);
     background-image: url("./assets/Metalico.png");
@@ -100,11 +104,11 @@ body.recuperar-contraseña-body{
   width: 100vw;
   position: fixed;
   z-index: -1;
-} 
+}  */
 }
 
 @media (min-width: 1200px){
-
+/* 
   body:not(.recuperar-contraseña-body):not(.iniciar-sesion):not(.error404){
     background-color: rgb(58,58,58,1);
     background-image: url("./assets/Metalico.png");
@@ -135,9 +139,9 @@ body.recuperar-contraseña-body{
   width: 100vw;
   position: fixed;
   z-index: -1;
+} */
 }
-}
-
+/* 
 body:not(.recuperar-contraseña-body):not(.iniciar-sesion):not(.error404){
   background-color: rgb(58,58,58,1);
 } 
@@ -162,4 +166,4 @@ body.error404{
   background-blend-mode: multiply;
   background-position: center center;
   background-attachment: fixed;
-} 
+}  */
