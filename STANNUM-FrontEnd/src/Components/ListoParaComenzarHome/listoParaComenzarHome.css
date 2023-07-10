@@ -1,0 +1,78 @@
+.contenedorListoParaComenzarHome{
+    margin-top: -8rem;
+    padding-top: 5rem;
+    padding-bottom: 6rem;
+    background-image: linear-gradient(to bottom, rgba(6, 17, 15, 1) 0%, rgba(201, 217, 236, 0.3) 50%, rgba(103, 204, 185, 1) 90%);
+    background-color: rgba(122, 224, 206, 0.3);
+    box-shadow: 0px -10px 24px 3px rgba(6,17,15,1);
+    backdrop-filter: blur(5px);
+}
+
+.contenedorListoParaComenzarHome h2{
+    font-size: 2.5rem;
+    font-weight: 300;
+    line-height: 3rem;
+    text-align: center;
+    color: rgba(255, 255, 255, 1);
+}
+
+.contenedorListoParaComenzarHome p{
+    width: 35%;
+    margin: auto;
+    margin-top: 2rem;
+    font-size: 1.4rem;
+    line-height: 1.7rem;
+    font-weight: 300;
+    color: rgb(255, 255, 255, 1);
+    text-align: center;
+}
+
+.contenedorListoParaComenzarHome span{
+    display: block;
+}
+
+
+.contenedorBotonesListoParaComenzar{
+    margin-top: 3rem;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+  }
+  
+.botonMirarVideosListoParaComenzar{
+    background-color: #FFFFFF;
+    padding-block: 0.7rem;
+    padding-inline: 1.5rem;
+    border-radius: 6px;
+    color: rgb(58,58,58,1);
+    font-weight: 500;
+    font-size: 0.85rem;
+    transition: all 0.3s ease;
+}
+  
+.botonMirarVideosListoParaComenzar img{
+    filter: brightness(0%);
+    width: 1rem;
+    margin-right: 0.4rem;
+}
+  
+.botonMirarVideosListoParaComenzar:hover{
+    background-color: rgba(255, 255, 255, 0.6);
+    transform: scale(1.08);
+}
+  
+.botonQuieroEntrenarListoParaComenzar{
+    font-size: 0.85rem;
+    padding-block: 0.7rem;
+    padding-inline: 1.5rem;
+    background-color: rgba(103, 204, 185, 1);
+    color: #FFFFFF;
+    border-radius: 6px;
+    font-weight: 700;
+    transition: all 0.3s ease;
+}
+  
+.botonQuieroEntrenarListoParaComenzar:hover{
+    transform: scale(1.08);
+    background-color: rgba(103, 204, 185, 0.6);
+}

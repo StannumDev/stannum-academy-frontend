@@ -1,6 +1,8 @@
 import React from 'react'
 import EmpresasEntrenadasHome from '../../Components/EmpresasEntrenadasHome/EmpresasEntrenadasHome';
 import EstoEsStannumHome from '../../Components/EstoEsStannumHome/EstoEsStannumHome';
+import FooterHome from '../../Components/FooterHome/FooterHome';
+import ListoParaComenzarHome from '../../Components/ListoParaComenzarHome/ListoParaComenzarHome';
 import LoQueDicenHome from '../../Components/LoQueDicenHome/LoQueDicenHome';
 import NavBar from '../../Components/NavBar/NavBar';
 import PortadaHome from '../../Components/PortadaHome/PortadaHome';
@@ -19,6 +21,8 @@ function Home() {
       <EstoEsStannumHome/>
       <ProductosHome/>
       <LoQueDicenHome/>
+      <ListoParaComenzarHome/>
+      <FooterHome/>
     </>
   )
 }

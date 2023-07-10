@@ -65,10 +65,20 @@
 
 .itemEstoEsStannum img{
     width: 70px;
+    transition: all 0.3s ease;
 }
 
 .itemEstoEsStannum span{
     color: rgb(255, 255, 255, 1);
     font-size: 1.2rem;
     font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.itemEstoEsStannum:hover img{
+    transform: scale(1.25) rotate(-20grad);
+}
+
+.itemEstoEsStannum:hover span{
+    transform: scale(1.05);
 }

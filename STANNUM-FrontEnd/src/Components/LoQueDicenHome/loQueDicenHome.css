@@ -1,12 +1,12 @@
 .contenedorLoQueDicenHome{
+    margin-top: 15rem;
+    margin-bottom: 25rem;
+    padding-top: 2rem;
     background-image: linear-gradient(to bottom, rgba(6, 17, 15, 1), rgba(122, 224, 206, 0.1));
     background-color: rgba(122, 224, 206, 0.3);
     box-shadow: 0px -10px 24px 3px rgba(6,17,15,1);
     box-shadow: 0px 30px 24px 3px rgba(122,224,206,0.37);
     backdrop-filter: blur(5px);
-    padding-top: 2rem;
-    padding-bottom: 7rem;
-    margin-bottom: 25rem;
 }
 
 .contenedorLoQueDicenHome h2{
@@ -19,7 +19,7 @@
     color: rgba(103, 204, 185, 1);
 }
 
-.contenedorLoQueDicenHome p{
+.parrafoLoQueDicenHome{
     margin-top: 2rem;
     font-size: 1.4rem;
     line-height: 1.7rem;
@@ -28,6 +28,79 @@
     text-align: center;
 }
 
-.contenedorLoQueDicenHome span{
+.parrafoLoQueDicenHome span{
     display: block;
+}
+
+.carouselLoQueDicenHome{
+    position: relative;
+    top: 150px;
+    margin-top: -11rem;
+    padding-top: 3rem;
+    padding-bottom: 8rem;
+}
+
+.cardLoQueDicen{
+    display: flex;
+    flex-direction: column;
+    padding-inline: 1.4rem;
+    padding-block: 2rem;
+    width: 95%;
+    border-radius: 16px;
+    background-color: rgba(255, 255, 255, 1);
+    box-shadow: 0px 16px 32px 0px rgba(132, 173, 230, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.cardLoQueDicen:hover{
+    transform: scale(1.05);
+}
+
+.cardLoQueDicenAbajo{
+    position: relative;
+    top: 60px;
+}
+
+.iconoLoQueDicenHome{
+    width: 70%;
+}
+
+.fotoLoQueDicenHome{
+    margin-top: 3rem;
+    width: 22%;
+    border-radius: 50%;
+
+}
+
+.textoLoQueDicenHome{
+    margin-top: 2rem;
+    color: rgb(58,58,58,0.8);
+    font-size: 1.15rem;
+    font-weight: 300;
+    line-height: 1.45rem;
+    text-align: left;
+}
+
+.textoLoQueDicenHome b{
+    font-weight: 800;
+}
+
+.nombreLoQueDicenHome{
+    margin-top: 1.4rem;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+.nombreLoQueDicenHome span{
+    font-size: 0.85rem;
+    font-weight: 400;
+    color: rgba(166, 169, 183, 1);
+}
+
+.guionCardLoQueDicenHome{
+    width: 15px;
+    height: 2px;
+    background-color: rgba(166, 169, 183, 0.7);
+    margin-right: 0.4rem;
 }

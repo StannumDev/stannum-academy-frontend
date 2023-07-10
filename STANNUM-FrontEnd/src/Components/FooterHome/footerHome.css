@@ -1,0 +1,112 @@
+.contenedorFooterHome{
+    position: relative;
+    box-shadow: 0px 0px 30px 5px rgba(0,0,0, 0.75);
+    padding-block: 8rem;
+    background-color: rgba(5, 16, 14, 1);
+    display: flex;
+    padding-inline: 5rem;
+}
+
+.contenedorFooterHome h4{
+    margin-bottom: 1.2rem;
+    color: #FFFFFF;
+    font-size: 1.3rem;
+    font-weight: 700;
+}
+
+.logoFooterHome{
+    width: 35%;
+    text-align: center;
+}
+
+.logoFooterHome a:hover img{
+    transform: scale(1.15);
+}
+
+.logoFooterHome img{
+    width: 25%;
+    transition: all .3s ease;
+}
+
+.enlacesFooterHome{
+    width: 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+}
+
+.enlacesFooterHome a{
+    margin-top: 0.6rem;
+    color: rgb(255,255,255,0.5);
+    font-size: 1rem;
+    font-weight: 300;
+    text-decoration: none;
+    transition: all .3s ease;
+}
+
+.enlacesFooterHome a:hover{
+    color: rgb(255,255,255, 1);
+    transform: scale(1.1);
+}
+
+.redesSocialesFooterHome{
+    width: 20%;
+    margin-left: 5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+}
+
+.itemRedesFooterHome{
+    margin-top: 0.6rem;
+    gap: 15px;
+    text-decoration: none;
+    transition: all .3s ease;
+}
+
+.itemRedesFooterHome img{
+    width: 1.5rem;
+    position: absolute;
+    opacity: 0.6;
+    transition: all .3s ease;
+}
+
+.itemRedesFooterHome span{
+    margin-left: 2.2rem;
+    color: rgb(255,255,255,0.5);
+    font-size: 1rem;
+    font-weight: 300;
+    transition: all .3s ease;
+}
+
+.itemRedesFooterHome:hover{
+    transform: scale(1.1);
+}
+
+.itemRedesFooterHome:hover img{
+    opacity: 1;
+}
+
+.itemRedesFooterHome:hover span{
+    color: rgb(255,255,255,1);
+}
+
+.contactoFooterHome{
+    width: 35%;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+}
+
+.contactoFooterHome span{
+    width: 40%;
+    margin-top: 0.6rem;
+    margin-bottom: 0.4rem;
+    font-size: 1rem;
+    font-weight: 300;
+    line-height: 1.3rem;
+    color: rgb(255,255,255,0.5);
+}

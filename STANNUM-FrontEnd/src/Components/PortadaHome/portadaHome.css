@@ -40,10 +40,6 @@
   line-height: 1.9rem;
 }
 
-.parrafoPortadaHome span{
-  font-weight: 700;
-}
-
 .contenedorBotonesPortada{
   display: flex;
   gap: 30px;
